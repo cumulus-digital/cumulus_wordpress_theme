@@ -126,6 +126,17 @@
 		"opt": 0,
 		"q": 65
 		},
+	"/assets/prod/images/bg-video_hero.png": {
+		"ft": 32768,
+		"iS": 3595,
+		"oA": 0,
+		"oAP": "/assets/prod/images/bg-video_hero.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 80
+		},
 	"/assets/prod/images/cumulus-logo-blue-full.svg": {
 		"ft": 2097152,
 		"miP": 0,
@@ -165,6 +176,17 @@
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
+		},
+	"/assets/prod/images/menu-crowd.jpg": {
+		"ft": 16384,
+		"iS": 143583,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/assets/prod/images/menu-crowd.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 65
 		},
 	"/assets/prod/js/blocks-station_finder.js": {
 		"bF": 4,
@@ -491,6 +513,17 @@
 		"opt": 1,
 		"q": 65
 		},
+	"/assets/src/images/bg-video_hero.png": {
+		"ft": 32768,
+		"iS": 10259,
+		"oA": 0,
+		"oAP": "/assets/prod/images/bg-video_hero.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 80
+		},
 	"/assets/src/images/cumulus-logo-blue-full.svg": {
 		"ft": 2097152,
 		"miP": 0,
@@ -574,6 +607,205 @@
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
+		},
+	"/assets/static/favicon/android-chrome-192x192.png": {
+		"ft": 32768,
+		"iS": 1705,
+		"oA": 0,
+		"oAP": "/assets/static/favicon/android-chrome-192x192.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 80
+		},
+	"/assets/static/favicon/android-chrome-512x512.png": {
+		"ft": 32768,
+		"iS": 5083,
+		"oA": 0,
+		"oAP": "/assets/static/favicon/android-chrome-512x512.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 80
+		},
+	"/assets/static/favicon/apple-touch-icon-120x120.png": {
+		"ft": 32768,
+		"iS": 1091,
+		"oA": 0,
+		"oAP": "/assets/static/favicon/apple-touch-icon-120x120.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 80
+		},
+	"/assets/static/favicon/apple-touch-icon-152x152.png": {
+		"ft": 32768,
+		"iS": 1355,
+		"oA": 0,
+		"oAP": "/assets/static/favicon/apple-touch-icon-152x152.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 80
+		},
+	"/assets/static/favicon/apple-touch-icon-180x180.png": {
+		"ft": 32768,
+		"iS": 1482,
+		"oA": 0,
+		"oAP": "/assets/static/favicon/apple-touch-icon-180x180.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 80
+		},
+	"/assets/static/favicon/apple-touch-icon-60x60.png": {
+		"ft": 32768,
+		"iS": 658,
+		"oA": 0,
+		"oAP": "/assets/static/favicon/apple-touch-icon-60x60.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 80
+		},
+	"/assets/static/favicon/apple-touch-icon-76x76.png": {
+		"ft": 32768,
+		"iS": 816,
+		"oA": 0,
+		"oAP": "/assets/static/favicon/apple-touch-icon-76x76.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 80
+		},
+	"/assets/static/favicon/apple-touch-icon.png": {
+		"ft": 32768,
+		"iS": 1482,
+		"oA": 0,
+		"oAP": "/assets/static/favicon/apple-touch-icon.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 80
+		},
+	"/assets/static/favicon/browserconfig.xml": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/assets/static/favicon/browserconfig.xml",
+		"oF": 0
+		},
+	"/assets/static/favicon/favicon-16x16.png": {
+		"ft": 32768,
+		"iS": 457,
+		"oA": 0,
+		"oAP": "/assets/static/favicon/favicon-16x16.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 80
+		},
+	"/assets/static/favicon/favicon-32x32.png": {
+		"ft": 32768,
+		"iS": 616,
+		"oA": 0,
+		"oAP": "/assets/static/favicon/favicon-32x32.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 80
+		},
+	"/assets/static/favicon/favicon.ico": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/assets/static/favicon/favicon.ico",
+		"oF": 0
+		},
+	"/assets/static/favicon/mstile-144x144.png": {
+		"ft": 32768,
+		"iS": 1751,
+		"oA": 0,
+		"oAP": "/assets/static/favicon/mstile-144x144.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 80
+		},
+	"/assets/static/favicon/mstile-150x150.png": {
+		"ft": 32768,
+		"iS": 1614,
+		"oA": 0,
+		"oAP": "/assets/static/favicon/mstile-150x150.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 80
+		},
+	"/assets/static/favicon/mstile-310x150.png": {
+		"ft": 32768,
+		"iS": 1595,
+		"oA": 0,
+		"oAP": "/assets/static/favicon/mstile-310x150.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 80
+		},
+	"/assets/static/favicon/mstile-310x310.png": {
+		"ft": 32768,
+		"iS": 3531,
+		"oA": 0,
+		"oAP": "/assets/static/favicon/mstile-310x310.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 80
+		},
+	"/assets/static/favicon/mstile-70x70.png": {
+		"ft": 32768,
+		"iS": 1215,
+		"oA": 0,
+		"oAP": "/assets/static/favicon/mstile-70x70.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 80
+		},
+	"/assets/static/favicon/safari-pinned-tab.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 0,
+		"oAP": "/assets/static/favicon/safari-pinned-tab.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"/assets/static/favicon/site.webmanifest": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/assets/static/favicon/site.webmanifest",
+		"oF": 0
 		},
 	"/browserify.js": {
 		"bF": 4,
@@ -1191,7 +1423,7 @@
 	"creationDate": 578338265.56473505,
 	"displayValue": "cumulus_wordpress_theme",
 	"displayValueWasSetByUser": 0,
-	"iconImageName": "meme-angryBaby",
+	"iconImageName": "/assets/static/favicon/apple-touch-icon-120x120.png",
 	"iconImageWasSetByUser": 0,
 	"lastBuiltDate": 578352058.78443503
 	},

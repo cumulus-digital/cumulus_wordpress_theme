@@ -93,6 +93,11 @@
                 "param": "post_type",
                 "operator": "==",
                 "value": "page"
+            },
+            {
+                "param": "page_type",
+                "operator": "!=",
+                "value": "front_page"
             }
         ]
     ],
@@ -104,5 +109,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "Display options for this page.",
-    "modified": 1558046325
+    "modified": 1558121559
 }

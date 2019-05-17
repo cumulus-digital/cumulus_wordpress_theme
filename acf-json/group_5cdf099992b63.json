@@ -1,0 +1,114 @@
+{
+    "key": "group_5cdf099992b63",
+    "title": "Front Page Video",
+    "fields": [
+        {
+            "key": "field_5cdf09b290032",
+            "label": "Header Video",
+            "name": "header_video_id",
+            "type": "file",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "library": "all",
+            "min_size": "",
+            "max_size": 100,
+            "mime_types": "mp4, webm, ogg, avi"
+        },
+        {
+            "key": "field_5cdf0afa90034",
+            "label": "Header Video Alternate",
+            "name": "header_video_alt_id",
+            "type": "file",
+            "instructions": "Alternate video format",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5cdf09b290032",
+                        "operator": "!=empty"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "library": "all",
+            "min_size": "",
+            "max_size": 100,
+            "mime_types": "mp4, webm, ogg, avi"
+        },
+        {
+            "key": "field_5cdf121568714",
+            "label": "Header Video Alternate",
+            "name": "header_video_alt2_id",
+            "type": "file",
+            "instructions": "Alternate video format",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5cdf0afa90034",
+                        "operator": "!=empty"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "library": "all",
+            "min_size": "",
+            "max_size": 100,
+            "mime_types": "mp4, webm, ogg, avi"
+        },
+        {
+            "key": "field_5cdf0ed0cbe4a",
+            "label": "",
+            "name": "header_video_autoplay",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Autoplay",
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_type",
+                "operator": "==",
+                "value": "front_page"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "Upload a video to feature on the home page. Add multiple video types for additional browser support.",
+    "modified": 1558123086
+}
