@@ -1,0 +1,26 @@
+{
+  "author": "Daniel Vena <daniel.vena@cumulus.com>",
+  "scripts": {
+    "build": "NODE_ENV=production browserify ./assets/prod/js/index.js -o ./assets/prod/js/bundle.js; NODE_ENV=production browserify ./assets/prod/js/station-finder.js -o ./assets/prod/js/station-finder.js; ",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "babelify": "^10.0.0",
+    "browserify": "^16.2.3"
+  },
+  "version": "1.0.0",
+  "main": "index.js",
+  "browser": {
+    "vue": "vue/dist/vue.common.js"
+  },
+  "dependencies": {
+    "intersection-observer": "^0.7.0",
+    "jquery": "^3.4.1",
+    "lodash": "^4.17.11",
+    "lodash-es": "^4.17.11",
+    "v-lazy-image": "^1.3.2",
+    "vue": "^2.6.10"
+  },
+  "name": "cumulus_com_wp",
+  "description": "Wordpress theme"
+}

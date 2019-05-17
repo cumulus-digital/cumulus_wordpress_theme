@@ -1,0 +1,53 @@
+{
+    "key": "group_5cddb9cc71cb2",
+    "title": "Card Image",
+    "fields": [
+        {
+            "key": "field_5cddb9d2775eb",
+            "label": "Card Image",
+            "name": "card_image",
+            "type": "image",
+            "instructions": "Display an image for this page when displayed as a card.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": 1000,
+            "max_height": 1000,
+            "max_size": "0.5",
+            "mime_types": "jpg, jpeg, gif, png, svg"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            },
+            {
+                "param": "page_type",
+                "operator": "==",
+                "value": "child"
+            }
+        ]
+    ],
+    "menu_order": 1,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "How to display the card for this subpage.",
+    "modified": 1558039029
+}

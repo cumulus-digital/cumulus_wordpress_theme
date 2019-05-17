@@ -1,0 +1,2 @@
+!function(e,t){var i=window.wp.element.createElement,n={backgroundColor:"#ccc",borderRadius:"3px",color:"#fff",padding:"20px",textAlign:"center"};e.registerBlockType("cumulus-gutenberg/station-finder",{title:"Station Finder",icon:{src:"format-audio",foreground:"#3399cc"},category:"widgets",edit:function(){return i("div",{style:n},"Station Finder Widget")},save:function(){return i("div",{id:"station-finder-widget"},"")}})}(window.wp.blocks);
+//# sourceMappingURL=blocks-station_finder.js.map

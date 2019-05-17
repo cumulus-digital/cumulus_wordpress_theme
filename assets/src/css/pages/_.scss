@@ -1,0 +1,154 @@
+main.page {
+
+	header {
+		margin: 4vh 0 7vh;
+
+		span {
+			margin: 0 auto;
+		}
+
+		&.has_image {
+			position: relative;
+			margin: 0 0 5vh;
+			background-position: center center;
+			background-size: cover;
+			width: 100%;
+			display: flex;
+
+			& > * {
+				align-self: center;
+				justify-self: center;
+			}
+
+			&::before {
+				display: inline-block;
+				content: "";
+				width: 1px;
+				margin-left: -1px;
+				height: 0;
+				padding-top: 26%;
+				vertical-align: middle;
+				float: left;
+			}
+
+			&.background_top {
+				background-position: center top;
+			}
+			&.background_bottom {
+				background-position: center bottom;
+			}
+
+			span {
+				padding: 1em;
+				color: #fff;
+				text-shadow: 
+					0 0 2em #000,
+					0 0 1em #000,
+					1px 1px 0 rgba(0,0,0,0.8);
+
+				&::after { /* to clear float */
+					content: "";
+					display: table;
+					clear: both;
+					background: none;
+					height: 0;
+				}
+
+			}
+			h1, h2 {
+				color: inherit;
+			}
+
+			h1 {
+				margin: 0;
+				font-size: 2em;
+				text-transform: uppercase;
+
+				&::after {
+					display: none;
+				}
+			}
+		}
+
+		h1 {
+			position: relative;
+			width: 100%;
+			color: #333;
+			margin: 0 auto;
+			line-height: 1.1;
+			text-align: center;
+			
+			&::after {
+				display: block;
+				content: "";
+				background: map-deep($colors, "highlight");
+
+				position: absolute;
+				width: 30%;
+				height: 2px;
+				left: 50%;
+				bottom: -2vh;
+				transform: translateX(-50%);
+			}
+		}
+
+		h2 {
+			margin: 0 auto 1vh;
+			color: #666;
+			font-size: 0.9em;
+			text-align: center;
+
+			.arrow {
+				display: inline-block;
+				width: .7em;
+				height: auto;
+				vertical-align: baseline;
+			}
+
+			a {
+				color: inherit;
+				text-decoration: none;
+
+				transition: color .2s;
+
+				&:hover {
+					color: map-deep($colors, 'highlight');
+				}
+			}
+		}
+	}
+
+	.body {
+		margin-bottom: 1em;
+
+		p:last-child {
+			margin-bottom: 0;
+		}
+
+		.full-width {
+			width: 100vw;
+			position: relative;
+			left: 50%;
+			right: 50%;
+			margin-left: -50vw;
+			margin-right: -50vw;
+		}
+	}
+
+	@at-root body.full-width & .row-container {
+		margin-left: 0;
+		margin-right: 0;
+		padding-left: 0;
+		padding-right: 0;
+		max-width: 100%;
+	}
+
+	// Allow reversing columns on mobile
+	.reverse-columns-on-mobile {
+		flex-wrap: wrap-reverse;
+	}
+}
+
+@import "front-page";
+@import "cards";
+@import "footers/_";

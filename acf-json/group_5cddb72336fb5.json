@@ -1,0 +1,108 @@
+{
+    "key": "group_5cddb72336fb5",
+    "title": "Header Options",
+    "fields": [
+        {
+            "key": "field_5cddddc271527",
+            "label": "",
+            "name": "display_header",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Display Header",
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5cddb827ef446",
+            "label": "Header Background Image",
+            "name": "header_image_id",
+            "type": "image",
+            "instructions": "Display an image behind the header for this page.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5cddddc271527",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": 2000,
+            "max_height": 1000,
+            "max_size": 1,
+            "mime_types": "jpg, jpeg, gif, png, svg"
+        },
+        {
+            "key": "field_5cddb8adef447",
+            "label": "Header Background Position",
+            "name": "header_background_position",
+            "type": "select",
+            "instructions": "Vertical alignment for the header background image.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5cddb827ef446",
+                        "operator": "!=empty"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "center": "Center",
+                "top": "Top",
+                "bottom": "Bottom"
+            },
+            "default_value": [],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 1,
+            "ajax": 0,
+            "return_format": "value",
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "Display options for this page.",
+    "modified": 1558046325
+}

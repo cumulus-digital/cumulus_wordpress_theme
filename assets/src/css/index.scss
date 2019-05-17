@@ -1,0 +1,135 @@
+@import "bourbon";
+@import "functions";
+@import 'variables';
+
+* { box-sizing: border-box; }
+
+html,body {
+	background: #fff;
+	color: #222;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 24px;
+	line-height: 1.2;
+	margin: 0;
+	padding: 0;
+
+	@media (max-width: map-deep($widths, "medium")) {
+		font-size: 22px;
+	}
+	@media (max-width: map-deep($widths, "small")) {
+		font-size: 20px;
+	}
+}
+
+body {
+	height: 100%;
+	margin-top: $masthead-height;
+
+	&.home, &.post_header_image {
+		margin-top: 0;
+
+		@media (max-width: map-deep($widths, "medium")) {
+			margin-top: $masthead-height;
+		}
+	}
+	&.menu-active {
+		overflow: hidden;
+	}
+}
+
+h1,h2,h3,h4,h5 {
+	display: block;
+	font-size: 1em;
+	font-weight: 200;
+	line-height: 1;
+	margin: 0 0 .25em;
+	padding: 0;
+}
+	h1 {
+		font-size: 2.5em;
+		font-weight: 600;
+	}
+	h2 {
+		font-size: 2.1em;
+		font-weight: 600;
+	}
+
+p {
+	margin-top: 0;
+}
+
+a {
+	img {
+		border: 0;
+	}
+	&:focus {
+		outline: 0;
+	}
+}
+
+img:not([src]) {
+	visibility: hidden;
+}
+
+nav.menu {
+	ul, li {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+}
+
+main {
+	position: relative;
+	z-index: 2;
+
+	background: #fff;
+}
+
+img[data-credit], .has_image[data-credit], figure.wp-block-image {
+	position: relative;
+	img {
+		display: inherit;
+	}
+	&:after, figcaption {
+		content: attr(data-credit);
+		background: rgba(map-deep($colors, "brand"), 0.7);
+		color: #fff;
+
+		position: absolute;
+		bottom: 0;
+		left: 0;
+
+		padding: .75em .9em;
+		margin: 0;
+
+		font-size: 0.4rem;
+	}
+}
+figure.wp-block-image:after {
+	display: none;
+}
+
+.post-edit-link {
+	background: #666;
+	color: #fff;
+
+	font-size: 11px;
+	line-height: 1;
+	text-decoration: none;
+	text-transform: uppercase;
+
+	padding: .25em .5em;
+
+	&:hover {
+		background: map-deep($colors, "brand");
+	}
+}
+
+#wpadminbar {
+	position: fixed !important;
+}
+
+@import "rows/_";
+@import "template-parts/_";
+@import "pages/_";

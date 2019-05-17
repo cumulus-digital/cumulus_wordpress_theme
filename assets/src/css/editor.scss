@@ -1,0 +1,18 @@
+@import 'variables';
+
+body .editor-styles-wrapper {
+
+	color: #222;
+	font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+	font-size: 18px;
+
+	.edit-post-visual-editor,
+	.editor-writing-flow .wp-block textarea,
+	.editor-writing-flow .wp-block .wp-block-freeform,
+	.editor-rich-text p,
+	.editor-post-title__input,
+	.wp-block-quote__citation {
+	    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+	}
+
+}

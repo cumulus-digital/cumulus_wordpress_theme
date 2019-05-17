@@ -1,0 +1,75 @@
+body > footer {
+	background: #333;
+	color: #fff;
+
+	padding: 3vh 2vw;
+
+	font-size: 0.5rem;
+
+	.row-container {
+		display: grid;
+		grid-template-columns: 1fr max-content 1fr 1fr;
+		grid-template-rows: 100%;
+		grid-gap: 3em;
+		
+		& > * {
+			align-self: center;
+		}
+
+		@media (max-width: map-deep($widths, 'small')) {
+			display: block;
+			text-align: center;
+		}
+	}
+
+	.logo img {
+		min-width: 200px;
+		max-width: 200px;
+
+		@media (max-width: map-deep($widths, 'small')) {
+			max-width: 50%;
+			margin-bottom: 1em;
+		}
+
+	}
+
+	a {
+		color: inherit;
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	nav.menu {
+		ul {
+			display: grid;
+			grid-gap: .25em;
+			grid-auto-flow: column;
+			grid-template-rows: 1fr 1fr 1fr;
+
+			li {
+				margin: 0 1em 0 0;
+			}
+
+			@media (max-width: map-deep($widths, 'small')) {
+				display: block;
+
+				li {
+					display: inline-block;
+					margin: 0 .5em .5em;
+				}
+			}
+		}
+	}
+
+	.copyright {
+		text-align: right;
+
+		@media (max-width: map-deep($widths, 'small')) {
+			margin-top: 1em;
+			text-align: center;
+		}
+	}
+}

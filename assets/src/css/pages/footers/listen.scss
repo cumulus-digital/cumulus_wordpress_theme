@@ -1,0 +1,63 @@
+.page_footer-listen {
+
+	display: flex;
+	justify-content: center;
+	
+	background-color: map-deep($colors, 'brand');
+	background-image: url('../images/bg-listen.jpg');
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	box-shadow: 0 0 1em rgba(0,0,0,0.3);
+
+	color: #fff;
+
+	padding: 4vh 4vw;
+
+	text-decoration: none;
+
+	h3 {
+		margin: 0 1em 0 0;
+		font-size: 2em;
+		font-weight: bold;
+		text-transform: uppercase;
+		text-shadow: 0 0 1em rgba(0,0,0,0.6);
+		transition: all .15s;
+
+		@media (max-width: map-deep($widths, "small")) {
+			margin: 0;
+			font-size: 1.5em;
+		}
+	}
+
+	.button {
+		align-self: center;
+		display: block;
+
+		padding: .5em;
+
+		background: #fff;
+		border-radius: 2px;
+		color: map-deep($colors, 'brand');
+		box-shadow: 0 0 1em rgba(0,0,0,0.4);
+
+		white-space: nowrap;
+
+		transition: all .15s;
+	}
+
+	&:hover {
+		h3 {
+			transform: scale(1.06);
+			text-shadow: 0 0 1em rgba(0,0,0,0.8);
+		}
+		.button {
+			background: map-deep($colors, 'highlight');
+			color: #fff;
+			box-shadow: 0 0 1em rgba(0,0,0,0.5);
+			transform: scale(1.06);
+		}
+	}
+
+}

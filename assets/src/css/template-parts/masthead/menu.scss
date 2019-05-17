@@ -1,0 +1,144 @@
+.menu {
+	background-color: map-deep($colors, "highlight");
+	background-image:
+		linear-gradient(to bottom, rgba(51,153,204,1) 0%,rgba(51,153,204,1) 30%,rgba(51,153,204,0) 100%),
+		url("/wp-content/uploads/2019/05/menu-crowd.jpg");
+	background-attachment: fixed;
+	background-position: center bottom;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	zoom: 1;
+
+	position: absolute;
+	top: $masthead-height;
+	left: 0;
+	z-index: 1;
+
+	transform: translate(0,0);
+
+	width: 100%;
+	height: 0;
+	overflow-y: scroll;
+
+	transition: all linear 0.2s;
+
+	font-size: 0.9rem;
+
+	@media (max-width: map-deep($widths, "medium")) {
+		background-image:
+			linear-gradient(to bottom, rgba(51,153,204,1) 0%,rgba(51,153,204,1) 30%,rgba(51,153,204,0.75) 100%),
+			url("/wp-content/uploads/2019/05/menu-crowd.jpg");
+		background-position: center center;
+		left: 100vw;
+		width: 100vw;
+		height: calc(100vh - #{$masthead-height});
+		font-size: 1.2rem;
+		transition: all linear 0.1s;
+	}
+
+	a {
+		display: block;
+		color: #fff;
+		text-decoration: none;
+
+		padding: 0.75vh 0.5vw;
+
+		&:hover {
+			background: rgba(0,0,0,0.4);
+		}
+	}
+
+	& > ul {
+		display: flex;
+
+		position: relative;
+		z-index: 2;
+		height: 100%;
+
+		a {
+			position: relative;
+			z-index: 2;
+		}
+
+		@media (max-width: map-deep($widths, "medium")) {
+			display: block;
+			height: auto;
+		}
+
+		& > li {
+			flex-grow: 1;
+			flex-basis: 0;
+			padding: 2% 2%;
+
+			font-weight: bold;
+			text-transform: uppercase;
+			text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+
+			@media (max-width: map-deep($widths, "medium")) {
+				padding: 3% 5% 0;
+
+				&:last-child {
+					padding-bottom: 4%;
+				}
+			}
+
+			& > ul {
+				margin-top: .5vh;
+
+				font-size: 0.8em;
+				font-weight: normal;
+				text-transform: none;
+
+				@media (max-width: map-deep($widths, "medium")) {
+					margin-top: 0;
+				}
+
+				& > li {
+					position: relative;
+					
+					& > ul {
+
+						font-size: 0.8em;
+						padding: 0 .75em;
+						margin-bottom: .5em;
+
+						a {
+							color: #fff;
+						}
+					}
+				}
+			}
+		}
+	}
+
+}
+
+@at-root body.admin-bar {
+	.masthead.menu-active .menu {
+		height: calc(100vh - #{$masthead-height} - 32px);
+	}
+
+	@media (max-width: map-deep($widths, "small")) {
+		.masthead.menu-active .menu {
+			height: calc(100vh - #{$masthead-height} - 46px);
+		}		
+	}
+}
+
+@at-root .masthead {
+	&.menu-active .menu {
+		height: calc(100vh - #{$masthead-height});
+		box-shadow: 0 0 10px rgba(0,0,0,0.2);
+		transition: all linear 0.2s;
+	}
+
+	@media (max-width: map-deep($widths, "medium")) {
+		
+		&.menu-active .menu {
+			left: 0;
+			transition: all linear 0.1s;
+		}
+
+	}
+}

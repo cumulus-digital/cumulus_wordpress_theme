@@ -1,0 +1,17 @@
+.row {
+	position: relative;
+	overflow: hidden;
+}
+
+.row-container {
+	padding: 0 5vw;
+	margin: 0 auto;
+	max-width: map-deep($widths, "max");
+	position: relative;
+}
+
+.header {
+	overflow: hidden;
+	position: relative;
+	z-index: 6;
+}

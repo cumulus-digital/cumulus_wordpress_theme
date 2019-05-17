@@ -1,0 +1,29 @@
+$widths: (
+	"max": 1200px,
+	"large": 1030px,
+	"medium": 820px,
+	"small": 640px
+);
+
+$colors: (
+	"bg" : (
+		"light": #f1f1f1
+	),
+	"brand": #00598e,
+	"accent": #01588e,
+	"highlight": #3399cc,
+	"caption": (
+		"background": rgba(7,112,177,.7),
+		"text": #fff
+	),
+	"overlay-wash": linear-gradient(rgba(1,88,142,.25), rgba(1,88,142,.7))
+);
+
+$masthead-height: 10vh;
+
+//-----
+$bourbon: (
+  "contrast-switch-dark-color": map-deep($colors, "caption", "background"),
+  "contrast-switch-light-color": #fff,
+);
+
