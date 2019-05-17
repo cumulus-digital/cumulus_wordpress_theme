@@ -275,7 +275,7 @@
             }
         ]
     ],
-    "menu_order": 2,
+    "menu_order": 3,
     "position": "side",
     "style": "default",
     "label_placement": "top",
@@ -283,5 +283,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "Display options for pages in the Cumulus theme.",
-    "modified": 1558121579
+    "modified": 1558129525
 }

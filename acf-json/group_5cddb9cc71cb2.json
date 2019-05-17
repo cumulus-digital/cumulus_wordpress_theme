@@ -41,7 +41,7 @@
             }
         ]
     ],
-    "menu_order": 1,
+    "menu_order": 2,
     "position": "side",
     "style": "default",
     "label_placement": "top",
@@ -49,5 +49,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "How to display the card for this subpage.",
-    "modified": 1558039029
+    "modified": 1558129514
 }
