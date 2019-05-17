@@ -7,7 +7,7 @@ class MenuWalker extends \Walker_Nav_Menu
 	{
 		$indent = ($depth) ? str_repeat( "\t", $depth ) : '';
 
-		$class_names = $value = '';
+		$class_names = '';
 
 		$classes = empty($item->classes) ? array() : (array) $item->classes;
 
@@ -40,7 +40,6 @@ class MenuWalker extends \Walker_Nav_Menu
 			'<li ' . 
 				'itemprop="name" ' . 
 				'id="menu-item-'. $item->ID . '" ' . 
-				$value . 
 				'class="' . \esc_attr($class_names) . '" ' .
 				'style="' . \esc_attr(implode(' ', $styles)) . '"' .
 			'>';
@@ -61,10 +60,10 @@ class MenuWalker extends \Walker_Nav_Menu
 			$args = (object) $args;
 		}
 		$item_output = $args->before;
-		$item_output .= '<a'. $attributes .'>';
+		$item_output .= $item->url !== '#' ? '<a'. $attributes .'>' : '<span>';
 		$item_output .= $args->link_before . \apply_filters( 'the_title', $item->title, $item->ID );
 		$item_output .= $args->link_after;
-		$item_output .= '</a>';
+		$item_output .= $item->url !== '#' ? '</a>' : '</span>';
 		$item_output .= $args->after;
 
 		$output .= \apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
