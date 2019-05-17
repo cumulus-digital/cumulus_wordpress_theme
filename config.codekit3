@@ -531,6 +531,17 @@
 		"plM": 3758088159,
 		"prP": 0
 		},
+	"/assets/src/images/menu-crowd.jpg": {
+		"ft": 16384,
+		"iS": 156902,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/assets/prod/images/menu-crowd.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"q": 65
+		},
 	"/assets/src/js/blocks-station_finder.js": {
 		"bF": 4,
 		"ft": 64,
