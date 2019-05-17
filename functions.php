@@ -37,6 +37,11 @@ function registerRequiredPlugins() {
 			'required'  => false,
 		),
 		array(
+			'name'      => 'Ninja Forms',
+			'slug'      => 'ninja-forms',
+			'required'  => false,
+		),
+		array(
 			'name'      => 'Stackable - Gutenberg Blocks',
 			'slug'      => 'stackable-ultimate-gutenberg-blocks',
 			'required'  => false,
