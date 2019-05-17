@@ -55,10 +55,10 @@ namespace CumulusTheme;
 					
 					<?php if ($card_options['show_title']): ?>
 						<h3>
-							<?php if (empty(get_arr_value($custom_fields, 'alt_title'))): ?>
+							<?php if (empty(get_arr_val($custom_fields, 'alt_title'))): ?>
 								<?php \the_title() ?>
 							<?php else: ?>
-								<?php echo \esc_html(get_arra_value($custom_fields, 'alt_title')) ?>
+								<?php echo \esc_html(get_arr_val($custom_fields, 'alt_title')) ?>
 							<?php endif ?>
 						</h3>
 					<?php endif ?>
