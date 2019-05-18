@@ -141,6 +141,10 @@ main.page {
 
 		figure {
 			margin: 0;
+
+			&.aligncenter {
+				margin: 0 auto;
+			}
 		}
 
 		.full-width {
