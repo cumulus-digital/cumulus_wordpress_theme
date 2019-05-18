@@ -44,6 +44,180 @@
             "ui": 1
         },
         {
+            "key": "field_5cddbf577d95f",
+            "label": "Card Image Display Type",
+            "name": "card_display_type",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5cddbd6931ced",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_5cdf547bfc8d9",
+                        "operator": "!=empty"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "icon": "Circular Mask",
+                "header": "Header Image",
+                "padded": "Padded Header Image"
+            },
+            "default_value": [
+                "icon"
+            ],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 1,
+            "ajax": 0,
+            "return_format": "value",
+            "placeholder": ""
+        },
+        {
+            "key": "field_5cddc04acdd87",
+            "label": "",
+            "name": "cards_display_title",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5cddbd6931ced",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_5cdf547bfc8d9",
+                        "operator": "!=empty"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Display Card Titles",
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5cddc077cdd88",
+            "label": "",
+            "name": "cards_display_excerpt",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5cddbd6931ced",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_5cdf547bfc8d9",
+                        "operator": "!=empty"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Display Card Excerpts",
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5cddbfc3cdd85",
+            "label": "",
+            "name": "card_links",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5cddbd6931ced",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_5cdf547bfc8d9",
+                        "operator": "!=empty"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Link Cards to Pages",
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5cddbffdcdd86",
+            "label": "Card Link Label",
+            "name": "card_link_label",
+            "type": "text",
+            "instructions": "Label text for the link button at the bottom of cards.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5cddbd6931ced",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_5cdf547bfc8d9",
+                        "operator": "!=empty"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Learn more",
+            "placeholder": "Learn more",
+            "prepend": "",
+            "append": "",
+            "maxlength": 20
+        },
+        {
             "key": "field_5cdde3169e5dc",
             "label": "Card Section Background Color",
             "name": "card_section_background_color",
@@ -150,179 +324,6 @@
             "ajax": 0,
             "return_format": "value",
             "placeholder": ""
-        },
-        {
-            "key": "field_5cddbf577d95f",
-            "label": "Card Image Display Type",
-            "name": "card_display_type",
-            "type": "select",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_5cddbd6931ced",
-                        "operator": "==",
-                        "value": "1"
-                    }
-                ],
-                [
-                    {
-                        "field": "field_5cdf547bfc8d9",
-                        "operator": "!=empty"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "icon": "Circular Mask",
-                "header": "Header Image"
-            },
-            "default_value": [
-                "icon"
-            ],
-            "allow_null": 0,
-            "multiple": 0,
-            "ui": 1,
-            "ajax": 0,
-            "return_format": "value",
-            "placeholder": ""
-        },
-        {
-            "key": "field_5cddbfc3cdd85",
-            "label": "",
-            "name": "card_links",
-            "type": "true_false",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_5cddbd6931ced",
-                        "operator": "==",
-                        "value": "1"
-                    }
-                ],
-                [
-                    {
-                        "field": "field_5cdf547bfc8d9",
-                        "operator": "!=empty"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "message": "Link Cards to Pages",
-            "default_value": 1,
-            "ui": 1,
-            "ui_on_text": "",
-            "ui_off_text": ""
-        },
-        {
-            "key": "field_5cddbffdcdd86",
-            "label": "Card Link Label",
-            "name": "card_link_label",
-            "type": "text",
-            "instructions": "Label text for the link button at the bottom of cards.",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_5cddbd6931ced",
-                        "operator": "==",
-                        "value": "1"
-                    }
-                ],
-                [
-                    {
-                        "field": "field_5cdf547bfc8d9",
-                        "operator": "!=empty"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "Learn more",
-            "placeholder": "Learn more",
-            "prepend": "",
-            "append": "",
-            "maxlength": 20
-        },
-        {
-            "key": "field_5cddc04acdd87",
-            "label": "",
-            "name": "cards_display_title",
-            "type": "true_false",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_5cddbd6931ced",
-                        "operator": "==",
-                        "value": "1"
-                    }
-                ],
-                [
-                    {
-                        "field": "field_5cdf547bfc8d9",
-                        "operator": "!=empty"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "message": "Display Card Titles",
-            "default_value": 1,
-            "ui": 1,
-            "ui_on_text": "",
-            "ui_off_text": ""
-        },
-        {
-            "key": "field_5cddc077cdd88",
-            "label": "",
-            "name": "cards_display_excerpt",
-            "type": "true_false",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_5cddbd6931ced",
-                        "operator": "==",
-                        "value": "1"
-                    }
-                ],
-                [
-                    {
-                        "field": "field_5cdf547bfc8d9",
-                        "operator": "!=empty"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "message": "Display Card Excerpts",
-            "default_value": 1,
-            "ui": 1,
-            "ui_on_text": "",
-            "ui_off_text": ""
         }
     ],
     "location": [
@@ -347,5 +348,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "Display options for pages in the Cumulus theme.",
-    "modified": 1558140488
+    "modified": 1558187440
 }
