@@ -7,11 +7,13 @@ namespace CumulusTheme;
 		<div class="row-container">
 
 			<div class="logo">
-				<?php if (function_exists('custom_logo')): ?>
-					<?php \custom_logo(); ?>
-				<?php else: ?>
-					<img src="<?=\get_template_directory_uri()?>/assets/prod/images/cumulus-logo-white-full.svg" alt="<?php \bloginfo('name') ?>">
-				<?php endif ?>
+				<a href="<?= \home_url() ?>">
+					<?php if (function_exists('custom_logo')): ?>
+						<?php \custom_logo(); ?>
+					<?php else: ?>
+						<img src="<?=\get_template_directory_uri()?>/assets/prod/images/cumulus-logo-white-full.svg" alt="<?php \bloginfo('name') ?>">
+					<?php endif ?>
+				</a>
 			</div>
 
 			<nav class="menu">
