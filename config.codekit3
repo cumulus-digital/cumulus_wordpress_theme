@@ -1365,6 +1365,22 @@
 		"oAP": "/template-full_width.php",
 		"oF": 0
 		},
+	"/template-parts/card.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/template-parts/card.php",
+		"oF": 0
+		},
+	"/template-parts/cards.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/template-parts/cards.php",
+		"oF": 0
+		},
 	"/template-parts/html-head.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -1395,14 +1411,6 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/template-parts/page_footer-listen.php",
-		"oF": 0
-		},
-	"/template-parts/subpages-cards.php": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/template-parts/subpages-cards.php",
 		"oF": 0
 		}
 	},

@@ -22,6 +22,28 @@
             "ui_off_text": ""
         },
         {
+            "key": "field_5cdf547bfc8d9",
+            "label": "Manual Card Selection",
+            "name": "manual_card_page_ids",
+            "type": "post_object",
+            "instructions": "Manually select pages to add as cards.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "page"
+            ],
+            "taxonomy": "",
+            "allow_null": 0,
+            "multiple": 1,
+            "return_format": "id",
+            "ui": 1
+        },
+        {
             "key": "field_5cdde3169e5dc",
             "label": "Card Section Background Color",
             "name": "card_section_background_color",
@@ -34,6 +56,12 @@
                         "field": "field_5cddbd6931ced",
                         "operator": "==",
                         "value": "1"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_5cdf547bfc8d9",
+                        "operator": "!=empty"
                     }
                 ]
             ],
@@ -57,6 +85,12 @@
                         "field": "field_5cddbd6931ced",
                         "operator": "==",
                         "value": "1"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_5cdf547bfc8d9",
+                        "operator": "!=empty"
                     }
                 ]
             ],
@@ -131,6 +165,12 @@
                         "operator": "==",
                         "value": "1"
                     }
+                ],
+                [
+                    {
+                        "field": "field_5cdf547bfc8d9",
+                        "operator": "!=empty"
+                    }
                 ]
             ],
             "wrapper": {
@@ -166,6 +206,12 @@
                         "operator": "==",
                         "value": "1"
                     }
+                ],
+                [
+                    {
+                        "field": "field_5cdf547bfc8d9",
+                        "operator": "!=empty"
+                    }
                 ]
             ],
             "wrapper": {
@@ -192,6 +238,12 @@
                         "field": "field_5cddbd6931ced",
                         "operator": "==",
                         "value": "1"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_5cdf547bfc8d9",
+                        "operator": "!=empty"
                     }
                 ]
             ],
@@ -220,6 +272,12 @@
                         "operator": "==",
                         "value": "1"
                     }
+                ],
+                [
+                    {
+                        "field": "field_5cdf547bfc8d9",
+                        "operator": "!=empty"
+                    }
                 ]
             ],
             "wrapper": {
@@ -246,6 +304,12 @@
                         "field": "field_5cddbd6931ced",
                         "operator": "==",
                         "value": "1"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_5cdf547bfc8d9",
+                        "operator": "!=empty"
                     }
                 ]
             ],
@@ -283,5 +347,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "Display options for pages in the Cumulus theme.",
-    "modified": 1558129525
+    "modified": 1558140488
 }
