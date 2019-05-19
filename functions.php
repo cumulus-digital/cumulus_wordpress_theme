@@ -222,6 +222,34 @@ function theme_setup() {
 		),
 	));
 
+	// Additional editor font styles
+	add_theme_support( 'editor-font-sizes', array(
+		array(
+			'name'      => __( 'Small', 'cumuluswp' ),
+			'shortName' => __( 'S', 'cumuluswp' ),
+			'size'      => 12,
+			'slug'      => 'small'
+		),
+		array(
+			'name'      => __( 'Medium', 'cumuluswp' ),
+			'shortName' => __( 'M', 'cumuluswp' ),
+			'size'      => 16,
+			'slug'      => 'medium'
+		),
+		array(
+			'name'      => __( 'Large', 'cumuluswp' ),
+			'shortName' => __( 'L', 'cumuluswp' ),
+			'size'      => 20,
+			'slug'      => 'large'
+		),
+		array(
+			'name'      => __( 'Larger', 'cumuluswp' ),
+			'shortName' => __( 'XL', 'cumuluswp' ),
+			'size'      => 24,
+			'slug'      => 'larger'
+		)
+	) );
+
 }
 \add_action( 'after_setup_theme', ns('theme_setup') );
 

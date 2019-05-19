@@ -171,6 +171,19 @@ main.page {
 			color: #fff;
 		}
 
+		.has-small-font-size {
+			font-size: 0.5em;
+		}
+		.has-medium-font-size {
+			font-size: 0.75em;
+		}
+		.has-large-font-size {
+			font-size: 1.25em;
+		}
+		.has-larger-font-size {
+			font-size: 1.5em;
+		}
+
 	}
 
 	@at-root body.full-width & .row-container {
