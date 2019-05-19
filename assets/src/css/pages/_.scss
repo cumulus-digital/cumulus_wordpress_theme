@@ -120,7 +120,7 @@ main.page {
 
 	.body {
 		margin-bottom: 1em;
-		line-height: 1.25;
+		line-height: 1.3;
 
 		p:last-child {
 			margin-bottom: 0;
@@ -182,6 +182,10 @@ main.page {
 		}
 		.has-larger-font-size {
 			font-size: 1.5em;
+		}
+
+		.circle-mask {
+			border-radius: 100%;
 		}
 
 		.ugb-feature-grid .ugb-feature-grid__item {
