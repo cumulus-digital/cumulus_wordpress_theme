@@ -70,11 +70,18 @@
 		& > li {
 			flex-grow: 1;
 			flex-basis: 0;
-			padding: 2% 2%;
+			padding: 1%;
 
 			font-weight: bold;
 			text-transform: uppercase;
 			text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+
+			&:first-child {
+				padding-left: 2%;
+			}
+			&:last-child {
+				padding-right: 2%;
+			}
 
 			@media (max-width: map-deep($widths, "medium")) {
 				padding: 3% 5% 0;
