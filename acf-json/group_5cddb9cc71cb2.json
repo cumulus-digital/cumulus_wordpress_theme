@@ -1,6 +1,6 @@
 {
     "key": "group_5cddb9cc71cb2",
-    "title": "Card Image",
+    "title": "Card Options",
     "fields": [
         {
             "key": "field_5cddb9d2775eb",
@@ -25,6 +25,25 @@
             "max_height": 1000,
             "max_size": "0.5",
             "mime_types": "jpg, jpeg, gif, png, svg"
+        },
+        {
+            "key": "field_5ce16bb846208",
+            "label": "Override Card Link Label",
+            "name": "override_card_link_label",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "Learn More",
+            "prepend": "",
+            "append": "",
+            "maxlength": 50
         }
     ],
     "location": [
@@ -49,5 +68,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "How to display the card for this subpage.",
-    "modified": 1558129514
+    "modified": 1558277087
 }

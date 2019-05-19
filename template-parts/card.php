@@ -45,7 +45,11 @@ $custom_fields = \get_fields();
 
 			<div class="permalink">
 				<span>
-					<?php echo $card_options['link_label'] ? \esc_html($card_options['link_label']) : 'Learn More' ?>
+					<?php if (get_arr_val($custom_fields, 'override_card_link_label')): ?>
+						<?php echo \esc_html(get_arr_val($custom_fields, 'override_card_link_label')) ?>
+					<?php else: ?>
+						<?php echo $card_options['link_label'] ? \esc_html($card_options['link_label']) : 'Learn More' ?>
+					<?php endif ?>
 				</span>
 				<img src="<?php echo \get_template_directory_uri() ?>/assets/prod/images/arrow-blue-right.svg" class="arrow">
 			</div>
