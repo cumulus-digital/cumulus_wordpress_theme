@@ -4,6 +4,7 @@ main.page {
 		margin: 4vh 0 7vh;
 
 		span {
+			display: grid;
 			margin: 0 auto;
 		}
 
@@ -72,7 +73,6 @@ main.page {
 
 		h1 {
 			position: relative;
-			width: 100%;
 			color: #333;
 			margin: 0 auto;
 			line-height: 1.1;
