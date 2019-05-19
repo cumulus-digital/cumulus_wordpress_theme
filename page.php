@@ -102,7 +102,9 @@ $header_image_id = false;
 				<?php if (get_arr_val($custom_fields, 'footer_page')): ?>
 					<?php foreach(get_arr_val($custom_fields, 'footer_page') as $footer_page): ?>
 						<?php \setup_postdata($footer_page) ?>
-						<?php \the_content() ?>
+						<div class="body">
+							<?php \the_content() ?>
+						</div>
 					<?php endforeach ?>
 					<?php \wp_reset_postdata() ?>
 				<?php endif ?>
