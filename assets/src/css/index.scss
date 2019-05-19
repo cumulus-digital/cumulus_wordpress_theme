@@ -111,7 +111,7 @@ figure.wp-block-image:after,
 figure.wp-block-video:after {
 	display: none;
 }
-figure.wp-block-video:after {
+figure.wp-block-video figcaption {
 	bottom: auto;
 	top: 0;
 }
