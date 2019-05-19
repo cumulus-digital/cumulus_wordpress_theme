@@ -1373,6 +1373,14 @@
 		"oAP": "/template-full_width.php",
 		"oF": 0
 		},
+	"/template-large-width.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/template-large-width.php",
+		"oF": 0
+		},
 	"/template-parts/card.php": {
 		"cB": 0,
 		"ft": 8192,
