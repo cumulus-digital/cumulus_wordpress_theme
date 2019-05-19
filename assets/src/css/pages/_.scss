@@ -171,11 +171,6 @@ main.page {
 			color: #fff;
 		}
 
-		.vertical-center-column-content {
-			& > * {
-				align-items: center;
-			}
-		}
 	}
 
 	@at-root body.full-width & .row-container {
