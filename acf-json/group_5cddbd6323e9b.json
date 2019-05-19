@@ -1,6 +1,6 @@
 {
     "key": "group_5cddbd6323e9b",
-    "title": "Card Display Options",
+    "title": "Display Cards",
     "fields": [
         {
             "key": "field_5cddbd6931ced",
@@ -432,6 +432,6 @@
     "instruction_placement": "field",
     "hide_on_screen": "",
     "active": 1,
-    "description": "Display options for pages in the Cumulus theme.",
-    "modified": 1558276420
+    "description": "Display options for pages added as cards to the bottom of this page.",
+    "modified": 1558277854
 }

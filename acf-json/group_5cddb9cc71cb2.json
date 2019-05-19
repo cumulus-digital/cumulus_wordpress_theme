@@ -1,6 +1,6 @@
 {
     "key": "group_5cddb9cc71cb2",
-    "title": "Card Options",
+    "title": "This Page's Card",
     "fields": [
         {
             "key": "field_5cddb9d2775eb",
@@ -52,11 +52,13 @@
                 "param": "post_type",
                 "operator": "==",
                 "value": "page"
-            },
+            }
+        ],
+        [
             {
-                "param": "page_type",
+                "param": "post_type",
                 "operator": "==",
-                "value": "child"
+                "value": "post"
             }
         ]
     ],
@@ -67,6 +69,6 @@
     "instruction_placement": "label",
     "hide_on_screen": "",
     "active": 1,
-    "description": "How to display the card for this subpage.",
-    "modified": 1558277087
+    "description": "How to display the card for this page.",
+    "modified": 1558277877
 }
