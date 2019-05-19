@@ -86,6 +86,9 @@
 			@media (max-width: map-deep($widths, "medium")) {
 				padding: 3% 5% 0;
 
+				&:first-child, &:last-child {
+					padding: 3% 5% 0;
+				}
 				&:last-child {
 					padding-bottom: 4%;
 				}
