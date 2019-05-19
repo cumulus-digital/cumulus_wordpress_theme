@@ -19,6 +19,7 @@ $header_image_id = false;
 			'background_position' => get_arr_val($custom_fields, 'card_section_background_image_position'),
 			'image_display' => get_arr_val($custom_fields, 'card_display_type'),
 			'links' => get_arr_val($custom_fields, 'card_links'),
+			'show_link_text' => get_arr_val($custom_fields, 'cards_display_link_label'),
 			'link_label' => get_arr_val($custom_fields, 'card_link_label'),
 			'show_title' => get_arr_val($custom_fields, 'cards_display_title'),
 			'show_excerpt' => get_arr_val($custom_fields, 'cards_display_excerpt'),

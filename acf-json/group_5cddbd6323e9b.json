@@ -230,6 +230,39 @@
             "ui_off_text": ""
         },
         {
+            "key": "field_5ce16887905ee",
+            "label": "",
+            "name": "cards_display_link",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5cddbd6931ced",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_5cdf547bfc8d9",
+                        "operator": "!=empty"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Show Link Text",
+            "default_value": 1,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
             "key": "field_5cddbffdcdd86",
             "label": "Card Link Label",
             "name": "card_link_label",
@@ -248,6 +281,13 @@
                     {
                         "field": "field_5cdf547bfc8d9",
                         "operator": "!=empty"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_5ce16887905ee",
+                        "operator": "==",
+                        "value": "1"
                     }
                 ]
             ],
@@ -393,5 +433,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "Display options for pages in the Cumulus theme.",
-    "modified": 1558275630
+    "modified": 1558276315
 }
