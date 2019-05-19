@@ -5,11 +5,13 @@ namespace CumulusTheme;
 <?php
 	$card_options = \get_query_var('card_options');
 	$children = new \WP_Query(array(
-		'post_parent' => \get_the_ID(),
-		'post_type'   => 'page', 
+		'post_parent'    => \get_the_ID(),
+		'post_type'      => 'page', 
 		'posts_per_page' => -1,
-		'post_status' => 'publish',
-		'orderby'     => 'menu_order',
+		'post_status'    => 'publish',
+		'orderby'        => 'menu_order',
+		'order'          => 'ASC',
+		'ignore_sticky_posts' => true
 	));
 ?>
 <?php if ($children->have_posts()): ?>
