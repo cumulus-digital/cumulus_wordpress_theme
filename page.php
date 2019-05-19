@@ -85,13 +85,12 @@ $header_image_id = false;
 
 					</header>
 				<?php endif ?>
+				<?php \edit_post_link('Edit this page') ?>
 				<div class="row-container">
 
 					<div class="body">
 						<?php \the_content() ?>
 					</div>
-
-					<?php \edit_post_link('Edit this page') ?>
 
 				</div>
 
