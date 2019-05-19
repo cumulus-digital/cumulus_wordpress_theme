@@ -100,9 +100,18 @@ $header_image_id = false;
 				<?php endif ?>
 
 				<?php if (get_arr_val($custom_fields, 'footer_page')): ?>
-					<?php foreach(get_arr_val($custom_fields, 'footer_page') as $footer_page): ?>
-						<?php echo \apply_filters('the_content', \get_the_content(null, null, $footer_page->ID)) ?>
-					<?php endforeach ?>
+					
+					<?php
+						$footer_pages = new \WP_Query([
+							'post_type' => 'page',
+							'post__in' => (array) get_arr_val($custom_fields, 'footer_page'),
+							'ignore_sticky_posts' => true
+						]);
+					?>
+					<?php while($footer_pages->have_posts()): $footer_pages->the_post() ?>
+						<?php \the_content() ?>
+					<?php endwhile ?>
+
 				<?php endif ?>
 
 				<?php if (get_arr_val($custom_fields, 'show_listen_now_footer')): ?>
