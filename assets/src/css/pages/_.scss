@@ -166,6 +166,16 @@ main.page {
 			margin-left: -50vw;
 			margin-right: -50vw;
 		}
+
+		.has-text-color.has-white-color {
+			color: #fff;
+		}
+
+		.vertical-center-column-content {
+			& > * {
+				align-items: center;
+			}
+		}
 	}
 
 	@at-root body.full-width & .row-container {
