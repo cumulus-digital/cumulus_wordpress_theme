@@ -224,6 +224,12 @@ main.page {
 			}
 		}
 
+		// Kadence block top divider fix on mobile
+		@media (max-width: map-deep($widths, 'small')) {
+			.kt-row-layout-top-sep {
+				top: -0.1%;
+			}
+		}
 
 	}
 
