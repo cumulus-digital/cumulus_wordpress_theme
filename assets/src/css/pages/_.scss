@@ -184,6 +184,10 @@ main.page {
 			font-size: 1.5em;
 		}
 
+		.ugb-feature-grid .ugb-feature-grid__item {
+			padding: 1em !important;
+		}
+
 	}
 
 	@at-root body.full-width & .row-container {
