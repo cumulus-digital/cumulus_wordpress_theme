@@ -13,6 +13,7 @@ $header_image_id = false;
 		$card_options = array(
 			'show' => get_arr_val($custom_fields, 'show_subpages_as_cards'),
 			'manual_page_ids' => get_arr_val($custom_fields, 'manual_card_page_ids'),
+			'columns' => get_arr_val($custom_fields, 'cards_columns'),
 			'background_color' => get_arr_val($custom_fields, 'card_section_background_color'),
 			'background_image' => get_arr_val($custom_fields, 'card_section_background_image'),
 			'background_position' => get_arr_val($custom_fields, 'card_section_background_image_position'),

@@ -16,6 +16,50 @@
 		padding: 0.5em;
 	}
 
+	&.one-columns .card {
+		max-width: calc(100vw - 3em);
+	}
+	&.two-columns .card {
+		max-width: calc(50vw - 3em);
+	}
+	&.three-columns .card {
+		max-width: calc(33vw - 3em);
+	}
+	&.four-columns .card {
+		max-width: calc(25vw - 3em);
+	}
+	&.five-columns .card {
+		max-width: calc(20vw - 3em);
+	}
+	&.six-columns .card {
+		max-width: calc(16.6666666667vw - 3em);
+	}
+	@media (max-width: map-deep($widths, 'medium')) {
+		&.one-columns,
+		&.two-columns,
+		&.three-columns,
+		&.four-columns,
+		&.five-columns,
+		&.six-columns {
+			.card {
+				max-width: calc(50vw - 3em);
+				font-size: 0.75em;
+			}
+		}
+	}
+	@media (max-width: map-deep($widths, 'small')) {
+		&.one-columns,
+		&.two-columns,
+		&.three-columns,
+		&.four-columns,
+		&.five-columns,
+		&.six-columns {
+			.card {
+				max-width: calc(100vw - 3em);
+			}
+		}
+	}
+
 	.card {
 		display: grid;
 		flex-grow: 1;

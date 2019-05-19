@@ -15,7 +15,7 @@ namespace CumulusTheme;
 <?php if ($children->have_posts()): ?>
 
 	<section
-		class="cards square"
+		class="cards square <?php echo $card_options['columns'] . '-columns' ?>"
 		style="<?php
 			if ($card_options['background_color']) {
 				echo 'background-color:' . $card_options['background_color'] .';';
