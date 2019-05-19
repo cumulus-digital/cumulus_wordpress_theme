@@ -184,8 +184,10 @@ main.page {
 			font-size: 1.5em;
 		}
 
-		.circle-mask {
+		figure.circle-mask img,
+		img.circle-mask {
 			border-radius: 100%;
+			overflow: hidden;
 		}
 
 		.ugb-feature-grid .ugb-feature-grid__item {
