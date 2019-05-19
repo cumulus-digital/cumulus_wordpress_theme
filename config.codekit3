@@ -1357,20 +1357,20 @@
 		"oF": 0,
 		"oS": 3
 		},
-	"/template-full_width-padded.php": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/template-full_width-padded.php",
-		"oF": 0
-		},
 	"/template-full_width.php": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/template-full_width.php",
+		"oF": 0
+		},
+	"/template-full_width_padded.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/template-full_width_padded.php",
 		"oF": 0
 		},
 	"/template-large-width.php": {
