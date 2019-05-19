@@ -63,29 +63,30 @@ $header_image_id = false;
 						<header>
 					<?php endif ?>
 
-						<span>
-							<?php $parent = $post->post_parent ? \get_post($post->post_parent) : false ?>
-							<?php if ($parent): ?>
-								<?php $parent_alt_title = \get_field('alt_title', $parent->ID) ?>
-								<h2>
-									<a href="<?php echo \get_permalink($parent) ?>">
-										<img src="<?php echo \get_template_directory_uri() ?>/assets/prod/images/arrow-circle-lightblue-left.svg" class="arrow">
-										<?php echo empty($parent_alt_title) ? \esc_html($parent->post_title) : \esc_html($parent_alt_title) ?>
-									</a>
-								</h2>
+					<span>
+						<?php $parent = $post->post_parent ? \get_post($post->post_parent) : false ?>
+						<?php if ($parent): ?>
+							<?php $parent_alt_title = \get_field('alt_title', $parent->ID) ?>
+							<h2>
+								<a href="<?php echo \get_permalink($parent) ?>">
+									<img src="<?php echo \get_template_directory_uri() ?>/assets/prod/images/arrow-circle-lightblue-left.svg" class="arrow">
+									<?php echo empty($parent_alt_title) ? \esc_html($parent->post_title) : \esc_html($parent_alt_title) ?>
+								</a>
+							</h2>
+						<?php endif ?>
+						<h1>
+							<?php if (empty(get_arr_val($custom_fields, 'alt_title'))): ?>
+								<?php \the_title() ?>
+							<?php else: ?>
+								<?php echo \esc_html(get_arr_val($custom_fields, 'alt_title')) ?>
 							<?php endif ?>
-							<h1>
-								<?php if (empty(get_arr_val($custom_fields, 'alt_title'))): ?>
-									<?php \the_title() ?>
-								<?php else: ?>
-									<?php echo \esc_html(get_arr_val($custom_fields, 'alt_title')) ?>
-								<?php endif ?>
-							</h1>
-						</span>
+						</h1>
+					</span>
 
-					</header>
+					<?php \edit_post_link('Edit this page') ?>
+
+				</header>
 				<?php endif ?>
-				<?php \edit_post_link('Edit this page') ?>
 				<div class="row-container">
 
 					<div class="body">

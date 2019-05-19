@@ -86,7 +86,7 @@ main {
 	background: #fff;
 }
 
-img[data-credit], .has_image[data-credit], figure.wp-block-image {
+img[data-credit], .has_image[data-credit], figure.wp-block-image, figure.wp-block-video {
 	position: relative;
 	img {
 		display: inherit;
@@ -99,6 +99,7 @@ img[data-credit], .has_image[data-credit], figure.wp-block-image {
 		position: absolute;
 		bottom: 0;
 		left: 0;
+		z-index: 2;
 
 		padding: .75em .9em;
 		margin: 0;
@@ -106,12 +107,16 @@ img[data-credit], .has_image[data-credit], figure.wp-block-image {
 		font-size: 0.4rem;
 	}
 }
-figure.wp-block-image:after {
+figure.wp-block-image:after,
+figure.wp-block-video:after {
 	display: none;
+}
+figure.wp-block-video:after {
+	bottom: auto;
+	top: 0;
 }
 
 .post-edit-link {
-	float: right;
 	background: #666;
 	color: #fff;
 
@@ -120,7 +125,7 @@ figure.wp-block-image:after {
 	text-decoration: none;
 	text-transform: uppercase;
 
-	padding: .25em .5em;
+	padding: .5em .6em;
 
 	&:hover {
 		background: map-deep($colors, "brand");

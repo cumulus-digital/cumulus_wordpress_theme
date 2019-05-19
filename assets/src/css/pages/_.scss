@@ -1,7 +1,14 @@
 main.page {
 
 	header {
+		position: relative;
 		margin: 4vh 0 7vh;
+
+		.post-edit-link {
+			position: absolute;
+			top: 0;
+			right: 0;
+		}
 
 		span {
 			display: grid;
@@ -15,6 +22,13 @@ main.page {
 			background-size: cover;
 			width: 100%;
 			display: flex;
+
+			.post-edit-link {
+				position: absolute;
+				bottom: -2em;
+				top: auto;
+				z-index: 20;
+			}
 
 			& > * {
 				align-self: center;
