@@ -59,10 +59,13 @@ p {
 }
 
 a {
+	color: map-deep($colors, 'brand');
+
 	img {
 		border: 0;
 	}
 	&:focus {
+		color: map-deep($colors, 'highlight');
 		outline: 0;
 	}
 }
