@@ -120,6 +120,7 @@ main.page {
 
 	.body {
 		margin-bottom: 1em;
+		line-height: 1.25;
 
 		p:last-child {
 			margin-bottom: 0;
@@ -127,6 +128,7 @@ main.page {
 
 		h1, h2, h3, h4 {
 			font-weight: bold;
+			line-height: 1.2;
 			margin: 0 0 0.5em;
 		}
 		h1 {
