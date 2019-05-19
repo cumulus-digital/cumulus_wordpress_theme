@@ -60,6 +60,11 @@
 		}
 	}
 
+	&.no-link-label .card {
+		padding: 0;
+	}
+
+
 	.card {
 		display: grid;
 		flex-grow: 1;
