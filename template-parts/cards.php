@@ -15,7 +15,7 @@ namespace CumulusTheme;
 <?php if ($children->have_posts()): ?>
 
 	<section
-		class="cards square <?php echo $card_options['columns'] . '-columns' ?> <?php echo $card_options['show_link_label'] ?: 'no-link-label' ?>"
+		class="cards square <?php echo $card_options['columns'] . '-columns' ?> <?php echo $card_options['show_link_label'] === false ? 'no-link-label' : '' ?>"
 		style="<?php
 			if ($card_options['background_color']) {
 				echo 'background-color:' . $card_options['background_color'] .';';

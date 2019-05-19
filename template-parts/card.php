@@ -41,7 +41,7 @@ $custom_fields = \get_fields();
 			</div>
 		<?php endif ?>
 
-		<?php if ($card_options['links'] && $card_options['show_link_text']): ?>
+		<?php if ($card_options['links'] && $card_options['show_link_label']): ?>
 
 			<div class="permalink">
 				<span>
