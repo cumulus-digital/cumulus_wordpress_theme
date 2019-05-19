@@ -64,7 +64,7 @@ a {
 	img {
 		border: 0;
 	}
-	&:focus {
+	&:hover, &:focus {
 		color: map-deep($colors, 'highlight');
 		outline: 0;
 	}

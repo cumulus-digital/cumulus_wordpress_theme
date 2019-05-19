@@ -204,9 +204,26 @@ main.page {
 			overflow: hidden;
 		}
 
+		// Fix padding on UGB Cards
 		.ugb-feature-grid .ugb-feature-grid__item {
 			padding: 1em !important;
 		}
+
+		// RSS Aggregator styles
+		.wp-rss-aggregator {
+			font-size: 0.8em;
+
+			ul {
+				list-style: none;
+				margin: 0;
+				padding: 0;
+			}
+
+			.feed-source {
+				display: none;
+			}
+		}
+
 
 	}
 
