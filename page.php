@@ -101,12 +101,12 @@ $header_image_id = false;
 
 				<?php if (get_arr_val($custom_fields, 'footer_page')): ?>
 					<?php foreach(get_arr_val($custom_fields, 'footer_page') as $footer_page): ?>
-						<?php echo \get_page($footer_page->ID, OBJECT, 'display')->post_content ?>
+						<?php echo \apply_filters('the_content', \get_the_content(null, null, $footer_page->ID)) ?>
 					<?php endforeach ?>
 				<?php endif ?>
 
 				<?php if (get_arr_val($custom_fields, 'show_listen_now_footer')): ?>
-					<?php \get_template_part('template-parts/page_footer', 'listen') ?>
+					<?php echo \get_template_part('template-parts/page_footer', 'listen') ?>
 				<?php endif ?>
 
 			</article>
