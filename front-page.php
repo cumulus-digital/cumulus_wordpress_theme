@@ -4,12 +4,14 @@ namespace CumulusTheme;
 \get_header();
 $custom_fields = \get_fields();
 $header_videos = array();
-foreach($custom_fields as $key => $field) {
-	if (
-		(strstr($key, 'header_video_id') || strstr($key, 'header_video_alt')) &&
-		! empty($field)
-	) {
-		$header_videos[$key] = $field;
+if ($custom_fields) {
+	foreach($custom_fields as $key => $field) {
+		if (
+			(strstr($key, 'header_video_id') || strstr($key, 'header_video_alt')) &&
+			! empty($field)
+		) {
+			$header_videos[$key] = $field;
+		}
 	}
 }
 ?>
