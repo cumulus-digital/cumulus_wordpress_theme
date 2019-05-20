@@ -56,7 +56,7 @@
 
 
 	// if admin bar is visible, move us down a bit
-	@at-root body.admin-bar & {
+	body.admin-bar & {
 
 		top: 32px;
 		

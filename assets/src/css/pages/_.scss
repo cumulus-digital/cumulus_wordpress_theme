@@ -242,17 +242,17 @@ main.page {
 
 	}
 
-	@at-root body.full-width & .row-container {
+	body.full-width & .row-container {
 		margin-left: 0;
 		margin-right: 0;
 		padding-left: 0;
 		padding-right: 0;
 		max-width: 100%;
 	}
-	@at-root body.full-width-padded & .row-container {
+	body.full-width-padded & .row-container {
 		max-width: 100%;
 	}
-	@at-root body.large-width & .row-container {
+	body.large-width & .row-container {
 		max-width: map-deep($widths, 'max') * 1.5;
 	}
 

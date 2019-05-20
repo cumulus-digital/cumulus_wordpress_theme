@@ -112,11 +112,13 @@
 
 		img {
 			display: block;
+			align-self: start;
 			max-width: calc(100% + 2px);
 			height: auto;
 			margin: 0 0 1em;
 
 			&.icon {
+				align-self: center;
 				max-width: 50%;
 				border-radius: 50%;
 				margin: 1em auto;
