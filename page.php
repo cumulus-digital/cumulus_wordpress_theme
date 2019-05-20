@@ -95,7 +95,7 @@ $header_image_id = false;
 
 				</div>
 
-				<?php if ($card_options['show']): ?>
+				<?php if ($card_options['show'] || $card_options['manual_page_ids']): ?>
 					<?php \get_template_part('template-parts/cards') ?>
 				<?php endif ?>
 
