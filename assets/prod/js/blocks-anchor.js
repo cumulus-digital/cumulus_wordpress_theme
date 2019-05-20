@@ -1,0 +1,2 @@
+!function(){"use strict";var n,r,e;n=window.wp.blocks,r=window.wp.element.createElement,e={backgroundColor:"#DDD",borderRadius:"3px",color:"#888",padding:"5px",textAlign:"center"},n.registerBlockType("cumulus-gutenberg/anchor",{title:"Anchor",icon:{src:"admin-links",foreground:"#3399cc"},category:"layout",supports:{anchor:!0},edit:function(){return r("div",{style:e},"Anchor")},save:function(){return r("div",{class:"cm-anchor"},"")}})}();
+//# sourceMappingURL=blocks-anchor.js.map

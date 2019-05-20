@@ -25,6 +25,14 @@
 		"oAP": "/.gitignore",
 		"oF": 0
 		},
+	"/404.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/404.php",
+		"oF": 0
+		},
 	"/acf-json": {
 		"ft": 65536,
 		"oA": 1,
@@ -187,6 +195,25 @@
 		"oIPL": 0,
 		"opt": 0,
 		"q": 65
+		},
+	"/assets/prod/js/blocks-anchor.js": {
+		"bF": 4,
+		"ft": 64,
+		"ma": 1,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/assets/prod/js/blocks-anchor.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/prod/js/blocks-anchor.js.map": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/assets/prod/js/blocks-anchor.js.map",
+		"oF": 0
 		},
 	"/assets/prod/js/blocks-station_finder.js": {
 		"bF": 4,
@@ -600,6 +627,17 @@
 		"oIPL": 0,
 		"opt": 1,
 		"q": 65
+		},
+	"/assets/src/js/blocks-anchor.js": {
+		"bF": 4,
+		"ft": 64,
+		"ma": 1,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/assets/prod/js/blocks-anchor.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
 		},
 	"/assets/src/js/blocks-station_finder.js": {
 		"bF": 4,

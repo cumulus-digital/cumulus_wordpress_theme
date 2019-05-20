@@ -136,6 +136,12 @@ figure.wp-block-video figcaption {
 	}
 }
 
+.cm-anchor {
+	position: absolute;
+	left: 0;
+	top: -$masthead-height;
+}
+
 #wpadminbar {
 	position: fixed !important;
 }

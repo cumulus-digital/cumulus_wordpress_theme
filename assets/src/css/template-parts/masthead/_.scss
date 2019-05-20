@@ -1,5 +1,6 @@
 .masthead {
 
+	/*
 	background: linear-gradient(
 		to bottom,
 		rgba(map-deep($colors, "brand"),1) 0%,
@@ -7,6 +8,8 @@
 		rgba(map-deep($colors, "brand"),0) 100%
 	);
 	box-shadow: 0 0 10px rgba(0,0,0,0);
+	*/
+	background: transparent;
 
 	position: fixed;
 	top: 0;
@@ -28,11 +31,13 @@
 		width: 100%;
 		height: 100%;
 
-		background: map-deep($colors, 'brand');
+		//background: map-deep($colors, 'brand');
+		background: #fff;
 
 		opacity: 0;
 
-		transition: opacity 0.3s;
+		//transition: opacity 0.3s;
+		transition: opacity 0.2s;
 	}
 
 	@at-root body.admin-bar & {
@@ -45,11 +50,19 @@
 
 	}
 
-	@media (max-width: map-deep($widths, "medium")) {
-		background: map-deep($colors, "brand");
+	@at-root body.post_header_image & {
+		background: linear-gradient(
+			to bottom,
+			rgba(255,255,255,1) 0%,
+			rgba(255,255,255,0.7) 100%
+		);
 	}
 
-	&.menu-active, &.switch, &.dark {
+	@media (max-width: map-deep($widths, "medium")) {
+		//background: map-deep($colors, "brand");
+	}
+
+	&.menu-active, &.switch {
 		box-shadow: 0 0 10px rgba(0,0,0,0.2);
 	
 		&::before {
@@ -89,7 +102,8 @@
 
 		a {
 			display: block;
-			background: url("../images/cumulus-logo-white-full.svg") no-repeat top left;
+			//background: url("../images/cumulus-logo-white-full.svg") no-repeat top left;
+			background: url("../images/cumulus-logo-blue-full.svg") no-repeat top left;
 			height: 100%;
 			width: 100%;
 		}
@@ -119,11 +133,12 @@
 			position: absolute;
 			right: 100%;
 
-			color: #fff;
+			//color: #fff;
+			color: #888;
 			font-size: 12px;
 			font-weight: bold;
 			text-transform: uppercase;
-			text-shadow: 1px 1px 0 rgba(0,0,0,0.25);
+			//text-shadow: 1px 1px 0 rgba(0,0,0,0.25);
 		}
 	}
 

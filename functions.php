@@ -322,6 +322,16 @@ function setupGutenberg() {
     );
 	$custom_vars = array( 'uri' => \get_stylesheet_directory_uri() );
 	\wp_localize_script( 'cumulus-gutenberg/station-finder', 'theme_vars', $custom_vars );
+
+	// Custom blocks
+	\wp_enqueue_script(
+        'cumulus-gutenberg/anchor', // Handle.
+        get_template_directory_uri() . '/assets/prod/js/blocks-anchor.js',
+        array('wp-blocks', 'wp-element')
+    );
+//	$custom_vars = array( 'uri' => \get_stylesheet_directory_uri() );
+//	\wp_localize_script( 'cumulus-gutenberg/station-finder', 'theme_vars', $custom_vars );
+
 }
 \add_action('enqueue_block_editor_assets', ns('setupGutenberg'));
 
