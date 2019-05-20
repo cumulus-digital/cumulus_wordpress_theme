@@ -21,7 +21,7 @@ namespace CumulusTheme;
 			</nav>
 
 			<nav class="social">
-
+				<?php social_menu() ?>
 			</nav>
 
 			<div class="copyright">

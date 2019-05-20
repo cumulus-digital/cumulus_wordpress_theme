@@ -163,7 +163,8 @@ function theme_setup() {
 
 	\register_nav_menus(array(
 		'header-menu' => __('Header Menu'),
-		'footer-menu' => __('Footer Menu')
+		'footer-menu' => __('Footer Menu'),
+		'social-menu' => __('Social Menu')
 	));
 
 	// Add theme support for Custom Logo.
@@ -388,6 +389,26 @@ function footer_menu() {
 		'after'           => '',
 		'link_before'     => '',
 		'link_after'      => '',
+		'items_wrap'      => '<ul>%3$s</ul>',
+		'depth'           => 0,
+		'walker'          => new MenuWalker
+	));
+}
+function social_menu() {
+	\wp_nav_menu(array(
+		'theme_location'  => 'social-menu',
+		'menu'            => '',
+		'container'       => '',
+		'container_class' => 'menu-{menu slug}-container',
+		'container_id'    => '',
+		'menu_class'      => 'menu',
+		'menu_id'         => '',
+		'echo'            => true,
+		'fallback_cb'     => 'wp_page_menu',
+		'before'          => '',
+		'after'           => '',
+		'link_before'     => '<span>',
+		'link_after'      => '</span>',
 		'items_wrap'      => '<ul>%3$s</ul>',
 		'depth'           => 0,
 		'walker'          => new MenuWalker

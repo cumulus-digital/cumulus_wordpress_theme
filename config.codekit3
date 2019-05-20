@@ -264,6 +264,19 @@
 		"oAP": "/assets/prod/js/station-finder.js.map",
 		"oF": 0
 		},
+	"/assets/src/css/_fonts.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "/assets/prod/css/_fonts.css",
+		"oF": 0,
+		"oS": 3,
+		"uL": 1
+		},
 	"/assets/src/css/_functions.scss": {
 		"aP": 1,
 		"bl": 0,
@@ -468,6 +481,19 @@
 		"ma": 1,
 		"oA": 1,
 		"oAP": "/assets/prod/css/template-parts/masthead/menu.css",
+		"oF": 0,
+		"oS": 3,
+		"uL": 1
+		},
+	"/assets/src/css/template-parts/social-nav.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "/assets/prod/css/template-parts/social-nav.css",
 		"oF": 0,
 		"oS": 3,
 		"uL": 1
@@ -805,6 +831,48 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/assets/static/favicon/site.webmanifest",
+		"oF": 0
+		},
+	"/assets/static/social/fa-social.eot": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/assets/static/social/fa-social.eot",
+		"oF": 0
+		},
+	"/assets/static/social/fa-social.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 0,
+		"oAP": "/assets/static/social/fa-social.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"/assets/static/social/fa-social.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/assets/static/social/fa-social.ttf",
+		"oF": 0
+		},
+	"/assets/static/social/fa-social.woff": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/assets/static/social/fa-social.woff",
+		"oF": 0
+		},
+	"/assets/static/social/fa-social.woff2": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/assets/static/social/fa-social.woff2",
 		"oF": 0
 		},
 	"/browserify.js": {

@@ -1,0 +1,88 @@
+nav.social {
+	
+	justify-self: center;
+
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+
+		li {
+			display: inline-block;
+			margin: 0;
+			padding: 0;			
+		}
+	}
+
+	a {
+		display: block;
+		margin-right: 0.25em;
+
+		color: #aaa;
+
+		font-family: 'fa-social';
+		font-size: 1.5rem;
+		text-decoration: none;
+
+		transition: color 0.2s;
+
+		&:hover {
+			color: #fff;
+			text-decoration: none;
+		}
+
+		span {
+			display: none;
+
+			&:before {
+				display: block;
+			}
+		}
+
+		&[href*="facebook.com"]:before,
+		&[href*="fb.me"]:before {
+			content: '\f230';
+		}
+
+		&[href*="twitter.com"]:before,
+		&[href*="t.co"]:before {
+			content: '\f099';
+		}
+
+		&[href*="youtube.com"]:before,
+		&[href*="youtu.be"]:before {
+			content: '\f16a';
+		}
+
+		&[href*="vimeo.com"]:before {
+			content: '\f16a';
+		}
+
+		&[href*="instagram.com"]:before,
+		&[href*="instagr.am"]:before {
+			content: '\f16d';
+		}
+
+		&[href*="tumblr.com"]:before,
+		&[href*="tmblr.co"]:before {
+			content: '\f173';
+		}
+
+		&[href*="skype.com"]:before {
+			content: '\f17e';
+		}
+
+		&[href*="spotify.com"]:before,
+		&[href*="spoti.fi"]:before,
+		&[href*="sptfy.com"]:before {
+			content: '\f1bc';
+		}
+
+		&[href*="linkedin.com"]:before,
+		&[href*="Lnkd.in"]:before {
+			content: '\f30c';
+		}
+
+	}
+
+}
