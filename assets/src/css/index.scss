@@ -137,9 +137,8 @@ figure.wp-block-video figcaption {
 }
 
 .cm-anchor {
-	position: absolute;
-	left: 0;
-	top: -$masthead-height;
+	position: relative;
+	top: -$masthead-height*1.5;
 }
 
 #wpadminbar {
