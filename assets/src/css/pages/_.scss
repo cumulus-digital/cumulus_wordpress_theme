@@ -246,6 +246,9 @@ main.page {
 	@at-root body.large-width & .row-container {
 		max-width: map-deep($widths, 'max') * 1.5;
 	}
+	@at-root body.page-no-bottom-margin & .body {
+		margin-bottom: 0;
+	}
 
 	// Allow reversing columns on mobile
 	.reverse-columns-on-mobile {
