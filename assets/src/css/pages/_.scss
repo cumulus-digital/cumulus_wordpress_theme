@@ -213,6 +213,10 @@ main.page {
 		.kt-blocks-info-box-link-wrap {
 			text-decoration: none;
 		}
+		// Max width for kadence info block images
+		.kt-blocks-info-box-media img {
+			max-width: 100%;
+		}
 
 		// RSS Aggregator styles
 		.wp-rss-aggregator {
