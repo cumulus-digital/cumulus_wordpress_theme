@@ -209,6 +209,11 @@ main.page {
 			padding: 1em !important;
 		}
 
+		// remove underline on kadence block link wrappers
+		.kt-blocks-info-box-link-wrap {
+			text-decoration: none;
+		}
+
 		// RSS Aggregator styles
 		.wp-rss-aggregator {
 			font-size: 0.8em;
