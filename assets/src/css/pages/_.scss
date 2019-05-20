@@ -251,6 +251,13 @@ main.page {
 	.reverse-columns-on-mobile {
 		flex-wrap: wrap-reverse;
 	}
+
+	// remove bottom margin on footer pages
+	.row-container + .body,
+	.cards + .body,
+	.body + .body {
+		margin-bottom: 0;
+	}
 }
 
 @import "front-page";
