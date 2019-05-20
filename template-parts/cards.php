@@ -41,7 +41,7 @@ namespace CumulusTheme;
 				$manual_cards = new \WP_Query([
 					'post_type' => 'page',
 					'post__in' => (array) get_arr_val($card_options, 'manual_page_ids'),
-					//'orderby' => '',
+					'orderby' => 'post__in',
 					//'order' => 'ASC',
 					'ignore_sticky_posts' => true
 				]);
