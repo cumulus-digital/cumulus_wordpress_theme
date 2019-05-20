@@ -135,7 +135,7 @@
             "label": "",
             "name": "cards_display_title",
             "type": "true_false",
-            "instructions": "",
+            "instructions": "If a page has no Card Icon, this setting is ignored.",
             "required": 0,
             "conditional_logic": [
                 [
@@ -433,5 +433,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "Display options for pages added as cards to the bottom of this page.",
-    "modified": 1558277854
+    "modified": 1558364134
 }

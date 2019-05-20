@@ -22,10 +22,17 @@ $custom_fields = \get_fields();
 			<img 
 				src="<?php echo $card_image->guid ?>"
 				class="<?php echo $card_options['image_display'] ?>"
+				alt="<?php
+					if (empty(get_arr_val($custom_fields, 'alt_title'))) {
+						\the_title();
+					} else {
+						echo \esc_html(get_arr_val($custom_fields, 'alt_title'));
+					}
+				?>"
 			>
 		<?php endif ?>
 		
-		<?php if ($card_options['show_title']): ?>
+		<?php if ($card_options['show_title'] || ! $card_image_id): ?>
 			<h3>
 				<?php if (empty(get_arr_val($custom_fields, 'alt_title'))): ?>
 					<?php \the_title() ?>
