@@ -3,6 +3,25 @@
     "title": "Special Footer Options",
     "fields": [
         {
+            "key": "field_5ce2d4ac22499",
+            "label": "",
+            "name": "disable_body_margin",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Disable bottom margin on this page's body",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
             "key": "field_5cddcfbce12c4",
             "label": "",
             "name": "show_listen_now_footer",
@@ -46,5 +65,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "Built-in specialized page footers.",
-    "modified": 1558046304
+    "modified": 1558369502
 }
