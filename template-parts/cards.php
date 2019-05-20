@@ -14,7 +14,7 @@ namespace CumulusTheme;
 		'ignore_sticky_posts' => true
 	));
 ?>
-<?php if ($children->have_posts()): ?>
+<?php if ($children->have_posts() || ! empty(get_arr_val($card_options, 'manual_page_ids'))): ?>
 
 	<section
 		class="cards square <?php echo $card_options['columns'] . '-columns' ?> <?php echo $card_options['show_link_label'] === false ? 'no-link-label' : '' ?>"
