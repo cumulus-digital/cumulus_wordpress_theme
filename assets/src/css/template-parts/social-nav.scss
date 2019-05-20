@@ -18,7 +18,7 @@ nav.social {
 		display: block;
 		margin-right: 0.25em;
 
-		color: #aaa;
+		color: rgba(255,255,255,0.6);
 
 		font-family: 'fa-social';
 		font-size: 1.5rem;
@@ -27,7 +27,7 @@ nav.social {
 		transition: color 0.2s;
 
 		&:hover {
-			color: #fff;
+			color: rgba(255,255,255,1);
 			text-decoration: none;
 		}
 

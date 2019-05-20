@@ -26,11 +26,11 @@ import {throttle} from 'lodash-es';
 			mastheadHeight = monitorEls.masthead.outerHeight(),
 			detectPoint = mainPos - mastheadHeight;
 		
-		if (isHome) {
-			detectPoint = mainPos - (mastheadHeight*2);
-		}
 		if (hasFeaturedImage) {
 			detectPoint = mainPos + mastheadHeight;
+		}
+		if (isHome) {
+			detectPoint = mainPos - (mastheadHeight*1.5);
 		}
 		
 		if ( ! monitorEls.masthead.hasClass('switch') && scrollPos >= detectPoint) {

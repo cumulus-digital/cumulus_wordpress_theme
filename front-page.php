@@ -1,7 +1,6 @@
 <?php
 namespace CumulusTheme;
 
-\get_header();
 $custom_fields = \get_fields();
 $header_videos = array();
 if ($custom_fields) {
@@ -14,6 +13,8 @@ if ($custom_fields) {
 		}
 	}
 }
+if (count($header_videos)) BodyClasses::add('post_header_image');
+\get_header();
 ?>
 <section class="row hero">
 
