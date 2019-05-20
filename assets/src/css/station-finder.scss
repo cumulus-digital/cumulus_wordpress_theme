@@ -96,6 +96,7 @@
 .sf-stations {
 	display: flex;
 	flex-flow: row wrap;
+	justify-content: center;
 
 	width: 100vw;
 	position: relative;
@@ -113,7 +114,8 @@
 		align-self: auto;
 		display: block;
 		flex: auto;
-		width: 20%;
+		flex-grow: 0;
+		width: 23%;
 		margin: 0.8em;
 
 		padding: 1em;
