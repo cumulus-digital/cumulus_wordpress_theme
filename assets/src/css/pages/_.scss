@@ -79,11 +79,12 @@ main.page {
 
 		h1 {
 			position: relative;
-			color: #333;
+			color: map-deep($colors, 'highlight');
 			margin: 0 auto;
 			line-height: 1.1;
 			text-align: center;
 			
+			/*
 			&::after {
 				display: block;
 				content: "";
@@ -96,12 +97,21 @@ main.page {
 				bottom: -2vh;
 				transform: translateX(-50%);
 			}
+			*/
 		}
 
 		h2 {
+			margin: 1.5em auto 0;
+			font-size: 1.2em;
+			font-weight: bold;
+			text-align: center;
+		}
+
+		h3 {
 			margin: 0 auto 1vh;
 			color: #666;
 			font-size: 0.9em;
+			font-weight: bold;
 			text-align: center;
 
 			.arrow {

@@ -4,10 +4,29 @@
     "fields": [
         {
             "key": "field_5cdf2b8bf9051",
-            "label": "Alternate Title",
+            "label": "Alternate Display Title",
             "name": "alt_title",
             "type": "text",
             "instructions": "Display instead of the normal title",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5ce4467f806bb",
+            "label": "Subtitle",
+            "name": "subtitle",
+            "type": "text",
+            "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -120,7 +139,7 @@
             }
         ]
     ],
-    "menu_order": 1,
+    "menu_order": 0,
     "position": "side",
     "style": "default",
     "label_placement": "top",
@@ -128,5 +147,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "Display options for this page.",
-    "modified": 1558129753
+    "modified": 1558464185
 }
