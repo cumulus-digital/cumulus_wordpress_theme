@@ -9,16 +9,16 @@ html,body {
 	background: #fff;
 	color: #222;
 	font-family: 'Montserrat', sans-serif;
-	font-size: 24px;
+	font-size: 20px;
 	line-height: 1.2;
 	margin: 0;
 	padding: 0;
 
 	@media (max-width: map-deep($widths, "medium")) {
-		font-size: 22px;
+		font-size: 18px;
 	}
 	@media (max-width: map-deep($widths, "small")) {
-		font-size: 20px;
+		font-size: 16px;
 	}
 }
 
