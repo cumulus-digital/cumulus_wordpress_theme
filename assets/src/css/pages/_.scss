@@ -185,6 +185,13 @@ main.page {
 			color: #fff;
 		}
 
+		.has-cumulus-blue-background-color {
+			background: map-deep($colors, 'brand');
+		}
+		.has-cumulus-light-blue-background-color {
+			background: map-deep($colors, 'highlight');
+		}
+
 		.has-small-font-size {
 			font-size: 0.5em;
 		}

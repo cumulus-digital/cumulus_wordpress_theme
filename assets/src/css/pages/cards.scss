@@ -11,32 +11,45 @@
 	background-size: cover;
 	background-repeat: no-repeat;
 
+	font-size: 1em;
 	text-align: center;
 
 	@media (max-width: map-deep($widths, 'small')) {
 		padding: 0.5em;
 	}
 
-	&.one-columns .card {
-		flex: 0 0 calc(100% - 4em);
+	&.one-columns {
+		padding: 0 30vw 1em;
+		.card {
+			flex: 0 0 calc(100% - 4em);
+		}
 	}
-	&.two-columns .card {
-		flex: 0 0 calc(50% - 4em);
+	&.two-columns {
+		padding: 0 20vw 1em;
+		.card {
+			flex: 0 0 calc(50% - 4em);
+		}
 	}
-	&.three-columns .card {
-		flex: 0 0 calc(33% - 4em);
+	&.three-columns {
+		padding: 0 10vw 1em;
+		.card {
+			flex: 0 0 calc(33% - 4em);
+		}
 	}
-	&.four-columns .card {
-		flex: 0 0 calc(25% - 4em);
-		font-size: 0.6rem;
+	&.four-columns {
+		padding: 0 10vw 1em;
+		.card {
+			flex: 0 0 calc(25% - 4em);
+			font-size: 0.6em;
+		}
 	}
 	&.five-columns .card {
 		flex: 0 0 calc(20% - 4em);
-		font-size: 0.5rem;
+		font-size: 0.5em;
 	}
 	&.six-columns .card {
 		flex: 0 0 calc(16.666666666667% - 4em);
-		font-size: 0.4rem;
+		font-size: 0.4em;
 	}
 	@media (max-width: map-deep($widths, 'medium')) {
 		&.one-columns,
@@ -80,13 +93,13 @@
 
 		background: #fff;
 		box-shadow: 0 0 2em rgba(0,0,0,0.2);
-		border: 1px solid rgba(map-deep($colors, 'brand'), 0.2);
+		//border: 1px solid rgba(map-deep($colors, 'brand'), 0.2);
 		border-radius: 0.6em;
 
 		color: #444;
 		text-decoration: none;
 
-		font-size: 0.65rem;
+		font-size: 0.65em;
 
 		transition: transform .15s ease-in-out,
 					box-shadow .2s ease-in-out,
