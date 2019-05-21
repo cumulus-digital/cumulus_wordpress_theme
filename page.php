@@ -103,6 +103,10 @@ $header_image_id = false;
 					<?php \get_template_part('template-parts/cards') ?>
 				<?php endif ?>
 
+				<?php if (get_arr_val($custom_fields, 'show_listen_now_footer')): ?>
+					<?php echo \get_template_part('template-parts/page_footer', 'listen') ?>
+				<?php endif ?>
+
 				<?php if (get_arr_val($custom_fields, 'footer_page')): ?>
 					<?php foreach(get_arr_val($custom_fields, 'footer_page') as $footer_page): ?>
 						<?php \setup_postdata($footer_page) ?>
@@ -111,10 +115,6 @@ $header_image_id = false;
 						</div>
 					<?php endforeach ?>
 					<?php \wp_reset_postdata() ?>
-				<?php endif ?>
-
-				<?php if (get_arr_val($custom_fields, 'show_listen_now_footer')): ?>
-					<?php echo \get_template_part('template-parts/page_footer', 'listen') ?>
 				<?php endif ?>
 
 			</article>

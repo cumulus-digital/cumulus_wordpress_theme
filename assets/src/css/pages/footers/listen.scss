@@ -1,10 +1,11 @@
 .page_footer-listen {
 
 	display: flex;
+	align-items: center;
 	justify-content: center;
 	
-	background-color: map-deep($colors, 'brand');
-	background-image: url('../images/bg-listen.jpg');
+	background-color: map-deep($colors, 'light-grey');
+	//background-image: url('../images/bg-listen.jpg');
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -17,13 +18,17 @@
 
 	text-decoration: none;
 
+	& > * {
+		align-self: center;
+	}
+
 	h3 {
 		margin: 0 1em 0 0;
-		color: #fff;
+		color: map-deep($colors, 'dark-grey');
 		font-size: 2em;
 		font-weight: bold;
 		text-transform: uppercase;
-		text-shadow: 0 0 1em rgba(0,0,0,0.6);
+		//text-shadow: 0 0 1em rgba(0,0,0,0.6);
 		transition: all .15s;
 
 		@media (max-width: map-deep($widths, "small")) {
@@ -38,10 +43,10 @@
 
 		padding: .5em;
 
-		background: #fff;
+		background: map-deep($colors, 'brand');
 		border-radius: 2px;
-		color: map-deep($colors, 'brand');
-		box-shadow: 0 0 1em rgba(0,0,0,0.4);
+		color: #fff;
+		//box-shadow: 0 0 1em rgba(0,0,0,0.4);
 
 		white-space: nowrap;
 
@@ -52,12 +57,12 @@
 
 		h3 {
 			transform: scale(1.06);
-			text-shadow: 0 0 1em rgba(0,0,0,0.8);
+			//text-shadow: 0 0 1em rgba(0,0,0,0.8);
 		}
 		.button {
 			background: map-deep($colors, 'highlight');
 			color: #fff;
-			box-shadow: 0 0 1em rgba(0,0,0,0.5);
+			//box-shadow: 0 0 1em rgba(0,0,0,0.5);
 			transform: scale(1.06);
 		}
 	}
