@@ -21,7 +21,7 @@ $custom_fields = \get_fields();
 			<?php $card_image = \get_post($card_image_id) ?>
 			<img 
 				src="<?php echo $card_image->guid ?>"
-				class="<?php echo $card_options['image_display'] ?>"
+				class="card_image <?php echo $card_options['image_display'] ?>"
 				alt="<?php
 					if (empty(get_arr_val($custom_fields, 'alt_title'))) {
 						\the_title();

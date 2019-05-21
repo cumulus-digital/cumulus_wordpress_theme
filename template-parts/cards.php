@@ -30,28 +30,32 @@ namespace CumulusTheme;
 		?>"
 	>
 
-		<?php while($children->have_posts()): $children->the_post() ?>
-
-			<?php \get_template_part('template-parts/card') ?>
-
-		<?php endwhile ?>
-
-		<?php if ( ! empty(get_arr_val($card_options, 'manual_page_ids'))): ?>
-			<?php 
-				$manual_cards = new \WP_Query([
-					'post_type' => 'page',
-					'post__in' => (array) get_arr_val($card_options, 'manual_page_ids'),
-					'orderby' => 'post__in',
-					//'order' => 'ASC',
-					'ignore_sticky_posts' => true
-				]);
-			?>
-			<?php while($manual_cards->have_posts()): $manual_cards->the_post() ?>
+		<div class="cards-container">
+	
+			<?php while($children->have_posts()): $children->the_post() ?>
 
 				<?php \get_template_part('template-parts/card') ?>
 
 			<?php endwhile ?>
-		<?php endif ?>
+
+			<?php if ( ! empty(get_arr_val($card_options, 'manual_page_ids'))): ?>
+				<?php 
+					$manual_cards = new \WP_Query([
+						'post_type' => 'page',
+						'post__in' => (array) get_arr_val($card_options, 'manual_page_ids'),
+						'orderby' => 'post__in',
+						//'order' => 'ASC',
+						'ignore_sticky_posts' => true
+					]);
+				?>
+				<?php while($manual_cards->have_posts()): $manual_cards->the_post() ?>
+
+					<?php \get_template_part('template-parts/card') ?>
+
+				<?php endwhile ?>
+			<?php endif ?>
+
+		</div>
 
 	</section>
 
