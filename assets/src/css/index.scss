@@ -22,9 +22,15 @@ html,body {
 	}
 }
 
+html {
+	background: map-deep($colors, 'brand');
+}
+
 body {
 	height: 100%;
 	margin-top: $masthead-height;
+
+	background: #fff;
 
 	&.home, &.post_header_image {
 		margin-top: 0;
