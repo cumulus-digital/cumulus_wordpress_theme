@@ -35,7 +35,7 @@
 
 		// Solid blue bar if mobile
 		@media (max-width: map-deep($widths, "medium")) {
-			background: map-deep($colors, "brand");
+			//background: map-deep($colors, "brand");
 			opacity: 1;
 		}
 	}
