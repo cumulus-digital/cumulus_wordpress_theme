@@ -30,7 +30,6 @@ $header_image_id = false;
 	<?php \get_header() ?>
 
 	<main role="main" class="page <?php echo ! get_arr_val($custom_fields, 'disable_body_margin') ?: 'no-bottom-margin' ?>">
-		<?php \edit_post_link('Edit this page') ?>
 
 		<?php while (\have_posts()) : \the_post(); $top_id = \get_the_ID() ?>
 
@@ -86,6 +85,7 @@ $header_image_id = false;
 
 				</header>
 				<?php endif ?>
+				<?php \edit_post_link('Edit this page') ?>
 				<div class="row-container">
 
 					<div class="body">
