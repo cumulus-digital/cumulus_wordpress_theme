@@ -323,14 +323,26 @@ function setupGutenberg() {
 	$custom_vars = array( 'uri' => \get_stylesheet_directory_uri() );
 	\wp_localize_script( 'cumulus-gutenberg/station-finder', 'theme_vars', $custom_vars );
 
-	// Custom blocks
 	\wp_enqueue_script(
         'cumulus-gutenberg/anchor', // Handle.
         get_template_directory_uri() . '/assets/prod/js/blocks-anchor.js',
         array('wp-blocks', 'wp-element')
     );
-//	$custom_vars = array( 'uri' => \get_stylesheet_directory_uri() );
-//	\wp_localize_script( 'cumulus-gutenberg/station-finder', 'theme_vars', $custom_vars );
+
+	\wp_enqueue_script(
+        'cumulus-gutenberg/force-values', // Handle.
+        get_template_directory_uri() . '/assets/prod/js/blocks-FORCE.js',
+        array('wp-blocks', 'wp-element')
+    );
+
+    \wp_register_Style(
+    	'cumulus-gutenberg/force-values',
+    	\get_template_directory_uri() . '/assets/prod/css/flipcards.css',
+    	false,
+    	null,
+    	'all'
+    );
+    \wp_enqueue_style('cumulus-gutenberg/force-values');
 
 }
 \add_action('enqueue_block_editor_assets', ns('setupGutenberg'));
@@ -359,6 +371,17 @@ function setupGutenbergFrontend() {
 		);
 		\wp_enqueue_style('cumulus-gutenberg/station-finder/frontend');
 
+	}
+
+	if (\has_block('cumulus-gutenberg/force-values')) {
+		\wp_register_Style(
+			'cumulus-gutenberg/force-values',
+			\get_template_directory_uri() . '/assets/prod/css/flipcards.css',
+			false,
+			null,
+			'all'
+		);
+		\wp_enqueue_style('cumulus-gutenberg/force-values');
 	}
 }
 \add_action('enqueue_block_assets', ns('setupGutenbergFrontend'));
