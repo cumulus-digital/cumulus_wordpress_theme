@@ -3,6 +3,7 @@ main.page {
 	.post-edit-link {
 		position: absolute;
 		right: 0;
+		z-index: 999999;
 	}
 
 	header {
