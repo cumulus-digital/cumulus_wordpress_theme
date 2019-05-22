@@ -123,6 +123,11 @@
 			align-self: center;
 		}
 
+		&.card-no_title.card-no_excerpt.card-has_image {
+			padding-bottom: 0;
+			background-color: rgba(#fff, 0.4);
+		}
+
 		@at-root .cards a.card:hover {
 			box-shadow: 0 0 2em rgba(0,0,0,0.3);
 			border-color: rgba(map-deep($colors, 'brand'), 0.8);
@@ -136,7 +141,7 @@
 			margin: 0.5em;
 		}
 
-		img.card_image {
+		img.card-image {
 			display: block;
 			align-self: start;
 			max-width: calc(100% + 2px);
@@ -158,7 +163,7 @@
 			margin: -1px;
 		}
 
-		.card_content {
+		.card-content {
 			display: grid;
 			padding: 1em 1em 1.1em;
 			& > * {
@@ -181,7 +186,7 @@
 			margin-top: 1em;
 		}
 
-		.permalink {
+		.card-permalink {
 			display: flex;
 			align-items: center;
 			justify-content: flex-end;
@@ -190,6 +195,7 @@
 			position: absolute;
 			bottom: 1em;
 			right: 1em;
+			z-index: 2;
 
 			padding: .5em .75em;
 			overflow: hidden;
@@ -222,7 +228,7 @@
 
 			    transition: all .2s ease-in-out .2s;
 
-				@at-root .cards a.card:hover .permalink span {
+				@at-root .cards a.card:hover .card-permalink span {
 					max-width: 100%;
 					padding-right: 0.5em;
 				}
