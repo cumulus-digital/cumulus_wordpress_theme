@@ -43,22 +43,24 @@ $card_image_id = $custom_fields['card_image'];
 		<?php endif ?>
 
 		<?php if ($card_options['image_display'] !== 'image_only' || ! $card_image_id): ?>
-			<div class="card-content">
-				<?php if ($card_options['show_title'] || ! $card_image_id): ?>
-					<h3>
-						<?php if (empty(get_arr_val($custom_fields, 'alt_title'))): ?>
-							<?php \the_title() ?>
-						<?php else: ?>
-							<?php echo \esc_html(get_arr_val($custom_fields, 'alt_title')) ?>
-						<?php endif ?>
-					</h3>
-				<?php endif ?>
-				<?php if (\has_excerpt() && $card_options['show_excerpt']): ?>
-					<div class="body">
-						<?php \the_excerpt() ?>
-					</div>
-				<?php endif ?>
-			</div>
+			<?php if ( ! $card_image_id || $card_options['show_title'] || ( \has_excerpt() && $card_options['show_excerpt'] )): ?>
+				<div class="card-content">
+					<?php if ($card_options['show_title'] || ! $card_image_id): ?>
+						<h3>
+							<?php if (empty(get_arr_val($custom_fields, 'alt_title'))): ?>
+								<?php \the_title() ?>
+							<?php else: ?>
+								<?php echo \esc_html(get_arr_val($custom_fields, 'alt_title')) ?>
+							<?php endif ?>
+						</h3>
+					<?php endif ?>
+					<?php if (\has_excerpt() && $card_options['show_excerpt']): ?>
+						<div class="body">
+							<?php \the_excerpt() ?>
+						</div>
+					<?php endif ?>
+				</div>
+			<?php endif ?>
 		<?php endif ?>
 
 		<?php if ($card_options['links'] && $card_options['show_link_label'] !== false): ?>
