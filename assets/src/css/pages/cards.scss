@@ -122,9 +122,11 @@
 			align-self: center;
 		}
 
-		&.card-no_title.card-no_excerpt.card-has_image {
+		&.card-has_image.card-image-image_only  {
 			padding-bottom: 0;
-			background-color: rgba(#fff, 0.4);
+			.card-permalink {
+				background-color: rgba(#fff, 0.4);
+			}
 		}
 
 		@at-root .cards a.card:hover {
@@ -154,7 +156,7 @@
 				margin: 1em auto;
 			}
 			&.card-image-padded {
-				margin: 1em;
+				padding: 1em;
 			}
 		}
 

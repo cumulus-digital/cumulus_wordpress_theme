@@ -8,7 +8,7 @@ $card_image_id = $custom_fields['card_image'];
 <?php if ($card_options['links']): ?>
 
 	<a href="<?php \the_permalink() ?>" class="card <?php
-		echo 'card-image_' . $card_options['image_display'] . ' ';
+		echo 'card-image-' . $card_options['image_display'] . ' ';
 		echo $card_options['show_title'] ? 'card-show_title ' : 'card-no_title ';
 		echo $card_options['show_excerpt'] ? 'card-show_excerpt ' : 'card-no_excerpt ';
 		echo $card_image_id ? 'card-has_image ' : 'card-no_image ';
@@ -17,7 +17,7 @@ $card_image_id = $custom_fields['card_image'];
 <?php else: ?>
 
 	<div class="card <?php
-		echo 'card-image_' . $card_options['image_display'] . ' ';
+		echo 'card-image-' . $card_options['image_display'] . ' ';
 		echo $card_options['show_title'] ? 'card-show_title ' : 'card-no_title ';
 		echo $card_options['show_excerpt'] ? 'card-show_excerpt ' : 'card-no_excerpt ';
 		echo $card_image_id ? 'card-has_image ' : 'card-no_image ';
@@ -41,18 +41,8 @@ $card_image_id = $custom_fields['card_image'];
 				?>"
 			>
 		<?php endif ?>
-		
-		<?php 
-		if (
-			! $card_image_id ||
-			(
-				$card_options['show_title'] || 
-				(
-					\has_excerpt() && $card_options['show_excerpt']
-				)
-			)
-		):
-		?>
+
+		<?php if ($card_options['image_display'] !== 'image_only' || ! $card_image_id): ?>
 			<div class="card-content">
 				<?php if ($card_options['show_title'] || ! $card_image_id): ?>
 					<h3>
@@ -63,7 +53,6 @@ $card_image_id = $custom_fields['card_image'];
 						<?php endif ?>
 					</h3>
 				<?php endif ?>
-
 				<?php if (\has_excerpt() && $card_options['show_excerpt']): ?>
 					<div class="body">
 						<?php \the_excerpt() ?>
