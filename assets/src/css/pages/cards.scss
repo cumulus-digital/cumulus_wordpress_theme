@@ -147,19 +147,15 @@
 			height: auto;
 			margin: 0;
 
-			&.icon {
+			&.card-image-icon {
 				align-self: center;
 				max-width: 50%;
 				border-radius: 50%;
 				margin: 1em auto;
 			}
-			&.padded {
+			&.card-image-padded {
 				margin: 1em;
 			}
-		}
-
-		img.card_image:last-child {
-			margin: -1px;
 		}
 
 		.card-content {
