@@ -53,7 +53,7 @@
 		max-width: 100%;
 		padding-bottom: 100%;
 
-		transition: 0.4s;
+		transition: all 0.4s;
 		transition-delay: 0.2s;
 		transform-style: preserve-3d;
 	}
@@ -76,6 +76,8 @@
 		backface-visibility: hidden;
 		background-position: center center;
 		background-size: cover;
+
+		transition: all 0.8s;
 
 		&:first-child {
 			z-index: 2;
