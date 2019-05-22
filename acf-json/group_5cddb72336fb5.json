@@ -3,11 +3,30 @@
     "title": "Header Options",
     "fields": [
         {
+            "key": "field_5cddddc271527",
+            "label": "",
+            "name": "display_header",
+            "type": "true_false",
+            "instructions": "If unchecked, no header will be displayed at on this page.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Display Header",
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
             "key": "field_5cdf2b8bf9051",
             "label": "Alternate Display Title",
             "name": "alt_title",
             "type": "text",
-            "instructions": "Display instead of the normal title",
+            "instructions": "Override the page's display title with this.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -39,25 +58,6 @@
             "prepend": "",
             "append": "",
             "maxlength": ""
-        },
-        {
-            "key": "field_5cddddc271527",
-            "label": "",
-            "name": "display_header",
-            "type": "true_false",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "message": "Display Header",
-            "default_value": 1,
-            "ui": 1,
-            "ui_on_text": "",
-            "ui_off_text": ""
         },
         {
             "key": "field_5cddb827ef446",
@@ -143,9 +143,9 @@
     "position": "side",
     "style": "default",
     "label_placement": "top",
-    "instruction_placement": "label",
+    "instruction_placement": "field",
     "hide_on_screen": "",
     "active": 1,
-    "description": "Display options for this page.",
-    "modified": 1558464185
+    "description": "Header display options for this page.",
+    "modified": 1558553655
 }

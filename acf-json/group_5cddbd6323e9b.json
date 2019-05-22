@@ -1,7 +1,116 @@
 {
     "key": "group_5cddbd6323e9b",
-    "title": "Cards Section for this Page",
+    "title": "Card Options",
     "fields": [
+        {
+            "key": "field_5ce59d7631ce1",
+            "label": "This Page's Card",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5ce59f2b94917",
+            "label": "",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "This tab controls how <strong><em>this<\/em><\/strong> page appears when it is displayed as a card.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_5ce16bb846208",
+            "label": "Override Card Link Label",
+            "name": "override_card_link_label",
+            "type": "text",
+            "instructions": "Override the link label for this page's card only.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "Learn More",
+            "prepend": "",
+            "append": "",
+            "maxlength": 50
+        },
+        {
+            "key": "field_5cddb9d2775eb",
+            "label": "Card Image",
+            "name": "card_image",
+            "type": "image",
+            "instructions": "Display an image for this page when displayed as a card.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": 1000,
+            "max_height": 1000,
+            "max_size": "0.5",
+            "mime_types": "jpg, jpeg, gif, png, svg"
+        },
+        {
+            "key": "field_5ce59daa31ce2",
+            "label": "Card Section",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5ce59ee294916",
+            "label": "",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "This tab controls the display of <strong><em>other<\/em><\/strong> page's cards on this page.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
         {
             "key": "field_5cddbd6931ced",
             "label": "",
@@ -247,7 +356,7 @@
             ],
             "wrapper": {
                 "width": "",
-                "class": "",
+                "class": "warning",
                 "id": ""
             },
             "message": "Cards without images will always display their title.",
@@ -490,6 +599,6 @@
     "instruction_placement": "field",
     "hide_on_screen": "",
     "active": 1,
-    "description": "Display options for pages added as cards to the bottom of this page.",
-    "modified": 1558551722
+    "description": "Display options for cards.",
+    "modified": 1558553166
 }
