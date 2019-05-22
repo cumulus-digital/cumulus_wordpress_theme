@@ -82,6 +82,7 @@ main.page {
 			position: relative;
 			color: map-deep($colors, 'highlight');
 			margin: 0 auto;
+			padding: 0 1em;
 			line-height: 1.1;
 			text-align: center;
 			
@@ -103,6 +104,7 @@ main.page {
 
 		h2 {
 			margin: 1.5em auto 0;
+			padding: 0 1em;
 			font-size: 1.2em;
 			font-weight: bold;
 			text-align: center;
@@ -110,6 +112,7 @@ main.page {
 
 		h3 {
 			margin: 0 auto 1vh;
+			padding: 0 1em;
 			color: #666;
 			font-size: 0.9em;
 			font-weight: bold;
@@ -182,6 +185,10 @@ main.page {
 			right: 50%;
 			margin-left: -50vw;
 			margin-right: -50vw;
+
+			@media (max-width: map-deeep($widths, 'medium')) {
+				padding: 0 1em;
+			}
 		}
 
 		.has-text-color.has-white-color {
