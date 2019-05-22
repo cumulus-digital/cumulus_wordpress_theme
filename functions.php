@@ -85,6 +85,31 @@ function disableACFinProd() {
 }
 \add_action('acf/init', ns('disableACFinProd'));
 
+// Yoast annoyances
+if (defined('WPSEO_VERSION')) {
+	// Remove Yoast ad
+	// https://buddydev.com/remove-this-site-is-optimized-with-the-yoast-seo-plugin-vx-y-z/
+	\add_action( 'template_redirect', function () {
+
+	    if ( ! class_exists( 'WPSEO_Frontend' ) ) {
+	        return;
+	    }
+
+	    $instance = \WPSEO_Frontend::get_instance();
+
+	    // make sure, future version of the plugin does not break our site.
+	    if ( ! method_exists( $instance, 'debug_mark') ) {
+	        return ;
+	    }
+
+	    // ok, let us remove the love letter.
+	    \remove_action( 'wpseo_head', array( $instance, 'debug_mark' ), 2 );
+	}, 9999 );
+
+	// Move Yoast post box to bottom
+	add_filter( 'wpseo_metabox_prio', function() { return 'low'; } );
+}
+
 // Custom menu display
 require_once 'classes/MenuWalker.php';
 
