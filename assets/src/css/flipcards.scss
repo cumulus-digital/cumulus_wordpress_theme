@@ -18,7 +18,7 @@
 
 		color: #fff;
 
-		font-size: 0.6em;
+		font-size: 0.5em;
 		line-height: 1.2;
 
 		&:hover .flipcard-content {
@@ -40,7 +40,11 @@
 		}
 
 		@media (max-width: map-deep($widths, 'medium')) {
-			//font-size: 0.45em;
+			font-size: 0.8em;
+			line-height: 1.25;
+			p {
+				font-size: 0.95em;
+			}
 		}
 
 		@media (max-width: map-deep($widths, 'small')) {
