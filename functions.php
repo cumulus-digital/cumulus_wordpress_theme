@@ -226,6 +226,12 @@ function theme_setup() {
 	// Additional editor font styles
 	add_theme_support( 'editor-font-sizes', array(
 		array(
+			'name'      => __( 'Normal', 'cumuluswp' ),
+			'shortName' => __( 'normal', 'cumuluswp' ),
+			'size'      => 14,
+			'slug'      => 'normal'
+		),
+		array(
 			'name'      => __( 'Small', 'cumuluswp' ),
 			'shortName' => __( 'S', 'cumuluswp' ),
 			'size'      => 12,
