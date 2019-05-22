@@ -46,11 +46,13 @@ function registerRequiredPlugins() {
 			'slug'      => 'stackable-ultimate-gutenberg-blocks',
 			'required'  => false,
 		),
+		/*
 		array(
 			'name'      => 'Ultimate Addons for Gutenberg',
 			'slug'      => 'ultimate-addons-for-gutenberg',
 			'required'  => false,
 		),
+		*/
 		array(
 			'name'      => 'Kadence Blocks',
 			'slug'      => 'kadence-blocks',
@@ -107,7 +109,7 @@ if (defined('WPSEO_VERSION')) {
 	}, 9999 );
 
 	// Move Yoast post box to bottom
-	add_filter( 'wpseo_metabox_prio', function() { return 'low'; } );
+	\add_filter( 'wpseo_metabox_prio', function() { return 'low'; } );
 }
 
 // Custom menu display
@@ -122,6 +124,10 @@ function remove_identity() {
 	return '';
 }
 \add_filter('the_generator', ns('remove_identity'));
+\remove_action('wp_head', 'wlwmanifest_link'); // remove MS-live writer
+\remove_action('wp_head', 'rsd_link'); // remove Really Simple Discovery
+\remove_action( 'wp_head', 'feed_links_extra', 3 ); // remove Comments Feed
+
 
 // Add custom copyright field to Settings / General
 function register_copyright_field() {
