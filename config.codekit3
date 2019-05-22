@@ -290,6 +290,14 @@
 		"oAP": "/assets/prod/js/bundle.js.map",
 		"oF": 0
 		},
+	"/assets/prod/js/bundle.js.tmp-browserify-38760907653425391572": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/assets/prod/js/bundle.js.tmp-browserify-38760907653425391572",
+		"oF": 0
+		},
 	"/assets/prod/js/index.js": {
 		"bF": 4,
 		"ft": 64,
