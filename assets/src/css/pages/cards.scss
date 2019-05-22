@@ -151,9 +151,9 @@
 
 			&.card-image-icon {
 				align-self: center;
-				max-width: 50%;
+				max-width: 60%;
 				border-radius: 50%;
-				margin: 1em auto;
+				margin: 1em auto 0;
 			}
 			&.card-image-padded {
 				padding: 1em;
@@ -178,6 +178,7 @@
 
 		.body {
 			margin: 0;
+			font-size: 0.85em;
 		}
 		h3 + .body {
 			margin-top: 1em;
