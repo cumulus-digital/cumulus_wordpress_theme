@@ -41,7 +41,7 @@
 	}
 	&.three-columns {
 		.cards-container {
-			max-width: 950px;
+			max-width: 1000px;
 		}
 		.card {
 			flex: 0 0 calc(33% - 4em);
@@ -100,7 +100,7 @@
 		display: grid;
 		position: relative;
 		max-width: 100%;
-		margin: 1em;
+		margin: .5em;
 		padding: 0 0 3.5em;
 		overflow: hidden;
 
