@@ -228,7 +228,7 @@ function theme_setup() {
 		array(
 			'name'      => __( 'Default', 'cumuluswp' ),
 			'shortName' => __( 'default', 'cumuluswp' ),
-			'size'      => 14,
+			'size'      => 18,
 			'slug'      => 'default'
 		),
 		array(
