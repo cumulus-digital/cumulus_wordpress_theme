@@ -6,11 +6,11 @@ $custom_fields = \get_fields();
 
 <?php if ($card_options['links']): ?>
 
-	<a href="<?php \the_permalink() ?>" class="card">
+	<a href="<?php \the_permalink() ?>" class="card <php echo 'image-' . $card_options['image_display']; ?>">
 
 <?php else: ?>
 
-	<div class="card">
+	<div class="card <php echo 'image-' . $card_options['image_display']; ?>">
 
 <?php endif ?>
 

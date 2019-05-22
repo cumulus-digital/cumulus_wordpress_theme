@@ -17,7 +17,10 @@ namespace CumulusTheme;
 <?php if ($children->have_posts() || ! empty(get_arr_val($card_options, 'manual_page_ids'))): ?>
 
 	<section
-		class="cards square <?php echo $card_options['columns'] . '-columns' ?> <?php echo $card_options['show_link_label'] === false ? 'no-link-label' : '' ?>"
+		class="cards square <?php
+			echo $card_options['columns'] . '-columns ';
+			echo $card_options['show_link_label'] === false ? 'no-link-label ' : '';
+		?>"
 		style="<?php
 			if ($card_options['background_color']) {
 				echo 'background-color:' . $card_options['background_color'] .';';
