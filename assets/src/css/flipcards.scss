@@ -23,6 +23,7 @@
 
 		&:hover .flipcard-content {
 			transform: scale(1.08) rotateY(180deg);
+			transition-delay: 0s;
 			z-index: 2;
 			.flipcard-face {
 				box-shadow: 0 0 2em rgba(0,0,0,0.3);
@@ -53,6 +54,7 @@
 		padding-bottom: 100%;
 
 		transition: 0.4s;
+		transition-delay: 0.2s;
 		transform-style: preserve-3d;
 	}
 
