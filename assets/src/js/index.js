@@ -8,7 +8,7 @@ import {throttle} from 'lodash-es';
 	var isHome = ($('body').hasClass('home')) ? true : false;
 	var hasFeaturedImage = ($('body').hasClass('post_header_image')) ? true : false;
 
-	$('.hamburger').click(
+	$('.hamburger-container').click(
 		function() {
 			$('.masthead').toggleClass('menu-active');
 			$('body').toggleClass('menu-active');
