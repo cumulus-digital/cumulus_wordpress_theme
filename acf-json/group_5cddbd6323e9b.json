@@ -1,6 +1,6 @@
 {
     "key": "group_5cddbd6323e9b",
-    "title": "Display Cards",
+    "title": "Cards Section for this Page",
     "fields": [
         {
             "key": "field_5cddbd6931ced",
@@ -491,5 +491,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "Display options for pages added as cards to the bottom of this page.",
-    "modified": 1558548767
+    "modified": 1558551722
 }
