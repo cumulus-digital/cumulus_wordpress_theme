@@ -60,7 +60,7 @@
 
 		top: 32px;
 		
-		@media (max-width: map-deep($widths, "small")) {
+		@media (max-width: map-deep($widths, "medium")) {
 			top: 46px;
 		}
 
@@ -98,6 +98,11 @@
 	&.switch .logo a {
 		background: url("../images/cumulus-logo-blue-full.svg") no-repeat top left;
 	}
+	@media(max-width: map-deep($widths, 'medium')) {
+		& .logo a {
+			background: url("../images/cumulus-logo-blue-full.svg") no-repeat top left;
+		}
+	}
 	&.menu-active .logo a {
 		background: url("../images/cumulus-logo-white-full.svg") no-repeat top left;
 	}
@@ -131,6 +136,12 @@
 	&.switch .hamburger-container::before {
 		color: rgba(0,0,0,0.6);
 		text-shadow: none;
+	}
+	@media(max-width: map-deep($widths, 'medium')) {
+		& .hamburger-container::before {
+			color: rgba(0,0,0,0.6);
+			text-shadow: none;
+		}
 	}
 	&.menu-active .hamburger-container::before {
 		color: #fff;

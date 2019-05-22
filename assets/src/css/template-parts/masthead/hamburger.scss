@@ -76,6 +76,14 @@
 		box-shadow: none;
 	}
 }
+@media(max-width: map-deep($widths, 'medium')) {
+	.hamburger-inner {
+		&, &::before, &::after {
+			background-color: rgba(0,0,0,0.5);
+			box-shadow: none;
+		}
+	}
+}
 &.menu-active .hamburger-inner {
 	transform: rotate(225deg);
 	transition-delay: 0.12s;
