@@ -237,6 +237,10 @@ main.page {
 			max-width: 100%;
 			height: auto;
 		}
+		// Center aligned Stackable buttons should have center-aligned text
+		.ugb-button--align-center .ugb-button--align-center {
+			text-align: center;
+		}
 
 		// RSS Aggregator styles
 		.wp-rss-aggregator {
