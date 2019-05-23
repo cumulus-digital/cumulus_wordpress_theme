@@ -200,7 +200,7 @@
         {
             "key": "field_5cddbf577d95f",
             "label": "Card Display Type",
-            "name": "card_display_type",
+            "name": "cards_display_type",
             "type": "select",
             "instructions": "",
             "required": 0,
@@ -658,5 +658,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "Display options for cards.",
-    "modified": 1558643536
+    "modified": 1558645235
 }
