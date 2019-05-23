@@ -299,6 +299,25 @@
             "placeholder": ""
         },
         {
+            "key": "field_5ce71a33d80a2",
+            "label": "",
+            "name": "cards_display_image",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Display Image",
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
             "key": "field_5cddc04acdd87",
             "label": "",
             "name": "cards_display_title",
@@ -658,5 +677,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "Display options for cards.",
-    "modified": 1558645235
+    "modified": 1558649438
 }

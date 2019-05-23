@@ -20,6 +20,7 @@ $header_image_id = false;
 			'display_type' => get_arr_val($custom_fields, 'cards_display_type'),
 			'equal_height' => get_arr_val($custom_fields, 'cards_equal_height'),
 			'vertical_alignment' => get_arr_val($custom_fields, 'cards_vertical_alignment'),
+			'show_image' => get_arr_val($custom_fields, 'cards_display_image'),
 			'links' => get_arr_val($custom_fields, 'cards_links'),
 			'show_link_label' => get_arr_val($custom_fields, 'cards_display_link_label'),
 			'link_label' => get_arr_val($custom_fields, 'cards_link_label'),

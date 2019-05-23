@@ -26,7 +26,7 @@ $card_image_id = $custom_fields['card_image'];
 <?php endif ?>
 
 		<?php
-			if ($card_image_id):
+			if ($card_options['display_image'] && $card_image_id):
 		?>
 			<?php $card_image = \get_post($card_image_id) ?>
 			<figure
