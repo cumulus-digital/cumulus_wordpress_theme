@@ -193,15 +193,66 @@ main.page {
 			}
 		}
 
-		.has-text-color.has-white-color {
-			color: #fff;
+		.has-text-color {
+			&.has-white-color {
+				color: #fff;
+			}
+			&.has-black-color {
+				color: #000;
+			}
+			&.has-grey-color {
+				color: #888;
+			}
+			&.has-light-grey-color {
+				color: #d6d6d6;
+			}
+			&.has-cumulus-dark-grey-color {
+				color: #333;
+			}
+			&.has-cumulus-blue-color {
+				color: map-deep($colors, 'brand');
+			}
+			&.has-cumulus-light-blue-color {
+				color: map-deep($colors, 'highlight');
+			}
+			&.has-wwopn-purple-color {
+				color: #6a2774;
+			}
+			&.has-wwopn-light-purple-color {
+				color: #a33cb3;
+			}
+
 		}
 
-		.has-cumulus-blue-background-color {
-			background: map-deep($colors, 'brand');
-		}
-		.has-cumulus-light-blue-background-color {
-			background: map-deep($colors, 'highlight');
+		.has-background-color {
+			&.has-white-background-color {
+				background-color: #fff;
+			}
+			&.has-black-background-color {
+				background-color: #000;
+			}
+			&.has-grey-background-color {
+				background-color: #888;
+			}
+			&.has-light-grey-background-color {
+				background-color: #d6d6d6;
+			}
+			&.has-cumulus-dark-grey-background-color {
+				background-color: #333;
+			}
+			&.has-cumulus-blue-background-color {
+				background-color: map-deep($colors, 'brand');
+			}
+			&.has-cumulus-light-blue-background-color {
+				background-color: map-deep($colors, 'highlight');
+			}
+			&.has-wwopn-purple-background-color {
+				background-color: #6a2774;
+			}
+			&.has-wwopn-light-purple-background-color {
+				background-color: #a33cb3;
+			}
+
 		}
 
 		.has-small-font-size {
