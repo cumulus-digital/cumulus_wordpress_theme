@@ -14,10 +14,21 @@
 		position: relative;
 		display: flex;
 		flex-wrap: wrap;
-		gap: 0.8em;
 		justify-content: center;
 		width: 100%;
 		margin: 0 auto;
+
+		&.cards-height-flow {
+			&.cards-vertical_align-start {
+				align-items: start;
+			}
+			&.cards-vertical_align-center {
+				align-items: center;
+			}
+			&.cards-vertical_align-end {
+				align-items: end;
+			}
+		}
 	}
 
 	&.one-columns {
@@ -103,7 +114,7 @@
 		position: relative;
 		max-width: 100%;
 		margin: .5em;
-		padding: 0 0 3.6em;
+		padding: 0 0 4.5em;
 		overflow: hidden;
 
 		background: #fff;
@@ -124,7 +135,7 @@
 			align-self: center;
 		}
 
-		&.card-image-white_on_blue {
+		&.card-display-white_on_blue {
 			color: #fff;
 			background: map-deep($colors, 'brand');
 			.card-permalink {
@@ -132,7 +143,7 @@
 				background-color: rgba(#fff, 0.3);
 			}
 		}
-		&.card-image-white_on_light_blue {
+		&.card-display-white_on_light_blue {
 			color: #fff;
 			background: map-deep($colors, 'highlight');
 			.card-permalink {
@@ -140,7 +151,7 @@
 				background-color: rgba(#fff, 0.3);
 			}
 		}
-		&.card-image-white_on_dark_grey {
+		&.card-display-white_on_dark_grey {
 			color: #fff;
 			background: #333;
 			.card-permalink {
@@ -148,7 +159,7 @@
 			}
 		}
 
-		&.card-has_image.card-image-image_only  {
+		&.card-has_image.card-display-image_only  {
 			padding-bottom: 0;
 			.card-permalink {
 				background-color: rgba(#fff, 0.3);
@@ -168,23 +179,42 @@
 			margin: 0.5em;
 		}
 
-		img.card-image {
+		.card-image {
+			position: relative;
 			display: block;
 			align-self: start;
-			max-width: calc(100% + 2px);
-			height: auto;
+			max-width: 100%;
+			max-height: 100%;
 			margin: 0;
+			overflow: hidden;
 
-			&.card-image-icon {
-				align-self: center;
-				max-width: 60%;
-				border-radius: 10000%;
-				margin: 1em auto 0;
-			}
-			&.card-image-padded {
-				padding: 1em;
+			& img {
+				max-width: 100%;
+				height: auto;
 			}
 		}
+			&.card-display-icon {
+				.card-image {
+					align-self: center;
+					width: 60%;
+					height: 0;
+					padding-bottom: 60%;
+					border-radius: 100000%;
+					margin: 1em auto 0;
+
+						img {
+							position: absolute;
+							top: 50%;
+							left: 50%;
+							transform: translate(-50%, -50%);
+						}
+				}
+			}
+			&.card-display-padded {
+				.card-image {
+					padding: 1em;
+				}
+			}
 
 		.card-content {
 			display: grid;

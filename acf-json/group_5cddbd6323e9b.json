@@ -244,6 +244,61 @@
             "placeholder": ""
         },
         {
+            "key": "field_5ce6fffa1417e",
+            "label": "",
+            "name": "cards_equal_height",
+            "type": "true_false",
+            "instructions": "Cards in a row should all be the same height",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Equal height",
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5ce7005b1417f",
+            "label": "Card Vertical Alignment",
+            "name": "cards_vertical_alignment",
+            "type": "select",
+            "instructions": "When cards are not the same height, specify how cards <em>in each row<\/em> should vertically align.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5ce6fffa1417e",
+                        "operator": "!=",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "start": "Top",
+                "center": "Middle",
+                "end": "Bottom"
+            },
+            "default_value": [
+                "center"
+            ],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 1,
+            "ajax": 0,
+            "return_format": "value",
+            "placeholder": ""
+        },
+        {
             "key": "field_5cddc04acdd87",
             "label": "",
             "name": "cards_display_title",
@@ -369,7 +424,7 @@
         {
             "key": "field_5cddbfc3cdd85",
             "label": "",
-            "name": "card_links",
+            "name": "cards_links",
             "type": "true_false",
             "instructions": "",
             "required": 0,
@@ -435,7 +490,7 @@
         {
             "key": "field_5cddbffdcdd86",
             "label": "Card Link Label",
-            "name": "card_link_label",
+            "name": "cards_link_label",
             "type": "text",
             "instructions": "Label text for the link button at the bottom of cards.",
             "required": 0,
@@ -603,5 +658,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "Display options for cards.",
-    "modified": 1558640303
+    "modified": 1558643536
 }

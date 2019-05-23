@@ -33,7 +33,12 @@ namespace CumulusTheme;
 		?>"
 	>
 
-		<div class="cards-container">
+		<div class="cards-container <?php
+			if ( ! $card_options['equal_height']) {
+				echo 'cards-height-flow ';
+				echo 'cards-vertical_align-' . $card_options['vertical_alignment'];
+			}
+		?>">
 	
 			<?php while($children->have_posts()): $children->the_post() ?>
 
