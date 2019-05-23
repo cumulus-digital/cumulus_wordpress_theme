@@ -110,7 +110,7 @@
 		box-shadow: 0 0 2em rgba(0,0,0,0.1);
 		border-radius: 0.6em;
 
-		color: #444;
+		color: #333;
 		text-decoration: none;
 
 		font-size: 0.65em;
@@ -124,6 +124,30 @@
 			align-self: center;
 		}
 
+		&.card-image-white_on_blue {
+			color: #fff;
+			background: map-deep($colors, 'brand');
+			.card-permalink {
+				color: #fff;
+				background-color: rgba(#fff, 0.3);
+			}
+		}
+		&.card-image-white_on_light_blue {
+			color: #fff;
+			background: map-deep($colors, 'highlight');
+			.card-permalink {
+				color: #fff;
+				background-color: rgba(#fff, 0.3);
+			}
+		}
+		&.card-image-white_on_dark_grey {
+			color: #fff;
+			background: #333;
+			.card-permalink {
+				color: #fff;
+			}
+		}
+
 		&.card-has_image.card-image-image_only  {
 			padding-bottom: 0;
 			.card-permalink {
@@ -133,8 +157,7 @@
 
 		@at-root .cards a.card:hover {
 			box-shadow: 0 0 2em rgba(0,0,0,0.3);
-			border-color: rgba(map-deep($colors, 'brand'), 0.8);
-			transform: scale(1.03);
+			transform: scale(1.04);
 			transform-origin: center center;
 			z-index: 5;
 		}
@@ -173,10 +196,10 @@
 
 		h3 {
 			margin: 0;
-			font-size: 1.5em;
+			font-size: 1.6em;
 			font-weight: 400;
 			line-height: 1.1;
-			color: #333;
+			color: inherit;
 		}
 
 		.body {
@@ -205,7 +228,7 @@
 			border-radius: 2em;
 			color: map-deep($colors, 'brand');
 
-			font-size: 1.2em;
+			font-size: 1.3em;
 			line-height: 1;
 			text-align: right;
 			white-space: nowrap;
