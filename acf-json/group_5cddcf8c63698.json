@@ -20,25 +20,6 @@
             "ui": 1,
             "ui_on_text": "",
             "ui_off_text": ""
-        },
-        {
-            "key": "field_5cddcfbce12c4",
-            "label": "",
-            "name": "show_listen_now_footer",
-            "type": "true_false",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "message": "Show \"Listen Now\" Footer",
-            "default_value": 0,
-            "ui": 1,
-            "ui_on_text": "",
-            "ui_off_text": ""
         }
     ],
     "location": [
@@ -65,5 +46,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "Built-in specialized page footers.",
-    "modified": 1558369502
+    "modified": 1558650866
 }
