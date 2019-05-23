@@ -90,7 +90,6 @@ $header_image_id = false;
 
 				</header>
 				<?php endif ?>
-				<?php \edit_post_link('Edit this page') ?>
 				<div class="row-container">
 
 					<div class="body">
@@ -118,6 +117,7 @@ $header_image_id = false;
 				<?php endif ?>
 
 			</article>
+			<?php \edit_post_link('Edit this page') ?>
 
 		<?php endwhile ?>
 
