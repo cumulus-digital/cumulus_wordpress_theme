@@ -10,16 +10,13 @@
 	font-size: 1em;
 	text-align: center;
 
-	@media (max-width: map-deep($widths, 'small')) {
-		padding: 0.5em;
-	}
-
 	.cards-container {
+		position: relative;
 		display: flex;
 		flex-wrap: wrap;
 		gap: 0.8em;
 		justify-content: center;
-		max-width: 100%;
+		width: 100%;
 		margin: 0 auto;
 	}
 
@@ -28,7 +25,7 @@
 			max-width: 300px;
 		}
 		.card {
-			flex: 0 0 calc(100% - 4em);
+			flex: 0 0 calc(100% - 2em);
 		}
 	}
 	&.two-columns {
@@ -36,7 +33,7 @@
 			max-width: 800px;
 		}
 		.card {
-			flex: 0 0 calc(50% - 4em);
+			flex: 0 0 calc(50% - 2em);
 		}
 	}
 	&.three-columns {
@@ -44,7 +41,7 @@
 			max-width: 1000px;
 		}
 		.card {
-			flex: 0 0 calc(33% - 4em);
+			flex: 0 0 calc(33% - 2em);
 		}
 	}
 	&.four-columns {
@@ -52,16 +49,16 @@
 			max-width: 1300px;
 		}
 		.card {
-			flex: 0 0 calc(25% - 4em);
+			flex: 0 0 calc(25% - 2em);
 			font-size: 0.6em;
 		}
 	}
 	&.five-columns .card {
-		flex: 0 0 calc(20% - 4em);
+		flex: 0 0 calc(20% - 2em);
 		font-size: 0.5em;
 	}
 	&.six-columns .card {
-		flex: 0 0 calc(16.666666666667% - 4em);
+		flex: 0 0 calc(16.666666666667% - 2em);
 		font-size: 0.4em;
 	}
 	@media (max-width: map-deep($widths, 'medium')) {
@@ -72,9 +69,6 @@
 		&.five-columns,
 		&.six-columns {
 			padding: 0 1em 1em;
-			.card {
-				flex: 0 0 calc(50% - 2em);
-			}
 		}
 	}
 	@media (max-width: map-deep($widths, 'small')) {

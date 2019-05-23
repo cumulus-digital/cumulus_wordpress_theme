@@ -18,7 +18,7 @@
 
 		color: #fff;
 
-		font-size: 0.5em;
+		font-size: 0.75rem;
 		line-height: 1.2;
 
 		&:hover .flipcard-content {
@@ -40,16 +40,12 @@
 		}
 
 		@media (max-width: map-deep($widths, 'medium')) {
-			font-size: 0.8em;
+			font-size: 0.6rem;
 			line-height: 1.25;
-			p {
-				font-size: 0.95em;
-			}
 		}
 
 		@media (max-width: map-deep($widths, 'small')) {
 			flex: 0 0 calc(50% - 4px);
-			//font-size: 0.55em;
 		}
 	}
 
@@ -105,11 +101,10 @@
 		}
 
 		h1, h2 {
-			font-size: 1.5em !important;
+			font-size: 1.3em !important;
 			margin: 0 0 .5em !important;
 
 			@media (max-width: map-deep($widths, 'medium')) {
-				//font-size: 1.4em !important;
 				margin: 0 0 .25em !important;
 			}
 
@@ -123,6 +118,10 @@
 			padding: 0.75em 1em !important;
 
 			background-color: map-deep($colors, 'highlight');
+		}
+
+		p {
+			font-size: 1em;
 		}
 
 		.flipcard-colorwash {
