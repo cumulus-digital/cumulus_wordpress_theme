@@ -83,6 +83,14 @@
 				//flex: 0 0 calc(100% - 2em);
 			}
 		}
+		&.three-columns,
+		&.four-columns,
+		&.five-columns,
+		&.six-columns {
+			.card {
+				flex: 0 0 calc(50% - 2em);
+			}
+		}
 	}
 
 	&.no-link-label .card {
