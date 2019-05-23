@@ -105,7 +105,7 @@
 		overflow: hidden;
 
 		background: #fff;
-		box-shadow: 0 0 2em rgba(0,0,0,0.2);
+		box-shadow: 0 0 2em rgba(0,0,0,0.1);
 		border-radius: 0.6em;
 
 		color: #444;
@@ -125,7 +125,7 @@
 		&.card-has_image.card-image-image_only  {
 			padding-bottom: 0;
 			.card-permalink {
-				background-color: rgba(#fff, 0.4);
+				background-color: rgba(#fff, 0.3);
 			}
 		}
 
