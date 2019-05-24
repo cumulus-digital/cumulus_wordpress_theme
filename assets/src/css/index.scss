@@ -147,6 +147,15 @@ figure.wp-block-video figcaption {
 	top: -$masthead-height*1.5;
 }
 
+// Fix popup maker on mobile
+.pum-theme-default-theme .pum-container.pum-position-fixed {
+	top: 50% !important;
+	left: 50% !important;
+	transform: translate(-50%,-50%) !important;
+	overflow: scroll !important;
+	max-height: 90% !important;
+}
+
 #wpadminbar {
 	position: fixed !important;
 }
