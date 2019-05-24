@@ -17,7 +17,7 @@ import {throttle} from 'lodash-es';
 	$('.hamburger-container').click(toggleMainMenu);
 
 	// Close the menu if clicked on a link
-	$('.masthead nav.menu a').click(toggleMainMenu);
+	$('.masthead nav.menu a[href*="#"]').click(toggleMainMenu);
 
 	// Switch masthead when page scrolls to main el
 	var monitorEls = {
