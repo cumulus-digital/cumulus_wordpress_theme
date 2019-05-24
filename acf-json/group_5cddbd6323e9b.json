@@ -250,7 +250,21 @@
             "type": "true_false",
             "instructions": "Cards in a row should all be the same height",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5cddbd6931ced",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_5cdf547bfc8d9",
+                        "operator": "!=empty"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -305,7 +319,21 @@
             "type": "true_false",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5cddbd6931ced",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_5cdf547bfc8d9",
+                        "operator": "!=empty"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -677,5 +705,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "Display options for cards.",
-    "modified": 1558649438
+    "modified": 1558714810
 }
