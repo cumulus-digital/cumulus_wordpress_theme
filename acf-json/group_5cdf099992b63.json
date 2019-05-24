@@ -19,7 +19,7 @@
             "library": "all",
             "min_size": "",
             "max_size": 50,
-            "mime_types": "mp4, webm, ogg, avi, jpg"
+            "mime_types": "mp4, webm, ogg, avi"
         },
         {
             "key": "field_5cdf0afa90034",
@@ -45,7 +45,7 @@
             "library": "all",
             "min_size": "",
             "max_size": 50,
-            "mime_types": "mp4, webm, ogg, avi, jpg"
+            "mime_types": "mp4, webm, ogg, avi"
         },
         {
             "key": "field_5cdf121568714",
@@ -71,7 +71,7 @@
             "library": "all",
             "min_size": "",
             "max_size": 50,
-            "mime_types": "mp4, webm, ogg, avi, jpg"
+            "mime_types": "mp4, webm, ogg, avi"
         },
         {
             "key": "field_5cdf0ed0cbe4a",
@@ -110,5 +110,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "Upload a video to feature on the home page. Add multiple video types for additional browser support.",
-    "modified": 1558704450
+    "modified": 1558704669
 }
