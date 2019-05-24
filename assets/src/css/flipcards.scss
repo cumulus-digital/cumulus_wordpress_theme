@@ -85,10 +85,10 @@
 		&:first-child {
 			z-index: 2;
 			transform: rotateY(0deg);
-			background-color: map-deep($colors, 'brand');
 		}
 		&:last-child {
 			transform: rotateY(180deg);
+			background-color: map-deep($colors, 'brand');
 		}
 
 		& > * {
