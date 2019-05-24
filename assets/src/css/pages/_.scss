@@ -293,6 +293,11 @@ main.page {
 			height: auto;
 		}
 
+		// Allow audio player to get smaller
+		.wp-block-audio audio {
+			min-width: 150px;
+		}
+
 		// RSS Aggregator styles
 		.wp-rss-aggregator {
 			font-size: 0.8em;
