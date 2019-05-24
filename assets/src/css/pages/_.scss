@@ -274,6 +274,13 @@ main.page {
 			overflow: hidden;
 		}
 
+		.negative-margin-top-1em {
+			margin-top: -1em;
+		}
+		.negative-margin-top-2em {
+			margin-top: -2em;
+		}
+
 		// Fix padding on UGB Cards
 		.ugb-feature-grid .ugb-feature-grid__item {
 			padding: 1em !important;
