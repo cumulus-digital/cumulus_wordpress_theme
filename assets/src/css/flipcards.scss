@@ -87,6 +87,20 @@
 		&:first-child {
 			z-index: 2;
 			transform: rotateY(0deg);
+
+			&:after {
+				content: "";
+				position: absolute;
+				left: 50%;
+				bottom: 1em;
+				transform: translateX(-50%);
+				z-index: 2;
+				width: 2em;
+				height: 2em;
+
+				background: url("../images/arrow-circle-lightblue-right.svg");
+				background-size: 100%;
+			}
 		}
 		&:last-child {
 			transform: rotateY(180deg);

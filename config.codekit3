@@ -591,6 +591,16 @@
 		"oA": 0,
 		"oAP": "/assets/prod/images/arrow-circle-lightblue-left.svg",
 		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"/assets/src/images/arrow-circle-lightblue-right.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 0,
+		"oAP": "/assets/prod/images/arrow-circle-lightblue-right.svg",
+		"oF": 0,
 		"opt": 1,
 		"plM": 3758088159,
 		"prP": 0
