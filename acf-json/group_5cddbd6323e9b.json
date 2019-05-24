@@ -289,6 +289,22 @@
                         "field": "field_5ce6fffa1417e",
                         "operator": "!=",
                         "value": "1"
+                    },
+                    {
+                        "field": "field_5cddbd6931ced",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_5ce6fffa1417e",
+                        "operator": "!=",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_5cdf547bfc8d9",
+                        "operator": "!=empty"
                     }
                 ]
             ],
@@ -705,5 +721,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "Display options for cards.",
-    "modified": 1558714810
+    "modified": 1558715025
 }
