@@ -8,12 +8,16 @@ import {throttle} from 'lodash-es';
 	var isHome = ($('body').hasClass('home')) ? true : false;
 	var hasFeaturedImage = ($('body').hasClass('post_header_image')) ? true : false;
 
-	$('.hamburger-container').click(
-		function() {
-			$('.masthead').toggleClass('menu-active');
-			$('body').toggleClass('menu-active');
-		}
-	);
+	function toggleMainMenu() {
+		$('.masthead').toggleClass('menu-active');
+		$('body').toggleClass('menu-active');
+	}
+
+	// Open and close the menu when the hamburger is clicked
+	$('.hamburger-container').click(toggleMainMenu);
+
+	// Close the menu if clicked on a link
+	$('.masthead nav.menu a').click(toggleMainMenu);
 
 	// Switch masthead when page scrolls to main el
 	var monitorEls = {
