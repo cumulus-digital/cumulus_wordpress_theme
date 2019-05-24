@@ -36,9 +36,16 @@ function registerRequiredPlugins() {
 			'slug'      => 'safe-svg',
 			'required'  => false,
 		),
+		/*
 		array(
 			'name'      => 'Ninja Forms',
 			'slug'      => 'ninja-forms',
+			'required'  => false,
+		),
+		*/
+		array(
+			'name'      => 'Form Maker',
+			'slug'      => 'form-maker',
 			'required'  => false,
 		),
 		array(
