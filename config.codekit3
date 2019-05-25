@@ -131,6 +131,16 @@
 		"plM": 3758088159,
 		"prP": 0
 		},
+	"/assets/prod/images/arrow-circle-lightblue-right.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 0,
+		"oAP": "/assets/prod/images/arrow-circle-lightblue-right.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
 	"/assets/prod/images/bg-blue_wave.svg": {
 		"ft": 2097152,
 		"miP": 0,
@@ -288,6 +298,14 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/assets/prod/js/bundle.js.map",
+		"oF": 0
+		},
+	"/assets/prod/js/bundle.js.tmp-browserify-24305833688001143855": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/assets/prod/js/bundle.js.tmp-browserify-24305833688001143855",
 		"oF": 0
 		},
 	"/assets/prod/js/index.js": {

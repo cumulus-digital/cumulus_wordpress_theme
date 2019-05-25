@@ -8,9 +8,24 @@ import {throttle} from 'lodash-es';
 	var isHome = ($('body').hasClass('home')) ? true : false;
 	var hasFeaturedImage = ($('body').hasClass('post_header_image')) ? true : false;
 
+	var $masthead = $('.masthead'),
+		$body = $('body'),
+		killScrollTimer;
 	function toggleMainMenu() {
-		$('.masthead').toggleClass('menu-active');
-		$('body').toggleClass('menu-active');
+		$masthead.toggleClass('menu-active');
+		$body.toggleClass('menu-active');
+		if ($masthead.hasClass('menu-active')) {
+			killScrollTimer = setTimeout(function() {
+				var scrollPos = supportPageOffset ? window.pageYOffset : isCSS1Compat ? document.documentElement.scrollTop : document.body.scrollTop
+				$body.data('scrollPos', scrollPos);
+				$body.css('position', 'fixed');
+			}, 100);
+		} else {
+			clearTimeout(killScrollTimer);
+			killScrollTimer = null;
+			document.body.scrollTo(0, $body.data('scrollPos'));
+			$body.css('position', 'relative');
+		}
 	}
 
 	// Open and close the menu when the hamburger is clicked
@@ -43,7 +58,7 @@ import {throttle} from 'lodash-es';
 			monitorEls.masthead.removeClass('switch');
 		}
 	}
-	window.addEventListener('scroll', throttle(scrollPosition, 50, {leading: true, trailing: true}));
+	window.addEventListener('scroll', throttle(scrollPosition, 100, {leading: true, trailing: true}));
 	$(window).on('load', function() {
 		scrollPosition()
 	});
