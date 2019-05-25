@@ -106,6 +106,13 @@
 			background: url("../images/cumulus-logo-blue-full.svg") no-repeat top left;				
 		}
 	}
+	&.menu-active .logo a {
+		background: url("../images/cumulus-logo-white-full.svg") no-repeat top left;
+
+		@at-root body.home & {
+			background: url("../images/cumulus-logo-blue-full.svg") no-repeat top left;				
+		}
+	}
 	@media(max-width: map-deep($widths, 'medium')) {
 		& .logo a {
 			background: url("../images/cumulus-logo-blue-icon.svg") no-repeat top left;
@@ -113,12 +120,9 @@
 				background: url("../images/cumulus-logo-blue-full.svg") no-repeat top left;
 			}
 		}
-	}
-	&.menu-active .logo a {
-		background: url("../images/cumulus-logo-white-full.svg") no-repeat top left;
-
-		@at-root body.home & {
-			background: url("../images/cumulus-logo-blue-full.svg") no-repeat top left;				
+		@at-root body.home &.menu-active .logo a,
+		&.menu-active .logo a {
+			background: url("../images/cumulus-logo-white-full.svg") no-repeat top left;
 		}
 	}
 
