@@ -67,6 +67,7 @@ $header_image_id = false;
 					<?php endif ?>
 
 					<span>
+						<!--
 						<?php $parent = $post->post_parent ? \get_post($post->post_parent) : false ?>
 						<?php if ($parent): ?>
 							<?php $parent_alt_title = \get_field('alt_title', $parent->ID) ?>
@@ -77,6 +78,7 @@ $header_image_id = false;
 								</a>
 							</h3>
 						<?php endif ?>
+						-->
 						<h1>
 							<?php if (empty(get_arr_val($custom_fields, 'alt_title'))): ?>
 								<?php \the_title() ?>
