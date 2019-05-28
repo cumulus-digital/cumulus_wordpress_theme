@@ -157,6 +157,11 @@ figure.wp-block-video figcaption {
 	margin: 0 !important;
 }
 
+// Allow multiple on form maker selects
+.fm-form-container .fm-form select[multiple] {
+	height: auto;
+}
+
 #wpadminbar {
 	position: fixed !important;
 }
