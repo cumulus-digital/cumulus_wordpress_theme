@@ -393,13 +393,19 @@ function setupGutenberg() {
     );
     \wp_enqueue_style('cumulus-gutenberg/force-values');
 
+	\wp_enqueue_script(
+        'cumulus-gutenberg/image-flipper', // Handle.
+        get_template_directory_uri() . '/assets/prod/js/blocks-imageflipper.js',
+        array('wp-blocks', 'wp-element')
+    );
+
 }
 \add_action('enqueue_block_editor_assets', ns('setupGutenberg'));
 
 // Setup block front-end
 function setupGutenbergFrontend() {
 	if (
-		! is_admin() &&
+		! \is_admin() &&
 		\get_the_ID() &&
 		\has_block('cumulus-gutenberg/station-finder')
 	) {
@@ -432,8 +438,53 @@ function setupGutenbergFrontend() {
 		);
 		\wp_enqueue_style('cumulus-gutenberg/force-values');
 	}
+
+	if ( ! \is_admin() && \has_block('cumulus-gutenberg/image-flipper')) {
+		\wp_enqueue_script(
+			'cumulus-gutenberg/image-flipper/frontend',
+			get_template_directory_uri() . '/assets/prod/js/blocks-imageflipper-frontend.js',
+			null,
+			null,
+			true
+		);
+		\wp_localize_script( 'cumulus-gutenberg/image-flipper/frontend', 'theme_vars', array(
+			'ajaxurl' => site_url() . '/wp-admin/admin-ajax.php', // WordPress A
+		) );
+		\wp_register_Style(
+			'cumulus-gutenberg/image-flipper/frontend',
+			\get_template_directory_uri() . '/assets/prod/css/imageflipper.css',
+			false,
+			null,
+			'all'
+		);
+		\wp_enqueue_style('cumulus-gutenberg/image-flipper/frontend');
+
+	}
 }
 \add_action('enqueue_block_assets', ns('setupGutenbergFrontend'));
+
+function getImagesByCategory() {
+	$category = json_decode($_POST['category'], true);
+	if ( ! filter_var($category, FILTER_VALIDATE_INT)) {
+		header('HTTP/1.0 400 Bad error');
+		echo '{ error: "Bad category." }';
+	} else {
+
+		$args = array(
+		    'category' => $category,
+		    'post_type' => 'attachment'
+		);
+		$media = \get_posts($args);
+		if ( ! empty($_GET['callback'])) {
+			echo $_GET['callback'] . '(' . json_encode($media) . ');';
+		} else {
+			echo json_encode($media);
+		}
+
+	}
+}
+add_action('wp_ajax_get_images_by_category', ns('getImagesByCategory'));
+add_action('wp_ajax_nopriv_get_images_by_category', ns('getImagesByCategory'));
 
 // Menus
 function header_menu() {

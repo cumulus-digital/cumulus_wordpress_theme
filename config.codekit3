@@ -75,6 +75,24 @@
 		"oAP": "/assets/prod/css/flipcards.css.map",
 		"oF": 0
 		},
+	"/assets/prod/css/imageflipper.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 2,
+		"oAP": "/assets/prod/css/imageflipper.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/assets/prod/css/imageflipper.css.map": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/assets/prod/css/imageflipper.css.map",
+		"oF": 0
+		},
 	"/assets/prod/css/index.css": {
 		"aP": 1,
 		"bl": 0,
@@ -262,6 +280,44 @@
 		"oAP": "/assets/prod/js/blocks-FORCE.js.map",
 		"oF": 0
 		},
+	"/assets/prod/js/blocks-imageflipper-frontend.js": {
+		"bF": 4,
+		"ft": 64,
+		"ma": 1,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/assets/prod/js/blocks-imageflipper-frontend.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/prod/js/blocks-imageflipper-frontend.js.map": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/assets/prod/js/blocks-imageflipper-frontend.js.map",
+		"oF": 0
+		},
+	"/assets/prod/js/blocks-imageflipper.js": {
+		"bF": 4,
+		"ft": 64,
+		"ma": 1,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/assets/prod/js/blocks-imageflipper.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/prod/js/blocks-imageflipper.js.map": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/assets/prod/js/blocks-imageflipper.js.map",
+		"oF": 0
+		},
 	"/assets/prod/js/blocks-station_finder.js": {
 		"bF": 4,
 		"ft": 64,
@@ -298,14 +354,6 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/assets/prod/js/bundle.js.map",
-		"oF": 0
-		},
-	"/assets/prod/js/bundle.js.tmp-browserify-24305833688001143855": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/assets/prod/js/bundle.js.tmp-browserify-24305833688001143855",
 		"oF": 0
 		},
 	"/assets/prod/js/index.js": {
@@ -407,6 +455,19 @@
 		"ma": 1,
 		"oA": 0,
 		"oAP": "/assets/prod/css/flipcards.css",
+		"oF": 0,
+		"oS": 3,
+		"uL": 1
+		},
+	"/assets/src/css/imageflipper.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 1,
+		"oA": 0,
+		"oAP": "/assets/prod/css/imageflipper.css",
 		"oF": 0,
 		"oS": 3,
 		"uL": 1
@@ -724,6 +785,28 @@
 		"mi": 1,
 		"oA": 0,
 		"oAP": "/assets/prod/js/blocks-FORCE.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 1
+		},
+	"/assets/src/js/blocks-imageflipper-frontend.js": {
+		"bF": 4,
+		"ft": 64,
+		"ma": 1,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/assets/prod/js/blocks-imageflipper-frontend.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/src/js/blocks-imageflipper.js": {
+		"bF": 4,
+		"ft": 64,
+		"ma": 1,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/assets/prod/js/blocks-imageflipper.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 1
