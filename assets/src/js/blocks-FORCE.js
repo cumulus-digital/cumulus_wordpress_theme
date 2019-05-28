@@ -1,5 +1,5 @@
 /**
- * Custom Gutenberg Block for Station Finder
+ * Custom Gutenberg Block for FORCE flipcards
  */
 ( function( blocks, element ) {
     const { Button, Panel, PanelBody, PanelRow, ToggleControl } = wp.components;
