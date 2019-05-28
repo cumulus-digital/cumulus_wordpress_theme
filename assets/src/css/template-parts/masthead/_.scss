@@ -98,22 +98,20 @@
 			background-image: url("../images/cumulus-logo-blue-icon.svg");
 		}
 	}
-	body.home & .logo a,
-	&.menu-active .logo a {
+	body.home & .logo a {
 		background-image: url("../images/cumulus-logo-white-full.svg");
 	}
 	body.home &.switch .logo a {
 		background-image: url("../images/cumulus-logo-blue-full.svg");
 	}
-
 	@media(max-width: map-deep($widths, 'medium')) {
-		body.home & .logo a,
-		body.home &.switch .logo a {
+		body.home & .logo a {
 			background-image: url("../images/cumulus-logo-blue-full.svg");
 		}
-		body &.menu-active .logo a {
-			background-image: url("../images/cumulus-logo-white-full.svg");
-		}
+	}
+
+	body &.menu-active .logo a {
+		background-image: url("../images/cumulus-logo-white-full.svg");
 	}
 
 	.hamburger-container {
