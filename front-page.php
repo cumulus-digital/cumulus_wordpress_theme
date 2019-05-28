@@ -32,7 +32,7 @@ if (count($header_videos)) BodyClasses::add('post_header_image');
 
 </section>
 
-<main role="main" class="row">
+<main role="main" class="row <?php echo ! get_arr_val($custom_fields, 'disable_body_margin') ?: 'no-bottom-margin' ?>">
 
 	<div class="row-container">
 
@@ -50,7 +50,6 @@ if (count($header_videos)) BodyClasses::add('post_header_image');
 			<?php endwhile; ?>
 		<?php endif ?>
 
-	<?php \edit_post_link('Edit this page'); ?>
 	</div>
 
 </main>

@@ -76,6 +76,26 @@
 			}
 		}
 
+		.full-width {
+			width: 100vw;
+			position: relative;
+			left: 50%;
+			right: 50%;
+			margin-left: -50vw;
+			margin-right: -50vw;
+
+			@media (max-width: map-deeep($widths, 'medium')) {
+				padding: 0 1em;
+			}
+		}
+
+		// option to disable body margin
+		&.no-bottom-margin,
+		&.no-bottom-margin .body {
+			margin-bottom: 0;
+			padding-bottom: 0;
+		}
+
 	}
 
 }
