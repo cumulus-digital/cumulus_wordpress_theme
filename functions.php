@@ -17,6 +17,9 @@ function get_arr_val($array, $key, $default = null) {
 	return $default;
 }
 
+// Enable trash for media
+define('MEDIA_TRASH', true);
+
 // Disable theme and plugin editor
 define( 'DISALLOW_FILE_EDIT', true );
 
