@@ -135,6 +135,11 @@ function remove_identity() {
 \remove_action('wp_head', 'rsd_link'); // remove Really Simple Discovery
 \remove_action( 'wp_head', 'feed_links_extra', 3 ); // remove Comments Feed
 
+// Allow media to have categories
+function registerMediaTaxonomy() {
+    \register_taxonomy_for_object_type( 'category', 'attachment' );
+}
+\add_action( 'init', ns('registerMediaTaxonomy') );
 
 // Add custom copyright field to Settings / General
 function register_copyright_field() {
