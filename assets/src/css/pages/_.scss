@@ -295,6 +295,9 @@ main.page {
 			text-decoration: none;
 		}
 		// Max width for kadence info block images
+		.kt-blocks-info-box-media {
+			width: 100%;
+		}
 		.kt-blocks-info-box-media img {
 			max-width: 100%;
 			height: auto;
