@@ -69,6 +69,7 @@
 		}
 
 		& > li {
+			position: relative;
 			flex-grow: 1;
 			flex-basis: 0;
 			padding: 1% 0 1% 1%;
@@ -77,11 +78,27 @@
 			text-transform: uppercase;
 			text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
 
+			&:after {
+				content: "";
+				position: absolute;
+				right: 0;
+				top: 0;
+				width: 1px;
+				height: 100%;
+
+				background: rgb(255,255,255);
+				background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 50%);
+			}
+
 			&:first-child {
 				padding-left: 2%;
 			}
 			&:last-child {
 				padding-right: 2%;
+
+				&:after {
+					display: none;
+				}
 			}
 
 			@media (max-width: map-deep($widths, "medium")) {
