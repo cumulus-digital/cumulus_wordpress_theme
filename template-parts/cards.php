@@ -20,6 +20,7 @@ namespace CumulusTheme;
 		class="cards square <?php
 			echo $card_options['columns'] . '-columns ';
 			echo $card_options['show_link_label'] === false ? 'no-link-label ' : '';
+			echo $card_options['uppercase_title'] === true ? 'uppercase-titles' : '';
 		?>"
 		style="<?php
 			if ($card_options['background_color']) {

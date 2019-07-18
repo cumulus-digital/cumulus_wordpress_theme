@@ -25,6 +25,7 @@ $header_image_id = false;
 			'show_link_label' => get_arr_val($custom_fields, 'cards_display_link_label'),
 			'link_label' => get_arr_val($custom_fields, 'cards_link_label'),
 			'show_title' => get_arr_val($custom_fields, 'cards_display_title'),
+			'uppercase_title' => get_arr_val($custom_fields, 'cards_uppercase_title'),
 			'show_excerpt' => get_arr_val($custom_fields, 'cards_display_excerpt'),
 		);
 		\set_query_var('card_options', $card_options);

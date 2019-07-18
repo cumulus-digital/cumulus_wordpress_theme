@@ -398,50 +398,7 @@
                 "class": "",
                 "id": ""
             },
-            "message": "Display Card Titles",
-            "default_value": 1,
-            "ui": 1,
-            "ui_on_text": "",
-            "ui_off_text": ""
-        },
-        {
-            "key": "field_5cddc077cdd88",
-            "label": "",
-            "name": "cards_display_excerpt",
-            "type": "true_false",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_5cddbd6931ced",
-                        "operator": "==",
-                        "value": "1"
-                    },
-                    {
-                        "field": "field_5cddbf577d95f",
-                        "operator": "!=",
-                        "value": "image_only"
-                    }
-                ],
-                [
-                    {
-                        "field": "field_5cdf547bfc8d9",
-                        "operator": "!=empty"
-                    },
-                    {
-                        "field": "field_5cddbf577d95f",
-                        "operator": "!=",
-                        "value": "image_only"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "message": "Display Card Excerpts",
+            "message": "Display Titles",
             "default_value": 1,
             "ui": 1,
             "ui_on_text": "",
@@ -483,6 +440,92 @@
             "message": "Cards without images will always display their title.",
             "new_lines": "wpautop",
             "esc_html": 0
+        },
+        {
+            "key": "field_5d308cc68f8d7",
+            "label": "",
+            "name": "cards_uppercase_title",
+            "type": "true_false",
+            "instructions": "When displaying card titles on this page, uppercase them.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5cddbd6931ced",
+                        "operator": "==",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_5cddbf577d95f",
+                        "operator": "!=",
+                        "value": "image_only"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_5cdf547bfc8d9",
+                        "operator": "!=empty"
+                    },
+                    {
+                        "field": "field_5cddbf577d95f",
+                        "operator": "!=",
+                        "value": "image_only"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Always Uppercase Titles",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5cddc077cdd88",
+            "label": "",
+            "name": "cards_display_excerpt",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5cddbd6931ced",
+                        "operator": "==",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_5cddbf577d95f",
+                        "operator": "!=",
+                        "value": "image_only"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_5cdf547bfc8d9",
+                        "operator": "!=empty"
+                    },
+                    {
+                        "field": "field_5cddbf577d95f",
+                        "operator": "!=",
+                        "value": "image_only"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Display Excerpts",
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
         },
         {
             "key": "field_5cddbfc3cdd85",
@@ -721,5 +764,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "Display options for cards.",
-    "modified": 1558715025
+    "modified": 1563463298
 }
