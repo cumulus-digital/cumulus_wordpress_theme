@@ -8,14 +8,14 @@
 		left: 50%;
 		width: 4vh;
 		height: 4vh;
-		border-left: .5em double #fff;
-		border-bottom: .5em double #fff;
+		border-left: .75em double #fff;
+		border-bottom: .75em double #fff;
 		border-radius: 0 0 0 .25em;
 		box-shadow: -2px 2px 3px rgba(0,0,0,0.4);
 		transform: rotate(-45deg) translateX(-50%);
 		opacity: 0;
 		//mix-blend-mode: difference;
-		animation: scroll-down-arrow 3s ease-in-out 2s infinite;
+		animation: scroll-down-arrow 5s ease-in-out 0s infinite;
 
 		@keyframes scroll-down-arrow {
 			0% {
@@ -26,7 +26,7 @@
 				bottom: 2em;
 				opacity: 1;
 			}
-			80% {
+			50% {
 				bottom: 0;
 				opacity: 0;
 			}
