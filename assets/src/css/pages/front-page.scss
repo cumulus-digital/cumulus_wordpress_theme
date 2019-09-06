@@ -14,7 +14,7 @@
 		box-shadow: -2px 2px 3px rgba(0,0,0,0.4);
 		transform: rotate(-45deg) translateX(-50%);
 		opacity: 0;
-		mix-blend-mode: difference;
+		//mix-blend-mode: difference;
 		animation: scroll-down-arrow 3s ease-in-out 2s infinite;
 
 		@keyframes scroll-down-arrow {
