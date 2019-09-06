@@ -1,8 +1,42 @@
 .home {
 	
+	.scroll-down-arrow {
+		content: '';
+		position: absolute;
+		z-index: 10;
+		bottom: 3em;
+		left: 50%;
+		width: 4vh;
+		height: 4vh;
+		border-left: .5em double #fff;
+		border-bottom: .5em double #fff;
+		border-radius: 0 0 0 .25em;
+		box-shadow: -2px 2px 3px rgba(0,0,0,0.4);
+		transform: rotate(-45deg) translateX(-50%);
+		opacity: 0;
+		mix-blend-mode: difference;
+		animation: scroll-down-arrow 3s ease-in-out 2s infinite;
+
+		@keyframes scroll-down-arrow {
+			0% {
+				bottom: 3em;
+				opacity: 0;
+			}
+			20% {
+				bottom: 2em;
+				opacity: 1;
+			}
+			80% {
+				bottom: 0;
+				opacity: 0;
+			}
+		}
+	}
+
 	.hero {
 		background-color: map-deep($colors, 'highlight');
 		position: relative;
+		z-index: 1;
 		width: 100%;
 		//height: 89vh;
 		//padding-bottom: 13vh;
@@ -10,6 +44,7 @@
 
 		.video-container {
 			position: absolute;
+			z-index: 2;
 			overflow: hidden;
 			width: 100%;
 			height: 100%;

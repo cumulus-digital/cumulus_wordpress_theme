@@ -63,4 +63,14 @@ import {throttle} from 'lodash-es';
 		scrollPosition()
 	});
 
+	// Detect if video is near the bottom of the browser window, if so add scroll arrow
+	if (isHome) {
+		$(function() {
+			var $video = $('.hero');
+			if ($video.position().top + $video.outerHeight() > $(window).height()-250) {
+				$video.append('<span class="scroll-down-arrow"></span>');
+			}
+		});
+	}
+
 }(jQuery, window.self));
