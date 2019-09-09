@@ -1,6 +1,6 @@
 /*eslint no-console: [0]*/
 import 'intersection-observer';
-import Vue from 'vue/dist/vue.esm.browser.min.js';
+import Vue from 'vue/dist/vue.esm.browser.js';
 import {flatten, debounce, map, sortBy, union} from 'lodash-es';
 import VLazyImage from "v-lazy-image";
 /**

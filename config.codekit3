@@ -863,12 +863,12 @@
 		"bF": 4,
 		"ft": 64,
 		"ma": 1,
-		"mi": 0,
+		"mi": 1,
 		"oA": 0,
 		"oAP": "/assets/prod/js/station-finder.js",
 		"oF": 0,
 		"sC": 3,
-		"tS": 0
+		"tS": 1
 		},
 	"/assets/static/favicon/android-chrome-192x192.png": {
 		"ft": 32768,
@@ -1585,6 +1585,17 @@
 		"mi": 1,
 		"oA": 1,
 		"oAP": "/node_modules/v-lazy-image/dist/v-lazy-image.es.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/node_modules/vue/dist/vue.esm.browser.js": {
+		"bF": 4,
+		"ft": 64,
+		"ma": 1,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/node_modules/vue/dist/vue.esm.browser.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
