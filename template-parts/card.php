@@ -33,7 +33,7 @@ $card_image_id = $custom_fields['card_image'];
 				class="card-image"
 			>
 				<img 
-					src="<?php echo $card_image->guid ?>"
+					src="<?php echo function_exists('jetpack_photon_url') ? \jetpack_photon_url($card_image->guid) : $card_image->guid ?>"
 					alt="<?php
 						if (empty(get_arr_val($custom_fields, 'alt_title'))) {
 							\the_title();
