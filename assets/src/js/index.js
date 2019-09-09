@@ -18,13 +18,13 @@ import {throttle} from 'lodash-es';
 			killScrollTimer = setTimeout(function() {
 				var scrollPos = supportPageOffset ? window.pageYOffset : isCSS1Compat ? document.documentElement.scrollTop : document.body.scrollTop
 				$body.data('scrollPos', scrollPos);
-				$body.css('position', 'fixed');
+				//$body.css('position', 'fixed');
 			}, 100);
 		} else {
 			clearTimeout(killScrollTimer);
 			killScrollTimer = null;
 			document.body.scrollTo(0, $body.data('scrollPos'));
-			$body.css('position', 'relative');
+			//$body.css('position', 'relative');
 		}
 	}
 
@@ -34,11 +34,13 @@ import {throttle} from 'lodash-es';
 	// Close the menu if clicked on a link
 	$('.masthead nav.menu a[href*="#"]').click(toggleMainMenu);
 
-	// Switch masthead when page scrolls to main el
 	var monitorEls = {
 		main: $('main'),
-		masthead: $('.masthead')
+		masthead: $('.masthead'),
+		scrollArrow: $('.scroll-down-arrow')
 	};
+
+	// Alter monitored els on scroll change
 	function scrollPosition() {
 		var scrollPos = supportPageOffset ? window.pageYOffset : isCSS1Compat ? document.documentElement.scrollTop : document.body.scrollTop,
 			mainPos = monitorEls.main.position().top,
@@ -57,6 +59,13 @@ import {throttle} from 'lodash-es';
 		} else if (monitorEls.masthead.hasClass('switch') && scrollPos < detectPoint) {
 			monitorEls.masthead.removeClass('switch');
 		}
+
+		// Hide scroll arrow
+		if (monitorEls.scrollArrow.length && scrollPos >= 100) {
+			monitorEls.scrollArrow.hide().data('hidden', true);
+		} else if (monitorEls.scrollArrow.data('hidden')) {
+			monitorEls.scrollArrow.show();
+		}
 	}
 	window.addEventListener('scroll', throttle(scrollPosition, 100, {leading: true, trailing: true}));
 	$(window).on('load', function() {
@@ -64,16 +73,16 @@ import {throttle} from 'lodash-es';
 	});
 
 	// Detect if video is near the bottom of the browser window, if so add scroll arrow
-	if (isHome) {
+	if (monitorEls.scrollArrow.length) {
 		$(function() {
 			var $video = $('.hero'),
 				video_bottom = $video.position().top + $video.outerHeight();
 			if ($video.position().top + $video.outerHeight() > $(window).height()-250) {
-				var pos = 'calc(' + video_bottom + 'px - 4.5em)';
+				var pos = $(window).height() - video_bottom + 'px';
 				if (video_bottom > $(window).height()) {
-					pos = 'calc(100vh - 5em)';
+					pos = '0vh';
 				}
-				$video.after('<span class="scroll-down-arrow" style="top:' + pos + '"></span>');
+				monitorEls.scrollArrow.css({ bottom: pos }).show();
 			}
 		});
 	}

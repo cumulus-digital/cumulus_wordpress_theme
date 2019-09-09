@@ -32,6 +32,8 @@ if (count($header_videos)) BodyClasses::add('post_header_image');
 
 </section>
 
+<span class="scroll-down-arrow"></span>
+
 <main role="main" class="row <?php echo ! get_arr_val($custom_fields, 'disable_body_margin') ?: 'no-bottom-margin' ?>">
 
 	<div class="row-container">
