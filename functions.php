@@ -48,11 +48,13 @@ function registerRequiredPlugins() {
 			'slug'      => 'form-maker',
 			'required'  => false,
 		),
+		/*
 		array(
 			'name'      => 'Stackable - Gutenberg Blocks',
 			'slug'      => 'stackable-ultimate-gutenberg-blocks',
 			'required'  => false,
 		),
+		*/
 		/*
 		array(
 			'name'      => 'Ultimate Addons for Gutenberg',
