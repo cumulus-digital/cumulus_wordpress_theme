@@ -143,6 +143,15 @@ function registerMediaTaxonomy() {
 }
 \add_action( 'init', ns('registerMediaTaxonomy') );
 
+// Exclude SVGs from Jetpack Photon
+function photonExcludeSVG( $val, $src, $tag ) {
+	if ( strpos(strtolower($src), '.svg') >= -1) {
+		return true;
+	}
+	return $val;
+}
+\add_filter( 'jetpack_photon_skip_image', ns('photonExcludeSVG'), 10, 3 );
+
 // Add custom copyright field to Settings / General
 function register_copyright_field() {
 	\register_setting(
