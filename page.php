@@ -11,7 +11,7 @@ $header_image_id = false;
 			BodyClasses::add('post_header_image');
 		}
 		$card_options = array(
-			'show' => get_arr_val($custom_fields, 'show_subpages_as_cards'),
+			'show_subpages' => get_arr_val($custom_fields, 'show_subpages_as_cards'),
 			'manual_page_ids' => get_arr_val($custom_fields, 'manual_card_page_ids'),
 			'columns' => get_arr_val($custom_fields, 'cards_columns'),
 			'background_color' => get_arr_val($custom_fields, 'card_section_background_color'),
@@ -104,7 +104,7 @@ $header_image_id = false;
 
 				</div>
 
-				<?php if ($card_options['show'] || $card_options['manual_page_ids']): ?>
+				<?php if ($card_options['show_subpages'] || $card_options['manual_page_ids']): ?>
 					<?php \get_template_part('template-parts/cards') ?>
 				<?php endif ?>
 

@@ -4,17 +4,23 @@ namespace CumulusTheme;
 
 <?php
 	$card_options = \get_query_var('card_options');
-	$children = new \WP_Query(array(
-		'post_parent'    => \get_the_ID(),
-		'post_type'      => 'page', 
-		'posts_per_page' => -1,
-		'post_status'    => 'publish',
-		'orderby'        => 'menu_order',
-		'order'          => 'ASC',
-		'ignore_sticky_posts' => true
-	));
+	$has_children = false;
+	if (get_arr_val($card_options, 'show_subpages')) {
+		$children = new \WP_Query(array(
+			'post_parent'    => \get_the_ID(),
+			'post_type'      => 'page', 
+			'posts_per_page' => -1,
+			'post_status'    => 'publish',
+			'orderby'        => 'menu_order',
+			'order'          => 'ASC',
+			'ignore_sticky_posts' => true
+		));
+		if ($children->have_posts()) {
+			$has_children = true;
+		}
+	}
 ?>
-<?php if ($children->have_posts() || ! empty(get_arr_val($card_options, 'manual_page_ids'))): ?>
+<?php if ($has_children || ! empty(get_arr_val($card_options, 'manual_page_ids'))): ?>
 
 	<section
 		class="cards square <?php
@@ -41,11 +47,13 @@ namespace CumulusTheme;
 			}
 		?>">
 	
-			<?php while($children->have_posts()): $children->the_post() ?>
+			<?php if ($has_children): ?>
+				<?php while($children->have_posts()): $children->the_post() ?>
 
-				<?php \get_template_part('template-parts/card') ?>
+					<?php \get_template_part('template-parts/card') ?>
 
-			<?php endwhile ?>
+				<?php endwhile ?>
+			<?php endif ?>
 
 			<?php if ( ! empty(get_arr_val($card_options, 'manual_page_ids'))): ?>
 				<?php 
