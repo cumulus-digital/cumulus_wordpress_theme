@@ -193,6 +193,10 @@ main.page {
 			}
 		}
 
+		.no-link-underline a {
+			text-decoration: none;
+		}
+
 		.has-text-color {
 			&.has-white-color {
 				color: #fff;
