@@ -133,7 +133,7 @@ import VLazyImage from "v-lazy-image";
 				if (cities.length === 1) {
 					finder.selected_city = cities[0];
 				}
-				return cities;
+				return cities.sort();
 			},
 			filteredFormats: function() {
 				var finder = this,
@@ -145,7 +145,7 @@ import VLazyImage from "v-lazy-image";
 				if (formats.length === 1) {
 					finder.selected_format = formats[0];
 				}
-				return formats;
+				return formats.sort();
 			},
 			filteredStations: function() {
 				var finder = this,
