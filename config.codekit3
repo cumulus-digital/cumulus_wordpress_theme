@@ -589,19 +589,6 @@
 		"oS": 3,
 		"uL": 1
 		},
-	"/assets/src/css/station-finder.scss": {
-		"aP": 1,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 1,
-		"oA": 0,
-		"oAP": "/assets/prod/css/station-finder.css",
-		"oF": 0,
-		"oS": 3,
-		"uL": 1
-		},
 	"/assets/src/css/template-parts/_.scss": {
 		"aP": 1,
 		"bl": 0,
@@ -837,17 +824,6 @@
 		"sC": 3,
 		"tS": 1
 		},
-	"/assets/src/js/blocks-station_finder.js": {
-		"bF": 4,
-		"ft": 64,
-		"ma": 1,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/assets/prod/js/blocks-station_finder.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
 	"/assets/src/js/index.js": {
 		"bF": 4,
 		"ft": 64,
@@ -858,17 +834,6 @@
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
-		},
-	"/assets/src/js/station-finder.js": {
-		"bF": 4,
-		"ft": 64,
-		"ma": 1,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/assets/prod/js/station-finder.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 1
 		},
 	"/assets/static/favicon/android-chrome-192x192.png": {
 		"ft": 32768,
@@ -1574,28 +1539,6 @@
 		"mi": 1,
 		"oA": 1,
 		"oAP": "/node_modules/lodash-es/lodash.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"/node_modules/v-lazy-image/dist/v-lazy-image.es.js": {
-		"bF": 4,
-		"ft": 64,
-		"ma": 1,
-		"mi": 1,
-		"oA": 1,
-		"oAP": "/node_modules/v-lazy-image/dist/v-lazy-image.es.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"/node_modules/vue/dist/vue.esm.browser.js": {
-		"bF": 4,
-		"ft": 64,
-		"ma": 1,
-		"mi": 1,
-		"oA": 1,
-		"oAP": "/node_modules/vue/dist/vue.esm.browser.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0

@@ -376,14 +376,6 @@ function setupGutenberg() {
 
 	// Custom blocks
 	\wp_enqueue_script(
-        'cumulus-gutenberg/station-finder', // Handle.
-        get_template_directory_uri() . '/assets/prod/js/blocks-station_finder.js',
-        array('wp-blocks', 'wp-element')
-    );
-	$custom_vars = array( 'uri' => \get_stylesheet_directory_uri() );
-	\wp_localize_script( 'cumulus-gutenberg/station-finder', 'theme_vars', $custom_vars );
-
-	\wp_enqueue_script(
         'cumulus-gutenberg/anchor', // Handle.
         get_template_directory_uri() . '/assets/prod/js/blocks-anchor.js',
         array('wp-blocks', 'wp-element')
@@ -415,29 +407,6 @@ function setupGutenberg() {
 
 // Setup block front-end
 function setupGutenbergFrontend() {
-	if (
-		! \is_admin() &&
-		\get_the_ID() &&
-		\has_block('cumulus-gutenberg/station-finder')
-	) {
-		
-		\wp_enqueue_script(
-			'cumulus-gutenberg/station-finder/frontend',
-			get_template_directory_uri() . '/assets/prod/js/station-finder.js',
-			null,
-			null,
-			true
-		);
-		\wp_register_Style(
-			'cumulus-gutenberg/station-finder/frontend',
-			\get_template_directory_uri() . '/assets/prod/css/station-finder.css',
-			false,
-			null,
-			'all'
-		);
-		\wp_enqueue_style('cumulus-gutenberg/station-finder/frontend');
-
-	}
 
 	if (\has_block('cumulus-gutenberg/force-values')) {
 		\wp_register_Style(
