@@ -1,7 +1,7 @@
 /*eslint no-console: [0]*/
 import 'intersection-observer';
 import Vue from 'vue/dist/vue.esm.browser.js';
-import {flatten, debounce, map, sortBy, union} from 'lodash-es';
+import {flatten, uniq, debounce, map, sortBy, union} from 'lodash-es';
 import VLazyImage from "v-lazy-image";
 /**
  * Station finder
@@ -10,6 +10,7 @@ import VLazyImage from "v-lazy-image";
 
 	var _ = {
 		flatten: flatten,
+		uniq: uniq,
 		debounce: debounce,
 		map: map,
 		sortBy: sortBy,
@@ -95,7 +96,7 @@ import VLazyImage from "v-lazy-image";
 					</div>
 				</div>
 				<div class="sf-stations">
-					<a :href="station.url" class="sf-station" v-for="station in filteredStations">
+					<a :href="station.url" target="_blank" class="sf-station" v-for="station in filteredStations">
 						<figure>
 							<v-lazy-image :src="station.image" src-placeholder="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" />
 						</figure>
@@ -140,7 +141,7 @@ import VLazyImage from "v-lazy-image";
 					states, formats;
 
 				states = getStates(finder.states, finder.selected_state, finder.selected_city, finder.selected_format);
-				formats = _.flatten(_.map(states, 'formats'));
+				formats = _.uniq(_.flatten(_.map(states, 'formats')));
 
 				if (formats.length === 1) {
 					finder.selected_format = formats[0];
