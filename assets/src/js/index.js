@@ -1,8 +1,8 @@
-import jQuery from 'jquery';
-import {throttle} from 'lodash-es';
+//import jQuery from 'jquery';
+import throttle from 'lodash-es/throttle';
 
 (function($, window, undefined) {
-	
+
 	var supportPageOffset = window.pageXOffset !== undefined;
 	var isCSS1Compat = ((document.compatMode || "") === "CSS1Compat");
 	var isHome = ($('body').hasClass('home')) ? true : false;

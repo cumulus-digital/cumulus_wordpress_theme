@@ -31,6 +31,9 @@
 				//display: block;
 				opacity: 1;
 			}
+			&[src*='.svg'] {
+				height: 100%;
+			}
 		}
 	}
 }
