@@ -5,6 +5,9 @@
 
 * { box-sizing: border-box; }
 
+// Hide bitnami banner
+#bitnami-banner { display: none !important; }
+
 html,body {
 	background: #fff;
 	color: #222;
