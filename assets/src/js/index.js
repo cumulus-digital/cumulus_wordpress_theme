@@ -91,6 +91,7 @@ import throttle from 'lodash-es/throttle';
 			$heroVideo.trigger('pause');
 			$body.addClass('menu-active');
 			$masthead.addClass('menu-active');
+			$masthead.find('.menu').get(0).scrollTop(0);
 		}
 	}
 	$('.hamburger-container, .masthead nav.menu a[href*="#"]').on(
