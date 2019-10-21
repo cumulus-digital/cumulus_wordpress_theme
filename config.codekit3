@@ -116,18 +116,18 @@
 		"bl": 0,
 		"ft": 16,
 		"ma": 0,
-		"oA": 2,
+		"oA": 1,
 		"oAP": "/assets/prod/css/station-finder.css",
-		"oF": 0,
+		"oF": 1,
 		"oS": 3
 		},
 	"/assets/prod/css/station-finder.css.map": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "/assets/prod/css/station-finder.css.map",
-		"oF": 0
+		"oF": 1
 		},
 	"/assets/prod/images/arrow-blue-right.svg": {
 		"ft": 2097152,
@@ -316,25 +316,6 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/assets/prod/js/blocks-imageflipper.js.map",
-		"oF": 0
-		},
-	"/assets/prod/js/bundle.js": {
-		"bF": 4,
-		"ft": 64,
-		"ma": 1,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/assets/prod/js/bundle.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"/assets/prod/js/bundle.js.map": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/assets/prod/js/bundle.js.map",
 		"oF": 0
 		},
 	"/assets/prod/js/index.js": {
@@ -1619,7 +1600,7 @@
 	},
 "hooks": [
 	{
-		"enabled": 1,
+		"enabled": 0,
 		"name": "Hook #1",
 		"predicateDataBase64Encoded": "YnBsaXN0MDDUAQIDBAUGBwpYJHZlcnNpb25ZJGFyY2hpdmVyVCR0b3BYJG9iamVjdHMSAAGGoF8QD05TS2V5ZWRBcmNoaXZlctEICVRyb290gAGvEBYLDBMYICorLjU5Pj9CRkpPUFNbX2NlVSRudWxs0w0ODxAREl8QF05TQ29tcG91bmRQcmVkaWNhdGVUeXBlXxAPTlNTdWJwcmVkaWNhdGVzViRjbGFzcxACgAKAFdIUDxUXWk5TLm9iamVjdHOhFoADgBTUDxkaGxwdHh9fEBFOU1JpZ2h0RXhwcmVzc2lvbl8QEE5TTGVmdEV4cHJlc3Npb25fEBNOU1ByZWRpY2F0ZU9wZXJhdG9ygBOADoAEgBHVISIjJA8lJicoKVlOU09wZXJhbmReTlNTZWxlY3Rvck5hbWVfEBBOU0V4cHJlc3Npb25UeXBlW05TQXJndW1lbnRzgAaABRADgAiADVx2YWx1ZUZvcktleTrSIw8sLRABgAfSLzAxMlokY2xhc3NuYW1lWCRjbGFzc2VzXxAQTlNTZWxmRXhwcmVzc2lvbqMxMzRcTlNFeHByZXNzaW9uWE5TT2JqZWN00hQPNjihN4AJgAzTDyM6Ozw9WU5TS2V5UGF0aIALEAqACl1pbnB1dEZpbGVuYW1l0i8wQEFfEBxOU0tleVBhdGhTcGVjaWZpZXJFeHByZXNzaW9uo0AzNNIvMENEXk5TTXV0YWJsZUFycmF5o0NFNFdOU0FycmF50i8wR0hfEBNOU0tleVBhdGhFeHByZXNzaW9upEdJMzRfEBROU0Z1bmN0aW9uRXhwcmVzc2lvbtNLIw9MTU5fEA9OU0NvbnN0YW50VmFsdWWADxAAgBBYaW5kZXguanPSLzBRUl8QGU5TQ29uc3RhbnRWYWx1ZUV4cHJlc3Npb26jUTM01Q9UVVZXWE1ZJ1paTlNNb2RpZmllclhOU05lZ2F0ZVlOU09wdGlvbnNeTlNPcGVyYXRvclR5cGWAEggQBNIvMFxdXxAbTlNFcXVhbGl0eVByZWRpY2F0ZU9wZXJhdG9yo1xeNF8QE05TUHJlZGljYXRlT3BlcmF0b3LSLzBgYV8QFU5TQ29tcGFyaXNvblByZWRpY2F0ZaNgYjRbTlNQcmVkaWNhdGXSLzBFZKJFNNIvMGZnXxATTlNDb21wb3VuZFByZWRpY2F0ZaNmYjQACAARABoAJAApADIANwBJAEwAUQBTAGwAcgB5AJMApQCsAK4AsACyALcAwgDEAMYAyADRAOUA+AEOARABEgEUARYBIQErAToBTQFZAVsBXQFfAWEBYwFwAXUBdwF5AX4BiQGSAaUBqQG2Ab8BxAHGAcgBygHRAdsB3QHfAeEB7wH0AhMCFwIcAisCLwI3AjwCUgJXAm4CdQKHAokCiwKNApYCmwK3ArsCxgLRAtoC5ALzAvUC9gL4Av0DGwMfAzUDOgNSA1YDYgNnA2oDbwOFAAAAAAAAAgEAAAAAAAAAaAAAAAAAAAAAAAAAAAAAA4k=",
 		"runOrder": 0,

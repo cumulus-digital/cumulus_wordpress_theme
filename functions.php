@@ -324,7 +324,7 @@ function scripts_and_styles() {
 
 		\wp_register_script(
 			'cumulus_theme_script',
-			\get_template_directory_uri() . '/assets/prod/js/bundle.js',
+			\get_template_directory_uri() . '/assets/prod/js/index.js',
 			array('jquery'),
 			null,
 			true

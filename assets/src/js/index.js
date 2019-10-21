@@ -1,90 +1,91 @@
-//import jQuery from 'jquery';
 import throttle from 'lodash-es/throttle';
 
-(function($, window, undefined) {
+(function($, window, undefined) { // eslint-disable-line no-unused-vars
 
-	var supportPageOffset = window.pageXOffset !== undefined;
-	var isCSS1Compat = ((document.compatMode || "") === "CSS1Compat");
-	var isHome = ($('body').hasClass('home')) ? true : false;
-	var hasFeaturedImage = ($('body').hasClass('post_header_image')) ? true : false;
-
-	var $masthead = $('.masthead'),
+	var $html = $('html'),
 		$body = $('body'),
-		killScrollTimer;
+		$main = $('main'),
+		$masthead = $('.masthead'),
+		$scrollArrow = $('.scroll-down-arrow'),
+		$heroVideo = $('.hero .video-container'),
+		detectionArea,
+		windowHeight,
+		mastheadHeight,
+		mainPos,
+		heroVideoHeight,
+		heroVideoBottom;
+
+	function handleWindowUpdates(func, windowEvents = 'resize scroll load', interval = 100, immediate = true) {
+		$(document).ready(func);
+		$(window).on(
+			windowEvents,
+			throttle(
+				func,
+				interval,
+				{leading: true, trailing: true}
+			)
+		);
+		if (immediate) {
+			func();
+		}
+	}
+
+	function showScrollArrow() {
+		if (
+			$heroVideo.length &&
+			heroVideoBottom > windowHeight * 0.8 &&
+			$(window).scrollTop() < 100
+		) {
+			var pos = '0vh';
+			if (heroVideoBottom < windowHeight) {
+				pos = windowHeight - heroVideoBottom;
+			}
+			$scrollArrow.css({ bottom: pos }).show();
+		} else {
+			$scrollArrow.hide();
+		}
+	}
+
+	// Update height calculations on resize
+	function updateHeights() {
+		windowHeight = $(window).height();
+		mastheadHeight = $masthead.outerHeight();
+		mainPos = Math.ceil($main.position().top);
+		detectionArea = {
+			top: $html.position().top + mastheadHeight,
+			bottom: $(window).height()
+		};
+		if ($heroVideo.length) {
+			heroVideoHeight = $heroVideo.outerHeight();
+			heroVideoBottom = $heroVideo.position().top + heroVideoHeight;
+		}
+	}
+	handleWindowUpdates(updateHeights, 'resize load');
+
+	function updateOnScroll() {
+		var scrollPos = $html.scrollTop();
+
+		// Toggle masthead class when main reaches it
+		if (
+			scrollPos > 0 &&
+			scrollPos + detectionArea.top >= mainPos
+		) {
+			$masthead.addClass('switch');
+		} else {
+			$masthead.removeClass('switch');
+		}
+
+		showScrollArrow();
+	}
+	handleWindowUpdates(updateOnScroll, 'scroll resize load');
+
 	function toggleMainMenu() {
 		$masthead.toggleClass('menu-active');
 		$body.toggleClass('menu-active');
-		if ($masthead.hasClass('menu-active')) {
-			killScrollTimer = setTimeout(function() {
-				var scrollPos = supportPageOffset ? window.pageYOffset : isCSS1Compat ? document.documentElement.scrollTop : document.body.scrollTop
-				$body.data('scrollPos', scrollPos);
-				//$body.css('position', 'fixed');
-			}, 100);
-		} else {
-			clearTimeout(killScrollTimer);
-			killScrollTimer = null;
-			document.body.scrollTo(0, $body.data('scrollPos'));
-			//$body.css('position', 'relative');
-		}
 	}
-
-	// Open and close the menu when the hamburger is clicked
-	$('.hamburger-container').click(toggleMainMenu);
-
-	// Close the menu if clicked on a link
-	$('.masthead nav.menu a[href*="#"]').click(toggleMainMenu);
-
-	var monitorEls = {
-		main: $('main'),
-		masthead: $('.masthead'),
-		scrollArrow: $('.scroll-down-arrow')
-	};
-
-	// Alter monitored els on scroll change
-	function scrollPosition() {
-		var scrollPos = supportPageOffset ? window.pageYOffset : isCSS1Compat ? document.documentElement.scrollTop : document.body.scrollTop,
-			mainPos = monitorEls.main.position().top,
-			mastheadHeight = monitorEls.masthead.outerHeight(),
-			detectPoint = mainPos - mastheadHeight;
-		
-		if (hasFeaturedImage) {
-			detectPoint = mainPos + mastheadHeight;
-		}
-		if (isHome) {
-			detectPoint = mainPos - (mastheadHeight*1.5);
-		}
-		
-		if ( ! monitorEls.masthead.hasClass('switch') && scrollPos >= detectPoint) {
-			monitorEls.masthead.addClass('switch');
-		} else if (monitorEls.masthead.hasClass('switch') && scrollPos < detectPoint) {
-			monitorEls.masthead.removeClass('switch');
-		}
-
-		// Hide scroll arrow
-		if (monitorEls.scrollArrow.length && scrollPos >= 100) {
-			monitorEls.scrollArrow.hide().data('hidden', true);
-		} else if (monitorEls.scrollArrow.data('hidden')) {
-			monitorEls.scrollArrow.show();
-		}
-	}
-	window.addEventListener('scroll', throttle(scrollPosition, 100, {leading: true, trailing: true}));
-	$(window).on('load', function() {
-		scrollPosition()
-	});
-
-	// Detect if video is near the bottom of the browser window, if so add scroll arrow
-	if (monitorEls.scrollArrow.length) {
-		$(function() {
-			var $video = $('.hero'),
-				video_bottom = $video.position().top + $video.outerHeight();
-			if ($video.position().top + $video.outerHeight() > $(window).height()-250) {
-				var pos = $(window).height() - video_bottom + 'px';
-				if (video_bottom > $(window).height()) {
-					pos = '0vh';
-				}
-				monitorEls.scrollArrow.css({ bottom: pos }).show();
-			}
-		});
-	}
+	$('.hamburger-container, .masthead nav.menu a[href*="#"]').on(
+		'click',
+		toggleMainMenu
+	);
 
 }(jQuery, window.self));
