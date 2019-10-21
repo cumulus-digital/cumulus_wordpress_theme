@@ -66,6 +66,7 @@
 		@media (max-width: map-deep($widths, "medium")) {
 			display: block;
 			height: auto;
+			margin-bottom: $masthead-height;
 		}
 
 		& > li {
