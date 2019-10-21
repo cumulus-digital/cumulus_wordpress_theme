@@ -53,7 +53,7 @@ import throttle from 'lodash-es/throttle';
 		mastheadHeight = $masthead.outerHeight();
 		mainPos = Math.ceil($main.position().top);
 		detectionArea = {
-			top: $html.position().top + mastheadHeight,
+			top: Math.abs($html.position().top) + mastheadHeight,
 			bottom: $(window).height()
 		};
 		if ($heroVideo.length) {
@@ -74,8 +74,8 @@ import throttle from 'lodash-es/throttle';
 			$masthead.addClass('switch');
 			$heroVideo.trigger('pause');
 		} else {
-			$masthead.removeClass('switch');
 			$heroVideo.trigger('play');
+			$masthead.removeClass('switch');
 		}
 
 		showScrollArrow();
@@ -83,8 +83,15 @@ import throttle from 'lodash-es/throttle';
 	handleWindowUpdates(updateOnScroll, 'scroll resize load');
 
 	function toggleMainMenu() {
-		$masthead.toggleClass('menu-active');
-		$body.toggleClass('menu-active');
+		if ($body.hasClass('menu-active')) {
+			$heroVideo.trigger('play');
+			$body.removeClass('menu-active');
+			$masthead.removeClass('menu-active');
+		} else {
+			$heroVideo.trigger('pause');
+			$body.addClass('menu-active');
+			$masthead.addClass('menu-active');
+		}
 	}
 	$('.hamburger-container, .masthead nav.menu a[href*="#"]').on(
 		'click',
