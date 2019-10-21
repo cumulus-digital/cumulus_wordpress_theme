@@ -7,7 +7,8 @@ import throttle from 'lodash-es/throttle';
 		$main = $('main'),
 		$masthead = $('.masthead'),
 		$scrollArrow = $('.scroll-down-arrow'),
-		$heroVideo = $('.hero .video-container'),
+		$heroVideoContainer = $('.hero .video-container'),
+		$heroVideo = $('.hero video'),
 		detectionArea,
 		windowHeight,
 		mastheadHeight,
@@ -56,8 +57,8 @@ import throttle from 'lodash-es/throttle';
 			bottom: $(window).height()
 		};
 		if ($heroVideo.length) {
-			heroVideoHeight = $heroVideo.outerHeight();
-			heroVideoBottom = $heroVideo.position().top + heroVideoHeight;
+			heroVideoHeight = $heroVideoContainer.outerHeight();
+			heroVideoBottom = $heroVideoContainer.position().top + heroVideoHeight;
 		}
 	}
 	handleWindowUpdates(updateHeights, 'resize load');
@@ -71,8 +72,10 @@ import throttle from 'lodash-es/throttle';
 			scrollPos + detectionArea.top >= mainPos
 		) {
 			$masthead.addClass('switch');
+			$heroVideo.trigger('pause');
 		} else {
 			$masthead.removeClass('switch');
+			$heroVideo.trigger('play');
 		}
 
 		showScrollArrow();
