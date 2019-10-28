@@ -86,7 +86,7 @@
 		height: 100%;
 		width: 100%;
 
-		padding: calc($masthead-height * 0.15) 1vw;
+		padding: calc(#{$masthead-height} * 0.15) 1vw;
 
 		& > * {
 			align-self: center;
