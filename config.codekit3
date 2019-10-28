@@ -1904,7 +1904,7 @@
 	"bowerTargetDependencyListType": 1,
 	"bowerUseExactVersion": 0,
 	"browserRefreshDelay": 0,
-	"browserslistString": ">0.2%, last 2 versions, Firefox ESR, not dead",
+	"browserslistString": ">0.1%, last 2 versions, Firefox ESR, not dead",
 	"buildFolderActive": 0,
 	"buildFolderName": "build",
 	"cleanBuild": 1,
