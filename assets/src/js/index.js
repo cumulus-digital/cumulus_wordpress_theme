@@ -104,5 +104,12 @@ import throttle from 'lodash-es/throttle';
 		'click',
 		toggleMainMenu
 	);
+	
+	$scrollArrow.on('click', function(e) {
+		e.preventDefault();
+		$('html, body').animate({
+			scrollTop: $main.offset().top - mastheadHeight
+		}, 500);
+	});
 
 }(jQuery, window.self));
