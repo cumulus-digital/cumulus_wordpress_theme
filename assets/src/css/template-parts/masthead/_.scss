@@ -138,17 +138,19 @@
 		&::before {
 			content: "Explore";
 
-			color: #fff;
+			color: RGBA(0, 0, 0, 0.6);
 			font-size: 12px;
 			font-weight: bold;
 			text-transform: uppercase;
-			text-shadow: 1px 1px 0 rgba(0,0,0,0.25);
+			text-shadow: none;
 
 			position: absolute;
 			right: 100%;
-			margin-right: 1em;
+			margin-right: .5em;
 			top: 50%;
 			transform: translateY(-50%);
+
+			transition: color 0.2s, text-shadow 0.2s;
 
 			@at-root body {
 				&.home .masthead:not(.switch),
