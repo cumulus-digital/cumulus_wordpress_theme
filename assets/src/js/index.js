@@ -88,6 +88,13 @@ import throttle from 'lodash-es/throttle';
 	}
 	handleWindowUpdates(updateOnScroll, 'scroll resize load');
 
+	$(window).blur(function() {
+		$heroVideo.trigger('pause');
+	});
+	$(window).focus(function() {
+		updateOnScroll();
+	});
+
 	function toggleMainMenu() {
 		if ($body.hasClass('menu-active')) {
 			$heroVideo.trigger('play');
