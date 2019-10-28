@@ -16,7 +16,13 @@ import throttle from 'lodash-es/throttle';
 		heroVideoHeight,
 		heroVideoBottom;
 
-	function handleWindowUpdates(func, windowEvents = 'resize scroll load', interval = 100, immediate = true) {
+	function handleWindowUpdates(func, windowEvents, interval, immediate) {
+		if ( typeof interval == 'undefined') {
+			interval = 100;
+		}
+		if ( typeof immediate == 'undefined') {
+			immediate = true
+		}
 		$(document).ready(func);
 		$(window).on(
 			windowEvents,
