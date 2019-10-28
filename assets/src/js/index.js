@@ -45,11 +45,11 @@ import throttle from 'lodash-es/throttle';
 		) {
 			var pos = '2vh';
 			if (heroVideoBottom < windowHeight) {
-				pos = windowHeight - heroVideoBottom - 20;
+				pos = windowHeight - heroVideoBottom - 15;
 			}
-			$scrollArrow.css({ bottom: pos }).show();
+			$scrollArrow.css({ bottom: pos }).fadeIn(200);
 		} else {
-			$scrollArrow.hide();
+			$scrollArrow.fadeOut(200);
 		}
 	}
 
