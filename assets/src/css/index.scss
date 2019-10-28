@@ -30,6 +30,7 @@ html {
 }
 
 body {
+	-ms-overflow-style: -ms-autohiding-scrollbar;
 	height: 100%;
 	margin-top: $masthead-height;
 
