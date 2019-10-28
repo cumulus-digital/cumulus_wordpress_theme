@@ -9,7 +9,7 @@
  	padding: 2vh;
  	display: inline-block;
  	cursor: pointer;
- 	transition-property: opacity, filter;
+ 	transition-property: opacity, filter, -webkit-filter;
  	transition-duration: 0.15s;
  	transition-timing-function: linear;
  	font: inherit;
