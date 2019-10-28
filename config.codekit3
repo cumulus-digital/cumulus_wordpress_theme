@@ -672,6 +672,46 @@
 		"oT": 1,
 		"q": 80
 		},
+	"/assets/src/images/cumulus-logo-blue-full.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 0,
+		"oAP": "/assets/prod/images/cumulus-logo-blue-full.svg",
+		"oF": 0,
+		"opt": 1,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"/assets/src/images/cumulus-logo-blue-icon.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 0,
+		"oAP": "/assets/prod/images/cumulus-logo-blue-icon.svg",
+		"oF": 0,
+		"opt": 1,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"/assets/src/images/cumulus-logo-white-full.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 0,
+		"oAP": "/assets/prod/images/cumulus-logo-white-full.svg",
+		"oF": 0,
+		"opt": 1,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"/assets/src/images/cumulus-logo-white-icon.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 0,
+		"oAP": "/assets/prod/images/cumulus-logo-white-icon.svg",
+		"oF": 0,
+		"opt": 1,
+		"plM": 3758088159,
+		"prP": 0
+		},
 	"/assets/src/images/menu-crowd.jpg": {
 		"ft": 16384,
 		"iS": 156902,

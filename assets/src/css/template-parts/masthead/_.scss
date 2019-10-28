@@ -135,9 +135,6 @@
 
 		position: relative;
 
-		width: calc(#{$masthead-height} * .6);
-		height: 100%;
-
 		&::before {
 			content: "Explore";
 
