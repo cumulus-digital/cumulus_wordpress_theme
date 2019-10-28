@@ -11,7 +11,10 @@ body > footer {
 		display: grid;
 		grid-template-columns: min-content max-content max-content 1fr;
 		grid-template-rows: 100%;
-		grid-gap: 3em;
+		grid-template-areas: "foot_logo foot_nav foot_social foot_copyright";
+		grid-column-gap: 3em;
+
+		padding: 0;
 		
 		& > * {
 			align-self: center;
@@ -23,15 +26,23 @@ body > footer {
 		}
 	}
 
-	.logo img {
-		min-width: 200px;
-		max-width: 200px;
+	.logo {
+		grid-area: foot_logo;
+		height: 99%;
+		width: 200px;
 
-		@media (max-width: map-deep($widths, 'small')) {
-			max-width: 50%;
-			margin-bottom: 1em;
+		a, img {
+			display: block;
 		}
+		img {
+			height: 100%;
+			width: auto;
 
+			@media (max-width: map-deep($widths, 'small')) {
+				width: 80%;
+				margin-bottom: 1em;
+			}
+		}
 	}
 
 	a {
@@ -44,18 +55,28 @@ body > footer {
 	}
 
 	nav.menu {
-		ul {
-			display: grid;
-			grid-gap: .25em;
-			grid-auto-flow: column;
-			grid-template-rows: 1fr 1fr 1fr;
+		grid-area: foot_nav;
+
+		ul, li {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+
+		& > ul {
+			column-count: 4;
+			column-gap: .25em;
+			height: 100%;
 
 			li {
+				display: block;
 				margin: 0 1em 0 0;
+				overflow: hidden;
 			}
 
 			@media (max-width: map-deep($widths, 'small')) {
-				display: block;
+				column-count: auto;
+				font-size: 1rem;
 
 				li {
 					display: inline-block;
@@ -65,7 +86,12 @@ body > footer {
 		}
 	}
 
+	.social {
+		grid-area: foot_social;
+	}
+
 	.copyright {
+		grid-area: foot_copyright;
 		text-align: right;
 
 		@media (max-width: map-deep($widths, 'small')) {
