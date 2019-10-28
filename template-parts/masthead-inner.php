@@ -2,17 +2,9 @@
 namespace CumulusTheme;
 ?>
 <div class="row-container">
-	<?php if (function_exists('custom_logo')): ?>
-		<div class="logo custom">
-			<a href="<?= \home_url() ?>">
-				<?php \custom_logo(); ?>
-			</a>
-		</div>
-	<?php else: ?>
-		<div class="logo">
-			<a href="<?= \home_url() ?>"></a>
-		</div>
-	<?php endif ?>
+	<div class="logo">
+		<a aria-label="Home" href="<?= \home_url() ?>"></a>
+	</div>
 
 	<div class="hamburger-container">
 		<button class="hamburger hamburger--spin" type="button"

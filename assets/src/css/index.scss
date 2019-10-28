@@ -3,7 +3,7 @@
 @import 'variables';
 @import 'fonts';
 
-* { box-sizing: border-box; }
+*, *::before, *::after { box-sizing: border-box; }
 
 // Hide bitnami banner
 #bitnami-banner { display: none !important; }
