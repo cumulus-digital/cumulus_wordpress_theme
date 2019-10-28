@@ -5,7 +5,7 @@
 		rgba(map-deep($colors, "brand"),1) 0%,
 		rgba(map-deep($colors, "brand"),0) 100%
 	);
-	//box-shadow: 0 0 10px rgba(0,0,0,0);
+	box-shadow: 0 0 0 rgba(0,0,0,0);
 
 	position: fixed;
 	top: 0;
@@ -14,8 +14,6 @@
 
 	width: 100%;
 	height: $masthead-height;
-
-	padding: 2vh 0;
 
 	transition: background 0.3s, box-shadow 0.3s;
 
@@ -29,16 +27,27 @@
 
 		background: #fff;
 
-		opacity: 0;
+		opacity: 1;
 
 		transition: opacity 0.2s, background 0.2s;
-
-		// Solid blue bar if mobile
-		@media (max-width: map-deep($widths, "medium")) {
-			//background: map-deep($colors, "brand");
+	}
+		body.home &::before {
+			opacity: 0;
+			@media (max-width: map-deep($widths, "medium")) {
+				opacity: 1;
+			}
+		}
+		body.home &.switch::before,
+		&.switch::before {
 			opacity: 1;
 		}
-	}
+		body.menu-active &::before,
+		body.menu-active &.switch::before {
+			background: map-deep($colors, 'brand');
+			opacity: 1;
+		}
+
+	/*
 	&.solid::before {
 		opacity: 1;
 	}
@@ -52,8 +61,7 @@
 	&.menu-active::before {
 		background: map-deep($colors, 'brand');
 	}
-
-
+	*/
 
 	// if admin bar is visible, move us down a bit
 	body.admin-bar & {
@@ -78,6 +86,8 @@
 		height: 100%;
 		width: 100%;
 
+		padding: calc($masthead-height * 0.15) 1vw;
+
 		& > * {
 			align-self: center;
 		}
@@ -86,7 +96,7 @@
 	.logo {
 		grid-area: head_logo;
 		height: 100%;
-		padding-left: 1vw;
+		justify-items: start;
 		overflow: visible;
 
 		a {
@@ -113,23 +123,6 @@
 			}
 		}
 	}
-	/*
-	body.home & .logo a {
-		background-image: url("../images/cumulus-logo-white-full.svg");
-	}
-	body.home &.switch .logo a {
-		background-image: url("../images/cumulus-logo-blue-full.svg");
-	}
-	@media(max-width: map-deep($widths, 'medium')) {
-		body.home & .logo a {
-			background-image: url("../images/cumulus-logo-blue-full.svg");
-		}
-	}
-
-	body &.menu-active .logo a {
-		background-image: url("../images/cumulus-logo-white-full.svg") ! important;
-	}
-	*/
 
 	.hamburger-container {
 		grid-area: head_menu;
