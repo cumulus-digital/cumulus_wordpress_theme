@@ -43,9 +43,9 @@ import throttle from 'lodash-es/throttle';
 			heroVideoBottom > windowHeight * 0.8 &&
 			$(window).scrollTop() < 100
 		) {
-			var pos = '0vh';
+			var pos = '2vh';
 			if (heroVideoBottom < windowHeight) {
-				pos = windowHeight - heroVideoBottom;
+				pos = windowHeight - heroVideoBottom - 20;
 			}
 			$scrollArrow.css({ bottom: pos }).show();
 		} else {
@@ -104,7 +104,7 @@ import throttle from 'lodash-es/throttle';
 		'click',
 		toggleMainMenu
 	);
-	
+
 	$scrollArrow.on('click', function(e) {
 		e.preventDefault();
 		$('html, body').animate({
