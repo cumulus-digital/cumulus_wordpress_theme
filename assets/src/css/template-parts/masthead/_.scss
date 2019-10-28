@@ -105,8 +105,9 @@
 			width: auto;
 
 			background-image: url("../images/cumulus-logo-white-full.svg");
+			background-position: center left;
 			background-repeat: no-repeat;
-			background-position: top left;
+			background-size: 99% 99%;
 
 			body:not(.home) & {
 				background-image: url("../images/cumulus-logo-blue-icon.svg");
