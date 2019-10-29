@@ -68,18 +68,6 @@ $header_image_id = false;
 					<?php endif ?>
 
 					<span>
-						<!--
-						<?php $parent = $post->post_parent ? \get_post($post->post_parent) : false ?>
-						<?php if ($parent): ?>
-							<?php $parent_alt_title = \get_field('alt_title', $parent->ID) ?>
-							<h3>
-								<a href="<?php echo \get_permalink($parent) ?>">
-									<img src="<?php echo \get_template_directory_uri() ?>/assets/prod/images/arrow-circle-lightblue-left.svg" class="arrow">
-									<?php echo empty($parent_alt_title) ? \esc_html($parent->post_title) : \esc_html($parent_alt_title) ?>
-								</a>
-							</h3>
-						<?php endif ?>
-						-->
 						<h1>
 							<?php if (empty(get_arr_val($custom_fields, 'alt_title'))): ?>
 								<?php \the_title() ?>
