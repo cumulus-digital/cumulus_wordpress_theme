@@ -4,6 +4,7 @@
         cursor: pointer;
         display: none;
         position: absolute;
+        top: calc(100vh - 100px);
         //bottom: 80px;
  
         @at-root body.admin-bar.has_fullscreen_header .scroll-down-arrow {

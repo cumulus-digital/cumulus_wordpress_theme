@@ -40,14 +40,17 @@ import throttle from 'lodash-es/throttle';
 	function showScrollArrow() {
 		if (
 			$heroVideo.length &&
-			heroVideoBottom > windowHeight * 0.8 &&
+			heroVideoBottom > windowHeight * 0.7 &&
 			$(window).scrollTop() < 100
 		) {
+			/*
 			var pos = '2vh';
 			if (heroVideoBottom < windowHeight) {
 				pos = windowHeight - heroVideoBottom - 15;
 			}
-			$scrollArrow.css({ bottom: pos }).fadeIn(200);
+			*/
+			//$scrollArrow.css({ bottom: pos }).fadeIn(200);
+			$scrollArrow.fadeIn(200);
 		} else {
 			$scrollArrow.fadeOut(200);
 		}
