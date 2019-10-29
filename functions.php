@@ -396,11 +396,13 @@ function setupGutenberg() {
     );
     \wp_enqueue_style('cumulus-gutenberg/force-values');
 
+    /*
 	\wp_enqueue_script(
         'cumulus-gutenberg/image-flipper', // Handle.
         get_template_directory_uri() . '/assets/prod/js/blocks-imageflipper.js',
         array('wp-blocks', 'wp-element')
     );
+    */
 
 }
 \add_action('enqueue_block_editor_assets', ns('setupGutenberg'));
@@ -419,6 +421,7 @@ function setupGutenbergFrontend() {
 		\wp_enqueue_style('cumulus-gutenberg/force-values');
 	}
 
+	/*
 	if ( ! \is_admin() && \has_block('cumulus-gutenberg/image-flipper')) {
 		\wp_enqueue_script(
 			'cumulus-gutenberg/image-flipper/frontend',
@@ -440,6 +443,7 @@ function setupGutenbergFrontend() {
 		\wp_enqueue_style('cumulus-gutenberg/image-flipper/frontend');
 
 	}
+	*/
 }
 \add_action('enqueue_block_assets', ns('setupGutenbergFrontend'));
 

@@ -4,11 +4,14 @@
         cursor: pointer;
         display: none;
         position: absolute;
-        top: calc(100vh - 100px);
+        top: calc(100vh - 70px);
         //bottom: 80px;
  
-        @at-root body.admin-bar.has_fullscreen_header .scroll-down-arrow {
-            //bottom: 48px;
+        @at-root body.admin-bar .scroll-down-arrow {
+            top: calc(100vh - 102px);
+            @media screen and (max-width: 782px) {
+	            top: calc(100vh - 116px);
+	        }
         }
 
         left: calc(50% - 15px);
