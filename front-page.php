@@ -1,11 +1,15 @@
 <?php
 namespace CumulusTheme;
 
-// Alter the title for this page to only display the site title
-function cmFrontPageTitle() {
-	return \bloginfo('name');
+// Alter the title for front page to only display the site title
+function cmFrontPageTitle( $title ) {
+	if (\is_front_page()) {
+		return array(\get_bloginfo('name'));
+	}
+	return $title;
 }
-\add_filter( 'wp_title', ns('cmFrontPageTitle') );
+\add_filter( 'document_title_parts', ns('cmFrontPageTitle'), 99999, 1 );
+\add_filter('wpseo_title', '__return_empty_string'); // Yoast interception
 
 $custom_fields = \get_fields();
 $header_videos = array();
