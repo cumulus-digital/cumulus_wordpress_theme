@@ -1,6 +1,12 @@
 <?php
 namespace CumulusTheme;
 
+// Alter the title for this page to only display the site title
+function cmFrontPageTitle() {
+	return \bloginfo('name');
+}
+\add_filter( 'wp_title', ns('cmFrontPageTitle') );
+
 $custom_fields = \get_fields();
 $header_videos = array();
 if ($custom_fields) {
