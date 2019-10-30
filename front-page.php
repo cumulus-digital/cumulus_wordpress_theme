@@ -31,10 +31,18 @@ if (count($header_videos)) BodyClasses::add('post_header_image');
 	<?php if (count($header_videos)): ?>
 		<div class="video-container">
 			<video <?php echo $custom_fields['header_video_autoplay'] ? 'autoplay' : '' ?> loop muted playsinline id="header_video" class="landing" data-object-fit="cover">
-				<?php foreach($header_videos as $video_id): ?>
-					<?php $video = \get_post($video_id) ?>
-					<source src="<?php echo $video->guid ?>#t=0.1" type="<?php echo $video->post_mime_type ?>">
-				<?php endforeach ?>
+				<?php if (array_key_exists('header_video_id', $header_videos)): ?>
+					<?php $video_full = \get_post($header_videos['header_video_id']); ?>
+					<source src="<?php echo $video_full->guid ?>#t=0.1" type="<?php echo $video_full->post_mime_type ?>" media="all and (min-width: 800px)">
+				<?php endif ?>
+				<?php if (array_key_exists('header_video_alt_id', $header_videos)): ?>
+					<?php $video_tablet = \get_post($header_videos['header_video_alt_id']); ?>
+					<source src="<?php echo $video_tablet->guid ?>#t=0.1" type="<?php echo $video_tablet->post_mime_type ?>" media="all and (min-width: 500px)">
+				<?php endif ?>
+				<?php if (array_key_exists('header_video_alt2_id', $header_videos)): ?>
+					<?php $video_mobile = \get_post($header_videos['header_video_alt2_id']); ?>
+					<source src="<?php echo $video_mobile->guid ?>#t=0.1" type="<?php echo $video_mobile->post_mime_type ?>" media="all and (min-width: 500px)">
+				<?php endif ?>
 				<img src="<?php echo \get_template_directory_uri() ?>/assets/prod/images/bg-video_hero.png">
 			</video>
 		</div>
