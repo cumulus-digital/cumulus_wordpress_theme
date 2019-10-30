@@ -661,6 +661,17 @@
 		"opt": 1,
 		"q": 65
 		},
+	"/assets/src/images/bg-video_hero-2.jpg": {
+		"ft": 16384,
+		"iS": 157937,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/assets/prod/images/bg-video_hero-2.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"q": 65
+		},
 	"/assets/src/images/bg-video_hero.png": {
 		"ft": 32768,
 		"iS": 10259,
