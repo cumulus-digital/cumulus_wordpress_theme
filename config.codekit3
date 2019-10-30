@@ -7,7 +7,7 @@
 		"uuidString": "EFB609D4-EAF8-44DD-B765-5EF4AAE3944B"
 		}
 	],
-"creatorBuild": "31491",
+"creatorBuild": "31934",
 "files": {
 	"/.gitattributes": {
 		"cB": 0,
@@ -1602,7 +1602,7 @@
 	{
 		"enabled": 0,
 		"name": "Hook #1",
-		"predicateDataBase64Encoded": "YnBsaXN0MDDUAQIDBAUGBwpYJHZlcnNpb25ZJGFyY2hpdmVyVCR0b3BYJG9iamVjdHMSAAGGoF8QD05TS2V5ZWRBcmNoaXZlctEICVRyb290gAGvEBYLDBMYICorLjU5Pj9CRkpPUFNbX2NlVSRudWxs0w0ODxAREl8QF05TQ29tcG91bmRQcmVkaWNhdGVUeXBlXxAPTlNTdWJwcmVkaWNhdGVzViRjbGFzcxACgAKAFdIUDxUXWk5TLm9iamVjdHOhFoADgBTUDxkaGxwdHh9fEBFOU1JpZ2h0RXhwcmVzc2lvbl8QEE5TTGVmdEV4cHJlc3Npb25fEBNOU1ByZWRpY2F0ZU9wZXJhdG9ygBOADoAEgBHVISIjJA8lJicoKVlOU09wZXJhbmReTlNTZWxlY3Rvck5hbWVfEBBOU0V4cHJlc3Npb25UeXBlW05TQXJndW1lbnRzgAaABRADgAiADVx2YWx1ZUZvcktleTrSIw8sLRABgAfSLzAxMlokY2xhc3NuYW1lWCRjbGFzc2VzXxAQTlNTZWxmRXhwcmVzc2lvbqMxMzRcTlNFeHByZXNzaW9uWE5TT2JqZWN00hQPNjihN4AJgAzTDyM6Ozw9WU5TS2V5UGF0aIALEAqACl1pbnB1dEZpbGVuYW1l0i8wQEFfEBxOU0tleVBhdGhTcGVjaWZpZXJFeHByZXNzaW9uo0AzNNIvMENEXk5TTXV0YWJsZUFycmF5o0NFNFdOU0FycmF50i8wR0hfEBNOU0tleVBhdGhFeHByZXNzaW9upEdJMzRfEBROU0Z1bmN0aW9uRXhwcmVzc2lvbtNLIw9MTU5fEA9OU0NvbnN0YW50VmFsdWWADxAAgBBYaW5kZXguanPSLzBRUl8QGU5TQ29uc3RhbnRWYWx1ZUV4cHJlc3Npb26jUTM01Q9UVVZXWE1ZJ1paTlNNb2RpZmllclhOU05lZ2F0ZVlOU09wdGlvbnNeTlNPcGVyYXRvclR5cGWAEggQBNIvMFxdXxAbTlNFcXVhbGl0eVByZWRpY2F0ZU9wZXJhdG9yo1xeNF8QE05TUHJlZGljYXRlT3BlcmF0b3LSLzBgYV8QFU5TQ29tcGFyaXNvblByZWRpY2F0ZaNgYjRbTlNQcmVkaWNhdGXSLzBFZKJFNNIvMGZnXxATTlNDb21wb3VuZFByZWRpY2F0ZaNmYjQACAARABoAJAApADIANwBJAEwAUQBTAGwAcgB5AJMApQCsAK4AsACyALcAwgDEAMYAyADRAOUA+AEOARABEgEUARYBIQErAToBTQFZAVsBXQFfAWEBYwFwAXUBdwF5AX4BiQGSAaUBqQG2Ab8BxAHGAcgBygHRAdsB3QHfAeEB7wH0AhMCFwIcAisCLwI3AjwCUgJXAm4CdQKHAokCiwKNApYCmwK3ArsCxgLRAtoC5ALzAvUC9gL4Av0DGwMfAzUDOgNSA1YDYgNnA2oDbwOFAAAAAAAAAgEAAAAAAAAAaAAAAAAAAAAAAAAAAAAAA4k=",
+		"predicateDataBase64Encoded": "YnBsaXN0MDDUAQIDBAUGZGVYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK8QFgcIDxQcJicqMTU6Oz5CRktMT1dbX2FVJG51bGzTCQoLDA0OXxAXTlNDb21wb3VuZFByZWRpY2F0ZVR5cGVfEA9OU1N1YnByZWRpY2F0ZXNWJGNsYXNzEAKAAoAV0hALERNaTlMub2JqZWN0c6ESgAOAFNQLFRYXGBkaG18QEU5TUmlnaHRFeHByZXNzaW9uXxAQTlNMZWZ0RXhwcmVzc2lvbl8QE05TUHJlZGljYXRlT3BlcmF0b3KAE4AOgASAEdUdHh8gCyEiIyQlWU5TT3BlcmFuZF5OU1NlbGVjdG9yTmFtZV8QEE5TRXhwcmVzc2lvblR5cGVbTlNBcmd1bWVudHOABoAFEAOACIANXHZhbHVlRm9yS2V5OtIfCygpEAGAB9IrLC0uWiRjbGFzc25hbWVYJGNsYXNzZXNfEBBOU1NlbGZFeHByZXNzaW9uoy0vMFxOU0V4cHJlc3Npb25YTlNPYmplY3TSEAsyNKEzgAmADNMLHzY3ODlZTlNLZXlQYXRogAsQCoAKXWlucHV0RmlsZW5hbWXSKyw8PV8QHE5TS2V5UGF0aFNwZWNpZmllckV4cHJlc3Npb26jPC8w0issP0BeTlNNdXRhYmxlQXJyYXmjP0EwV05TQXJyYXnSKyxDRF8QE05TS2V5UGF0aEV4cHJlc3Npb26kQ0UvMF8QFE5TRnVuY3Rpb25FeHByZXNzaW9u00cfC0hJSl8QD05TQ29uc3RhbnRWYWx1ZYAPEACAEFhpbmRleC5qc9IrLE1OXxAZTlNDb25zdGFudFZhbHVlRXhwcmVzc2lvbqNNLzDVC1BRUlNUSVUjVlpOU01vZGlmaWVyWE5TTmVnYXRlWU5TT3B0aW9uc15OU09wZXJhdG9yVHlwZYASCBAE0issWFlfEBtOU0VxdWFsaXR5UHJlZGljYXRlT3BlcmF0b3KjWFowXxATTlNQcmVkaWNhdGVPcGVyYXRvctIrLFxdXxAVTlNDb21wYXJpc29uUHJlZGljYXRlo1xeMFtOU1ByZWRpY2F0ZdIrLEFgokEw0issYmNfEBNOU0NvbXBvdW5kUHJlZGljYXRlo2JeMF8QD05TS2V5ZWRBcmNoaXZlctFmZ1Ryb290gAEACAARABoAIwAtADIANwBQAFYAXQB3AIkAkACSAJQAlgCbAKYAqACqAKwAtQDJANwA8gD0APYA+AD6AQUBDwEeATEBPQE/AUEBQwFFAUcBVAFZAVsBXQFiAW0BdgGJAY0BmgGjAagBqgGsAa4BtQG/AcEBwwHFAdMB2AH3AfsCAAIPAhMCGwIgAjYCOwJSAlkCawJtAm8CcQJ6An8CmwKfAqoCtQK+AsgC1wLZAtoC3ALhAv8DAwMZAx4DNgM6A0YDSwNOA1MDaQNtA38DggOHAAAAAAAAAgEAAAAAAAAAaAAAAAAAAAAAAAAAAAAAA4k=",
 		"runOrder": 0,
 		"scriptSourceString": "npm run build",
 		"scriptType": 1,
@@ -1910,7 +1910,7 @@
 	"bowerTargetDependencyListType": 1,
 	"bowerUseExactVersion": 0,
 	"browserRefreshDelay": 0,
-	"browserslistString": ">0.2%, last 2 versions, Firefox ESR, not dead",
+	"browserslistString": ">0.1%, last 2 versions, Firefox ESR, not dead",
 	"buildFolderActive": 0,
 	"buildFolderName": "build",
 	"cleanBuild": 1,
@@ -2052,6 +2052,7 @@
 			"flagValue": -1
 			}
 		},
+	"environmentVariablesString": "NODE_ENV:::production",
 	"esLintConfigFileHandlingType": 1,
 	"esLintECMAVersion": 8,
 	"esLintEnvironmentsMask": 8209,
@@ -2153,6 +2154,10 @@
 			"optionString": "'all'"
 			},
 		"default-case": {
+			"active": 0,
+			"optionString": ""
+			},
+		"default-param-last": {
 			"active": 0,
 			"optionString": ""
 			},
@@ -2502,6 +2507,10 @@
 			},
 		"no-implied-eval": {
 			"active": 0,
+			"optionString": ""
+			},
+		"no-import-assign": {
+			"active": 1,
 			"optionString": ""
 			},
 		"no-inline-comments": {
@@ -2927,6 +2936,10 @@
 		"prefer-promise-reject-errors": {
 			"active": 0,
 			"optionString": "{'allowEmptyReject': false}"
+			},
+		"prefer-regex-literals": {
+			"active": 0,
+			"optionString": ""
 			},
 		"prefer-rest-params": {
 			"active": 0,
@@ -3536,7 +3549,6 @@
 		"autoOutputPathStyle": 0,
 		"createSourceMap": 1,
 		"enableJavascript": 0,
-		"ieCompatibility": 1,
 		"mathStyle": 0,
 		"outputStyle": 0,
 		"rewriteURLStyle": 0,
@@ -3676,6 +3688,9 @@
 	"npmTargetDependencyListType": 1,
 	"overrideExternalServerCSS": 0,
 	"previewPathAddition": "",
+	"rollupExternals": "",
+	"rollupReplacements": "process.env.NODE_ENV:::$NODE_ENV,,,ENVIRONMENT:::$NODE_ENV",
+	"rollupTreeshakingEnabled": 1,
 	"skippedFoldersString": "log, _logs, logs, _cache, cache, .idea, /storage/framework/sessions, node_modules, /acf-json",
 	"sourceFolderName": "source",
 	"susyVersion": 3,

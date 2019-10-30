@@ -81,9 +81,9 @@ import throttle from 'lodash-es/throttle';
 			scrollPos + detectionArea.top >= mainPos
 		) {
 			$masthead.addClass('switch');
-			$heroVideo.trigger('pause');
+			//$heroVideo.trigger('pause');
 		} else {
-			$heroVideo.trigger('play');
+			//$heroVideo.trigger('play');
 			$masthead.removeClass('switch');
 		}
 
@@ -95,7 +95,7 @@ import throttle from 'lodash-es/throttle';
 		$heroVideo.trigger('pause');
 	});
 	$(window).focus(function() {
-		updateOnScroll();
+		$heroVideo.trigger('play');
 	});
 
 	function toggleMainMenu() {
