@@ -88,13 +88,19 @@ function registerRequiredPlugins() {
 }
 \add_action( 'tgmpa_register', ns('registerRequiredPlugins') );
 
-// Disable ACF menu if we're not local
-function disableACFinProd() {
-	if ( ! strstr(\get_site_url(), 'http://localhost')) {
-		\acf_update_setting('show_admin', false);
+// Disable ACF menu if we're not in a dev environment
+if (function_exists('acf_update_setting')) {
+	function init_disable_acf_in_prod() {
+		if (
+			strstr(\get_site_url(), '.local') === false &&
+			strstr(\get_site_url(), '.dev') === false &&
+			strstr(\get_site_url(), 'localhost') === false
+		) {
+			\acf_update_setting('show_admin', false);
+		}
 	}
+	\add_action('acf/init', ns('init_disable_acf_in_prod'));
 }
-\add_action('acf/init', ns('disableACFinProd'));
 
 // Yoast annoyances
 if (defined('WPSEO_VERSION')) {
