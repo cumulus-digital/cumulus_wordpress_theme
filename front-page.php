@@ -33,7 +33,7 @@ if (count($header_videos)) BodyClasses::add('post_header_image');
 			<video <?php echo $custom_fields['header_video_autoplay'] ? 'autoplay' : '' ?> loop muted playsinline id="header_video" class="landing" data-object-fit="cover" poster="<?php echo \get_template_directory_uri() ?>/assets/prod/images/bg-video_hero-small.png">
 				<?php foreach($header_videos as $video_id): ?>
 					<?php $video = \get_post($video_id) ?>
-					<source src="<?php echo $video->guid ?>#t=0.01" type="<?php echo $video->post_mime_type ?>">
+					<source src="<?php echo $video->guid ?>#t=0" type="<?php echo $video->post_mime_type ?>">
 				<?php endforeach ?>
 				<img src="<?php echo \get_template_directory_uri() ?>/assets/prod/images/bg-video_hero-small.png">
 			</video>
