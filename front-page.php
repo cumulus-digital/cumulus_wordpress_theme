@@ -41,7 +41,7 @@ if (count($header_videos)) BodyClasses::add('post_header_image');
 				<?php endif ?>
 				<?php if (array_key_exists('header_video_alt2_id', $header_videos)): ?>
 					<?php $video_mobile = \get_post($header_videos['header_video_alt2_id']); ?>
-					<source src="<?php echo $video_mobile->guid ?>#t=0.1" type="<?php echo $video_mobile->post_mime_type ?>" media="all and (min-width: 500px)">
+					<source src="<?php echo $video_mobile->guid ?>#t=0.1" type="<?php echo $video_mobile->post_mime_type ?>" media="all and (min-width: 1px)">
 				<?php endif ?>
 				<img src="<?php echo \get_template_directory_uri() ?>/assets/prod/images/bg-video_hero.png">
 			</video>
