@@ -23,10 +23,10 @@
         },
         {
             "key": "field_5cdf0afa90034",
-            "label": "Header Video Tablet",
+            "label": "Header Video Alternate",
             "name": "header_video_alt_id",
             "type": "file",
-            "instructions": "Alternate video format for tablet-sized screens",
+            "instructions": "Alternate video format",
             "required": 0,
             "conditional_logic": [
                 [
@@ -49,10 +49,10 @@
         },
         {
             "key": "field_5cdf121568714",
-            "label": "Header Video Mobile",
+            "label": "Header Video Alternate",
             "name": "header_video_alt2_id",
             "type": "file",
-            "instructions": "Alternate video format for mobile-sized screens",
+            "instructions": "Alternate video format",
             "required": 0,
             "conditional_logic": [
                 [
