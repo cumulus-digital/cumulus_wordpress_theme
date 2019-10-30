@@ -101,7 +101,7 @@
                 <div className="flipcard">
                     <div className="flipcard-content">
                         <div
-                            className="flipcard-face"
+                            className="flipcard-face flipcard-face-front"
                             style={ {
                                 backgroundImage: prop ? `url(${ prop }` : `none`,
                             } }
@@ -113,7 +113,7 @@
                                 We are { label }.
                             </h1>
                         </div>
-                        <div className="flipcard-face">
+                        <div className="flipcard-face flipcard-face-back">
                             <h2>We are { label }.</h2>
                             { card.content }
                         </div>
