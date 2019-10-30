@@ -180,6 +180,17 @@
 		"opt": 0,
 		"q": 65
 		},
+	"/assets/prod/images/bg-video_hero-2.jpg": {
+		"ft": 16384,
+		"iS": 156666,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/assets/prod/images/bg-video_hero-2.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 65
+		},
 	"/assets/prod/images/bg-video_hero.png": {
 		"ft": 32768,
 		"iS": 3595,
@@ -667,6 +678,17 @@
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/assets/prod/images/bg-video_hero-2.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"q": 65
+		},
+	"/assets/src/images/bg-video_hero-small.jpg": {
+		"ft": 16384,
+		"iS": 37493,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/assets/prod/images/bg-video_hero-small.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 1,
