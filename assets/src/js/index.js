@@ -91,7 +91,7 @@ import throttle from 'lodash-es/throttle';
 	}
 	handleWindowUpdates(updateOnScroll, 'scroll resize load');
 
-	functon isHeroVideoPlaying() {
+	function isHeroVideoPlaying() {
 		if ($heroVideo.length) {
 			var video = $heroVideo.get(0);
 			if (video.currentTime > 0 && ! video.paused && ! video.ended && video.readyState > 2) {
