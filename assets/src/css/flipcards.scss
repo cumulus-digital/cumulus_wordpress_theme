@@ -8,8 +8,6 @@
 	max-width: 100%;
 	margin: 1em 0;
 
-	perspective: 600px;
-
 	.flipcard {
 		flex: 0 0 calc(25% - 4px);
 		display: grid;
@@ -21,7 +19,12 @@
 		font-size: 0.75rem;
 		line-height: 1.25;
 
+		perspective: 600px;
+		perspective: 100vw;
+		z-index: 1;
+
 		&:hover, &:focus {
+			z-index: 2;
 			.flipcard-content {
 				transform: rotateY(180deg);
 				transition-delay: 0s;
@@ -58,7 +61,7 @@
 		max-width: 100%;
 		padding-bottom: 100%;
 
-		transition: all 0.4s;
+		transition: all 0.3s;
 		transition-delay: 0.2s;
 		transform-style: preserve-3d;
 		transform-origin: 50% 51%;
