@@ -81,9 +81,9 @@ import throttle from 'lodash-es/throttle';
 			scrollPos + detectionArea.top >= mainPos
 		) {
 			$masthead.addClass('switch');
-			//$heroVideo.trigger('pause');
+			pauseHeroVideo();
 		} else {
-			//$heroVideo.trigger('play');
+			playHeroVideo();
 			$masthead.removeClass('switch');
 		}
 
@@ -91,11 +91,31 @@ import throttle from 'lodash-es/throttle';
 	}
 	handleWindowUpdates(updateOnScroll, 'scroll resize load');
 
+	functon isHeroVideoPlaying() {
+		if ($heroVideo.length) {
+			var video = $heroVideo.get(0);
+			if (video.currentTime > 0 && ! video.paused && ! video.ended && video.readyState > 2) {
+				return true;
+			}
+		}
+		return false;
+	}
+	function pauseHeroVideo() {
+		if (isHeroVideoPlaying()) {
+			$heroVideo.trigger('pause');
+		}
+	}
+	function playHeroVideo() {
+		if ( ! isHeroVideoPlaying()) {
+			$heroVideo.trigger('play');
+		}
+	}
+
 	$(window).blur(function() {
-		$heroVideo.trigger('pause');
+		pauseHeroVideo();
 	});
 	$(window).focus(function() {
-		$heroVideo.trigger('play');
+		updateOnScroll();
 	});
 
 	function toggleMainMenu() {
