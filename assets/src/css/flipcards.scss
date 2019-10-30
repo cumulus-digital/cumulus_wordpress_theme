@@ -9,7 +9,7 @@
 	margin: 1em 0;
 
 	perspective: 600px;
-	transform-style: preserve-3d;
+	transform-origin: 50% 51%;
 
 	.flipcard {
 		flex: 0 0 calc(25% - 4px);
