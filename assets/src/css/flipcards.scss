@@ -8,7 +8,8 @@
 	max-width: 100%;
 	margin: 1em 0;
 
-	perspective: 1000px;
+	perspective: 600px;
+	transform-style: preserve-3d;
 
 	.flipcard {
 		flex: 0 0 calc(25% - 4px);
