@@ -12,18 +12,22 @@ function cmFrontPageTitle( $title ) {
 \add_filter('wpseo_title', '__return_empty_string'); // Yoast interception
 
 $custom_fields = \get_fields();
-$header_videos = array();
+$header_video_ids = array();
 if ($custom_fields) {
 	foreach($custom_fields as $key => $field) {
 		if (
 			(strstr($key, 'header_video_id') || strstr($key, 'header_video_alt')) &&
 			! empty($field)
 		) {
-			$header_videos[$key] = $field;
+			$header_video_ids[$key] = $field;
 		}
 	}
 }
-if (count($header_videos)) BodyClasses::add('post_header_image');
+if (count($header_video_ids)) {
+	BodyClasses::add('post_header_image');
+	$header_videos = \get_posts(array(
+		'post_in' => $header_video_ids
+	));
 \get_header();
 ?>
 <section class="row hero">
@@ -31,8 +35,7 @@ if (count($header_videos)) BodyClasses::add('post_header_image');
 	<?php if (count($header_videos)): ?>
 		<div class="video-container">
 			<video <?php echo $custom_fields['header_video_autoplay'] ? 'autoplay' : '' ?> loop muted playsinline id="header_video" class="landing" data-object-fit="cover" poster="<?php echo \get_template_directory_uri() ?>/assets/prod/images/bg-video_hero-small.png">
-				<?php foreach($header_videos as $video_id): ?>
-					<?php $video = \get_post($video_id) ?>
+				<?php foreach($header_videos as $video): ?>
 					<source src="<?php echo \wp_get_attachment_url($video->ID) ?>#t=0" type="<?php echo $video->post_mime_type ?>">
 				<?php endforeach ?>
 				<img src="<?php echo \get_template_directory_uri() ?>/assets/prod/images/bg-video_hero-small.png">
