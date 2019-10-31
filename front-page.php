@@ -32,8 +32,8 @@ if (count($header_videos)) BodyClasses::add('post_header_image');
 		<div class="video-container">
 			<video <?php echo $custom_fields['header_video_autoplay'] ? 'autoplay' : '' ?> loop muted playsinline id="header_video" class="landing" data-object-fit="cover" poster="<?php echo \get_template_directory_uri() ?>/assets/prod/images/bg-video_hero-small.png">
 				<?php foreach($header_videos as $video_id): ?>
-					<?php $video = \wp_get_attachment_url($video_id) ?>
-					<source src="<?php echo \wp_make_link_relative($video) ?>#t=0" type="<?php echo $video->post_mime_type ?>">
+					<?php $video = \get_post($video_id) ?>
+					<source src="<?php echo \wp_get_attachment_url($video->ID) ?>#t=0" type="<?php echo $video->post_mime_type ?>">
 				<?php endforeach ?>
 				<img src="<?php echo \get_template_directory_uri() ?>/assets/prod/images/bg-video_hero-small.png">
 			</video>
