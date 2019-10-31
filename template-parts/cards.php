@@ -34,7 +34,7 @@ namespace CumulusTheme;
 			}
 			if ($card_options['background_image']) {
 				$bg_image = \get_post($card_options['background_image']);
-				echo 'background-image:url(\'' . $bg_image->guid . '\');';
+				echo 'background-image:url(\'' . \wp_make_link_relative($bg_image->guid) . '\');';
 				echo 'background-position:' . $card_options['background_position'] . ';';
 			}
 		?>"

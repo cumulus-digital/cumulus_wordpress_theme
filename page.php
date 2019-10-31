@@ -58,7 +58,7 @@ $header_image_id = false;
 						?>
 						<header
 							class="has_image <?php echo implode(' ', $header_classes) ?>"
-							style="background-image:url('<?php echo function_exists('jetpack_photon_url') ? \jetpack_photon_url($header_image->guid) : $header_image->guid ?>')"
+							style="background-image:url('<?php echo function_exists('jetpack_photon_url') ? \jetpack_photon_url($header_image->guid) : \wp_make_link_relative($header_image->guid) ?>')"
 							<?php if ( ! empty($header_image->post_excerpt)): ?>
 								data-credit="<?php echo \esc_html($header_image->post_excerpt) ?>"
 							<?php endif ?>
