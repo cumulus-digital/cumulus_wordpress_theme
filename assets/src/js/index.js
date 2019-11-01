@@ -142,4 +142,42 @@ import throttle from 'lodash-es/throttle';
 		}, 500);
 	});
 
+	// Handle populate_markets form field by loading content from station finder
+	// Load markets from station finder
+	function populateMarkets(select) {
+		select = $(select);
+		$.getJSON(
+			"https://player.westwoodone.com/stations/stations.ashx",
+			function( response ) {
+				var stations = response;
+				var markets = [];
+				var market_options = [];
+				stations.forEach(function(station) {
+					var market = station.city + ', ' + station.state;
+					if ( ! markets.includes(market)) {
+						markets.push(market);
+					}
+				});
+				markets.sort();
+				markets.forEach(function(market) {
+					market_options.push($('<option value="' + market + '">' + market + '</option>'));
+				});
+				select.each(function() {
+					$(this).append(market_options);
+				});
+				select.find('.loading_markets').remove();
+			}
+		);
+	}
+
+	$('.pum').on('pumBeforeOpen', function() {
+		var $this = $(this);
+		var select = $this.find('.populate_markets select');
+		if (select.length) {
+			var loading = $('<option class="loading_markets">Loading markets...</option>');
+			select.append(loading);
+			populateMarkets(select);
+		}
+	});
+
 }(jQuery, window.self));
