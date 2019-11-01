@@ -26,8 +26,12 @@ if ($custom_fields) {
 if (count($header_video_ids)) {
 	BodyClasses::add('post_header_image');
 	$header_videos = \get_posts(array(
-		'post_in' => $header_video_ids
+		'include' => array_values($header_video_ids),
+		'post_type' => 'attachment',
+		'post_status' => 'all'
 	));
+}
+
 \get_header();
 ?>
 <section class="row hero">
