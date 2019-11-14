@@ -34,7 +34,7 @@ class MenuWalker extends \Walker_Nav_Menu
 				$item
 			)
 		);
-		$class_names = ' class="'. \esc_attr($class_names) . '"';
+		$class_names = \esc_attr($class_names);
 
 		$output .= $indent . 
 			'<li ' . 
@@ -53,9 +53,11 @@ class MenuWalker extends \Walker_Nav_Menu
 		$attributes .= ! empty($item->url)        ?
 			' href="' . \esc_attr($item->url) . '"' : '';
 		$attributes .= ' itemprop="url" ';
+		/*
 		$attributes .= ! empty($image)            ?
 			' style="' . \esc_attr($image) . '"' : 'style=""';
-
+		*/
+	
 		if (is_array($args)) {
 			$args = (object) $args;
 		}
