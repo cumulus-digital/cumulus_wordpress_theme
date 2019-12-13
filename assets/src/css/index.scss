@@ -82,6 +82,13 @@ a {
 	}
 }
 
+li {
+	margin-bottom: .5em;
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
 img:not([src]) {
 	visibility: hidden;
 }
