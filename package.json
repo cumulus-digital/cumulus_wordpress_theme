@@ -15,7 +15,7 @@
   "description": "Wordpress theme",
   "dependencies": {
     "intersection-observer": "^0.7.0",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "lodash": "^4.17.15",
     "lodash-es": "^4.17.15",
     "scrollmonitor": "^1.2.4",
