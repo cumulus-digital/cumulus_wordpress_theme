@@ -1,27 +1,28 @@
 {
+  "description": "Wordpress theme",
+  "dependencies": {
+    "intersection-observer": "^0.10.0",
+    "jquery": "^3.5.1",
+    "lodash": "^4.17.15",
+    "lodash-es": "^4.17.15",
+    "scrollmonitor": "^1.2.4",
+    "v-lazy-image": "^1.4.0",
+    "vue": "^2.6.11"
+  },
+  "version": "1.0.0",
   "author": "Daniel Vena <daniel.vena@cumulus.com>",
   "main": "index.js",
   "devDependencies": {
     "babelify": "^10.0.0",
-    "browserify": "^16.5.0"
+    "browserify": "^16.5.1"
   },
   "browser": {
     "vue": "vue/dist/vue.common.js"
   },
+  "optionalDependencies": {},
+  "name": "cumulus_com_wp",
   "scripts": {
     "build": "NODE_ENV=production browserify ./assets/prod/js/index.js -o ./assets/prod/js/bundle.js;",
     "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "description": "Wordpress theme",
-  "dependencies": {
-    "intersection-observer": "^0.7.0",
-    "jquery": "^3.4.1",
-    "lodash": "^4.17.15",
-    "lodash-es": "^4.17.15",
-    "scrollmonitor": "^1.2.4",
-    "v-lazy-image": "^1.3.2",
-    "vue": "^2.6.10"
-  },
-  "name": "cumulus_com_wp",
-  "version": "1.0.0"
+  }
 }
