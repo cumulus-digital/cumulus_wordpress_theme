@@ -3,3 +3,7 @@
  */
 
 @import 'wp-rss-aggregator';
+
+.wp-block-image img {
+    height: auto;
+}
