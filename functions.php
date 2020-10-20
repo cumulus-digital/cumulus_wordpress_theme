@@ -1,6 +1,7 @@
 <?php
 namespace CumulusTheme;
 
+@ini_set( 'memory_limit', '128M' );
 @ini_set( 'upload_max_size' , '128M' );
 @ini_set( 'post_max_size', '128M');
 @ini_set( 'max_execution_time', '600' );
