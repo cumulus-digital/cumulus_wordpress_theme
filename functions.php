@@ -4,7 +4,8 @@ namespace CumulusTheme;
 @ini_set( 'memory_limit', '128M' );
 @ini_set( 'upload_max_size' , '128M' );
 @ini_set( 'post_max_size', '128M');
-@ini_set( 'max_execution_time', '600' );
+@ini_set( 'max_execution_time', '1200' );
+@ini_set( 'max_input_time', '1200' );
 
 // Auto-updates
 \add_filter( 'auto_update_plugin', '__return_true' );
