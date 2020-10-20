@@ -7,6 +7,8 @@ namespace CumulusTheme;
 @ini_set( 'max_execution_time', '1200' );
 @ini_set( 'max_input_time', '1200' );
 
+define('THEME_PATH', parse_url(\get_template_directory_uri(), PHP_URL_PATH));
+
 // Auto-updates
 \add_filter( 'auto_update_plugin', '__return_true' );
 \add_filter( 'auto_update_theme', '__return_true' );
@@ -338,7 +340,7 @@ function scripts_and_styles() {
 
 		\wp_register_script(
 			'cumulus_theme_script',
-			\get_template_directory_uri() . '/assets/prod/js/index.js',
+			THEME_PATH . '/assets/prod/js/index.js',
 			array('jquery'),
 			null,
 			true
@@ -347,7 +349,7 @@ function scripts_and_styles() {
 
 		\wp_register_style(
 			'cumulus_theme_style',
-			\get_template_directory_uri() . '/assets/prod/css/index.css',
+			THEME_PATH . '/assets/prod/css/index.css',
 			array(),
 			null,
 			'all'
@@ -381,7 +383,7 @@ function setupGutenberg() {
 
 	\wp_register_Style(
 		'guttenberg_styles',
-		\get_template_directory_uri() . '/assets/prod/css/editor.css',
+		THEME_PATH . '/assets/prod/css/editor.css',
 		false,
 		null,
 		'all'
@@ -391,19 +393,19 @@ function setupGutenberg() {
 	// Custom blocks
 	\wp_enqueue_script(
         'cumulus-gutenberg/anchor', // Handle.
-        get_template_directory_uri() . '/assets/prod/js/blocks-anchor.js',
+        THEME_PATH . '/assets/prod/js/blocks-anchor.js',
         array('wp-blocks', 'wp-element')
     );
 
 	\wp_enqueue_script(
         'cumulus-gutenberg/force-values', // Handle.
-        get_template_directory_uri() . '/assets/prod/js/blocks-FORCE.js',
+        THEME_PATH . '/assets/prod/js/blocks-FORCE.js',
         array('wp-blocks', 'wp-element')
     );
 
     \wp_register_Style(
     	'cumulus-gutenberg/force-values',
-    	\get_template_directory_uri() . '/assets/prod/css/flipcards.css',
+    	THEME_PATH . '/assets/prod/css/flipcards.css',
     	false,
     	null,
     	'all'
@@ -413,7 +415,7 @@ function setupGutenberg() {
     /*
 	\wp_enqueue_script(
         'cumulus-gutenberg/image-flipper', // Handle.
-        get_template_directory_uri() . '/assets/prod/js/blocks-imageflipper.js',
+        THEME_PATH . '/assets/prod/js/blocks-imageflipper.js',
         array('wp-blocks', 'wp-element')
     );
     */
@@ -427,7 +429,7 @@ function setupGutenbergFrontend() {
 	if (\has_block('cumulus-gutenberg/force-values')) {
 		\wp_register_Style(
 			'cumulus-gutenberg/force-values',
-			\get_template_directory_uri() . '/assets/prod/css/flipcards.css',
+			THEME_PATH . '/assets/prod/css/flipcards.css',
 			false,
 			null,
 			'all'
@@ -439,7 +441,7 @@ function setupGutenbergFrontend() {
 	if ( ! \is_admin() && \has_block('cumulus-gutenberg/image-flipper')) {
 		\wp_enqueue_script(
 			'cumulus-gutenberg/image-flipper/frontend',
-			get_template_directory_uri() . '/assets/prod/js/blocks-imageflipper-frontend.js',
+			THEME_PATH . '/assets/prod/js/blocks-imageflipper-frontend.js',
 			null,
 			null,
 			true
@@ -449,7 +451,7 @@ function setupGutenbergFrontend() {
 		) );
 		\wp_register_Style(
 			'cumulus-gutenberg/image-flipper/frontend',
-			\get_template_directory_uri() . '/assets/prod/css/imageflipper.css',
+			THEME_PATH . '/assets/prod/css/imageflipper.css',
 			false,
 			null,
 			'all'

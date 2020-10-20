@@ -76,7 +76,7 @@ $card_image_id = $custom_fields['card_image'];
 						<?php echo $card_options['link_label'] ? \esc_html($card_options['link_label']) : 'Learn More' ?>
 					<?php endif ?>
 				</span>
-				<img src="<?php echo \get_template_directory_uri() ?>/assets/prod/images/arrow-blue-right.svg" class="arrow">
+				<img src="<?php echo THEME_PATH ?>/assets/prod/images/arrow-blue-right.svg" class="arrow">
 			</div>
 
 		<?php endif ?>
