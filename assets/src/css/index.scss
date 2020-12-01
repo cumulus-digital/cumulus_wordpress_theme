@@ -159,6 +159,9 @@ table {
 .table-padding-3quarterem td {
 	padding: .75em;
 }
+.table-firstcolumn-dates td:first-child {
+	width: 6em;
+}
 
 .post-edit-link {
 	background: #666;
