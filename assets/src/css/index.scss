@@ -148,6 +148,18 @@ figure.wp-block-video figcaption {
 	top: 0;
 }
 
+table {
+	border: 0;
+	border-collapse: collapse;
+
+	td {
+		padding: .25em;
+	}
+}
+.table-padding-3quarterem td {
+	padding: .75em;
+}
+
 .post-edit-link {
 	background: #666;
 	color: #fff;
