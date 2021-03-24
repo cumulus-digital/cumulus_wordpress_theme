@@ -103,6 +103,12 @@ img:not([src]) {
 	text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
 }
 
+/* Allows removing spacing from gutenberg typography */
+.mb-0 { margin-bottom: 0 !important; }
+.pb-0 { padding-bottom: 0 !important; }
+.mt-0 { margin-top: 0 !important; }
+.pt-0 { padding-top: 0 !important; }
+
 nav.menu {
 	ul, li {
 		list-style: none;
