@@ -1,4 +1,4 @@
-import throttle from 'lodash-es/throttle';
+import throttle from 'lodash/throttle';
 
 (function($, window, undefined) { // eslint-disable-line no-unused-vars
 

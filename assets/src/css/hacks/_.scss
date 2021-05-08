@@ -13,3 +13,8 @@
 .kt-tabs-title-list {
     align-items: flex-end;
 }
+
+// Borders on jotform oEmbeds
+.wp-block-embed-jotform iframe {
+	border: 0;
+}

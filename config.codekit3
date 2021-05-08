@@ -363,6 +363,17 @@
 		"oAP": "/assets/prod/js/blocks-imageflipper.js.map",
 		"oF": 0
 		},
+	"/assets/prod/js/bundle.js": {
+		"bF": 4,
+		"ft": 64,
+		"ma": 1,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/assets/prod/js/bundle.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
 	"/assets/prod/js/index.js": {
 		"bF": 4,
 		"ft": 64,
