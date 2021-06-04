@@ -486,6 +486,36 @@ function getImagesByCategory() {
 add_action('wp_ajax_get_images_by_category', ns('getImagesByCategory'));
 add_action('wp_ajax_nopriv_get_images_by_category', ns('getImagesByCategory'));
 
+/** 
+ * Additional date parameters for fetching posts
+ */
+function fetch_post_from_years($query) {
+	if ($query->is_search() || $query->is_archive()) {
+		if (isset($_GET['before'])) {
+			$d = \DateTime::createFromFormat('Y-m-d', $_GET['before']);
+			if ( $d && $d->format('Y-m-d') === $_GET['before']) {
+				$query->set(
+					'date_query', array(
+						array('before' => $d->format('Y-m-d'))
+					)
+				);
+			}
+		}
+		if (isset($_GET['after'])) {
+			$d = \DateTime::createFromFormat('Y-m-d', $_GET['after']);
+			if ( $d && $d->format('Y-m-d') === $_GET['after']) {
+				$query->set(
+					'date_query', array(
+						array('after' => $d->format('Y-m-d'))
+					)
+				);
+			}
+		}
+	}
+	return $query;
+}
+\add_action('pre_get_posts', ns('fetch_post_from_years'), 1000);
+
 // Menus
 function header_menu() {
 	\wp_nav_menu(array(
