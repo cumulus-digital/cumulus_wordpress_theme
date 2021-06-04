@@ -30,9 +30,9 @@ $description = get_the_archive_description();
 									<?php \the_title(); ?>
 								</a>
 							</h2>
-							<time datetime="<?php \get_the_date('Y-m-d') ?>">
+							<time datetime="<?php \get_the_date('Y-m-d', \get_the_ID()) ?>">
 								<?php
-									echo \wp_kses( \get_the_date('F, n Y'), array() );
+									echo \wp_kses( \get_the_date('F, n Y', \get_the_ID() ), array() );
 								?>
 							</time>
 						</header>
@@ -60,7 +60,7 @@ $description = get_the_archive_description();
 		</div>
 	</section>
 	<section class="row">
-		<div class="row-container">
+		<div class="row-container pagination">
 			<?php
 			the_posts_pagination( array(
 				'prev_text'          => 'Previous page',
