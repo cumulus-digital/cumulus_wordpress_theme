@@ -491,6 +491,16 @@ add_action('wp_ajax_nopriv_get_images_by_category', ns('getImagesByCategory'));
  */
 function fetch_post_from_years($query) {
 	if ($query->is_search() || $query->is_archive()) {
+		if (isset($_GET['previous-years'])) {
+			$d = \DateTime::createFromFormat('Y-m-d', date('Y') . '-01-01');
+			if ( $d ) {
+				$query->set(
+					'date_query', array(
+						array('before' => $d->format('Y-m-d'))
+					)
+				);
+			}
+		}
 		if (isset($_GET['before'])) {
 			$d = \DateTime::createFromFormat('Y-m-d', $_GET['before']);
 			if ( $d && $d->format('Y-m-d') === $_GET['before']) {
