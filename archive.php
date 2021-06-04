@@ -30,9 +30,9 @@ $description = get_the_archive_description();
 									<?php \the_title(); ?>
 								</a>
 							</h2>
-							<time datetime="<?php \get_the_date('Y-m-d', \get_the_ID()) ?>">
+							<time datetime="<?php echo \get_the_time('Y-m-d', \get_the_ID()) ?>">
 								<?php
-									echo \wp_kses( \get_the_date('F, n Y', \get_the_ID() ), array() );
+									echo \wp_kses( \get_the_date(), array() );
 								?>
 							</time>
 						</header>
