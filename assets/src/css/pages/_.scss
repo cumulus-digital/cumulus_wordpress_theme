@@ -212,7 +212,7 @@ main.page {
 			text-decoration: none;
 		}
 
-		.has-text-color {
+		.has-text-color, .has-inline-color {
 			&.has-white-color {
 				color: #fff;
 			}

@@ -15,7 +15,7 @@ body .editor-styles-wrapper {
 	    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
 	}
 
-	.has-text-color {
+	.has-text-color, .has-inline-color {
 		&.has-white-color {
 			color: #fff;
 		}
