@@ -242,8 +242,8 @@ main.page {
 			}
 
 		}
-
-		.has-background-color {
+		
+		.has-background-color, .has-background {
 			&.has-white-background-color {
 				background-color: #fff;
 			}
@@ -271,7 +271,6 @@ main.page {
 			&.has-wwopn-light-purple-background-color {
 				background-color: #a33cb3;
 			}
-
 		}
 
 		.has-small-font-size {
