@@ -1,5 +1,7 @@
 <?php
+
 namespace CumulusTheme;
+
 ?>
 <div class="row-container">
 	<div class="logo">
@@ -8,7 +10,7 @@ namespace CumulusTheme;
 
 	<div class="hamburger-container">
 		<button class="hamburger hamburger--spin" type="button"
-		        aria-label="Menu" aria-controls="navigation">
+		        aria-label="Menu" aria-controls="header-menu-container">
 		  <span class="hamburger-box">
 		    <span class="hamburger-inner"></span>
 		  </span>
