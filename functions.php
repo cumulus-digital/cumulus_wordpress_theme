@@ -558,7 +558,7 @@ function header_menu()
         'link_after'      => '',
         'items_wrap'      => '<ul itemscope itemtype="http://www.schema.org/SiteNavigationElement">%3$s</ul>',
         'depth'           => 0,
-        'walker'          => new MenuWalker()
+        //'walker'          => new MenuWalker()
     ));
 }
 function footer_menu()
@@ -579,7 +579,7 @@ function footer_menu()
         'link_after'      => '',
         'items_wrap'      => '<ul>%3$s</ul>',
         'depth'           => 0,
-        'walker'          => new MenuWalker()
+        //'walker'          => new MenuWalker()
     ));
 }
 function social_menu()
@@ -600,7 +600,7 @@ function social_menu()
         'link_after'      => '</span>',
         'items_wrap'      => '<ul>%3$s</ul>',
         'depth'           => 0,
-        'walker'          => new MenuWalker()
+        //'walker'          => new MenuWalker()
     ));
 }
 
