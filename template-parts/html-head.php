@@ -5,7 +5,9 @@
 
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-	<meta name="description" content="<?php bloginfo('description'); ?>">
+	<?php if (\get_bloginfo('description')): ?>
+		<meta name="description" content="<?php bloginfo('description'); ?>">
+	<?php endif; ?>
 
 	<?php if (\has_site_icon()): ?>
 		<?php \wp_site_icon() ?>
