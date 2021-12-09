@@ -42,7 +42,7 @@ if (count($header_video_ids)) {
 				<?php foreach($header_videos as $video): ?>
 					<source src="<?php echo \wp_get_attachment_url($video->ID) ?>#t=0" type="<?php echo $video->post_mime_type ?>">
 				<?php endforeach ?>
-				<img src="<?php echo THEME_PATH ?>/assets/prod/images/bg-video_hero-small.png">
+				<img src="<?php echo THEME_PATH ?>/assets/prod/images/bg-video_hero-small.png" alt>
 			</video>
 		</div>
 		<script src="https://cdn.jsdelivr.net/npm/objectFitPolyfill@2.3.0/dist/objectFitPolyfill.basic.min.js" integrity="sha256-Kms38lBvuW1aCtPabohpwj3Xx1VCuIjGgDS6X6ay3Hc=" crossorigin="anonymous"></script>
