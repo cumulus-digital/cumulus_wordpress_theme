@@ -4,9 +4,9 @@ namespace CumulusTheme;
 
 ?>
 <div class="row-container">
-	<div class="logo">
-		<a aria-label="Home" href="<?= \home_url() ?>"></a>
-	</div>
+	<h1 class="logo">
+		<a aria-label="Home" href="<?= \home_url() ?>" title="<?= \get_bloginfo('name') ?>"></a>
+	</h1>
 
 	<div class="hamburger-container">
 		<button class="hamburger hamburger--spin" type="button"
