@@ -5,7 +5,7 @@ namespace CumulusTheme;
 ?>
 <div class="row-container">
 	<h1 class="logo">
-		<a aria-label="Home" href="<?= \home_url() ?>" title="<?= \get_bloginfo('name') ?>"></a>
+		<a aria-label="Home" href="<?= \home_url() ?>" title="<?= \get_bloginfo('name') ?>"><span><?= bloginfo('name') ?></span></a>
 	</h1>
 
 	<div class="hamburger-container">
