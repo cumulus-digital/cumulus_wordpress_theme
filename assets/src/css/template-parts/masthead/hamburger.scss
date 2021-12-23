@@ -28,6 +28,11 @@
  		opacity: 0.7;
  		outline: 0;
  	}
+	 &:focus {
+		 outline: 1;
+		 opacity: 1;
+		 background-color: map-deep($colors, "brand");
+	 }
  }
 
 .hamburger-box {
@@ -69,7 +74,7 @@
  		transition: bottom 0.1s 0.25s ease-in, transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
  	}
 }
-&.solid .hamburger-inner, 
+&.solid .hamburger-inner,
 &.switch .hamburger-inner {
 	&, &::before, &::after {
 		background-color: rgba(0,0,0,0.5);

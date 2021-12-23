@@ -107,9 +107,8 @@ a {
 	img {
 		border: 0;
 	}
-	&:hover, &:focus {
+	@include hover {
 		color: map-deep($colors, 'highlight');
-		outline: 0;
 	}
 }
 
@@ -199,7 +198,7 @@ table {
 .table-firstcolumn-dates {
 	td {
 		vertical-align: top;
-	
+
 		&:first-child {
 			width: 6em;
 		}

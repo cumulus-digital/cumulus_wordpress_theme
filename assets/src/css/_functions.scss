@@ -28,3 +28,23 @@
 		@content;
 	}
 }
+
+@mixin hover() {
+	@media (hover: none) {
+		-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+		&:active {
+			@content;
+		}
+	}
+
+	@media not all and (hover: none),
+	all and (-ms-high-contrast: none),
+	(-ms-high-contrast: active) {
+
+		&:hover,
+		&:focus {
+			@content
+		}
+	}
+}

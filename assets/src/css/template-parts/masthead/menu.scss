@@ -47,10 +47,11 @@
 
 		padding: 0.75vh 0.5vw;
 	}
-	a:hover {
-		background: rgba(0,0,0,0.4);
+	a {
+		@include hover {
+			background: rgba(0, 0, 0, 0.4);
+		}
 	}
-
 
 	& > ul {
 		display: flex;
@@ -109,7 +110,7 @@
 				&:after {
 					display: none;
 				}
-				
+
 				&:first-child, &:last-child {
 					padding: 3% 5% 0;
 					margin-left: 0;
@@ -133,7 +134,7 @@
 
 				& > li {
 					position: relative;
-					
+
 					& > ul {
 
 						font-size: 0.8em;
@@ -161,7 +162,7 @@
 	@media (max-width: map-deep($widths, "small")) {
 		.masthead.menu-active .menu {
 			height: calc(100vh - #{$masthead-height} - 46px);
-		}		
+		}
 	}
 }
 
@@ -173,7 +174,7 @@
 	}
 
 	@media (max-width: map-deep($widths, "medium")) {
-		
+
 		&.menu-active .menu {
 			left: 0;
 			transition: all linear 0.1s;
