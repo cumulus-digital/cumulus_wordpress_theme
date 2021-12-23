@@ -55,7 +55,7 @@ main.page {
 			span {
 				padding: 1em;
 				color: #fff;
-				text-shadow: 
+				text-shadow:
 					0 0 2em #000,
 					0 0 1em #000,
 					1px 1px 0 rgba(0,0,0,0.8);
@@ -91,7 +91,7 @@ main.page {
 			padding: 0 1em;
 			line-height: 1.1;
 			text-align: center;
-			
+
 			/*
 			&::after {
 				display: block;
@@ -144,7 +144,7 @@ main.page {
 
 				transition: color .2s;
 
-				&:hover {
+				@include hover {
 					color: map-deep($colors, 'highlight');
 				}
 			}
@@ -242,7 +242,7 @@ main.page {
 			}
 
 		}
-		
+
 		.has-background-color, .has-background {
 			&.has-white-background-color {
 				background-color: #fff;

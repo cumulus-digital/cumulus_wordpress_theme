@@ -109,6 +109,10 @@ a {
 	}
 	@include hover {
 		color: map-deep($colors, 'highlight');
+		outline: 0;
+	}
+	&:focus-visible {
+		outline: 1;
 	}
 }
 
@@ -216,7 +220,7 @@ table {
 
 	padding: .5em .6em;
 
-	&:hover {
+	@include hover {
 		background: map-deep($colors, "brand");
 	}
 }

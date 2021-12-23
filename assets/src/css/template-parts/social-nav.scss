@@ -1,5 +1,5 @@
 nav.social {
-	
+
 	justify-self: center;
 
 	ul {
@@ -10,7 +10,7 @@ nav.social {
 		li {
 			display: inline-block;
 			margin: 0;
-			padding: 0;			
+			padding: 0;
 		}
 	}
 
@@ -26,7 +26,7 @@ nav.social {
 
 		transition: color 0.2s;
 
-		&:hover {
+		@include hover {
 			color: rgba(255,255,255,1);
 			text-decoration: none;
 		}

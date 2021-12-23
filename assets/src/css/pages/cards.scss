@@ -166,11 +166,13 @@
 			}
 		}
 
-		@at-root .cards a.card:hover {
-			box-shadow: 0 0 2em rgba(0,0,0,0.3);
-			transform: scale(1.04);
-			transform-origin: center center;
-			z-index: 5;
+		@at-root .cards a.card {
+			@include hover {
+				box-shadow: 0 0 2em rgba(0,0,0,0.3);
+				transform: scale(1.04);
+				transform-origin: center center;
+				z-index: 5;
+			}
 		}
 
 		@media (max-width: map-deep($widths, 'small')) {
@@ -291,9 +293,13 @@
 
 			    transition: all .2s ease-in-out .2s;
 
-				@at-root .cards a.card:hover .card-permalink span {
-					max-width: 100%;
-					padding-right: 0.5em;
+				@at-root .cards a.card {
+					@include hover {
+						.card-permalink span {
+							max-width: 100%;
+							padding-right: 0.5em;
+						}
+					}
 				}
 
 				@media (max-width: map-deep($widths, 'small')) {

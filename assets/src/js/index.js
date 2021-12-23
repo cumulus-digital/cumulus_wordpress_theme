@@ -118,21 +118,35 @@ import throttle from 'lodash/throttle';
 		updateOnScroll();
 	});
 
-	function toggleMainMenu() {
-		if ($body.hasClass('menu-active')) {
-			$heroVideo.trigger('play');
-			$body.removeClass('menu-active');
-			$masthead.removeClass('menu-active');
-		} else {
+	function toggleMainMenu(forced) {
+		if (forced || !$body.hasClass('menu-active')) {
 			$heroVideo.trigger('pause');
 			$body.addClass('menu-active');
 			$masthead.addClass('menu-active');
 			$masthead.find('.menu').scrollTop(0);
+		} else {
+			$heroVideo.trigger('play');
+			$body.removeClass('menu-active');
+			$masthead.removeClass('menu-active');
 		}
 	}
 	$('.hamburger-container, .masthead nav.menu a[href*="#"]').on(
 		'click',
-		toggleMainMenu
+		function () {
+			toggleMainMenu();
+		}
+	);
+	$('.masthead nav.menu a').on(
+		'focus',
+		function () {
+			toggleMainMenu(true);
+		}
+	);
+	$('.masthead nav.menu a').on(
+		'focusout',
+		function () {
+			toggleMainMenu(false);
+		}
 	);
 
 	$scrollArrow.on('click', function(e) {

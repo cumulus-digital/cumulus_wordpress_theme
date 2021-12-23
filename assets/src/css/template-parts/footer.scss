@@ -5,7 +5,7 @@ body > footer {
 
 	padding: 3vh 2vw;
 
-	font-size: 0.75rem;
+	font-size: 0.8rem;
 
 	.row-container {
 		display: grid;
@@ -55,7 +55,8 @@ body > footer {
 		color: inherit;
 		text-decoration: none;
 
-		&:hover {
+		@include hover {
+			color: inherit;
 			text-decoration: underline;
 		}
 	}
