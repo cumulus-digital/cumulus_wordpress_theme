@@ -61,16 +61,16 @@
 		}
 		.card {
 			flex: 0 0 calc(25% - 2em);
-			font-size: 0.6em;
+			font-size: 0.8em;
 		}
 	}
 	&.five-columns .card {
 		flex: 0 0 calc(20% - 2em);
-		font-size: 0.5em;
+		font-size: 0.75em;
 	}
 	&.six-columns .card {
 		flex: 0 0 calc(16.666666666667% - 2em);
-		font-size: 0.4em;
+		font-size: 0.65em;
 	}
 	@media (max-width: map-deep($widths, 'medium')) {
 		&.one-columns,
