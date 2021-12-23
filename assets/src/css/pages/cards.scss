@@ -229,23 +229,23 @@
 			}
 		}
 
-		h3 {
+		h2 {
 			margin: 0;
 			font-size: 1.6em;
 			font-weight: 400;
 			line-height: 1.1;
 			color: inherit;
 
-			@at-root .cards.uppercase-titles h3 {
+			@at-root .cards.uppercase-titles h2 {
 				text-transform: uppercase;
 			}
 		}
 
 		.body {
 			margin: 0;
-			font-size: 0.85em;
+			font-size: 1em;
 		}
-		h3 + .body {
+		h2 + .body {
 			margin-top: 1em;
 		}
 
@@ -262,7 +262,7 @@
 
 			padding: .5em .75em;
 			overflow: hidden;
-			
+
 			background-color: rgba(map-deep($colors, 'highlight'), 0.1);
 			border-radius: 2em;
 			color: map-deep($colors, 'brand');
