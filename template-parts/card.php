@@ -30,12 +30,11 @@ $card_image_id = $custom_fields['card_image'];
 		<?php
             if ($card_options['show_image'] && $card_image_id):
         ?>
-			<?php $card_image = \get_post($card_image_id) ?>
 			<figure
 				class="card-image"
 			>
 				<img
-					src="<?php echo function_exists('jetpack_photon_url') ? \jetpack_photon_url($card_image->guid) : $card_image->guid ?>"
+					src="<?php echo \wp_get_attachment_image_url($card_image_id, 'full'); ?>"
 					alt="<?php
                         if (empty(get_arr_val($custom_fields, 'alt_title'))) {
                             \the_title();
