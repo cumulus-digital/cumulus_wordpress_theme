@@ -502,15 +502,12 @@ function fetch_post_from_years($query)
 {
     if ($query->is_search() || $query->is_archive()) {
         if (isset($_GET['previous-years'])) {
-            $d = \DateTime::createFromFormat('Y-m-d', date('Y') . '-01-01');
-            if ($d) {
-                $query->set(
-                    'date_query',
-                    array(
-                        array('before' => $d->format('Y-m-d'))
-                    )
-                );
-            }
+            $query->set(
+                'date_query',
+                array(
+                    array('before' => '1 year ago')
+                )
+            );
         }
         if (isset($_GET['before'])) {
             $d = \DateTime::createFromFormat('Y-m-d', $_GET['before']);
