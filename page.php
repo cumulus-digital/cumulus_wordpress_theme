@@ -60,7 +60,7 @@ $header_image_id = false;
                         ?>
 						<header
 							class="has_image <?php echo implode(' ', $header_classes) ?>"
-							style="background-image:url('<?php echo \wp_make_link_relative(\wp_get_attachment_image_url($header_image_id, 'full')) ?>')"
+							style="background-image:url('<?php echo \wp_get_attachment_image_url($header_image_id, 'full'); ?>')"
 							<?php if (! empty($header_image->post_excerpt)): ?>
 								data-credit="<?php echo \esc_html($header_image->post_excerpt) ?>"
 							<?php endif ?>
