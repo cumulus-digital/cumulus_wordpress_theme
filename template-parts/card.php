@@ -34,7 +34,7 @@ $card_image_id = $custom_fields['card_image'];
 				class="card-image"
 			>
 				<img
-					src="<?php echo \wp_get_attachment_image_url($card_image_id, 'full'); ?>"
+					src="<?php echo \wp_make_link_relative(\wp_get_attachment_image_url($card_image_id, 'full')); ?>"
 					alt="<?php
                         if (empty(get_arr_val($custom_fields, 'alt_title'))) {
                             \the_title();

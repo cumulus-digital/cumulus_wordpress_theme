@@ -1,35 +1,37 @@
 <?php
+
 namespace CumulusTheme;
+
 $header_image_id = false;
 ?>
 <?php if (\have_posts()): ?>
 
 	<?php
-		$custom_fields = \get_fields();
-		$header_image_id = get_arr_val($custom_fields, 'header_image_id');
-		if ($header_image_id) {
-			BodyClasses::add('post_header_image');
-		}
-		$card_options = array(
-			'show_subpages' => get_arr_val($custom_fields, 'show_subpages_as_cards'),
-			'manual_page_ids' => get_arr_val($custom_fields, 'manual_card_page_ids'),
-			'columns' => get_arr_val($custom_fields, 'cards_columns'),
-			'background_color' => get_arr_val($custom_fields, 'card_section_background_color'),
-			'background_image' => get_arr_val($custom_fields, 'card_section_background_image'),
-			'background_position' => get_arr_val($custom_fields, 'card_section_background_image_position'),
-			'display_type' => get_arr_val($custom_fields, 'cards_display_type'),
-			'equal_height' => get_arr_val($custom_fields, 'cards_equal_height'),
-			'vertical_alignment' => get_arr_val($custom_fields, 'cards_vertical_alignment'),
-			'show_image' => get_arr_val($custom_fields, 'cards_display_image'),
-			'links' => get_arr_val($custom_fields, 'cards_links'),
-			'show_link_label' => get_arr_val($custom_fields, 'cards_display_link_label'),
-			'link_label' => get_arr_val($custom_fields, 'cards_link_label'),
-			'show_title' => get_arr_val($custom_fields, 'cards_display_title'),
-			'uppercase_title' => get_arr_val($custom_fields, 'cards_uppercase_title'),
-			'show_excerpt' => get_arr_val($custom_fields, 'cards_display_excerpt'),
-		);
-		\set_query_var('card_options', $card_options);
-	?>
+        $custom_fields = \get_fields();
+        $header_image_id = get_arr_val($custom_fields, 'header_image_id');
+        if ($header_image_id) {
+            BodyClasses::add('post_header_image');
+        }
+        $card_options = array(
+            'show_subpages' => get_arr_val($custom_fields, 'show_subpages_as_cards'),
+            'manual_page_ids' => get_arr_val($custom_fields, 'manual_card_page_ids'),
+            'columns' => get_arr_val($custom_fields, 'cards_columns'),
+            'background_color' => get_arr_val($custom_fields, 'card_section_background_color'),
+            'background_image' => get_arr_val($custom_fields, 'card_section_background_image'),
+            'background_position' => get_arr_val($custom_fields, 'card_section_background_image_position'),
+            'display_type' => get_arr_val($custom_fields, 'cards_display_type'),
+            'equal_height' => get_arr_val($custom_fields, 'cards_equal_height'),
+            'vertical_alignment' => get_arr_val($custom_fields, 'cards_vertical_alignment'),
+            'show_image' => get_arr_val($custom_fields, 'cards_display_image'),
+            'links' => get_arr_val($custom_fields, 'cards_links'),
+            'show_link_label' => get_arr_val($custom_fields, 'cards_display_link_label'),
+            'link_label' => get_arr_val($custom_fields, 'cards_link_label'),
+            'show_title' => get_arr_val($custom_fields, 'cards_display_title'),
+            'uppercase_title' => get_arr_val($custom_fields, 'cards_uppercase_title'),
+            'show_excerpt' => get_arr_val($custom_fields, 'cards_display_excerpt'),
+        );
+        \set_query_var('card_options', $card_options);
+    ?>
 
 	<?php \get_header() ?>
 
@@ -43,23 +45,23 @@ $header_image_id = false;
 						<?php $header_image = \get_post($header_image_id) ?>
 						<?php $background_position = get_arr_val($custom_fields, 'header_background_position') ?>
 						<?php
-							$header_classes = array();
-							if (is_array($background_position)) {
-								$background_position = $background_position[0];
-							}
-							switch (strtolower($background_position)) {
-								case 'top':
-									$header_classes[] = 'background_top';
-									break;
-								case 'bottom':
-									$header_classees[] = 'background_bottom';
-									break;
-							}
-						?>
+                            $header_classes = array();
+                            if (is_array($background_position)) {
+                                $background_position = $background_position[0];
+                            }
+                            switch (strtolower($background_position)) {
+                                case 'top':
+                                    $header_classes[] = 'background_top';
+                                    break;
+                                case 'bottom':
+                                    $header_classees[] = 'background_bottom';
+                                    break;
+                            }
+                        ?>
 						<header
 							class="has_image <?php echo implode(' ', $header_classes) ?>"
-							style="background-image:url('<?php echo function_exists('jetpack_photon_url') ? \jetpack_photon_url($header_image->guid) : \wp_make_link_relative($header_image->guid) ?>')"
-							<?php if ( ! empty($header_image->post_excerpt)): ?>
+							style="background-image:url('<?php echo \wp_make_link_relative(\wp_get_attachment_image_url($header_image_id, 'full')) ?>')"
+							<?php if (! empty($header_image->post_excerpt)): ?>
 								data-credit="<?php echo \esc_html($header_image->post_excerpt) ?>"
 							<?php endif ?>
 						>
@@ -101,7 +103,7 @@ $header_image_id = false;
 				<?php endif ?>
 
 				<?php if (get_arr_val($custom_fields, 'footer_page')): ?>
-					<?php foreach(get_arr_val($custom_fields, 'footer_page') as $footer_page): ?>
+					<?php foreach (get_arr_val($custom_fields, 'footer_page') as $footer_page): ?>
 						<?php \setup_postdata($footer_page) ?>
 						<div class="body">
 							<?php \the_content() ?>
