@@ -56,13 +56,11 @@ function registerRequiredPlugins()
             'slug'      => 'ninja-forms',
             'required'  => false,
         ),
-        */
         array(
             'name'      => 'Form Maker',
             'slug'      => 'form-maker',
             'required'  => false,
         ),
-        /*
         array(
             'name'      => 'Stackable - Gutenberg Blocks',
             'slug'      => 'stackable-ultimate-gutenberg-blocks',
@@ -143,6 +141,18 @@ if (defined('WPSEO_VERSION')) {
     });
 
     \add_filter('wpseo_debug_markers', '__return_false');
+}
+
+// Remove MonsterInsights comments
+if (defined('MONSTERINSIGHTS_VERSION') || defined('MONSTERINSIGHTS_PRO_VERSION')) {
+    \add_action('get_header', function () {
+        ob_start(function ($o) {
+            return preg_replace('/\n?<\!\-\-.*?monsterinsights.*?>/mi', '', $o);
+        });
+    });
+    \add_action('wp_head', function () {
+        ob_end_flush();
+    }, 999);
 }
 
 // Custom menu display
