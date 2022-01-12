@@ -143,11 +143,13 @@ if (defined('WPSEO_VERSION')) {
     \add_filter('wpseo_debug_markers', '__return_false');
 }
 
-// Remove MonsterInsights comments
+// Remove MonsterInsights comments and version leak
 if (defined('MONSTERINSIGHTS_VERSION') || defined('MONSTERINSIGHTS_PRO_VERSION')) {
     \add_action('get_header', function () {
         ob_start(function ($o) {
-            return preg_replace('/\n?<\!\-\-.*?monsterinsights.*?>/mi', '', $o);
+            $ret = preg_replace('/\n?<\!\-\-.*?monsterinsights.*?>/mi', '', $o);
+            $ret = preg_replace('/\n?\s*var mi_version = .*;/mi', '', $ret);
+            return $ret;
         });
     });
     \add_action('wp_head', function () {
