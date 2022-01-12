@@ -141,6 +141,8 @@ if (defined('WPSEO_VERSION')) {
     \add_filter('wpseo_metabox_prio', function () {
         return 'low';
     });
+
+    \add_filter('wpseo_debug_markers', '__return_false');
 }
 
 // Custom menu display
