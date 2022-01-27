@@ -1,29 +1,17 @@
 {
   "author" : "Daniel Vena <daniel.vena@cumulus.com>",
-  "browser" : {
-    "vue" : "vue\/dist\/vue.common.js"
+  "main" : "index.js",
+  "devDependencies" : {
+    "babelify" : "^10.0.0"
   },
-  "optionalDependencies" : {
-
-  },
-  "name" : "cumulus_com_wp",
   "scripts" : {
     "build" : "NODE_ENV=production browserify .\/assets\/prod\/js\/index.js -o .\/assets\/prod\/js\/bundle.js;",
     "test" : "echo \"Error: no test specified\" && exit 1"
   },
   "version" : "1.0.0",
   "description" : "Wordpress theme",
+  "name" : "cumulus_com_wp",
   "dependencies" : {
-    "intersection-observer" : "^0.10.0",
-    "jquery" : "^3.5.1",
-    "scrollmonitor" : "^1.2.4",
-    "vue" : "^2.6.11",
-    "lodash" : "^4.17.15",
-    "v-lazy-image" : "^1.4.0"
-  },
-  "main" : "index.js",
-  "devDependencies" : {
-    "babelify" : "^10.0.0",
-    "browserify" : "^16.5.1"
+    "lodash" : "^4.17.15"
   }
 }

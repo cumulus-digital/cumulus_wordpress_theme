@@ -324,25 +324,6 @@
       "oAP" : "\/assets\/prod\/js\/blocks-anchor.js.map",
       "oF" : 0
     },
-    "\/assets\/prod\/js\/blocks-FORCE.js" : {
-      "bF" : 4,
-      "ft" : 64,
-      "ma" : 1,
-      "mi" : 1,
-      "oA" : 0,
-      "oAP" : "\/assets\/prod\/js\/blocks-FORCE.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 0
-    },
-    "\/assets\/prod\/js\/blocks-FORCE.js.map" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/assets\/prod\/js\/blocks-FORCE.js.map",
-      "oF" : 0
-    },
     "\/assets\/prod\/js\/blocks-imageflipper-frontend.js" : {
       "bF" : 4,
       "ft" : 64,
@@ -884,7 +865,7 @@
       "q" : 65,
       "rq" : 75
     },
-    "\/assets\/src\/js\/blocks-anchor.js" : {
+    "\/assets\/src\/js\/blocks-anchor.jsx" : {
       "bF" : 4,
       "ft" : 64,
       "ma" : 1,
@@ -894,39 +875,6 @@
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
-    },
-    "\/assets\/src\/js\/blocks-FORCE.js" : {
-      "bF" : 4,
-      "ft" : 64,
-      "ma" : 1,
-      "mi" : 1,
-      "oA" : 0,
-      "oAP" : "\/assets\/prod\/js\/blocks-FORCE.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 1
-    },
-    "\/assets\/src\/js\/blocks-imageflipper-frontend.js" : {
-      "bF" : 4,
-      "ft" : 64,
-      "ma" : 1,
-      "mi" : 1,
-      "oA" : 0,
-      "oAP" : "\/assets\/prod\/js\/blocks-imageflipper-frontend.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 0
-    },
-    "\/assets\/src\/js\/blocks-imageflipper.js" : {
-      "bF" : 4,
-      "ft" : 64,
-      "ma" : 1,
-      "mi" : 1,
-      "oA" : 0,
-      "oAP" : "\/assets\/prod\/js\/blocks-imageflipper.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 1
     },
     "\/assets\/src\/js\/index.js" : {
       "bF" : 4,

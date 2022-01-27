@@ -23,7 +23,7 @@ import throttle from 'lodash/throttle';
 		if ( typeof immediate == 'undefined') {
 			immediate = true
 		}
-		$(document).ready(func);
+		$(func);
 		$(window).on(
 			windowEvents,
 			throttle(
@@ -111,10 +111,10 @@ import throttle from 'lodash/throttle';
 		}
 	}
 
-	$(window).blur(function() {
+	$(window).on('blur', function() {
 		pauseHeroVideo();
 	});
-	$(window).focus(function() {
+	$(window).on('focus', function() {
 		updateOnScroll();
 	});
 

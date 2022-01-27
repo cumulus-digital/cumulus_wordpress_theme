@@ -3,7 +3,7 @@
  */
 ( function( blocks, element ) {
     var el = element.createElement;
- 
+
     var blockStyle = {
         backgroundColor: '#DDD',
         borderRadius: '3px',
@@ -11,7 +11,7 @@
         padding: '5px',
         textAlign: 'center'
     };
- 
+
     blocks.registerBlockType( 'cumulus-gutenberg/anchor', {
         title: 'Anchor',
         icon: {
