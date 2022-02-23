@@ -1,12 +1,12 @@
 .home {
-	
+
 	.scroll-down-arrow {
         cursor: pointer;
         display: none;
         position: absolute;
         top: calc(100vh - 135px);
         //bottom: 80px;
- 
+
         @at-root body.admin-bar .scroll-down-arrow {
             top: calc(100vh - 103px);
         }
@@ -62,7 +62,7 @@
             animation-name: scroll-down-arrow;
         }
     }
-    
+
     @keyframes scroll-down-arrow {
         0% {
             opacity: 1;
@@ -136,7 +136,7 @@
 		width: 100%;
 		height: calc(100vh - 100px);
 		//padding-bottom: 56.25%;
-		
+
 		@media (max-width: map-deep($widths, 'medium')) {
 			height: 0;
 			padding-bottom: 56.25%;
@@ -170,7 +170,7 @@
 			min-width: 100%;
 			object-position: center;
 		}
-	
+
 		.ticker-container {
 			position: absolute;
 			bottom: 0;
@@ -222,6 +222,7 @@
 			}
 		}
 
+		/*
 		.full-width {
 			width: 100vw;
 			position: relative;
@@ -234,6 +235,7 @@
 				padding: 0 1em;
 			}
 		}
+		*/
 
 		// option to disable body margin
 		&.no-bottom-margin,

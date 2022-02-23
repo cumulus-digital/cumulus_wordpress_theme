@@ -259,6 +259,12 @@ function theme_setup()
     \add_theme_support('post-formats', array( 'aside', 'gallery', 'video' ));
     \add_post_type_support('page', 'excerpt');
 
+    \add_theme_support('html5');
+    \add_theme_support('align-wide');
+    \add_theme_support('custom-spacing');
+    \add_theme_support('custom-units');
+    \add_theme_support('wp-block-styles');
+
     \register_nav_menus(array(
         'header-menu' => __('Header Menu'),
         'footer-menu' => __('Footer Menu'),

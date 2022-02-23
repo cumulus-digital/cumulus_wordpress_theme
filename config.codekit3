@@ -669,6 +669,21 @@
       "pg" : 0,
       "sct" : 1
     },
+    "\/assets\/src\/css\/wpcore.scss" : {
+      "aP" : 1,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 1,
+      "oA" : 1,
+      "oAP" : "\/assets\/prod\/css\/wpcore.css",
+      "oF" : 0,
+      "oS" : 3,
+      "pg" : 0,
+      "sct" : 1
+    },
     "\/assets\/src\/images\/arrow-blue-right.svg" : {
       "ft" : 2097152,
       "miP" : 0,
