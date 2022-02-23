@@ -1,0 +1,35 @@
+{
+	"version": 2,
+	"settings": {
+		"appearanceTools": true,
+		"color": {
+			"link": true,
+			"custom": true,
+			"customDuotone": true,
+			"customGradient": true
+		},
+		"layout": {
+            "contentSize": "calc(1200px - 2rem)",
+            "wideSize": "calc(1200px + 2rem)"
+        },
+		"spacing": {
+			"units": [
+				"em",
+				"rem",
+				"%",
+				"px",
+				"vh",
+				"vw"
+			]
+		},
+		"typography": {
+			"dropCap": false,
+			"fontStyle": true,
+			"fontWeight": true,
+			"letterSpacing": true,
+			"lineHeight": true,
+			"textDecoration": true,
+			"textTransform": true
+		}
+	}
+}

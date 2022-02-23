@@ -1716,6 +1716,14 @@
       "oA" : 0,
       "oAP" : "\/template-parts\/page_footer-listen.php",
       "oF" : 0
+    },
+    "\/theme.json" : {
+      "ft" : 524288,
+      "oA" : 0,
+      "oAP" : "\/theme.json",
+      "oF" : 0,
+      "oO" : 0,
+      "oS" : 1
     }
   },
   "hooks" : [
