@@ -73,6 +73,8 @@ p {
 
 a {
 	color: map-deep($colors, 'brand');
+	text-decoration-thickness: from-font;
+	text-underline-position: from-font;
 
 	img {
 		border: 0;
