@@ -203,6 +203,7 @@ table {
 }
 
 // Fix popup maker on mobile
+/* // Disabled as popups aren't used much anymore
 .pum-theme-default-theme .pum-container.pum-position-fixed {
 	top: 50% !important;
 	left: 50% !important;
@@ -211,6 +212,7 @@ table {
 	max-height: 90% !important;
 	margin: 0 !important;
 }
+//*/
 
 // Allow multiple on form maker selects
 .fm-form-container .fm-form select[multiple] {
