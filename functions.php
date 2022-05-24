@@ -259,7 +259,7 @@ function theme_setup()
     \add_theme_support('post-formats', array( 'aside', 'gallery', 'video' ));
     \add_post_type_support('page', 'excerpt');
 
-    \add_theme_support('html5');
+    \add_theme_support('html5', [ 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption', 'style', 'script' ]);
     \add_theme_support('align-wide');
     \add_theme_support('custom-spacing');
     \add_theme_support('custom-units');
