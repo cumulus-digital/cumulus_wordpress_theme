@@ -1,205 +1,230 @@
 @import "bourbon";
 @import "functions";
-@import 'variables';
-@import 'fonts';
-@import 'wpcore.scss';
+@import "variables";
+@import "fonts";
+@import "wpcore.scss";
 
-*, *::before, *::after { box-sizing: border-box; }
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
 // Hide bitnami banner
-#bitnami-banner { display: none !important; }
+#bitnami-banner {
+  display: none !important;
+}
 
-html,body {
-	background: #fff;
-	color: #111;
-	font-family: 'Montserrat', sans-serif;
-	font-size: 18px;
-	line-height: 1.25;
-	margin: 0;
-	padding: 0;
+html,
+body {
+  background: #fff;
+  color: #111;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  line-height: 1.25;
+  margin: 0;
+  padding: 0;
 
-	@media (max-width: map-deep($widths, "medium")) {
-		font-size: 17px;
-	}
-	@media (max-width: map-deep($widths, "small")) {
-		font-size: 16px;
-	}
+  @media (max-width: map-deep($widths, "medium")) {
+    font-size: 17px;
+  }
+  @media (max-width: map-deep($widths, "small")) {
+    font-size: 16px;
+  }
 }
 
 html {
-	background: map-deep($colors, 'brand');
+  background: map-deep($colors, "brand");
 }
 
 body {
-	-ms-overflow-style: -ms-autohiding-scrollbar;
-	height: 100%;
-	margin-top: $masthead-height;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  height: 100%;
+  margin-top: $masthead-height;
 
-	background: #fff;
+  background: #fff;
 
-	&.home, &.post_header_image {
-		margin-top: 0;
+  &.home,
+  &.post_header_image {
+    margin-top: 0;
 
-		@media (max-width: map-deep($widths, "medium")) {
-			margin-top: $masthead-height;
-		}
-	}
-	&.menu-active {
-		overflow: hidden;
-		//position: fixed;
-	}
+    @media (max-width: map-deep($widths, "medium")) {
+      margin-top: $masthead-height;
+    }
+  }
+  &.menu-active {
+    overflow: hidden;
+    //position: fixed;
+  }
 }
 
-h1,h2,h3,h4,h5 {
-	display: block;
-	font-size: 1em;
-	font-weight: 200;
-	line-height: 1;
-	margin: 0 0 .25em;
-	padding: 0;
+h1,
+h2,
+h3,
+h4,
+h5 {
+  display: block;
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 1;
+  margin: 0 0 0.25em;
+  padding: 0;
 }
-	h1 {
-		font-size: 2.5em;
-		font-weight: 600;
-	}
-	h2 {
-		font-size: 2.1em;
-		font-weight: 600;
-	}
+h1 {
+  font-size: 2.5em;
+  font-weight: 800;
+}
+h2 {
+  font-size: 2.1em;
+  font-weight: 600;
+}
 
 p {
-	margin-top: 0;
+  margin-top: 0;
 }
 
 a {
-	color: map-deep($colors, 'brand');
-	text-decoration-thickness: from-font;
-	text-underline-position: from-font;
+  color: map-deep($colors, "brand");
+  text-decoration-thickness: from-font;
+  text-underline-position: from-font;
 
-	img {
-		border: 0;
-	}
-	@include hover {
-		color: map-deep($colors, 'highlight');
-		outline: 0;
-	}
-	&:focus-visible {
-		outline: 1;
-	}
+  img {
+    border: 0;
+  }
+  @include hover {
+    color: map-deep($colors, "highlight");
+    outline: 0;
+  }
+  &:focus-visible {
+    outline: 1;
+  }
 }
 
 li {
-	margin-bottom: .5em;
-	&:last-child {
-		margin-bottom: 0;
-	}
+  margin-bottom: 0.5em;
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 img:not([src]) {
-	visibility: hidden;
+  visibility: hidden;
 }
 
 .text-shadow-1 {
-	text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 }
 .text-shadow-2 {
-	text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 .text-shadow-3 {
-	text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
 }
 
 /* Allows removing spacing from gutenberg typography */
-.mb-0 { margin-bottom: 0 !important; }
-.pb-0 { padding-bottom: 0 !important; }
-.mt-0 { margin-top: 0 !important; }
-.pt-0 { padding-top: 0 !important; }
+.mb-0 {
+  margin-bottom: 0 !important;
+}
+.pb-0 {
+  padding-bottom: 0 !important;
+}
+.mt-0 {
+  margin-top: 0 !important;
+}
+.pt-0 {
+  padding-top: 0 !important;
+}
 
 nav.menu {
-	ul, li {
-		list-style: none;
-		margin: 0;
-		padding: 0;
-	}
+  ul,
+  li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
 }
 
 main {
-	position: relative;
-	z-index: 2;
+  position: relative;
+  z-index: 2;
 
-	background: #fff;
+  background: #fff;
 }
 
-img[data-credit], .has_image[data-credit], figure.wp-block-image, figure.wp-block-video {
-	position: relative;
-	img {
-		display: inherit;
-	}
-	&:after, figcaption {
-		content: attr(data-credit);
-		background: rgba(map-deep($colors, "brand"), 0.7);
-		color: #fff;
+img[data-credit],
+.has_image[data-credit],
+figure.wp-block-image,
+figure.wp-block-video {
+  position: relative;
+  img {
+    display: inherit;
+  }
+  &:after,
+  figcaption {
+    content: attr(data-credit);
+    background: rgba(map-deep($colors, "brand"), 0.7);
+    color: #fff;
 
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		z-index: 2;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
 
-		padding: .75em .9em;
-		margin: 0;
+    padding: 0.75em 0.9em;
+    margin: 0;
 
-		font-size: 0.4rem;
-	}
+    font-size: 0.4rem;
+  }
 }
 figure.wp-block-image:after,
 figure.wp-block-video:after {
-	display: none;
+  display: none;
 }
 figure.wp-block-video figcaption {
-	bottom: auto;
-	top: 0;
+  bottom: auto;
+  top: 0;
 }
 
 table {
-	border: 0;
-	border-collapse: collapse;
+  border: 0;
+  border-collapse: collapse;
 
-	td {
-		padding: .25em;
-	}
+  td {
+    padding: 0.25em;
+  }
 }
 .table-padding-3quarterem td {
-	padding: .75em;
+  padding: 0.75em;
 }
 .table-firstcolumn-dates {
-	td {
-		vertical-align: top;
+  td {
+    vertical-align: top;
 
-		&:first-child {
-			width: 6em;
-		}
-	}
+    &:first-child {
+      width: 6em;
+    }
+  }
 }
 
 .post-edit-link {
-	background: #666;
-	color: #fff;
+  background: #666;
+  color: #fff;
 
-	font-size: 11px;
-	line-height: 1;
-	text-decoration: none;
-	text-transform: uppercase;
+  font-size: 11px;
+  line-height: 1;
+  text-decoration: none;
+  text-transform: uppercase;
 
-	padding: .5em .6em;
+  padding: 0.5em 0.6em;
 
-	@include hover {
-		background: map-deep($colors, "brand");
-	}
+  @include hover {
+    background: map-deep($colors, "brand");
+  }
 }
 
 .cm-anchor {
-	position: relative;
-	top: -$masthead-height*1.5;
+  position: relative;
+  top: -$masthead-height * 1.5;
 }
 
 // Fix popup maker on mobile
@@ -216,14 +241,12 @@ table {
 
 // Allow multiple on form maker selects
 .fm-form-container .fm-form select[multiple] {
-	height: auto !important;
+  height: auto !important;
 }
 
 #wpadminbar {
-	position: fixed !important;
+  position: fixed !important;
 }
-
-
 
 @import "rows/_";
 @import "template-parts/_";
