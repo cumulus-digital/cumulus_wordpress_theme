@@ -1,14 +1,16 @@
+import '../css/index.scss';
 import throttle from 'lodash/throttle';
 
-(function($, window, undefined) { // eslint-disable-line no-unused-vars
+( function ( $, window, undefined ) {
+	// eslint-disable-line no-unused-vars
 
-	var $html = $('html'),
-		$body = $('body'),
-		$main = $('main'),
-		$masthead = $('.masthead'),
-		$scrollArrow = $('.scroll-down-arrow'),
-		$heroVideoContainer = $('.hero .video-container'),
-		$heroVideo = $('.hero video'),
+	var $html = $( 'html' ),
+		$body = $( 'body' ),
+		$main = $( 'main' ),
+		$masthead = $( '.masthead' ),
+		$scrollArrow = $( '.scroll-down-arrow' ),
+		$heroVideoContainer = $( '.hero .video-container' ),
+		$heroVideo = $( '.hero video' ),
 		detectionArea,
 		windowHeight,
 		mastheadHeight,
@@ -16,23 +18,19 @@ import throttle from 'lodash/throttle';
 		heroVideoHeight,
 		heroVideoBottom;
 
-	function handleWindowUpdates(func, windowEvents, interval, immediate) {
-		if ( typeof interval == 'undefined') {
+	function handleWindowUpdates( func, windowEvents, interval, immediate ) {
+		if ( typeof interval == 'undefined' ) {
 			interval = 100;
 		}
-		if ( typeof immediate == 'undefined') {
-			immediate = true
+		if ( typeof immediate == 'undefined' ) {
+			immediate = true;
 		}
-		$(func);
-		$(window).on(
+		$( func );
+		$( window ).on(
 			windowEvents,
-			throttle(
-				func,
-				interval,
-				{leading: true, trailing: true}
-			)
+			throttle( func, interval, { leading: true, trailing: true } )
 		);
-		if (immediate) {
+		if ( immediate ) {
 			func();
 		}
 	}
@@ -41,7 +39,7 @@ import throttle from 'lodash/throttle';
 		if (
 			$heroVideo.length &&
 			heroVideoBottom > windowHeight * 0.7 &&
-			$(window).scrollTop() < 100
+			$( window ).scrollTop() < 100
 		) {
 			/*
 			var pos = '2vh';
@@ -50,110 +48,109 @@ import throttle from 'lodash/throttle';
 			}
 			*/
 			//$scrollArrow.css({ bottom: pos }).fadeIn(200);
-			$scrollArrow.fadeIn(200);
+			$scrollArrow.fadeIn( 200 );
 		} else {
-			$scrollArrow.fadeOut(200);
+			$scrollArrow.fadeOut( 200 );
 		}
 	}
 
 	// Update height calculations on resize
 	function updateHeights() {
-		windowHeight = $(window).height();
+		windowHeight = $( window ).height();
 		mastheadHeight = $masthead.outerHeight();
-		mainPos = Math.ceil($main.position().top);
+		mainPos = Math.ceil( $main.position().top );
 		detectionArea = {
-			top: Math.abs($html.position().top) + mastheadHeight,
-			bottom: $(window).height()
+			top: Math.abs( $html.position().top ) + mastheadHeight,
+			bottom: $( window ).height(),
 		};
-		if ($heroVideo.length) {
+		if ( $heroVideo.length ) {
 			heroVideoHeight = $heroVideoContainer.outerHeight();
-			heroVideoBottom = $heroVideoContainer.position().top + heroVideoHeight;
+			heroVideoBottom =
+				$heroVideoContainer.position().top + heroVideoHeight;
 		}
 	}
-	handleWindowUpdates(updateHeights, 'resize load');
+	handleWindowUpdates( updateHeights, 'resize load' );
 
 	function updateOnScroll() {
 		var scrollPos = $html.scrollTop();
 
 		// Toggle masthead class when main reaches it
-		if (
-			scrollPos > 0 &&
-			scrollPos + detectionArea.top >= mainPos
-		) {
-			$masthead.addClass('switch');
+		if ( scrollPos > 0 && scrollPos + detectionArea.top >= mainPos ) {
+			$masthead.addClass( 'switch' );
 			pauseHeroVideo();
 		} else {
 			playHeroVideo();
-			$masthead.removeClass('switch');
+			$masthead.removeClass( 'switch' );
 		}
 
 		showScrollArrow();
 	}
-	handleWindowUpdates(updateOnScroll, 'scroll resize load');
+	handleWindowUpdates( updateOnScroll, 'scroll resize load' );
 
 	function isHeroVideoPlaying() {
-		if ($heroVideo.length) {
-			var video = $heroVideo.get(0);
-			if (video.currentTime > 0 && ! video.paused && ! video.ended && video.readyState > 2) {
+		if ( $heroVideo.length ) {
+			var video = $heroVideo.get( 0 );
+			if (
+				video.currentTime > 0 &&
+				! video.paused &&
+				! video.ended &&
+				video.readyState > 2
+			) {
 				return true;
 			}
 		}
 		return false;
 	}
 	function pauseHeroVideo() {
-		if (isHeroVideoPlaying()) {
-			$heroVideo.trigger('pause');
+		if ( isHeroVideoPlaying() ) {
+			$heroVideo.trigger( 'pause' );
 		}
 	}
 	function playHeroVideo() {
-		if ( ! isHeroVideoPlaying()) {
-			$heroVideo.trigger('play');
+		if ( ! isHeroVideoPlaying() ) {
+			$heroVideo.trigger( 'play' );
 		}
 	}
 
-	$(window).on('blur', function() {
+	$( window ).on( 'blur', function () {
 		pauseHeroVideo();
-	});
-	$(window).on('focus', function() {
+	} );
+	$( window ).on( 'focus', function () {
 		updateOnScroll();
-	});
+	} );
 
-	function toggleMainMenu(forced) {
-		if (forced || !$body.hasClass('menu-active')) {
-			$heroVideo.trigger('pause');
-			$body.addClass('menu-active');
-			$masthead.addClass('menu-active');
-			$masthead.find('.menu').scrollTop(0);
+	function toggleMainMenu( forced ) {
+		if ( forced || ! $body.hasClass( 'menu-active' ) ) {
+			$heroVideo.trigger( 'pause' );
+			$body.addClass( 'menu-active' );
+			$masthead.addClass( 'menu-active' );
+			$masthead.find( '.menu' ).scrollTop( 0 );
 		} else {
-			$heroVideo.trigger('play');
-			$body.removeClass('menu-active');
-			$masthead.removeClass('menu-active');
+			$heroVideo.trigger( 'play' );
+			$body.removeClass( 'menu-active' );
+			$masthead.removeClass( 'menu-active' );
 		}
 	}
-	$('.hamburger-container, .masthead nav.menu a[href*="#"]').on(
+	$( '.hamburger-container, .masthead nav.menu a[href*="#"]' ).on(
 		'click',
 		function () {
 			toggleMainMenu();
 		}
 	);
-	$('.masthead nav.menu a').on(
-		'focus',
-		function () {
-			toggleMainMenu(true);
-		}
-	);
-	$('.masthead nav.menu a').on(
-		'focusout',
-		function () {
-			toggleMainMenu(false);
-		}
-	);
+	$( '.masthead nav.menu a' ).on( 'focus', function () {
+		toggleMainMenu( true );
+	} );
+	$( '.masthead nav.menu a' ).on( 'focusout', function () {
+		toggleMainMenu( false );
+	} );
 
-	$scrollArrow.on('click', function(e) {
+	$scrollArrow.on( 'click', function ( e ) {
 		e.preventDefault();
-		$('html, body').animate({
-			scrollTop: $main.offset().top - mastheadHeight
-		}, 500);
-	});
-
-}(jQuery, window.self));
+		$( 'html, body' ).animate(
+			{
+				scrollTop: $main.offset().top - mastheadHeight,
+			},
+			500
+		);
+	} );
+} )( jQuery, window.self );

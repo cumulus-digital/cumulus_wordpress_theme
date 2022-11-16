@@ -372,7 +372,7 @@ function scripts_and_styles()
     if ($GLOBALS['pagenow'] != 'wp-login.php' && ! \is_admin()) {
         \wp_register_script(
             'cumulus_theme_script',
-            THEME_PATH . '/assets/prod/js/index.js',
+            THEME_PATH . '/assets/prod/index.js',
             array('jquery'),
             null,
             true
@@ -381,7 +381,7 @@ function scripts_and_styles()
 
         \wp_register_style(
             'cumulus_theme_style',
-            THEME_PATH . '/assets/prod/css/index.css',
+            THEME_PATH . '/assets/prod/index.css',
             array(),
             null,
             'all'
@@ -414,7 +414,7 @@ function setupGutenberg()
 
     \wp_register_Style(
         'guttenberg_styles',
-        THEME_PATH . '/assets/prod/css/editor.css',
+        THEME_PATH . '/assets/prod/editor.css',
         false,
         null,
         'all'
@@ -424,7 +424,7 @@ function setupGutenberg()
     // Custom blocks
     \wp_enqueue_script(
         'cumulus-gutenberg/anchor', // Handle.
-        THEME_PATH . '/assets/prod/js/blocks-anchor.js',
+        THEME_PATH . '/assets/prod/blocks-anchor.js',
         array('wp-blocks', 'wp-element')
     );
 
