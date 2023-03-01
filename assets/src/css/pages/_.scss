@@ -1,5 +1,4 @@
 main.page {
-
 	font-size: 1rem;
 
 	.post-edit-link {
@@ -55,21 +54,20 @@ main.page {
 			span {
 				padding: 1em;
 				color: #fff;
-				text-shadow:
-					0 0 2em #000,
-					0 0 1em #000,
-					1px 1px 0 rgba(0,0,0,0.8);
+				text-shadow: 0 0 2em #000, 0 0 1em #000,
+					1px 1px 0 rgba(0, 0, 0, 0.8);
 
-				&::after { /* to clear float */
+				&::after {
+					/* to clear float */
 					content: "";
 					display: table;
 					clear: both;
 					background: none;
 					height: 0;
 				}
-
 			}
-			h1, h2 {
+			h1,
+			h2 {
 				color: inherit;
 			}
 
@@ -86,7 +84,7 @@ main.page {
 
 		h1 {
 			position: relative;
-			color: map-deep($colors, 'highlight');
+			color: map-deep($colors, "highlight");
 			margin: 0 auto;
 			padding: 0 1em;
 			line-height: 1.1;
@@ -109,14 +107,14 @@ main.page {
 		}
 
 		h2 {
-			margin: 1em auto .5em;
+			margin: 1em auto 0.5em;
 			padding: 0 1em;
 			font-size: 1.4em;
 			font-weight: bold;
 			text-align: center;
 
 			.archive & {
-				margin: 0 0 .25em;
+				margin: 0 0 0.25em;
 				padding: 0;
 				line-height: 1.3;
 				text-align: left;
@@ -133,7 +131,7 @@ main.page {
 
 			.arrow {
 				display: inline-block;
-				width: .7em;
+				width: 0.7em;
 				height: auto;
 				vertical-align: baseline;
 			}
@@ -142,10 +140,10 @@ main.page {
 				color: inherit;
 				text-decoration: none;
 
-				transition: color .2s;
+				transition: color 0.2s;
 
 				@include hover {
-					color: map-deep($colors, 'highlight');
+					color: map-deep($colors, "highlight");
 				}
 			}
 		}
@@ -157,13 +155,18 @@ main.page {
 
 	.body {
 		margin-bottom: 2em;
-		line-height: 1.3;
+		line-height: 1.5;
 
 		p:last-child {
 			margin-bottom: 0;
 		}
 
-		h1, h2, h3, h4, h5, h6 {
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
 			font-weight: bold;
 			line-height: 1.2;
 			margin: 0 0 0.5em;
@@ -214,7 +217,8 @@ main.page {
 			text-decoration: none;
 		}
 
-		.has-text-color, .has-inline-color {
+		.has-text-color,
+		.has-inline-color {
 			&.has-white-color {
 				color: #fff;
 			}
@@ -231,10 +235,10 @@ main.page {
 				color: #333;
 			}
 			&.has-cumulus-blue-color {
-				color: map-deep($colors, 'brand');
+				color: map-deep($colors, "brand");
 			}
 			&.has-cumulus-light-blue-color {
-				color: map-deep($colors, 'highlight');
+				color: map-deep($colors, "highlight");
 			}
 			&.has-wwopn-purple-color {
 				color: #6a2774;
@@ -242,10 +246,10 @@ main.page {
 			&.has-wwopn-light-purple-color {
 				color: #a33cb3;
 			}
-
 		}
 
-		.has-background-color, .has-background {
+		.has-background-color,
+		.has-background {
 			&.has-white-background-color {
 				background-color: #fff;
 			}
@@ -262,10 +266,10 @@ main.page {
 				background-color: #333;
 			}
 			&.has-cumulus-blue-background-color {
-				background-color: map-deep($colors, 'brand');
+				background-color: map-deep($colors, "brand");
 			}
 			&.has-cumulus-light-blue-background-color {
-				background-color: map-deep($colors, 'highlight');
+				background-color: map-deep($colors, "highlight");
 			}
 			&.has-wwopn-purple-background-color {
 				background-color: #6a2774;
@@ -307,7 +311,7 @@ main.page {
 		}
 		// Remove absurd margin on UGB Buttons
 		.ugb-button-wrapper {
-			margin: 0 -.5em;
+			margin: 0 -0.5em;
 		}
 
 		// remove underline on kadence block link wrappers
@@ -344,7 +348,7 @@ main.page {
 		}
 
 		// Kadence block top divider fix on mobile
-		@media (max-width: map-deep($widths, 'small')) {
+		@media (max-width: map-deep($widths, "small")) {
 			.kt-row-layout-top-sep {
 				top: -1px;
 			}
@@ -352,7 +356,6 @@ main.page {
 				bottom: -1px;
 			}
 		}
-
 	}
 
 	body.full-width & .row-container {
@@ -366,7 +369,7 @@ main.page {
 		max-width: 100%;
 	}
 	body.large-width & .row-container {
-		max-width: map-deep($widths, 'max') * 1.5;
+		max-width: map-deep($widths, "max") * 1.5;
 	}
 
 	// option to disable body margin
