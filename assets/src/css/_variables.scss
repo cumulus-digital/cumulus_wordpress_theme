@@ -2,12 +2,12 @@ $widths: (
 	"max": 1200px,
 	"large": 1030px,
 	"medium": 820px,
-	"small": 640px
+	"small": 640px,
 );
 
 $colors: (
-	"bg" : (
-		"light": #f1f1f1
+	"bg": (
+		"light": #f1f1f1,
 	),
 	"brand": #00598e,
 	"accent": #01588e,
@@ -16,17 +16,27 @@ $colors: (
 	"light-grey": #d6d6d6,
 	"dark-grey": #333,
 	"caption": (
-		"background": rgba(7,112,177,.7),
-		"text": #fff
+		"background": rgba(7, 112, 177, 0.7),
+		"text": #fff,
 	),
-	"overlay-wash": linear-gradient(rgba(1,88,142,.25), rgba(1,88,142,.7))
+	"overlay-wash":
+		linear-gradient(rgba(1, 88, 142, 0.25), rgba(1, 88, 142, 0.7)),
 );
 
-$masthead-height: 10vh;
+$masthead-height: var(--cmls-masthead-height);
+:root {
+	--cmls-masthead-height: 10vh;
+
+	@media (max-width: map-deep($widths, "medium")) {
+		--cmls-masthead-height: 13vw;
+	}
+	@media (max-width: map-deep($widths, "small")) {
+		--cmls-masthead-height: 17vw;
+	}
+}
 
 //-----
 $bourbon: (
-  "contrast-switch-dark-color": map-deep($colors, "caption", "background"),
-  "contrast-switch-light-color": #fff,
+	"contrast-switch-dark-color": map-deep($colors, "caption", "background"),
+	"contrast-switch-light-color": #fff,
 );
-

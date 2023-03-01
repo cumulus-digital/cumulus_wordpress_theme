@@ -1,11 +1,10 @@
 .masthead {
-
 	background: linear-gradient(
 		to bottom,
-		rgba(map-deep($colors, "brand"),1) 0%,
-		rgba(map-deep($colors, "brand"),0) 100%
+		rgba(map-deep($colors, "brand"), 1) 0%,
+		rgba(map-deep($colors, "brand"), 0) 100%
 	);
-	box-shadow: 0 0 0 rgba(0,0,0,0);
+	box-shadow: 0 0 0 rgba(0, 0, 0, 0);
 
 	position: fixed;
 	top: 0;
@@ -13,7 +12,7 @@
 	z-index: 200;
 
 	width: 100%;
-	height: $masthead-height;
+	height: var(--cmls-masthead-height);
 
 	transition: background 0.3s, box-shadow 0.3s;
 
@@ -22,7 +21,7 @@
 	}
 
 	&::before {
-		content: '';
+		content: "";
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -35,21 +34,21 @@
 
 		transition: opacity 0.2s, background 0.2s;
 	}
-		body.home &::before {
-			opacity: 0;
-			@media (max-width: map-deep($widths, "medium")) {
-				opacity: 1;
-			}
-		}
-		body.home &.switch::before,
-		&.switch::before {
+	body.home &::before {
+		opacity: 0;
+		@media (max-width: map-deep($widths, "medium")) {
 			opacity: 1;
 		}
-		body.menu-active &::before,
-		body.menu-active &.switch::before {
-			background: map-deep($colors, 'brand');
-			opacity: 1;
-		}
+	}
+	body.home &.switch::before,
+	&.switch::before {
+		opacity: 1;
+	}
+	body.menu-active &::before,
+	body.menu-active &.switch::before {
+		background: map-deep($colors, "brand");
+		opacity: 1;
+	}
 
 	/*
 	&.solid::before {
@@ -57,7 +56,7 @@
 	}
 	&.menu-active, &.switch {
 		box-shadow: 0 0 10px rgba(0,0,0,0.2);
-	
+
 		&::before {
 			opacity: 1;
 		}
@@ -69,16 +68,14 @@
 
 	// if admin bar is visible, move us down a bit
 	body.admin-bar & {
-
 		top: 32px;
-		
+
 		@media screen and (max-width: 782px) {
 			top: 46px;
 		}
-
 	}
 
-	.row-container { 
+	.row-container {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		grid-template-rows: 100%;
@@ -90,7 +87,8 @@
 		width: 100%;
 		height: 100%;
 
-		padding: calc(#{$masthead-height} * 0.15) 1vw;
+		padding: calc(var(--cmls-masthead-height) * 0.15) 3vw;
+		padding-right: 0;
 
 		& > * {
 			align-self: center;
@@ -104,7 +102,9 @@
 		overflow: visible;
 		margin: 0;
 
-		span { display: none; }
+		span {
+			display: none;
+		}
 
 		a {
 			display: block;
@@ -123,10 +123,10 @@
 				background-image: url("../images/cumulus-logo-blue-full.svg");
 			}
 			@at-root body.menu-active .masthead.switch .logo a,
-			body.menu-active & {
+				body.menu-active & {
 				background-image: url("../images/cumulus-logo-white-full.svg");
 			}
-			@media (max-width: map-deep($widths, 'medium')) {
+			@media (max-width: map-deep($widths, "medium")) {
 				background-image: url("../images/cumulus-logo-blue-full.svg");
 			}
 		}
@@ -149,7 +149,7 @@
 
 			position: absolute;
 			right: 100%;
-			margin-right: .5em;
+			margin-right: 0.5em;
 			top: 50%;
 			transform: translateY(-50%);
 
@@ -160,12 +160,12 @@
 				&.menu-active .masthead {
 					.hamburger-container::before {
 						color: RGB(255, 255, 255);
-						text-shadow: 1px 1px 0 RGBA(0, 0, 0, .25);
+						text-shadow: 1px 1px 0 RGBA(0, 0, 0, 0.25);
 					}
 				}
 			}
 
-			@media (max-width: map-deep($widths, 'medium')) {
+			@media (max-width: map-deep($widths, "medium")) {
 				display: none;
 			}
 		}

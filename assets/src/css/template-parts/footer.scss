@@ -1,6 +1,6 @@
 body > footer {
 	z-index: 10;
-	background: map-deep($colors, 'brand');
+	background: map-deep($colors, "brand");
 	color: #fff;
 
 	padding: 3vh 2vw;
@@ -20,7 +20,7 @@ body > footer {
 			align-self: center;
 		}
 
-		@media (max-width: map-deep($widths, 'small')) {
+		@media (max-width: map-deep($widths, "small")) {
 			display: block;
 			text-align: center;
 		}
@@ -31,18 +31,19 @@ body > footer {
 		height: 99%;
 		width: 200px;
 
-		a, img {
+		a,
+		img {
 			display: block;
 		}
 		img {
 			height: 100%;
 			width: auto;
 		}
-		@media (max-width: map-deep($widths, 'small')) {
+		@media (max-width: map-deep($widths, "small")) {
 			img {
 				height: auto;
-				width: 80%;
-				margin: 0 auto;
+				width: 60%;
+				margin: 0 auto 1.75em;
 			}
 
 			width: 100%;
@@ -64,7 +65,8 @@ body > footer {
 	nav.menu {
 		grid-area: foot_nav;
 
-		ul, li {
+		ul,
+		li {
 			list-style: none;
 			margin: 0;
 			padding: 0;
@@ -72,22 +74,22 @@ body > footer {
 
 		& > ul {
 			column-count: 4;
-			column-gap: .25em;
+			column-gap: 0.25em;
 			height: 100%;
 
 			li {
 				display: block;
-				margin: 0 1em .25em 0;
+				margin: 0 1em 0.25em 0;
 				overflow: hidden;
 			}
 
-			@media (max-width: map-deep($widths, 'small')) {
+			@media (max-width: map-deep($widths, "small")) {
 				column-count: auto;
 				font-size: 1rem;
 
 				li {
 					display: inline-block;
-					margin: 0 .5em .5em;
+					margin: 0 0.5em 0.5em;
 				}
 			}
 		}
@@ -101,7 +103,7 @@ body > footer {
 		grid-area: foot_copyright;
 		text-align: right;
 
-		@media (max-width: map-deep($widths, 'small')) {
+		@media (max-width: map-deep($widths, "small")) {
 			margin-top: 1em;
 			text-align: center;
 		}

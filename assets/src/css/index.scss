@@ -58,7 +58,8 @@ html {
 body {
 	-ms-overflow-style: -ms-autohiding-scrollbar;
 	height: 100%;
-	margin-top: $masthead-height;
+	margin-top: var(--cmls-masthead-height);
+	overflow-x: hidden;
 
 	background: #fff;
 
@@ -67,7 +68,7 @@ body {
 		margin-top: 0;
 
 		@media (max-width: map-deep($widths, "medium")) {
-			margin-top: $masthead-height;
+			margin-top: var(--cmls-masthead-height);
 		}
 	}
 	&.menu-active {
@@ -125,8 +126,19 @@ li {
 	}
 }
 
-img:not([src]) {
-	visibility: hidden;
+img {
+	max-width: 100%;
+	height: auto;
+	object-fit: cover;
+	image-rendering: -webkit-optimize-contrast;
+
+	&:not([src]) {
+		visibility: hidden;
+	}
+	// SVGs default to contain
+	&[src*=".svg"] {
+		object-fit: contain;
+	}
 }
 
 .text-shadow-1 {
@@ -242,7 +254,9 @@ table {
 
 .cm-anchor {
 	position: relative;
-	top: -$masthead-height * 1.5;
+	top: calc(
+		var(--cmls-masthead-height) * 1.5 * -1
+	); //-$masthead-height * 1.5;
 }
 
 // Fix popup maker on mobile
