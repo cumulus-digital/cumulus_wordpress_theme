@@ -2,19 +2,24 @@
  * Plugin-specific and misc hacks
  */
 
-@import 'wp-rss-aggregator';
+@import "wp-rss-aggregator";
 
 .wp-block-image img,
 .wp-block-media-text__media img,
 .wp-block-media-text__media video {
-    height: auto;
+	height: auto;
 }
 
 .kt-tabs-title-list {
-    align-items: flex-end;
+	align-items: flex-end;
 }
 
 // Borders on jotform oEmbeds
 .wp-block-embed-jotform iframe {
 	border: 0;
+}
+
+// Remove underline from kadence buttons
+a.button {
+	text-decoration-line: none;
 }
