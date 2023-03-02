@@ -1,4 +1,162 @@
 .menu {
+	background-color: map-deep($colors, "brand");
+	background-image: linear-gradient(
+			to bottom,
+			rgba(0, 89, 142, 1) 0%,
+			rgba(0, 89, 142, 1) 30%,
+			rgba(0, 39, 92, 0.6) 100%
+		),
+		url("../images/menu-crowd.jpg");
+	background-attachment: local;
+	background-position: center bottom;
+	background-repeat: no-repeat;
+	background-size: cover;
+	color: #fff;
+
+	font-size: 1rem;
+	line-height: 1.2;
+
+	zoom: 1;
+
+	position: absolute;
+	top: var(--cmls-masthead-height);
+	left: 0;
+	width: 100vw;
+	height: 0;
+	overflow: hidden;
+	-webkit-overflow-scrolling: touch;
+	z-index: 1;
+
+	transform: translate(0, 0);
+
+	transition: height 0.2s;
+
+	.menu-active & {
+		height: calc(100vh - var(--cmls-masthead-height));
+		overflow-y: auto;
+	}
+	.admin-bar.menu-active & {
+		height: calc(100vh - var(--cmls-masthead-height) - 32px);
+
+		@media (max-width: map-deep($widths, "small")) {
+			height: calc(100vh - var(--cmls-masthead-height) - 46px);
+		}
+	}
+
+	@media (max-width: map-deep($widths, "medium")) {
+		background-image: linear-gradient(
+				to bottom,
+				rgba(0, 89, 142, 1) 0%,
+				rgba(0, 89, 142, 1) 30%,
+				rgba(0, 59, 112, 0.8) 100%
+			),
+			url("../images/menu-crowd.jpg");
+		background-attachment: fixed;
+
+		font-size: 1.2rem;
+
+		left: 100vw;
+		width: 0;
+		height: calc(100vh - var(--cmls-masthead-height));
+		transition: left 0.1s;
+
+		.menu-active & {
+			left: 0;
+			width: 100vw;
+		}
+	}
+
+	a,
+	span {
+		display: block;
+		color: #fff;
+		text-decoration-line: none;
+
+		padding: 0.35em;
+	}
+	a {
+		text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.65);
+
+		@include hover {
+			background: rgba(0, 0, 0, 0.4);
+		}
+	}
+	.current_page_item > a {
+		display: inline-block;
+		background-color: rgba(0, 0, 0, 0.15);
+	}
+
+	> ul {
+		display: flex;
+		gap: 3em;
+
+		backdrop-filter: blur(2px);
+
+		position: relative;
+		width: 100%;
+		min-height: calc(100vh - var(--cmls-masthead-height));
+		padding: 1.5em 5.5vw;
+
+		@media (max-width: map-deep($widths, "medium")) {
+			display: block;
+			padding: 1em 1.5em;
+		}
+
+		> li {
+			flex-basis: 0;
+			flex-grow: 1;
+
+			position: relative;
+
+			// Lines between top level items
+			&:not(:last-child):after {
+				content: "";
+				position: absolute;
+				right: -1.5em;
+				top: -0.5em;
+				width: 1px;
+				height: 100%;
+
+				background: rgb(255, 255, 255);
+				background: linear-gradient(
+					180deg,
+					rgba(255, 255, 255, 0.5) 0%,
+					rgba(255, 255, 255, 0) 50%
+				);
+
+				@media (max-width: map-deep($widths, "medium")) {
+					display: none;
+				}
+			}
+
+			@media (max-width: map-deep($widths, "medium")) {
+				margin-bottom: 2em;
+			}
+
+			> a {
+				font-size: 1.15em;
+				font-weight: bold;
+				text-transform: uppercase;
+			}
+
+			> ul {
+				margin-top: 0.5em;
+
+				li {
+					margin-bottom: 0.35em;
+
+					a {
+						font-weight: 300;
+						letter-spacing: 0.01em;
+					}
+				}
+			}
+		}
+	}
+}
+
+/*
+.menu {
 	background-color: map-deep($colors, "highlight");
 	background-image: linear-gradient(
 			to bottom,
@@ -55,7 +213,7 @@
 		color: #fff;
 		text-decoration: none;
 
-		padding: 0.75vh 0.5vw;
+		padding: 0;
 	}
 	a {
 		@include hover {
@@ -87,11 +245,15 @@
 			position: relative;
 			flex-grow: 1;
 			flex-basis: 0;
-			padding: 1% 0.5%;
+			//padding: 1% 0.5%;
 
 			font-weight: bold;
 			text-transform: uppercase;
 			text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+
+			> a {
+				line-height: 1;
+			}
 
 			&:after {
 				content: "";
@@ -110,10 +272,10 @@
 			}
 
 			&:first-child {
-				margin-left: 2%;
+				//margin-left: 2%;
 			}
 			&:last-child {
-				margin-right: 2%;
+				//margin-right: 2%;
 
 				&:after {
 					display: none;
@@ -121,7 +283,8 @@
 			}
 
 			@media (max-width: map-deep($widths, "medium")) {
-				padding: 3% 5% 0;
+				font-size: 0.85em;
+				//padding: 3% 5% 0;
 
 				&:after {
 					display: none;
@@ -129,9 +292,9 @@
 
 				&:first-child,
 				&:last-child {
-					padding: 3% 5% 0;
-					margin-left: 0;
-					margin-right: 0;
+					//padding: 3% 5% 0;
+					//margin-left: 0;
+					//margin-right: 0;
 				}
 				&:last-child {
 					padding-bottom: 4%;
@@ -139,9 +302,10 @@
 			}
 
 			& > ul {
-				margin-top: 0.5vh;
+				margin-top: 0.5em;
+				margin-left: 0.5em;
 
-				font-size: 0.75em;
+				font-size: 1em;
 				font-weight: normal;
 				text-transform: none;
 
@@ -151,6 +315,7 @@
 
 				& > li {
 					position: relative;
+					margin-bottom: 0.25em;
 
 					& > ul {
 						font-size: 0.8em;
@@ -194,3 +359,4 @@
 		}
 	}
 }
+*/
