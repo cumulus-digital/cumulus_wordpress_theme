@@ -94,8 +94,10 @@
 
 		position: relative;
 		width: 100%;
+		max-width: 1700px;
 		min-height: calc(100vh - var(--cmls-masthead-height));
-		padding: 1.5em 5.5vw;
+		padding: 1.5em;
+		margin: 0 auto;
 
 		@media (max-width: map-deep($widths, "medium")) {
 			display: block;
