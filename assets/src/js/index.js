@@ -119,29 +119,29 @@ import throttle from 'lodash/throttle';
 		updateOnScroll();
 	} );
 
-	function toggleMainMenu( forced ) {
-		if ( forced === true || ! $body.hasClass( 'menu-active' ) ) {
+	function toggleMainMenu( openIt ) {
+		if ( openIt === true || ! $body.hasClass( 'menu-active' ) ) {
 			$heroVideo.trigger( 'pause' );
 			$body.addClass( 'menu-active' );
 			$masthead.addClass( 'menu-active' );
 			$masthead.find( '.menu' ).scrollTop( 0 );
-		} else if ( forced === false || $body.hasClass( 'menu-active' ) ) {
+		} else if ( openIt === false || $body.hasClass( 'menu-active' ) ) {
 			$heroVideo.trigger( 'play' );
 			$body.removeClass( 'menu-active' );
 			$masthead.removeClass( 'menu-active' );
 		}
 	}
+	function openMainMenu() {
+		toggleMainMenu( true );
+	}
+	function closeMainMenu() {
+		toggleMainMenu( false );
+	}
 	$( '.hamburger-container' ).on( 'click', function () {
 		toggleMainMenu();
 	} );
-	$( '.masthead nav.menu a' ).on( 'focus', function () {
-		toggleMainMenu( true );
-	} );
-	$( '.masthead nav.menu a' ).on( 'focusout', function () {
-		toggleMainMenu( false );
-	} );
 	$( '.masthead nav.menu a[href*="#"]' ).on( 'click', function () {
-		toggleMainMenu( false );
+		closeMainMenu();
 	} );
 
 	$scrollArrow.on( 'click', function ( e ) {
