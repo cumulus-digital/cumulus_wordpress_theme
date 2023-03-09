@@ -144,6 +144,18 @@ import throttle from 'lodash/throttle';
 		closeMainMenu();
 	} );
 
+	// Highlight current anchor item
+	$( function () {
+		if ( window.location.hash.length > 1 ) {
+			var hashItem = $(
+				'.masthead nav.menu a[href*="' + window.location.hash + '"]'
+			);
+			if ( hashItem.length ) {
+				hashItem.parent().addClass( 'current_page_item' );
+			}
+		}
+	} );
+
 	$scrollArrow.on( 'click', function ( e ) {
 		e.preventDefault();
 		$( 'html, body' ).animate(
