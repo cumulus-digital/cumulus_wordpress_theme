@@ -141,8 +141,11 @@ import throttle from 'lodash/throttle';
 		toggleMainMenu();
 	} );
 	$( '.masthead nav.menu a[href*="#"]' ).on( 'click', function () {
-		setTimeout( highlightCurrentAnchor, 500 );
-		closeMainMenu();
+		var link = new URL( this.href );
+		if ( window.location.pathname == link.pathname ) {
+			setTimeout( highlightCurrentAnchor, 500 );
+			closeMainMenu();
+		}
 	} );
 
 	// Highlight current anchor item
