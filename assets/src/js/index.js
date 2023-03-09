@@ -141,12 +141,16 @@ import throttle from 'lodash/throttle';
 		toggleMainMenu();
 	} );
 	$( '.masthead nav.menu a[href*="#"]' ).on( 'click', function () {
+		setTimeout( highlightCurrentAnchor, 500 );
 		closeMainMenu();
 	} );
 
 	// Highlight current anchor item
-	$( function () {
+	function highlightCurrentAnchor() {
 		if ( window.location.hash.length > 1 ) {
+			$( '.masthead nav.menu a[href*="#"]' )
+				.parent()
+				.removeClass( 'current_page_item' );
 			var hashItem = $(
 				'.masthead nav.menu a[href*="' + window.location.hash + '"]'
 			);
@@ -154,6 +158,9 @@ import throttle from 'lodash/throttle';
 				hashItem.parent().addClass( 'current_page_item' );
 			}
 		}
+	}
+	$( function () {
+		highlightCurrentAnchor();
 	} );
 
 	$scrollArrow.on( 'click', function ( e ) {
