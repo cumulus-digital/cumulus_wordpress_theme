@@ -656,6 +656,16 @@ add_action('wp_headers', function () {
      */
     \header('X-DNS-Prefetch-Control: on');
 
+    /*
+     * X-Frame-Options: SAMEORIGIN - Prevent web pages from being loaded inside iFrame
+     */
+    \header('X-Frame-Options: SAMEORIGIN');
+
+    /*
+     * X-Content-Type-Options: nosniff - Prevent MIME Type sniffing
+     */
+    \header('X-Content-Type-Options: nosniff');
+
     /**
      * Modicrom of support for old IE
      */
