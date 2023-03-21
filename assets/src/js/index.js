@@ -1,5 +1,6 @@
 import '../css/index.scss';
 import throttle from 'lodash/throttle';
+import './jotforms.js';
 
 ( function ( $, window, undefined ) {
 	// eslint-disable-line no-unused-vars
