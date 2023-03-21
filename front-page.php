@@ -1,35 +1,37 @@
 <?php
+
 namespace CumulusTheme;
 
 // Alter the title for front page to only display the site title
-function cmFrontPageTitle( $title ) {
-	if (\is_front_page()) {
-		return array(\get_bloginfo('name'));
-	}
-	return $title;
+function cmFrontPageTitle($title)
+{
+    if (\is_front_page()) {
+        return array(\get_bloginfo('name'));
+    }
+    return $title;
 }
-\add_filter( 'document_title_parts', ns('cmFrontPageTitle'), 99999, 1 );
+\add_filter('document_title_parts', ns('cmFrontPageTitle'), 99999, 1);
 \add_filter('wpseo_title', '__return_empty_string'); // Yoast interception
 
 $custom_fields = \get_fields();
 $header_video_ids = array();
 if ($custom_fields) {
-	foreach($custom_fields as $key => $field) {
-		if (
-			(strstr($key, 'header_video_id') || strstr($key, 'header_video_alt')) &&
-			! empty($field)
-		) {
-			$header_video_ids[$key] = $field;
-		}
-	}
+    foreach($custom_fields as $key => $field) {
+        if (
+            (strstr($key, 'header_video_id') || strstr($key, 'header_video_alt')) &&
+            ! empty($field)
+        ) {
+            $header_video_ids[$key] = $field;
+        }
+    }
 }
 if (count($header_video_ids)) {
-	BodyClasses::add('post_header_image');
-	$header_videos = \get_posts(array(
-		'include' => array_values($header_video_ids),
-		'post_type' => 'attachment',
-		'post_status' => 'all'
-	));
+    BodyClasses::add('post_header_image');
+    $header_videos = \get_posts(array(
+        'include' => array_values($header_video_ids),
+        'post_type' => 'attachment',
+        'post_status' => 'all'
+    ));
 }
 
 \get_header();
@@ -45,7 +47,6 @@ if (count($header_video_ids)) {
 				<img src="<?php echo THEME_PATH ?>/assets/prod/images/bg-video_hero-small.png" alt>
 			</video>
 		</div>
-		<script src="https://cdn.jsdelivr.net/npm/objectFitPolyfill@2.3.0/dist/objectFitPolyfill.basic.min.js" integrity="sha256-Kms38lBvuW1aCtPabohpwj3Xx1VCuIjGgDS6X6ay3Hc=" crossorigin="anonymous"></script>
 	<?php endif ?>
 
 </section>
