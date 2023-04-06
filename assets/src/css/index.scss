@@ -280,6 +280,21 @@ table {
 	position: fixed !important;
 }
 
+/* CCPA notice */
+.choice-footer-msg-wrapper {
+	background: #222;
+	color: #ccc;
+	font-size: 12px;
+	text-align: center;
+	position: relative;
+	z-index: 999;
+}
+#choice-footer-msg {
+	max-width: 690px;
+	margin: 0 auto;
+	padding: 1.5em 1em;
+}
+
 @import "rows/_";
 @import "template-parts/_";
 @import "pages/_";

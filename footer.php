@@ -33,7 +33,9 @@ namespace CumulusTheme;
 		</div>
 
 	</footer>
-	<div id="choice-footer-msg"></div>
+	<div class="choice-footer-msg-wrapper">
+		<div id="choice-footer-msg"></div>
+	</div>
 
 	<?php wp_footer(); ?>
 
