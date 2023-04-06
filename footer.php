@@ -1,5 +1,7 @@
 <?php
+
 namespace CumulusTheme;
+
 ?>
 
 	<footer class="row" role="contentinfo">
@@ -31,6 +33,7 @@ namespace CumulusTheme;
 		</div>
 
 	</footer>
+	<div id="choice-footer-msg"></div>
 
 	<?php wp_footer(); ?>
 
