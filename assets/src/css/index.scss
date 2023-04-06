@@ -293,6 +293,14 @@ table {
 	max-width: 690px;
 	margin: 0 auto;
 	padding: 1.5em 1em;
+
+	a {
+		color: map-deep($colors, "highlight");
+
+		&:hover {
+			color: #fff;
+		}
+	}
 }
 
 @import "rows/_";
