@@ -33,6 +33,12 @@ function get_arr_val($array, $key, $default = null)
 // Disable theme and plugin editor
 define('DISALLOW_FILE_EDIT', true);
 
+// Disable comments
+\add_filter('comments_open', '__return_false', PHP_INT_MAX, 2);
+
+// Disable pingbacks
+\add_filter('pings_open', '__return_false', PHP_INT_MAX, 2);
+
 // Recommend plugins
 require_once 'classes/TGM-Plugin-Activation/class-tgm-plugin-activation.php';
 function registerRequiredPlugins()
