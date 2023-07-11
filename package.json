@@ -5,7 +5,7 @@
   "author": "Daniel Vena <daniel.vena@cumulus.com>",
   "main": "index.js",
   "devDependencies": {
-    "@wordpress/scripts": "^26.1.0",
+    "@wordpress/scripts": "^26.8.0",
     "bourbon": "^7.0.0",
     "classlist-polyfill": "^1.2.0",
     "colord": "^2.9.2",
