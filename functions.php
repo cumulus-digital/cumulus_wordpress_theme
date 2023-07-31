@@ -41,6 +41,15 @@ define('DISALLOW_FILE_EDIT', true);
 
 // Disable jetpack ai
 \add_filter('jetpack_ai_enabled', '__return false', PHP_INT_MAX);
+\add_action('jetpack_register_gutenberg_extensions', function () {
+    //unregister_block_type('jetpack/ai-assistant');
+    if (is_callable('\Jetpack_Gutenberg::set_extension_unavailable')) {
+        \Jetpack_Gutenberg::set_extension_unavailable(
+            'jetpack/ai-assistant',
+            'no_ai_allowed'
+        );
+    }
+}, PHP_INT_MAX);
 
 // Recommend plugins
 require_once 'classes/TGM-Plugin-Activation/class-tgm-plugin-activation.php';
