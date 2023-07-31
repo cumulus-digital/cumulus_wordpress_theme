@@ -39,6 +39,9 @@ define('DISALLOW_FILE_EDIT', true);
 // Disable pingbacks
 \add_filter('pings_open', '__return_false', PHP_INT_MAX, 2);
 
+// Disable jetpack ai
+\add_filter('jetpack_ai_enabled', '__return false', PHP_INT_MAX);
+
 // Recommend plugins
 require_once 'classes/TGM-Plugin-Activation/class-tgm-plugin-activation.php';
 function registerRequiredPlugins()
