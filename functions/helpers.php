@@ -81,8 +81,11 @@ if ( ! \defined( __NAMESPACE__ . '\CMLS_HELPERS_IMPORTED' ) ) {
 		}
 
 		if ( \is_array( $path ) ) {
+			$return_val = $default_value;
 			foreach ( $path as $path_element ) {
 				if ( ! \is_array( $input_array ) ) {
+					\do_action( 'qm/debug', 'input was not an array!' );
+
 					return $default_value;
 				}
 
@@ -96,7 +99,7 @@ if ( ! \defined( __NAMESPACE__ . '\CMLS_HELPERS_IMPORTED' ) ) {
 					 * than `array_key_exists()`.
 					 */
 					if ( isset( $input_array[ $path_element ] ) ) {
-						$input_array = $input_array[ $path_element ];
+						$return_val = $input_array[ $path_element ];
 
 						continue;
 					}
@@ -106,7 +109,7 @@ if ( ! \defined( __NAMESPACE__ . '\CMLS_HELPERS_IMPORTED' ) ) {
 					 * which also checks for `null` values.
 					 */
 					if ( \array_key_exists( $path_element, $input_array ) ) {
-						$input_array = $input_array[ $path_element ];
+						$return_val = $input_array[ $path_element ];
 
 						continue;
 					}
@@ -114,6 +117,8 @@ if ( ! \defined( __NAMESPACE__ . '\CMLS_HELPERS_IMPORTED' ) ) {
 
 				return $default_value;
 			}
+
+			return $return_val;
 		}
 
 		return $default_value;
