@@ -1,3 +1,17 @@
-node_modules
+# Composer
+vendor/
+!assets/prod/composer/vendor/
+
+# npm
+node_modules/
+
+*.log
+
+# OS generated files
 .DS_Store
-stext.html
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db

@@ -1,0 +1,171 @@
+{
+    "packages": [
+        {
+            "name": "tgmpa\/tgm-plugin-activation",
+            "version": "2.6.1",
+            "version_normalized": "2.6.1.0",
+            "source": {
+                "type": "git",
+                "url": "https:\/\/github.com\/TGMPA\/TGM-Plugin-Activation.git",
+                "reference": "c626d0d91fc8ef24916e809c7b79eeafab1c1cac"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https:\/\/api.github.com\/repos\/TGMPA\/TGM-Plugin-Activation\/zipball\/c626d0d91fc8ef24916e809c7b79eeafab1c1cac",
+                "reference": "c626d0d91fc8ef24916e809c7b79eeafab1c1cac",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.2"
+            },
+            "time": "2016-05-19T15:46:51+00:00",
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "files": [
+                    "class-tgm-plugin-activation.php"
+                ]
+            },
+            "notification-url": "https:\/\/packagist.org\/downloads\/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Thomas Griffin",
+                    "homepage": "http:\/\/thomasgriffinmedia.com",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Gary Jones",
+                    "homepage": "https:\/\/github.com\/GaryJones",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Juliette Reinders Folmer",
+                    "homepage": "https:\/\/github.com\/jrfnl",
+                    "role": "Developer"
+                }
+            ],
+            "description": "TGM Plugin Activation is a PHP library that allows you to easily require or recommend plugins for your WordPress themes (and plugins).",
+            "homepage": "http:\/\/tgmpluginactivation.com",
+            "keywords": [
+                "activation",
+                "library",
+                "plugins",
+                "theme",
+                "wordpress"
+            ],
+            "support": {
+                "issues": "https:\/\/github.com\/TGMPA\/TGM-Plugin-Activation\/issues",
+                "source": "https:\/\/github.com\/TGMPA\/TGM-Plugin-Activation"
+            },
+            "install-path": "..\/tgmpa\/tgm-plugin-activation"
+        },
+        {
+            "name": "vena\/acf-json",
+            "version": "1.0.5",
+            "version_normalized": "1.0.5.0",
+            "source": {
+                "type": "git",
+                "url": "https:\/\/github.com\/vena\/acf-json.git",
+                "reference": "8a4a907ab85507e97c33a2bf3e08530f166720d5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https:\/\/api.github.com\/repos\/vena\/acf-json\/zipball\/8a4a907ab85507e97c33a2bf3e08530f166720d5",
+                "reference": "8a4a907ab85507e97c33a2bf3e08530f166720d5",
+                "shasum": ""
+            },
+            "require-dev": {
+                "friendsofphp\/php-cs-fixer": "^3.0"
+            },
+            "time": "2021-08-25T00:07:26+00:00",
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "CumulusTheme\\Vendors\\vena\\AcfJson\\": "src\/"
+                }
+            },
+            "notification-url": "https:\/\/packagist.org\/downloads\/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Daniel Vena",
+                    "email": "deaconvena+github@gmail.com"
+                }
+            ],
+            "description": "Force ACF to store and load json for specific groups inside a plugin or theme.",
+            "homepage": "https:\/\/github.com\/vena\/acf-json",
+            "keywords": [
+                "acf",
+                "wordpress"
+            ],
+            "support": {
+                "issues": "https:\/\/github.com\/vena\/acf-json\/issues",
+                "source": "https:\/\/github.com\/vena\/acf-json\/tree\/1.0.5"
+            },
+            "install-path": "..\/vena\/acf-json"
+        },
+        {
+            "name": "wptrt\/control-color-alpha",
+            "version": "v1.1.5",
+            "version_normalized": "1.1.5.0",
+            "source": {
+                "type": "git",
+                "url": "https:\/\/github.com\/WPTT\/control-color-alpha.git",
+                "reference": "b287235b4398c1935d4cf2182c21b5e049738d03"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https:\/\/api.github.com\/repos\/WPTT\/control-color-alpha\/zipball\/b287235b4398c1935d4cf2182c21b5e049738d03",
+                "reference": "b287235b4398c1935d4cf2182c21b5e049738d03",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.6"
+            },
+            "require-dev": {
+                "composer\/installers": "~1.0",
+                "dealerdirect\/phpcodesniffer-composer-installer": "*",
+                "wp-coding-standards\/wpcs": "*",
+                "wptrt\/wpthemereview": "*"
+            },
+            "time": "2021-09-15T06:44:44+00:00",
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "CumulusTheme\\Vendors\\WPTRT\\Customize\\Control\\": "src\/"
+                }
+            },
+            "notification-url": "https:\/\/packagist.org\/downloads\/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "WordPress.org Theme Review Team",
+                    "email": "themes@wordpress.org",
+                    "homepage": "https:\/\/make.wordpress.org\/themes",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Color control for the WordPress Customizer with RGBA support.",
+            "homepage": "https:\/\/github.com\/WPTRT\/control-color-alpha",
+            "keywords": [
+                "wordpress"
+            ],
+            "support": {
+                "issues": "https:\/\/github.com\/WPTRT\/control-color-alpha\/issues",
+                "source": "https:\/\/github.com\/WPTT\/control-color-alpha\/tree\/v1.1.5"
+            },
+            "install-path": "..\/wptrt\/control-color-alpha"
+        }
+    ],
+    "dev": false,
+    "dev-package-names": []
+}

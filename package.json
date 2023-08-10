@@ -5,7 +5,7 @@
   "author": "Daniel Vena <daniel.vena@cumulus.com>",
   "main": "index.js",
   "devDependencies": {
-    "@wordpress/scripts": "^26.9.0",
+    "@wordpress/scripts": "^26.10.0",
     "bourbon": "^7.0.0",
     "classlist-polyfill": "^1.2.0",
     "colord": "^2.9.2",
@@ -14,9 +14,6 @@
     "lodash": "^4.17.20",
     "prettier": "npm:wp-prettier@^2.6.2"
   },
-  "browserslist": [
-    "last 3 versions or > 1%"
-  ],
   "scripts": {
     "start": "wp-scripts start",
     "build": "wp-scripts build",
@@ -29,6 +26,6 @@
     "lint:md:js": "wp-scripts lint-md-js",
     "lint:pkg-json": "wp-scripts lint-pkg-json",
     "packages-update": "wp-scripts packages-update",
-    "full-upgrade": "npm update; npm run packages-update; npm upgrade"
+    "full-upgrade": "npm update && npm run packages-update && npm upgrade; pushd ./.php-cs-fixer && ./refresh.sh && popd; composer update && composer upgrade && ./rescope.sh"
   }
 }

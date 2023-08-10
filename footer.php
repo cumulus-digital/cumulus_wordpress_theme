@@ -13,7 +13,7 @@ namespace CumulusTheme;
 					<?php if (function_exists('custom_logo')): ?>
 						<?php \custom_logo(); ?>
 					<?php else: ?>
-						<img src="<?=THEME_PATH?>/assets/prod/images/cumulus-logo-white-full.svg" alt="<?php \bloginfo('name') ?>">
+						<img src="<?=theme_url()?>/assets/prod/images/cumulus-logo-white-full.svg" alt="<?php \bloginfo('name') ?>">
 					<?php endif ?>
 				</a>
 			</div>

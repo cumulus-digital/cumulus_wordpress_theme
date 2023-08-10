@@ -36,10 +36,10 @@ $card_image_id = $custom_fields['card_image'];
 				<img
 					src="<?php echo \wp_get_attachment_image_url($card_image_id, 'full'); ?>"
 					alt="<?php
-                        if (empty(get_arr_val($custom_fields, 'alt_title'))) {
+                        if (empty(gav($custom_fields, 'alt_title'))) {
                             \the_title();
                         } else {
-                            echo \esc_html(get_arr_val($custom_fields, 'alt_title'));
+                            echo \esc_html(gav($custom_fields, 'alt_title'));
                         }
                     ?>"
 				>
@@ -51,10 +51,10 @@ $card_image_id = $custom_fields['card_image'];
 				<div class="card-content">
 					<?php if ($card_options['show_title'] || ! $card_image_id): ?>
 						<h2>
-							<?php if (empty(get_arr_val($custom_fields, 'alt_title'))): ?>
+							<?php if (empty(gav($custom_fields, 'alt_title'))): ?>
 								<?php \the_title() ?>
 							<?php else: ?>
-								<?php echo \esc_html(get_arr_val($custom_fields, 'alt_title')) ?>
+								<?php echo \esc_html(gav($custom_fields, 'alt_title')) ?>
 							<?php endif ?>
 						</h2>
 					<?php endif ?>
@@ -71,13 +71,13 @@ $card_image_id = $custom_fields['card_image'];
 
 			<div class="card-permalink">
 				<span>
-					<?php if (get_arr_val($custom_fields, 'override_card_link_label')): ?>
-						<?php echo \esc_html(get_arr_val($custom_fields, 'override_card_link_label')) ?>
+					<?php if (gav($custom_fields, 'override_card_link_label')): ?>
+						<?php echo \esc_html(gav($custom_fields, 'override_card_link_label')) ?>
 					<?php else: ?>
 						<?php echo $card_options['link_label'] ? \esc_html($card_options['link_label']) : 'Learn More' ?>
 					<?php endif ?>
 				</span>
-				<img src="<?php echo THEME_PATH ?>/assets/prod/images/arrow-blue-right.svg" class="arrow" alt="">
+				<img src="<?php echo theme_url() ?>/assets/prod/images/arrow-blue-right.svg" class="arrow" alt="">
 			</div>
 
 		<?php endif ?>
