@@ -90,6 +90,11 @@ main.page {
 			line-height: 1.1;
 			text-align: center;
 
+			@media (max-width: map-deep($widths, "small")) {
+				font-size: 1.75em;
+				padding: 0;
+			}
+
 			/*
 			&::after {
 				display: block;
@@ -173,15 +178,31 @@ main.page {
 		}
 		h1 {
 			font-size: 2em;
+
+			@media (max-width: map-deep($widths, "small")) {
+				font-size: 1.5em;
+			}
 		}
 		h2 {
 			font-size: 1.7em;
+
+			@media (max-width: map-deep($widths, "small")) {
+				font-size: 1.3em;
+			}
 		}
 		h3 {
 			font-size: 1.4em;
+
+			@media (max-width: map-deep($widths, "small")) {
+				font-size: 1.2em;
+			}
 		}
 		h4 {
 			font-size: 1.2em;
+
+			@media (max-width: map-deep($widths, "small")) {
+				font-size: 1.1em;
+			}
 		}
 		h5 {
 			font-size: 1em;
