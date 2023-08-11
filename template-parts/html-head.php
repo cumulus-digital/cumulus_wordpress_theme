@@ -18,6 +18,7 @@ if ( \is_singular() && \has_excerpt() ) {
 
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
 	<meta name="description" content="<?php echo \wp_kses( $description, array() ); ?>">
 
 	<?php if ( \has_site_icon() ): ?>
