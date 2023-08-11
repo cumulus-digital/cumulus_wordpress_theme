@@ -74,12 +74,12 @@ window.cmls_qc_config = {
 	ccpa_msg_id: 'choice-footer-msg',
 
 	// CCPA message
-	ccpa_msg: `
-		We use cookies and other technologies to provide targeted advertising aimed
-		at providing the best experience for our customers.  You may opt out of the
-		sale or sharing of data for targeted advertising here:
-		<a class="cmls-uspapi-displayuspui">Do Not Sell or Share My Personal Information</a>.
-	`,
+	ccpa_msg: 'We use cookies' +
+		' and other data collection technologies' +
+		' to provide the best experience for our customers. You may request' +
+		' that your data not be shared with third parties here: ' +
+		'<a href="#" class="cmls-uspapi-displayuspui"' +
+		'>Do Not Sell or Share My Personal Information</a>',
 
 	// Push consent events to datalayer(s)
 	datalayer_push: {$PUSH_DL},

@@ -581,7 +581,7 @@
 						' to provide the best experience for our customers. You may request' +
 						' that your data not be shared with third parties here: ' +
 						'<a href="#" onclick="window.__uspapi(\'displayUspUi\');"' +
-						'>Do Not Sell My Data</a>' +
+						'>Do Not Sell or Share My Personal Information</a>' +
 						'.';
 				}
 
