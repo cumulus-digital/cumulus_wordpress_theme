@@ -54,7 +54,11 @@ function quantcast_choice_field() {
 }
 \add_filter( 'admin_init', ns( 'quantcast_choice_field' ) );
 
-\add_filter( 'init', function () {
+\add_filter( 'wp_enqueue_scripts', function () {
+	if ( \is_admin() ) {
+		return;
+	}
+
 	$ID = \get_option( 'quantcast_choice_id', '' );
 	if ( $ID ) {
 		$ID      = \esc_js( $ID );
