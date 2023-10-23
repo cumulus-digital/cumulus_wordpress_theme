@@ -59,8 +59,8 @@ function acfResetMetaboxesForCPT( $cpt, $group ) {
 			return;
 		}
 
-		\wp_register_style( PREFIX . '-lock_metaboxes', '' );
-		\wp_enqueue_style( PREFIX . '-lock_metaboxes', '' );
+		\wp_register_style( PREFIX . '-lock_metaboxes', '', array(), false, 'screen' );
+		\wp_enqueue_style( PREFIX . '-lock_metaboxes', '', array(), false, 'screen' );
 		\wp_register_script( PREFIX . '-lock_metaboxes', '', array( ), false, true );
 		\wp_enqueue_script( PREFIX . '-lock_metaboxes', '', array( ), false, true );
 

@@ -1,11 +1,11 @@
 {
-  "version": "1.0.0",
+  "version": "1.0.8",
   "description": "Wordpress theme",
   "name": "cumulus_com_wp",
   "author": "Daniel Vena <daniel.vena@cumulus.com>",
   "main": "index.js",
   "devDependencies": {
-    "@wordpress/scripts": "^26.11.0",
+    "@wordpress/scripts": "^26.15.0",
     "bourbon": "^7.0.0",
     "classlist-polyfill": "^1.2.0",
     "colord": "^2.9.2",
