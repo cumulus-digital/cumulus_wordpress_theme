@@ -102,7 +102,7 @@ END
 		);
 		\wp_enqueue_script(
 			PREFIX . '-quantcast-choice-tag',
-			theme_url() . '/assets/static/script/quantcast-choice.js',
+			theme_url() . '/assets/static/script/inmobi-choice.js',
 			array( PREFIX . '-quantcast-choice-config' ),
 			false,
 			false
