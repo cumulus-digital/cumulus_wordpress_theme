@@ -9,12 +9,12 @@
 	var element = document.createElement( 'script' );
 	var firstScript = document.getElementsByTagName( 'script' )[ 0 ];
 
-	var url = 'https://cmp.quantcast.com'.concat(
+	var url = 'https://cmp.inmobi.com'.concat(
 		'/choice/',
 		window.cmls_qc_config.UTID,
 		'/',
 		host,
-		'/choice.js?tag_version=V2'
+		'/choice.js?tag_version=V3'
 	);
 
 	var uspTries = 0;
