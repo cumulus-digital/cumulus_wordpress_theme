@@ -8,7 +8,9 @@ namespace CumulusTheme;
 \defined( 'ABSPATH' ) || exit( 'No direct access allowed.' );
 
 // Disable theme and plugin editor
-\define( 'DISALLOW_FILE_EDIT', true );
+if ( ! \defined( 'DISALLOW_FILE_EDIT' ) ) {
+	\define( 'DISALLOW_FILE_EDIT', true );
+}
 
 // Disable the block directory
 \add_action(
