@@ -16,7 +16,6 @@
 		'<label for="cmls-disable_sticky">Disable sticky posts</label>',
 		function () {
 			$value = \get_option( 'cmls-disable_sticky' );
-			\var_dump( $value );
 			?>
 				<label for="cmls-disable_sticky">
 					<input type="hidden" name="cmls-disable_sticky" value="0" />
