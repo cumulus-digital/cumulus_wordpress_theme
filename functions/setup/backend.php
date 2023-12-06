@@ -207,3 +207,8 @@ function custom_admin_footer() {
 \add_filter( 'default_page_template_title', function () {
 	return \__( 'Basic', PREFIX );
 } );
+
+// Allow menu order for posts
+\add_action( 'admin_init', function () {
+	\add_post_type_support( 'post', 'page-attributes' );
+} );
