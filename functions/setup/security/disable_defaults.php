@@ -14,8 +14,16 @@ namespace CumulusTheme\Setup\Security;
 	}
 
 	// Remove sticky posts
-	if ( \get_option( 'sticky_posts' ) ) {
+	$disable_sticky = \get_option( 'cmls-disable_sticky' );
+	if ( $disable_sticky === '1' && \get_option( 'sticky_posts' ) ) {
 		\update_option( 'sticky_posts', array() );
+	}
+} );
+
+// Ignore sticky posts
+\add_action( 'pre_get_posts', function ( $query ) {
+	if ( \get_option( 'cmls-disable_sticky' ) === '1' ) {
+		$query->set( 'ignore_sticky_posts', true );
 	}
 } );
 
