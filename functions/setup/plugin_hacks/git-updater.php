@@ -17,7 +17,7 @@ namespace CumulusTheme\Setup\PluginHacks;
 		)
 	);
 	\add_settings_field(
-		'Github Key',
+		'cmls-github_key',
 		'<label for="cmls-github_key">Github Key</label>',
 		function () {
 			$value = \get_option( 'cmls-github_key' );

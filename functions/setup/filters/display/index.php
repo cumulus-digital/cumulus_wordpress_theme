@@ -1,7 +1,7 @@
 <?php
 /**
  * CMLS Base Theme
- * Default filters for display
+ * Default filters for display.
  */
 
 namespace CumulusTheme;
@@ -11,3 +11,4 @@ namespace CumulusTheme;
 require __DIR__ . '/archives.php';
 require __DIR__ . '/post-password.php';
 require __DIR__ . '/title-registration-marks.php';
+require __DIR__ . '/style-loader-tag.php';
