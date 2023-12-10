@@ -42,4 +42,4 @@ namespace CumulusTheme;
 	}
 
 	return $tag;
-}, 10, 4 );
+}, \PHP_INT_MAX, 4 );
