@@ -25,15 +25,6 @@ namespace CumulusTheme;
 			|| \mb_stristr( $href, '?preload' )
 			|| \mb_stristr( $href, ';preload' )
 		) {
-			$replace_rel = array(
-				'rel="stylesheet"',
-				"rel='stylesheet'",
-			);
-
-			$preload = \str_ireplace( $replace_rel, 'rel="preload" as="style" onload="this.rel=\'stylesheet\'"', $tag );
-
-			return "{$preload}\n<noscript>{$tag}</noscript>";
-			/*
 			$replace_media = array(
 				'media="all"',
 				"media='all'",
@@ -44,10 +35,28 @@ namespace CumulusTheme;
 			);
 
 			$noscript = \str_ireplace( $replace_media, 'media="all"', $tag );
-			$onload   = \str_ireplace( $replace_media, 'media="print" onload="this.media=\'all\'"', $tag );
+			$onload   = \str_ireplace( $replace_media, 'media="print" data-preloading', $tag );
+
+			\wp_register_script( PREFIX . '-preload-style', '', array( ), false, true );
+			\wp_enqueue_script( PREFIX . '-preload-style', '', array( ), false, true );
+
+			\wp_add_inline_script(
+				PREFIX . '-preload-style',
+				"
+document.addEventListener('DOMContentLoaded', function () {
+	var styles = document.querySelectorAll('link[data-preloading]');
+	[].forEach.call(styles, function(s) {
+		if (s.sheet) {
+			s.media='all';
+		} else {
+			s.addEventListener('load', function() { this.media = 'all'; });
+		}
+	});
+});
+"
+			);
 
 			return "{$onload}\n<noscript>{$noscript}</noscript>";
-			 */
 		}
 	}
 
