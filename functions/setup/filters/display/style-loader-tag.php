@@ -25,6 +25,15 @@ namespace CumulusTheme;
 			|| \mb_stristr( $href, '?preload' )
 			|| \mb_stristr( $href, ';preload' )
 		) {
+			$replace_rel = array(
+				'rel="stylesheet"',
+				"rel='stylesheet'",
+			);
+
+			$preload = \str_ireplace( $replace_rel, 'rel="preload" as="style" onload="this.rel=\'stylesheet\'"', $tag );
+
+			return "{$preload}\n<noscript>{$tag}</noscript>";
+			/*
 			$replace_media = array(
 				'media="all"',
 				"media='all'",
@@ -38,6 +47,7 @@ namespace CumulusTheme;
 			$onload   = \str_ireplace( $replace_media, 'media="print" onload="this.media=\'all\'"', $tag );
 
 			return "{$onload}\n<noscript>{$noscript}</noscript>";
+			 */
 		}
 	}
 
