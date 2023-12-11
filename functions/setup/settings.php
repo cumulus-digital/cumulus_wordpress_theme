@@ -32,7 +32,7 @@
 		'general',
 		'cmls-async_fonts',
 		array(
-			'description'       => 'Use async method for theme customizer web font',
+			'description'       => 'Defer loading custom web fonts',
 			'type'              => 'boolean',
 			'sanitize_callback' => 'sanitize_text_field',
 			'default'           => '1',
@@ -40,14 +40,15 @@
 	);
 	\add_settings_field(
 		'cmls-async_fonts',
-		'<label for="cmls-async_fonts">Async Web Font</label>',
+		'<label for="cmls-async_fonts">Defer Web Font</label>',
 		function () {
 			$value = \get_option( 'cmls-async_fonts' );
 			?>
 				<label for="cmls-async_fonts">
 					<input type="hidden" name="cmls-async_fonts" value="0" />
 					<input type="checkbox" id="cmls-async_fonts" name="cmls-async_fonts" <?php echo $value === '1' ? 'checked' : ''; ?> value="1" />
-					Load theme's web font asynchronously.
+					Defer loading custom web fonts.<br>
+					<small style="max-width: 500px">Note that other optimization plugins and fonts loaded through plugins may interfere with or not be affected by this setting.</small>
 				</label>
 			<?php
 		},
