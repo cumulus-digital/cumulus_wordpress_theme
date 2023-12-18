@@ -8,8 +8,15 @@ namespace CumulusTheme;
 \defined( 'ABSPATH' ) || exit( 'No direct access allowed.' );
 
 function quantcast_choice_field() {
+	\add_settings_section(
+		'cmls-theme_settings-quantcast',
+		'Quantcast/inMobi Choice',
+		null,
+		'cmls-theme_settings'
+	);
+
 	\register_setting(
-		'general',
+		'cmls-theme_settings',
 		'quantcast_choice_id',
 		array(
 			'description'       => 'Quantcast Choice ID',
@@ -23,13 +30,17 @@ function quantcast_choice_field() {
 		'<label for="quantcast_choice_id">' . \__( 'Quantcast Choice ID', 'quantcast_choice_id' ) . '</label>',
 		function () {
 			$value = \get_option( 'quantcast_choice_id', '' );
-			echo '<input type="text" id="quantcast_choice_id" name="quantcast_choice_id" value="' . $value . '" class="regular-text" />';
+			?>
+			<input type="text" id="quantcast_choice_id" name="quantcast_choice_id" value="<?php echo \esc_attr( $value ); ?>" class="regular-text" />'
+			<p><small>Leave empty to disable Quantcast/inMobi Choice</small></p>
+			<?php
 		},
-		'general'
+		'cmls-theme_settings',
+		'cmls-theme_settings-quantcast'
 	);
 
 	\register_setting(
-		'general',
+		'cmls-theme_settings',
 		'quantcast_choice_push_datalayer',
 		array(
 			'description'       => 'QC: Push IAB & Non-IAB consent data to the Data Layer',
@@ -49,10 +60,11 @@ function quantcast_choice_field() {
 			echo '<input type="hidden" name="quantcast_choice_push_datalayer" value="0">';
 			echo '<input type="checkbox" id="quantcast_choice_push_datalayer" name="quantcast_choice_push_datalayer" value="1"' . ( $value ? ' checked' : '' ) . '>';
 		},
-		'general'
+		'cmls-theme_settings',
+		'cmls-theme_settings-quantcast'
 	);
 }
-\add_filter( 'admin_init', ns( 'quantcast_choice_field' ) );
+\add_filter( 'admin_init', ns( 'quantcast_choice_field' ), \PHP_INT_MAX );
 
 \add_filter( 'wp_enqueue_scripts', function () {
 	if ( \is_admin() ) {

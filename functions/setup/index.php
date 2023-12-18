@@ -20,5 +20,3 @@ require __DIR__ . '/cleanup.php';
 
 require __DIR__ . '/acf/index.php';
 require __DIR__ . '/plugin_hacks/index.php';
-
-require __DIR__ . '/quantcast-choice.php';
