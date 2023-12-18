@@ -100,6 +100,11 @@ module.exports = {
 			process.cwd(),
 			'assets/src/css/imageflipper.scss'
 		),
+		'swap-preloading-styles': path.resolve(
+			process.cwd(),
+			'assets/src/js',
+			'swap-preloading-styles.js'
+		),
 
 		/*
 		default_variables: path.resolve(

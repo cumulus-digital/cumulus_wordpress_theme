@@ -11,4 +11,4 @@ namespace CumulusTheme;
 require __DIR__ . '/archives.php';
 require __DIR__ . '/post-password.php';
 require __DIR__ . '/title-registration-marks.php';
-// require __DIR__ . '/style-loader-tag.php';
+require __DIR__ . '/style-loader-tag.php';

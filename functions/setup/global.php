@@ -30,7 +30,7 @@ function registerGlobalScript() {
 	);
 	\wp_register_style(
 		'google_montserrat_font',
-		'https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,500;0,600;0,700;0,800;0,900;1,100;1,300;1,500;1,600;1,700;1,800;1,900&display=swap',
+		'https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,500;0,600;0,700;0,800;0,900;1,100;1,300;1,500;1,600;1,700;1,800;1,900&display=swap&cmpreload',
 		false,
 		null,
 	);
@@ -38,9 +38,9 @@ function registerGlobalScript() {
 function enqueueGlobalScript() {
 	\wp_enqueue_script( PREFIX . '_script' );
 	\wp_enqueue_style( PREFIX . '_style' );
-	if ( \get_option( 'cmls-async_fonts', '1' ) !== '1' ) {
-		\wp_enqueue_style( 'google_montserrat_font' );
-	}
+	// if ( \get_option( 'cmls-async_fonts', '1' ) !== '1' ) {
+	\wp_enqueue_style( 'google_montserrat_font' );
+	// }
 }
 
 \add_action( 'wp_loaded', ns( 'registerGlobalScript' ) );
@@ -48,9 +48,11 @@ function enqueueGlobalScript() {
 // \add_action( 'admin_enqueue_scripts', ns( 'enqueueGlobalScript' ) );
 
 // Add google font to footer if we're deferring it
+/*
 if ( \get_option( 'cmls-async_fonts', '1' ) === '1' ) {
 	function enqueueFooterStyles() {
 		\wp_enqueue_style( 'google_montserrat_font' );
 	}
 	\add_action( 'wp_footer', ns( 'enqueueFooterStyles' ) );
 }
+ */

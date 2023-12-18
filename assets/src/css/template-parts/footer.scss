@@ -94,6 +94,13 @@ body > footer {
 				}
 			}
 		}
+
+		li.ot-sdk-show-settings {
+			cursor: pointer;
+			@include hover {
+				text-decoration: underline;
+			}
+		}
 	}
 
 	.social {
