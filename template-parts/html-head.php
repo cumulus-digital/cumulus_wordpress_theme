@@ -14,6 +14,12 @@ if ( \is_singular() && \has_excerpt() ) {
 ?><!DOCTYPE html>
 <html <?php \language_attributes(); ?> class="no-js">
 <head>
+	<?php if ( \has_action( 'cmls_template-head-begin' ) ): ?>
+		<!-- action:cmls_template-head-begin -->
+		<?php \do_action( 'cmls_template-head-begin' ); ?>
+		<!-- /action:cmls_template-head-begin -->
+	<?php endif; ?>
+
 	<meta charset="<?php \bloginfo( 'charset' ); ?>">
 
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -42,4 +48,10 @@ if ( \is_singular() && \has_excerpt() ) {
 	<link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
 
 	<?php \wp_head(); ?>
+
+	<?php if ( \has_action( 'cmls_template-head-end' ) ): ?>
+		<!-- action:cmls_template-head-end -->
+		<?php \do_action( 'cmls_template-head-end' ); ?>
+		<!-- /action:cmls_template-head-end -->
+	<?php endif; ?>
 </head>
