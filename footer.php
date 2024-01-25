@@ -10,11 +10,7 @@ namespace CumulusTheme;
 
 		<div class="logo">
 				<a href="<?php echo \home_url(); ?>">
-					<?php if ( \has_custom_logo( \get_current_blog_id() ) ): ?>
-						<?php \get_custom_logo( \get_current_blog_id() ); ?>
-					<?php else: ?>
-						<img src="<?php echo theme_url(); ?>/assets/prod/images/cumulus-logo-white-full.svg" alt="<?php \bloginfo( 'name' ); ?>">
-					<?php endif; ?>
+					<img src="<?php echo theme_url(); ?>/assets/prod/images/cumulus-logo-white-full.svg" alt="<?php \bloginfo( 'name' ); ?>">
 				</a>
 			</div>
 
