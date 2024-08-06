@@ -40,15 +40,15 @@ body > footer {
 			width: auto;
 		}
 		@media (max-width: map-deep($widths, "small")) {
+			width: 100%;
+			margin: 0 auto 1em;
+			text-align: center;
+
 			img {
 				height: auto;
 				width: 60%;
 				margin: 0 auto 1.75em;
 			}
-
-			width: 100%;
-			margin: 0 auto 1em;
-			text-align: center;
 		}
 	}
 

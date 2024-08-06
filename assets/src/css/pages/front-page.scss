@@ -1,77 +1,76 @@
 .home {
-
 	.scroll-down-arrow {
-        cursor: pointer;
-        display: none;
-        position: absolute;
-        top: calc(100vh - 135px);
-        //bottom: 80px;
+		cursor: pointer;
+		display: none;
+		position: absolute;
+		top: calc(100vh - 135px);
+		//bottom: 80px;
 
-        @at-root body.admin-bar .scroll-down-arrow {
-            top: calc(100vh - 103px);
-        }
+		left: calc(50% - 15px);
+		z-index: 20;
 
-        left: calc(50% - 15px);
-        z-index: 20;
+		width: 30px;
+		height: 50px;
+		//margin-bottom: -15px;
 
-        width: 30px;
-        height: 50px;
-        //margin-bottom: -15px;
+		background: linear-gradient(
+			to bottom,
+			RGBA(255, 255, 255, 0.3) 0%,
+			RGBA(255, 255, 255, 1) 90%
+		);
+		border: 2px solid #fff;
+		box-shadow: 0 2px 3px RGBA(0, 0, 0, 0.5);
+		border-radius: 25px;
 
-        background: linear-gradient(
-            to bottom,
-            RGBA(255,255,255,0.3) 0%,
-            RGBA(255,255,255,1) 90%
-        );
-        border: 2px solid #fff;
-        box-shadow: 0 2px 3px RGBA(0,0,0,0.5);
-        border-radius: 25px;
+		@at-root body.admin-bar .scroll-down-arrow {
+			top: calc(100vh - 103px);
+		}
 
-        &::before {
-            content: 'Scroll Down';
-            position: absolute;
-            bottom: 100%;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 100px;
-            width: max-content;
-            margin-bottom: 1em;
-            padding: .3em .5em;
+		&::before {
+			content: "Scroll Down";
+			position: absolute;
+			bottom: 100%;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 100px;
+			width: max-content;
+			margin-bottom: 1em;
+			padding: 0.3em 0.5em;
 
-            font-size: 11.5px;
-            text-align: center;
-            //text-shadow: 0 2px 1px RGBA(0,0,0,0.5);
-            line-height: 1;
+			font-size: 11.5px;
+			text-align: center;
+			//text-shadow: 0 2px 1px RGBA(0,0,0,0.5);
+			line-height: 1;
 
-            background: rgba(0,0,0,0.4);
-            color: #fff;
-        }
-        &::after {
-            position: absolute;
-            display: block;
-            content: '';
-            width: 8px;
-            height: 8px;
-            background: #fff;
-            left: calc(50% - 4px);
-            top: 8px;
-            border-radius: 4px;
-            box-shadow: 0 2px 3px RGBA(0,0,0,0.8);
-            animation-duration: 1.5s;
-            animation-iteration-count: infinite;
-            animation-name: scroll-down-arrow;
-        }
-    }
+			background: rgba(0, 0, 0, 0.4);
+			color: #fff;
+		}
+		&::after {
+			position: absolute;
+			display: block;
+			content: "";
+			width: 8px;
+			height: 8px;
+			background: #fff;
+			left: calc(50% - 4px);
+			top: 8px;
+			border-radius: 4px;
+			box-shadow: 0 2px 3px RGBA(0, 0, 0, 0.8);
+			animation-duration: 1.5s;
+			animation-iteration-count: infinite;
+			animation-name: scroll-down-arrow;
+		}
+	}
 
-    @keyframes scroll-down-arrow {
-        0% {
-            opacity: 1;
-        }
-        100% {
-            opacity: 0;
-            transform: translateY(300%);
-        }
-    }
+	@keyframes scroll-down-arrow {
+		0% {
+			opacity: 1;
+		}
+		100% {
+			opacity: 0;
+			transform: translateY(300%);
+		}
+	}
 	/*
 	.scroll-down-arrow {
 		display: none;
@@ -130,14 +129,14 @@
 	*/
 
 	.hero {
-		background-color: map-deep($colors, 'highlight');
+		background-color: map-deep($colors, "highlight");
 		position: relative;
 		z-index: 1;
 		width: 100%;
 		height: calc(100vh - 100px);
 		//padding-bottom: 56.25%;
 
-		@media (max-width: map-deep($widths, 'medium')) {
+		@media (max-width: map-deep($widths, "medium")) {
 			height: 0;
 			padding-bottom: 56.25%;
 		}
@@ -195,13 +194,12 @@
 				vertical-align: bottom;
 			}
 		}
-
 	}
 
 	main {
 		background: #fff;
 		padding: 3vh 0;
-		box-shadow: 0 0 1em rgba(0,0,0,0.2);
+		box-shadow: 0 0 1em rgba(0, 0, 0, 0.2);
 
 		line-height: 1.4;
 
@@ -243,20 +241,18 @@
 			margin-bottom: 0;
 			padding-bottom: 0;
 		}
-
 	}
-
 }
 
 @keyframes home-ticker {
-  0% {
-    -webkit-transform: translateX(10%);
-    transform: translateX(-10%);
-    visibility: visible;
-  }
+	0% {
+		-webkit-transform: translateX(10%);
+		transform: translateX(-10%);
+		visibility: visible;
+	}
 
-  100% {
-    -webkit-transform: translateX(-100%);
-    transform: translateX(-100%);
-  }
+	100% {
+		-webkit-transform: translateX(-100%);
+		transform: translateX(-100%);
+	}
 }
