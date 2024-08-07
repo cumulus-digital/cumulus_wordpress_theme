@@ -8,23 +8,28 @@ namespace CumulusTheme;
 
 		<div class="row-container">
 
-		<div class="logo">
+			<div class="logo">
 				<a href="<?php echo \home_url(); ?>">
 					<img src="<?php echo theme_url(); ?>/assets/prod/images/cumulus-logo-white-full.svg" alt="<?php \bloginfo( 'name' ); ?>">
 				</a>
+				<?php if ( \mb_strlen( \get_option( 'copyright_info' ) ) ): ?>
+				<div class="copyright">
+					<?php echo \esc_html( \str_ireplace( '%YEAR%', \date( 'Y' ), \get_option( 'copyright_info' ) ) ); ?>
+				</div>
+				<?php endif; ?>
 			</div>
 
+			<?php if ( has_footer_menu() ): ?>
 			<nav class="menu">
 				<?php footer_menu(); ?>
 			</nav>
+			<?php endif; ?>
 
+			<?php if ( has_social_menu() ): ?>
 			<nav class="social">
 				<?php social_menu(); ?>
 			</nav>
-
-			<div class="copyright">
-				&copy; <?php echo \date( 'Y' ); ?> <?php echo \esc_html( \get_option( 'copyright_info' ) ); ?>
-			</div>
+			<?php endif; ?>
 
 		</div>
 
