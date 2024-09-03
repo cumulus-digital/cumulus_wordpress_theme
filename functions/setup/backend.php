@@ -60,6 +60,15 @@ function backendSetupScripts() {
 		return;
 	}
 
+	$assets = include theme_path() . '/assets/prod/editor.asset.php';
+	\wp_enqueue_script(
+		PREFIX . '-editor-script',
+		theme_url() . '/assets/prod/editor.js',
+		$assets['dependencies'],
+		$assets['version'],
+		true
+	);
+
 	// Custom blocks
 	\wp_enqueue_script(
 		'cumulus-gutenberg/anchor', // Handle.

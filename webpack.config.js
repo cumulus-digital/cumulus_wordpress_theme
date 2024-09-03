@@ -91,7 +91,7 @@ module.exports = {
 			'assets/src/js/blocks-anchor.jsx'
 		),
 		index: path.resolve( process.cwd(), 'assets/src/js/index.js' ),
-		editor: path.resolve( process.cwd(), 'assets/src/css/editor.scss' ),
+		editor: path.resolve( process.cwd(), 'assets/src/js/editor.js' ),
 		flipcards: path.resolve(
 			process.cwd(),
 			'assets/src/css/flipcards.scss'
