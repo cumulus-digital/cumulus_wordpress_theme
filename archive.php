@@ -1,9 +1,10 @@
 <?php
+
 namespace CumulusTheme;
 
 \get_header();
 
-$description = get_the_archive_description();
+$description = \get_the_archive_description();
 ?>
 <main role="main" class="page">
 	<section class="row">
@@ -19,29 +20,28 @@ $description = get_the_archive_description();
 	<section class="row">
 		<div class="row-container">
 
-			<?php if (\have_posts()): ?>
-				<?php while (\have_posts()) : \the_post(); ?>
+			<?php if ( \have_posts() ): ?>
+				<?php while ( \have_posts() ) : \the_post(); ?>
 
-					<article id="post-<?php the_ID(); ?>" <?php \post_class(); ?>>
+					<article id="post-<?php \the_ID(); ?>" <?php \post_class(); ?>>
+						<?php \edit_post_link(); ?>
 
 						<header>
 							<h2>
-								<a href="<?php echo \get_permalink() ?>">
+								<a href="<?php echo \get_permalink(); ?>">
 									<?php \the_title(); ?>
 								</a>
 							</h2>
-							<time datetime="<?php echo \get_the_time('Y-m-d', \get_the_ID()) ?>">
+							<time datetime="<?php echo \get_the_time( 'Y-m-d', \get_the_ID() ); ?>">
 								<?php
 									echo \wp_kses( \get_the_date(), array() );
-								?>
+					?>
 							</time>
 						</header>
 
 						<div class="body">
 							<?php \the_excerpt(); ?>
 						</div>
-
-					<?php \edit_post_link(); ?>
 					</article>
 
 				<?php endwhile; ?>
@@ -62,12 +62,12 @@ $description = get_the_archive_description();
 	<section class="row">
 		<div class="row-container pagination">
 			<?php
-			the_posts_pagination( array(
+			\the_posts_pagination( array(
 				'prev_text'          => 'Previous page',
 				'next_text'          => 'Next page',
 				'before_page_number' => '<span class="meta-nav screen-reader-text">Page </span>',
 			) );
-			?>
+?>
 		</div>
 	</section>
 </main>

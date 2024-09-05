@@ -5,8 +5,8 @@
   "author": "Daniel Vena <daniel.vena@cumulus.com>",
   "main": "index.js",
   "devDependencies": {
-    "@wordpress/prettier-config": "^4.6.0",
-    "@wordpress/scripts": "^28.6.0",
+    "@wordpress/prettier-config": "^4.7.0",
+    "@wordpress/scripts": "^29.0.0",
     "bourbon": "^7.3.0",
     "classlist-polyfill": "^1.2.0",
     "colord": "^2.9.3",

@@ -1,4 +1,5 @@
 <?php
+
 namespace CumulusTheme;
 
 \get_header();
@@ -7,12 +8,13 @@ namespace CumulusTheme;
 	<section class="row">
 		<div class="row-container">
 
-			<?php if (\have_posts()): ?>
-				<?php while (\have_posts()) : \the_post(); ?>
+			<?php if ( \have_posts() ): ?>
+				<?php while ( \have_posts() ) : \the_post(); ?>
 
-					<article id="post-<?php the_ID(); ?>" <?php \post_class(); ?>>
+					<article id="post-<?php \the_ID(); ?>" <?php \post_class(); ?>>
 
 						<header>
+							<?php \edit_post_link(); ?>
 							<h1>
 								<?php \the_title(); ?>
 							</h1>
