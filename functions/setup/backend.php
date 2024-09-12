@@ -208,7 +208,7 @@ function register_copyright_field() {
 
 // Show custom copyright line in admin footer
 function custom_admin_footer() {
-	return '&copy; ' . \date( 'Y' ) . ' ' . \esc_html( \get_option( 'copyright_info' ) );
+	return \esc_html( \str_ireplace( '%YEAR%', \date( 'Y' ), \get_option( 'copyright_info' ) ) );
 }
 \add_filter( 'admin_footer_text', ns( 'custom_admin_footer' ) );
 
