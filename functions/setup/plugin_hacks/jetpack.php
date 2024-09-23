@@ -11,6 +11,7 @@ namespace CumulusTheme\Setup\PluginHacks;
 \add_filter( 'jetpack_implode_frontend_css', '__return_false', \PHP_INT_MAX );
 
 // Disable AI Assistant
+/*
 \add_filter( 'jetpack_ai_enabled', '__return false', \PHP_INT_MAX );
 \add_action( 'jetpack_register_gutenberg_extensions', function () {
 	if ( \class_exists( '\Jetpack_Gutenberg' ) && \is_callable( '\Jetpack_Gutenberg::set_extension_unavailable' ) ) {
@@ -27,6 +28,7 @@ namespace CumulusTheme\Setup\PluginHacks;
 		);
 	}
 }, \PHP_INT_MAX );
+ */
 
 // Remove VideoPress
 \add_filter( 'jetpack_get_available_modules', function ( $modules ) {
@@ -36,15 +38,33 @@ namespace CumulusTheme\Setup\PluginHacks;
 
 	return $modules;
 } );
+
+/*
 \add_action( 'init', function () {
 	$registry = \WP_Block_Type_Registry::get_instance();
 	if ( $registry->get_registered( 'videopress/video' ) ) {
 		\unregister_block_type( 'videopress/video' );
 	}
 }, \PHP_INT_MAX );
+ */
 
 // Disable upsell nags
 \add_filter( 'jetpack_just_in_time_msgs', '__return_false', \PHP_INT_MAX );
+
+// Disable Google Photos/Pexels
+\add_action(
+	'enqueue_block_editor_assets',
+	function () {
+		$disable_external_media = <<<'JS'
+document.addEventListener( 'DOMContentLoaded', function() {
+	wp.hooks.removeFilter( 'blocks.registerBlockType', 'external-media/individual-blocks' );
+	wp.hooks.removeFilter( 'editor.MediaUpload', 'external-media/replace-media-upload' );
+} );
+JS;
+		\wp_add_inline_script( 'jetpack-blocks-editor', $disable_external_media );
+	},
+	\PHP_INT_MAX
+);
 
 // function remove_jetpack_css() {
 // $jetpack_options = \get_option( 'jetpack_active_modules' );
