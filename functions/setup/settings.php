@@ -80,6 +80,33 @@ namespace CumulusTheme;
 		'cmls-theme_settings',
 		'cmls-theme_settings-general'
 	);
+
+	\register_setting(
+		'cmls-theme_settings',
+		'cmls-youtube_nocookie',
+		array(
+			'description'       => 'Disable YouTube Cookies',
+			'type'              => 'boolean',
+			'sanitize_callback' => 'sanitize_text_field',
+			'default'           => '1',
+		)
+	);
+	\add_settings_field(
+		'cmls-youtube_nocookie',
+		'<label for="cmls-youtube_nocookie">Disable YouTube Cookies</label>',
+		function () {
+			$value = \get_option( 'cmls-youtube_nocookie' );
+			?>
+				<label for="cmls-youtube_nocookie">
+					<input type="hidden" name="cmls-youtube_nocookie" value="1" />
+					<input type="checkbox" id="cmls-youtube_nocookie" name="cmls-youtube_nocookie" <?php echo $value === '1' ? 'checked' : ''; ?> value="1" />
+					Replace YouTube Embeds with Youtube-NoCookie
+				</label>
+			<?php
+		},
+		'cmls-theme_settings',
+		'cmls-theme_settings-general'
+	);
 }, 1 );
 
 require __DIR__ . '/settings/quantcast-choice.php';
