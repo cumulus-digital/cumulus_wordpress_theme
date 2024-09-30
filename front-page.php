@@ -44,7 +44,7 @@ if ( \count( $header_video_ids ) ) {
 				<?php foreach( $header_videos as $video ): ?>
 					<source src="<?php echo \wp_get_attachment_url( $video->ID ); ?>#t=0" type="<?php echo $video->post_mime_type; ?>">
 				<?php endforeach; ?>
-				<img src="<?php echo theme_url(); ?>/assets/prod/images/bg-video_hero-small.png" alt>
+				<img src="<?php echo theme_url(); ?>/assets/prod/images/bg-video_hero-small.png" alt loading="lazy">
 			</video>
 		</div>
 	<?php endif; ?>
