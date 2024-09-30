@@ -10,7 +10,7 @@ namespace CumulusTheme;
 
 			<div class="logo">
 				<a href="<?php echo \home_url(); ?>">
-					<img src="<?php echo theme_url(); ?>/assets/prod/images/cumulus-logo-white-full.svg" alt="<?php \bloginfo( 'name' ); ?>">
+					<img src="<?php echo theme_url(); ?>/assets/prod/images/cumulus-logo-white-full.svg" alt="<?php \bloginfo( 'name' ); ?>" loading="lazy">
 				</a>
 				<?php if ( \mb_strlen( \get_option( 'copyright_info' ) ) ): ?>
 				<div class="copyright">
