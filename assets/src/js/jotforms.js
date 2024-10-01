@@ -25,7 +25,11 @@ jQuery( () => {
 		if ( i.getAttribute( 'data-src' ) ) {
 			// Support OneTrust handling of iframes
 			const classes = i.getAttribute( 'class' );
-			if ( classes && classes.includes( 'optanon-category' ) ) {
+			if (
+				'OneTrust' in window &&
+				classes &&
+				classes.includes( 'optanon-category' )
+			) {
 				i.setAttribute(
 					'data-src',
 					addParams( i.getAttribute( 'data-src' ) )
