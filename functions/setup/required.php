@@ -26,11 +26,13 @@ function registerRequiredPlugins() {
 			'required'         => true,
 			'force_activation' => true,
 		),
+		/*
 		array(
 			'name'     => 'Jetpack by WordPress.com',
 			'slug'     => 'jetpack',
 			'required' => false,
 		),
+		 */
 		array(
 			'name'     => 'Kadence Blocks',
 			'slug'     => 'kadence-blocks',
