@@ -28,7 +28,8 @@ jQuery( () => {
 			if (
 				'OneTrust' in window &&
 				classes &&
-				classes.includes( 'optanon-category' )
+				( classes.includes( 'optanon-category' ) ||
+					i.getAttribute( 'data-ot-ignore' ) )
 			) {
 				i.setAttribute(
 					'data-src',
