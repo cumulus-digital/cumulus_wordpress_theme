@@ -14,7 +14,9 @@
 	width: 100%;
 	height: var(--cmls-masthead-height);
 
-	transition: background 0.3s, box-shadow 0.3s;
+	transition:
+		background 0.3s,
+		box-shadow 0.3s;
 
 	&.switch {
 		box-shadow: 0 0 1.5vh RGBA(0, 0, 0, 0.2);
@@ -32,7 +34,9 @@
 
 		opacity: 1;
 
-		transition: opacity 0.2s, background 0.2s;
+		transition:
+			opacity 0.2s,
+			background 0.2s;
 	}
 	body.home &::before {
 		opacity: 0;
@@ -98,7 +102,7 @@
 	.logo {
 		grid-area: head_logo;
 		height: 100%;
-		justify-items: start;
+		//justify-items: start;
 		overflow: visible;
 		margin: 0;
 
@@ -153,7 +157,9 @@
 			top: 50%;
 			transform: translateY(-50%);
 
-			transition: color 0.2s, text-shadow 0.2s;
+			transition:
+				color 0.2s,
+				text-shadow 0.2s;
 
 			@at-root body {
 				&.home .masthead:not(.switch),
