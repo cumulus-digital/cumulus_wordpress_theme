@@ -1,0 +1,27 @@
+@use "functions" as *;
+@use "variables" as *;
+
+:root {
+	--cmls-width-small: #{map-deep($widths, "small")};
+	--cmls-width-medium: #{map-deep($widths, "medium")};
+	--cmls-width-large: #{map-deep($widths, "large")};
+	--cmls-width-max: #{map-deep($widths, "max")};
+
+	--cmls-color-bg-light: #{map-deep($colors, "bg", "light")};
+	--cmls-color-brand: #{map-deep($colors, "brand")};
+	--cmls-color-accent: #{map-deep($colors, "accent")};
+	--cmls-color-highlight: #{map-deep($colors, "highlight")};
+	--cmls-color-grey: #{map-deep($colors, "grey")};
+	--cmls-color-light-grey: #{map-deep($colors, "light-grey")};
+	--cmls-color-dark-grey: #{map-deep($colors, "dark-grey")};
+	--cmls-color-caption-background: #{map-deep(
+			$colors,
+			"caption",
+			"background"
+		)};
+	--cmls-color-caption-text: #{map-deep($colors, "caption", "text")};
+	--cmls-color-overlay-wash: #{map-deep($colors, "overlay-wash")};
+
+	--cmls-masthead-height: 8.5vh;
+	--cmls-masthead-height: clamp(65px, 8vh, 80px);
+}

@@ -6,7 +6,7 @@
 .row-container {
 	padding: 0 5vw;
 	margin: 0 auto;
-	max-width: map-deep($widths, "max");
+	max-width: var(--cmls-width-max);
 	position: relative;
 
 	.pagination {

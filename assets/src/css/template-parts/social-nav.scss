@@ -1,5 +1,6 @@
-nav.social {
+@use "../functions" as *;
 
+nav.social {
 	justify-self: center;
 
 	ul {
@@ -18,16 +19,16 @@ nav.social {
 		display: block;
 		margin-right: 0.25em;
 
-		color: rgba(255,255,255,0.6);
+		color: rgba(255, 255, 255, 0.6);
 
-		font-family: 'fa-social';
+		font-family: "fa-social";
 		font-size: 1.75rem;
 		text-decoration: none;
 
 		transition: color 0.2s;
 
 		@include hover {
-			color: rgba(255,255,255,1);
+			color: rgba(255, 255, 255, 1);
 			text-decoration: none;
 		}
 
@@ -41,48 +42,46 @@ nav.social {
 
 		&[href*="facebook.com"]:before,
 		&[href*="fb.me"]:before {
-			content: '\f230';
+			content: "\f230";
 		}
 
 		&[href*="twitter.com"]:before,
 		&[href*="t.co"]:before {
-			content: '\f099';
+			content: "\f099";
 		}
 
 		&[href*="youtube.com"]:before,
 		&[href*="youtu.be"]:before {
-			content: '\f16a';
+			content: "\f16a";
 		}
 
 		&[href*="vimeo.com"]:before {
-			content: '\f16a';
+			content: "\f16a";
 		}
 
 		&[href*="instagram.com"]:before,
 		&[href*="instagr.am"]:before {
-			content: '\f16d';
+			content: "\f16d";
 		}
 
 		&[href*="tumblr.com"]:before,
 		&[href*="tmblr.co"]:before {
-			content: '\f173';
+			content: "\f173";
 		}
 
 		&[href*="skype.com"]:before {
-			content: '\f17e';
+			content: "\f17e";
 		}
 
 		&[href*="spotify.com"]:before,
 		&[href*="spoti.fi"]:before,
 		&[href*="sptfy.com"]:before {
-			content: '\f1bc';
+			content: "\f1bc";
 		}
 
 		&[href*="linkedin.com"]:before,
 		&[href*="Lnkd.in"]:before {
-			content: '\f30c';
+			content: "\f30c";
 		}
-
 	}
-
 }

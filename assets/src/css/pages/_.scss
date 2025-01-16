@@ -1,3 +1,6 @@
+@use "sass:meta";
+@use "../functions" as *;
+
 main.page {
 	font-size: 1rem;
 
@@ -54,7 +57,9 @@ main.page {
 			span {
 				padding: 1em;
 				color: #fff;
-				text-shadow: 0 0 2em #000, 0 0 1em #000,
+				text-shadow:
+					0 0 2em #000,
+					0 0 1em #000,
 					1px 1px 0 rgba(0, 0, 0, 0.8);
 
 				&::after {
@@ -84,13 +89,13 @@ main.page {
 
 		h1 {
 			position: relative;
-			color: map-deep($colors, "highlight");
+			color: var(--cmls-color-highlight);
 			margin: 0 auto;
 			padding: 0 1em;
 			line-height: 1.1;
 			text-align: center;
 
-			@media (max-width: map-deep($widths, "small")) {
+			@include phone {
 				font-size: 1.75em;
 				padding: 0;
 			}
@@ -148,7 +153,7 @@ main.page {
 				transition: color 0.2s;
 
 				@include hover {
-					color: map-deep($colors, "highlight");
+					color: var(--cmls-color-highlight);
 				}
 			}
 		}
@@ -179,28 +184,28 @@ main.page {
 		h1 {
 			font-size: 2em;
 
-			@media (max-width: map-deep($widths, "small")) {
+			@include phone {
 				font-size: 1.5em;
 			}
 		}
 		h2 {
 			font-size: 1.7em;
 
-			@media (max-width: map-deep($widths, "small")) {
+			@include phone {
 				font-size: 1.3em;
 			}
 		}
 		h3 {
 			font-size: 1.4em;
 
-			@media (max-width: map-deep($widths, "small")) {
+			@include phone {
 				font-size: 1.2em;
 			}
 		}
 		h4 {
 			font-size: 1.2em;
 
-			@media (max-width: map-deep($widths, "small")) {
+			@include phone {
 				font-size: 1.1em;
 			}
 		}
@@ -256,10 +261,10 @@ main.page {
 				color: #333;
 			}
 			&.has-cumulus-blue-color {
-				color: map-deep($colors, "brand");
+				color: var(--cmls-color-brand);
 			}
 			&.has-cumulus-light-blue-color {
-				color: map-deep($colors, "highlight");
+				color: var(--cmls-color-highlight);
 			}
 			&.has-wwopn-purple-color {
 				color: #6a2774;
@@ -287,10 +292,10 @@ main.page {
 				background-color: #333;
 			}
 			&.has-cumulus-blue-background-color {
-				background-color: map-deep($colors, "brand");
+				background-color: var(--cmls-color-brand);
 			}
 			&.has-cumulus-light-blue-background-color {
-				background-color: map-deep($colors, "highlight");
+				background-color: var(--cmls-color-highlight);
 			}
 			&.has-wwopn-purple-background-color {
 				background-color: #6a2774;
@@ -369,7 +374,7 @@ main.page {
 		}
 
 		// Kadence block top divider fix on mobile
-		@media (max-width: map-deep($widths, "small")) {
+		@include phone {
 			.kt-row-layout-top-sep {
 				top: -1px;
 			}
@@ -390,7 +395,7 @@ main.page {
 		max-width: 100%;
 	}
 	body.large-width & .row-container {
-		max-width: map-deep($widths, "max") * 1.5;
+		max-width: calc(var(--cmls-width-max) * 1.5);
 	}
 
 	// option to disable body margin
@@ -411,6 +416,6 @@ main.page {
 	}
 }
 
-@import "front-page";
-@import "cards";
-@import "footers/_";
+@include meta.load-css("front-page");
+@include meta.load-css("cards");
+@include meta.load-css("footers/_");

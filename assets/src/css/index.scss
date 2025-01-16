@@ -1,7 +1,10 @@
-@import "functions";
-@import "variables";
-@import "fonts";
-@import "wpcore.scss";
+@use "sass:meta";
+@use "global" as *;
+@use "functions" as *;
+@use "variables" as *;
+
+@include meta.load-css("fonts");
+@include meta.load-css("wpcore.scss");
 
 // Include SVGs
 #doesnotexist {
@@ -43,10 +46,10 @@ body {
 	padding: 0;
 	min-height: 100%;
 
-	@media (max-width: map-deep($widths, "medium")) {
+	@include tablet {
 		font-size: 17px;
 	}
-	@media (max-width: map-deep($widths, "small")) {
+	@include phone {
 		font-size: 16px;
 	}
 }
@@ -68,7 +71,7 @@ body {
 	&.post_header_image {
 		margin-top: 0;
 
-		@media (max-width: map-deep($widths, "medium")) {
+		@include tablet {
 			margin-top: var(--cmls-masthead-height);
 		}
 	}
@@ -104,7 +107,7 @@ p {
 }
 
 a {
-	color: map-deep($colors, "brand");
+	color: var(--cmls-color-brand);
 	text-decoration-thickness: from-font;
 	text-underline-position: from-font;
 
@@ -112,7 +115,7 @@ a {
 		border: 0;
 	}
 	@include hover {
-		color: map-deep($colors, "highlight");
+		color: var(--cmls-color-highlight);
 		outline: 0;
 	}
 	&:focus-visible {
@@ -249,7 +252,7 @@ table {
 	padding: 0.5em 0.6em;
 
 	@include hover {
-		background: map-deep($colors, "brand");
+		background: var(--cmls-color-brand);
 	}
 }
 
@@ -296,7 +299,7 @@ table {
 	padding: 1.5em 1em;
 
 	a {
-		color: map-deep($colors, "highlight");
+		color: var(--cmls-color-highlight);
 
 		&:hover {
 			color: #fff;
@@ -304,7 +307,7 @@ table {
 	}
 }
 
-@import "rows/_";
-@import "template-parts/_";
-@import "pages/_";
-@import "hacks/_";
+@include meta.load-css("rows/_");
+@include meta.load-css("template-parts/_");
+@include meta.load-css("pages/_");
+@include meta.load-css("hacks/_");

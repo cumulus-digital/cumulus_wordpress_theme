@@ -1,8 +1,8 @@
 /**
  * Plugin-specific and misc hacks
  */
-
-@import "wp-rss-aggregator";
+@use "sass:meta";
+@include meta.load-css("wp-rss-aggregator");
 
 .wp-block-image img,
 .wp-block-media-text__media img,

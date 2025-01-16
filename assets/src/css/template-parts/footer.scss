@@ -1,6 +1,8 @@
+@use "../functions" as *;
+
 body > footer {
 	z-index: 10;
-	background: map-deep($colors, "brand");
+	background: var(--cmls-color-brand);
 	color: #fff;
 
 	padding: 3vh 2vw;
@@ -21,7 +23,7 @@ body > footer {
 
 		padding: 0;
 
-		@media (max-width: map-deep($widths, "small")) {
+		@include phone {
 			display: block;
 			text-align: center;
 		}
@@ -39,7 +41,7 @@ body > footer {
 			height: 100%;
 			width: auto;
 		}
-		@media (max-width: map-deep($widths, "small")) {
+		@include phone {
 			width: 100%;
 			margin: 0 auto 1em;
 			text-align: center;
@@ -84,7 +86,7 @@ body > footer {
 				overflow: hidden;
 			}
 
-			@media (max-width: map-deep($widths, "small")) {
+			@include phone {
 				column-gap: 0;
 				column-count: auto;
 				font-size: 0.95rem;
@@ -119,7 +121,7 @@ body > footer {
 		width: 100%;
 		opacity: 0.75;
 
-		@media (max-width: map-deep($widths, "small")) {
+		@include phone {
 			margin-top: 1em;
 			text-align: center;
 		}

@@ -1,16 +1,17 @@
-.page_footer-listen {
+@use "../../functions" as *;
 
+.page_footer-listen {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 
-	background-color: map-deep($colors, 'light-grey');
+	background-color: var(--cmls-color-light-grey);
 	//background-image: url('../images/bg-listen.jpg');
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;
 
-	box-shadow: 0 0 1em rgba(0,0,0,0.3);
+	box-shadow: 0 0 1em rgba(0, 0, 0, 0.3);
 
 	color: #fff;
 
@@ -24,14 +25,14 @@
 
 	h3 {
 		margin: 0 1em 0 0;
-		color: map-deep($colors, 'dark-grey');
+		color: var(--cmls-color-dark-grey);
 		font-size: 2em;
 		font-weight: bold;
 		text-transform: uppercase;
 		//text-shadow: 0 0 1em rgba(0,0,0,0.6);
-		transition: all .15s;
+		transition: all 0.15s;
 
-		@media (max-width: map-deep($widths, "small")) {
+		@include phone {
 			margin: 0;
 			font-size: 1.5em;
 		}
@@ -41,30 +42,28 @@
 		align-self: center;
 		display: block;
 
-		padding: .5em;
+		padding: 0.5em;
 
-		background: map-deep($colors, 'brand');
+		background: var(--cmls-color-brand);
 		border-radius: 2px;
 		color: #fff;
 		//box-shadow: 0 0 1em rgba(0,0,0,0.4);
 
 		white-space: nowrap;
 
-		transition: all .15s;
+		transition: all 0.15s;
 	}
 
 	@include hover {
-
 		h3 {
 			transform: scale(1.06);
 			//text-shadow: 0 0 1em rgba(0,0,0,0.8);
 		}
 		.button {
-			background: map-deep($colors, 'highlight');
+			background: var(--cmls-color-highlight);
 			color: #fff;
 			//box-shadow: 0 0 1em rgba(0,0,0,0.5);
 			transform: scale(1.06);
 		}
 	}
-
 }

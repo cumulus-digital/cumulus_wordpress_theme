@@ -22,21 +22,4 @@ $colors: (
 	"overlay-wash":
 		linear-gradient(rgba(1, 88, 142, 0.25), rgba(1, 88, 142, 0.7)),
 );
-
 $masthead-height: var(--cmls-masthead-height);
-:root {
-	--cmls-masthead-height: 10vh;
-
-	@media (max-width: map-deep($widths, "medium")) {
-		--cmls-masthead-height: 13vw;
-	}
-	@media (max-width: map-deep($widths, "small")) {
-		--cmls-masthead-height: 17vw;
-	}
-}
-
-//-----
-$bourbon: (
-	"contrast-switch-dark-color": map-deep($colors, "caption", "background"),
-	"contrast-switch-light-color": #fff,
-);

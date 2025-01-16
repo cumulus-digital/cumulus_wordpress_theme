@@ -85,6 +85,13 @@ defaultConfig.module.rules = rules;
 
 module.exports = {
 	...defaultConfig,
+	stats: {
+		...defaultConfig.stats,
+		loggingDebug: [
+			...( defaultConfig?.stats?.loggingDebug || [] ),
+			'sass-loader',
+		],
+	},
 	entry: {
 		'blocks-anchor': path.resolve(
 			process.cwd(),
@@ -92,6 +99,7 @@ module.exports = {
 		),
 		index: path.resolve( process.cwd(), 'assets/src/js/index.js' ),
 		editor: path.resolve( process.cwd(), 'assets/src/js/editor.js' ),
+		/*
 		flipcards: path.resolve(
 			process.cwd(),
 			'assets/src/css/flipcards.scss'
@@ -100,6 +108,7 @@ module.exports = {
 			process.cwd(),
 			'assets/src/css/imageflipper.scss'
 		),
+		*/
 		'swap-preloading-styles': path.resolve(
 			process.cwd(),
 			'assets/src/js',

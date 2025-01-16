@@ -1,1 +1,2 @@
-@import 'listen';
+@use "sass:meta";
+@include meta.load-css("listen");

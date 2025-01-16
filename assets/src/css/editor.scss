@@ -1,10 +1,8 @@
-@import 'functions';
-@import 'variables';
+@use "global" as *;
 
 body .editor-styles-wrapper {
-
 	color: #111;
-	font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+	font-family: "Montserrat", Arial, Helvetica, sans-serif;
 	font-size: 18px;
 
 	.edit-post-visual-editor,
@@ -13,10 +11,11 @@ body .editor-styles-wrapper {
 	.editor-rich-text p,
 	.editor-post-title__input,
 	.wp-block-quote__citation {
-	    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+		font-family: "Montserrat", Arial, Helvetica, sans-serif;
 	}
 
-	.has-text-color, .has-inline-color {
+	.has-text-color,
+	.has-inline-color {
 		&.has-white-color {
 			color: #fff;
 		}
@@ -33,10 +32,10 @@ body .editor-styles-wrapper {
 			color: #333;
 		}
 		&.has-cumulus-blue-color {
-			color: map-deep($colors, 'brand');
+			color: var(--cmls-color-brand);
 		}
 		&.has-cumulus-light-blue-color {
-			color: map-deep($colors, 'highlight');
+			color: var(--cmls-color-highlight);
 		}
 		&.has-wwopn-purple-color {
 			color: #6a2774;
@@ -44,7 +43,6 @@ body .editor-styles-wrapper {
 		&.has-wwopn-light-purple-color {
 			color: #a33cb3;
 		}
-
 	}
 
 	.has-background-color {
@@ -64,10 +62,10 @@ body .editor-styles-wrapper {
 			background-color: #333;
 		}
 		&.has-cumulus-blue-background-color {
-			background-color: map-deep($colors, 'brand');
+			background-color: var(--cmls-color-brand);
 		}
 		&.has-cumulus-light-blue-background-color {
-			background-color: map-deep($colors, 'highlight');
+			background-color: var(--cmls-color-highlight);
 		}
 		&.has-wwopn-purple-background-color {
 			background-color: #6a2774;
@@ -75,15 +73,21 @@ body .editor-styles-wrapper {
 		&.has-wwopn-light-purple-background-color {
 			background-color: #a33cb3;
 		}
-
 	}
 
 	/* Allows removing spacing from gutenberg typography */
-	.mb-0 { margin-bottom: 0 !important; }
-	.pb-0 { padding-bottom: 0 !important; }
-	.mt-0 { margin-top: 0 !important; }
-	.pt-0 { padding-top: 0 !important; }
-
+	.mb-0 {
+		margin-bottom: 0 !important;
+	}
+	.pb-0 {
+		padding-bottom: 0 !important;
+	}
+	.mt-0 {
+		margin-top: 0 !important;
+	}
+	.pt-0 {
+		padding-top: 0 !important;
+	}
 }
 .acf-field.warning {
 	background-color: #f5f0da;

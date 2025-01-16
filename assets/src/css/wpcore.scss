@@ -130,5 +130,5 @@ a img.aligncenter {
 }
 
 [data-align="wide"] {
-	max-width: calc(#{map-deep($widths, "max")} + 2em) !important;
+	max-width: calc(var(--cmls-width-max) + 2em) !important;
 }

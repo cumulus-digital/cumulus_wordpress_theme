@@ -1,5 +1,7 @@
-& > .menu {
-	background-color: map-deep($colors, "brand");
+@use "../../functions" as *;
+
+.masthead > .menu {
+	background-color: var(--cmls-color-brand);
 	background-image: linear-gradient(
 			to bottom,
 			rgba(0, 89, 142, 1) 0%,
@@ -38,12 +40,12 @@
 	.admin-bar.menu-active & {
 		height: calc(100vh - var(--cmls-masthead-height) - 32px);
 
-		@media (max-width: map-deep($widths, "small")) {
+		@include phone {
 			height: calc(100vh - var(--cmls-masthead-height) - 46px);
 		}
 	}
 
-	@media (max-width: map-deep($widths, "medium")) {
+	@include tablet {
 		background-image: linear-gradient(
 				to bottom,
 				rgba(0, 89, 142, 1) 0%,
@@ -101,7 +103,7 @@
 		padding: 1.5em;
 		margin: 0 auto;
 
-		@media (max-width: map-deep($widths, "medium")) {
+		@include tablet {
 			display: block;
 			padding: 1em 1.5em;
 		}
@@ -128,12 +130,12 @@
 					rgba(255, 255, 255, 0) 50%
 				);
 
-				@media (max-width: map-deep($widths, "medium")) {
+				@include tablet {
 					display: none;
 				}
 			}
 
-			@media (max-width: map-deep($widths, "medium")) {
+			@include tablet {
 				margin-bottom: 2em;
 			}
 

@@ -1,3 +1,6 @@
+@use "sass:map";
+@use "variables" as *;
+
 /// Map deep get
 /// @author Hugo Giraudel
 /// @access public
@@ -5,26 +8,26 @@
 /// @param {Arglist} $keys - Key chain
 /// @return {*} - Desired value
 @function map-deep($map, $keys...) {
-    @each $key in $keys {
-        $map: map-get($map, $key);
-    }
-    @return $map;
+	@each $key in $keys {
+		$map: map.get($map, $key);
+	}
+	@return $map;
 }
 
-@mixin mq($size, $q: 'max-width') {
-	@media ($q: map-get($breakpoints, $size)) {
+@mixin mq($size, $q: "max-width") {
+	@media ($q: map.get($widths, $size)) {
 		@content;
 	}
 }
 
 @mixin phone() {
-	@media (max-width: map-get($devices, 'phone')) {
+	@media (max-width: map.get($widths, "small")) {
 		@content;
 	}
 }
 
 @mixin tablet() {
-	@media (max-width: map-get($devices, 'tablet')) {
+	@media (max-width: map.get($widths, "medium")) {
 		@content;
 	}
 }
@@ -39,12 +42,11 @@
 	}
 
 	@media not all and (hover: none),
-	all and (-ms-high-contrast: none),
-	(-ms-high-contrast: active) {
-
+		all and (-ms-high-contrast: none),
+		(-ms-high-contrast: active) {
 		&:hover,
 		&:focus {
-			@content
+			@content;
 		}
 	}
 }

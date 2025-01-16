@@ -1,3 +1,7 @@
+@use "sass:meta";
+@use "../../functions" as *;
+@use "../../variables" as *;
+
 .masthead {
 	background: linear-gradient(
 		to bottom,
@@ -40,7 +44,7 @@
 	}
 	body.home &::before {
 		opacity: 0;
-		@media (max-width: map-deep($widths, "medium")) {
+		@include tablet {
 			opacity: 1;
 		}
 	}
@@ -50,7 +54,7 @@
 	}
 	body.menu-active &::before,
 	body.menu-active &.switch::before {
-		background: map-deep($colors, "brand");
+		background: var(--cmls-color-brand);
 		opacity: 1;
 	}
 
@@ -74,7 +78,7 @@
 	body.admin-bar & {
 		top: 32px;
 
-		@media screen and (max-width: 782px) {
+		@include tablet {
 			top: 46px;
 		}
 	}
@@ -130,7 +134,7 @@
 				body.menu-active & {
 				background-image: url("../images/cumulus-logo-white-full.svg");
 			}
-			@media (max-width: map-deep($widths, "medium")) {
+			@include tablet {
 				background-image: url("../images/cumulus-logo-blue-full.svg");
 			}
 		}
@@ -171,12 +175,12 @@
 				}
 			}
 
-			@media (max-width: map-deep($widths, "medium")) {
+			@include tablet {
 				display: none;
 			}
 		}
 	}
-
-	@import "hamburger";
-	@import "menu";
 }
+
+@include meta.load-css("hamburger");
+@include meta.load-css("menu");

@@ -1,3 +1,5 @@
+@use "../functions" as *;
+
 .home {
 	.scroll-down-arrow {
 		cursor: pointer;
@@ -129,14 +131,14 @@
 	*/
 
 	.hero {
-		background-color: map-deep($colors, "highlight");
+		background-color: var(--cmls-color-highlight);
 		position: relative;
 		z-index: 1;
 		width: 100%;
 		height: calc(100vh - 100px);
 		//padding-bottom: 56.25%;
 
-		@media (max-width: map-deep($widths, "medium")) {
+		@include tablet {
 			height: 0;
 			padding-bottom: 56.25%;
 		}
@@ -180,7 +182,7 @@
 
 			padding: 4vh 0;
 
-			background: map-deep($colors, "bg", "light");
+			background: var(--cmls-color-bg-light);
 
 			font-size: 5vh;
 			line-height: 1;

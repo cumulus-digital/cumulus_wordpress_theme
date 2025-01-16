@@ -1,3 +1,7 @@
+@use "sass:meta";
+@use "../functions" as *;
+@use "../variables" as *;
+
 .cards {
 	padding: 0 2em 1em;
 	margin-top: 0;
@@ -72,7 +76,7 @@
 		flex: 0 0 calc(16.666666666667% - 2em);
 		font-size: 0.65em;
 	}
-	@media (max-width: map-deep($widths, "medium")) {
+	@include tablet {
 		&.one-columns,
 		&.two-columns,
 		&.three-columns,
@@ -82,7 +86,7 @@
 			padding: 0 1em 1em;
 		}
 	}
-	@media (max-width: map-deep($widths, "small")) {
+	@include phone {
 		&.one-columns,
 		&.two-columns,
 		&.three-columns,
@@ -125,8 +129,11 @@
 
 		font-size: 0.65em;
 
-		transition: transform 0.15s ease-in-out, box-shadow 0.2s ease-in-out,
-			color 0.1s ease-in-out 0.1s, border-color 0.1s ease-in-out 0.05s;
+		transition:
+			transform 0.15s ease-in-out,
+			box-shadow 0.2s ease-in-out,
+			color 0.1s ease-in-out 0.1s,
+			border-color 0.1s ease-in-out 0.05s;
 
 		& > * {
 			align-self: center;
@@ -134,7 +141,7 @@
 
 		&.card-display-white_on_blue {
 			color: #fff;
-			background: map-deep($colors, "brand");
+			background: var(--cmls-color-brand);
 			.card-permalink {
 				color: #fff;
 				background-color: rgba(#fff, 0.3);
@@ -142,7 +149,7 @@
 		}
 		&.card-display-white_on_light_blue {
 			color: #fff;
-			background: map-deep($colors, "highlight");
+			background: var(--cmls-color-highlight);
 			.card-permalink {
 				color: #fff;
 				background-color: rgba(#fff, 0.3);
@@ -172,7 +179,7 @@
 			}
 		}
 
-		@media (max-width: map-deep($widths, "small")) {
+		@include phone {
 			//max-width: calc(50vw - 3em);
 			//font-size: 0.5rem;
 			margin: 0.5em;
@@ -264,7 +271,7 @@
 
 			background-color: rgba(map-deep($colors, "highlight"), 0.1);
 			border-radius: 2em;
-			color: map-deep($colors, "brand");
+			color: var(--cmls-color-brand);
 
 			font-size: 1.3em;
 			line-height: 1;
@@ -273,7 +280,7 @@
 
 			transition: all 0.2s ease-in-out 0.05s;
 
-			@media (max-width: map-deep($widths, "small")) {
+			@include phone {
 				right: auto;
 				left: 50%;
 				transform: translateX(-50%);
@@ -300,7 +307,7 @@
 					}
 				}
 
-				@media (max-width: map-deep($widths, "small")) {
+				@include phone {
 					max-width: 100%;
 					padding-right: 1em;
 				}
