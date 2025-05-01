@@ -6,9 +6,9 @@ use Isolated\Symfony\Component\Finder\Finder;
 
 $composer = \json_decode( \file_get_contents( 'composer.json' ), true );
 
-$wp_functions = \str_getcsv( \file_get_contents( __DIR__ . '/.php-cs-fixer/wp-functions.csv' ) );
-$wp_classes   = \str_getcsv( \file_get_contents( __DIR__ . '/.php-cs-fixer/wp-classes.csv' ) );
-$wp_consts    = \str_getcsv( \file_get_contents( __DIR__ . '/.php-cs-fixer/wp-consts.csv' ) );
+$wp_functions = \str_getcsv( \file_get_contents( __DIR__ . '/.php-cs-fixer/wp-functions.csv' ), ',', '"', '\\' );
+$wp_classes   = \str_getcsv( \file_get_contents( __DIR__ . '/.php-cs-fixer/wp-classes.csv' ), ',', '"', '\\' );
+$wp_consts    = \str_getcsv( \file_get_contents( __DIR__ . '/.php-cs-fixer/wp-consts.csv' ), ',', '"', '\\' );
 
 return array(
 	// The prefix configuration. If a non null value will be used, a random prefix will be generated.
@@ -21,7 +21,7 @@ return array(
 	// For more see: https://github.com/humbug/php-scoper#finders-and-paths
 	'finders' => array(
 		// Finder::create()->files()->in( 'vendor' ),
-		\Isolated\Symfony\Component\Finder\Finder::create()
+		Finder::create()
 			->files()
 			->ignoreVCS( true )
 			->notName( '/LICENSE|.*\\.md|.*\\.dist|Makefile|composer\\.json|composer\\.lock/' )
@@ -39,7 +39,7 @@ return array(
 			->notPath( 'friendsofphp' )
 			->notPath( 'bin' )
 			->in( 'vendor' ),
-		\Isolated\Symfony\Component\Finder\Finder::create()->append( array(
+		Finder::create()->append( array(
 			'composer.json',
 			'composer.lock',
 		) ),

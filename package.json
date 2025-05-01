@@ -4,10 +4,10 @@
   "author": "Daniel Vena <daniel.vena@cumulus.com>",
   "main": "index.js",
   "dependencies": {
-    "@wordpress/prettier-config": "^4.21.0",
-    "@wordpress/scripts": "^30.14.1",
+    "@wordpress/prettier-config": "^4.22.0",
+    "@wordpress/scripts": "^30.15.0",
     "colord": "^2.9.3",
-    "core-js": "^3.41.0",
+    "core-js": "^3.42.0",
     "hamburgers": "^1.2.1",
     "jquery": "^3.7.1",
     "lodash": "^4.17.21",

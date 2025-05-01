@@ -37,7 +37,7 @@ class ColorAlpha extends WP_Customize_Color_Control
      */
     public function enqueue()
     {
-        $control_root_url = \str_replace(\wp_normalize_path(\untrailingslashit(\WP_CONTENT_DIR)), \untrailingslashit(\content_url()), \dirname(__DIR__));
+        $control_root_url = str_replace(wp_normalize_path(untrailingslashit(\WP_CONTENT_DIR)), untrailingslashit(content_url()), dirname(__DIR__));
         /**
          * Filters the URL for the scripts.
          *
@@ -45,8 +45,8 @@ class ColorAlpha extends WP_Customize_Color_Control
          * @param string $control_root_url The URL to the root folder of the package.
          * @return string
          */
-        $control_root_url = \apply_filters('wptrt_color_picker_alpha_url', $control_root_url);
-        \wp_enqueue_script(
+        $control_root_url = apply_filters('wptrt_color_picker_alpha_url', $control_root_url);
+        wp_enqueue_script(
             'wptrt-control-color-picker-alpha',
             $control_root_url . '/dist/main.js',
             // We're including wp-color-picker for localized strings, nothing more.
