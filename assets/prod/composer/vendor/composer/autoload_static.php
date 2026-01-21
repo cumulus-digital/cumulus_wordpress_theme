@@ -11,7 +11,7 @@ class ComposerStaticInitd6cbdcc39ef2865cb5a14e8befbc738b
     );
 
     public static $prefixLengthsPsr4 = array (
-        'C' => 
+        'C' =>
         array (
             'CumulusTheme\\Vendors\\vena\\AcfJson\\' => 34,
             'CumulusTheme\\Vendors\\WPTRT\\Customize\\Control\\' => 45,
@@ -19,11 +19,11 @@ class ComposerStaticInitd6cbdcc39ef2865cb5a14e8befbc738b
     );
 
     public static $prefixDirsPsr4 = array (
-        'CumulusTheme\\Vendors\\vena\\AcfJson\\' => 
+        'CumulusTheme\\Vendors\\vena\\AcfJson\\' =>
         array (
             0 => __DIR__ . '/..' . '/vena/acf-json/src',
         ),
-        'CumulusTheme\\Vendors\\WPTRT\\Customize\\Control\\' => 
+        'CumulusTheme\\Vendors\\WPTRT\\Customize\\Control\\' =>
         array (
             0 => __DIR__ . '/..' . '/wptrt/control-color-alpha/src',
         ),

@@ -4,8 +4,8 @@
   "author": "Daniel Vena <daniel.vena@cumulus.com>",
   "main": "index.js",
   "dependencies": {
-    "@wordpress/prettier-config": "^4.33.0",
-    "@wordpress/scripts": "^30.26.0",
+    "@wordpress/prettier-config": "^4.38.0",
+    "@wordpress/scripts": "^31.3.0",
     "clean-webpack-plugin": "^4.0.0",
     "colord": "^2.9.3",
     "core-js": "^3.46.0",
