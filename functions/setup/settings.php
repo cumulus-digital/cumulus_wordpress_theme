@@ -7,7 +7,7 @@ namespace CumulusTheme;
 \add_action( 'admin_menu', function () {
 	\add_options_page(
 		'Cumulus Theme Settings',
-		'CMLS Settings',
+		'CMLS Theme',
 		'switch_themes',
 		'cmls-theme_settings',
 		function () {
