@@ -1,32 +1,32 @@
 {
-  "description": "Wordpress theme for cumulusmedia.com",
-  "name": "cumulus_wordpress_theme",
-  "author": "Daniel Vena <daniel.vena@cumulus.com>",
-  "main": "index.js",
-  "dependencies": {
-    "@wordpress/prettier-config": "^4.42.0",
-    "@wordpress/scripts": "^31.7.0",
-    "clean-webpack-plugin": "^4.0.0",
-    "colord": "^2.9.3",
-    "core-js": "^3.49.0",
-    "hamburgers": "^1.2.1",
-    "jquery": "^4.0.0",
-    "lodash": "^4.17.23",
-    "prettier": "npm:wp-prettier@^3.0.3",
-    "sass": "~1.83.4"
-  },
-  "scripts": {
-    "start": "wp-scripts start",
-    "build": "wp-scripts build",
-    "check-engines": "wp-scripts check-engines",
-    "check-licenses": "wp-scripts check-licenses",
-    "format:js": "wp-scripts format-js",
-    "lint:css": "wp-scripts lint-style",
-    "lint:js": "wp-scripts lint-js",
-    "lint:md:docs": "wp-scripts lint-md-docs",
-    "lint:md:js": "wp-scripts lint-md-js",
-    "lint:pkg-json": "wp-scripts lint-pkg-json",
-    "packages-update": "wp-scripts packages-update",
-    "full-upgrade": "npm update && npm run packages-update && npm upgrade; pushd ./.php-cs-fixer && ./refresh.sh && popd; composer update && composer upgrade && ./rescope.sh"
-  }
+	"description": "Wordpress theme for cumulusmedia.com",
+	"name": "cumulus_wordpress_theme",
+	"author": "Daniel Vena <daniel.vena@cumulus.com>",
+	"main": "index.js",
+	"dependencies": {
+		"@wordpress/prettier-config": "^4.44.0",
+		"@wordpress/scripts": "^32.0.0",
+		"clean-webpack-plugin": "^4.0.0",
+		"colord": "^2.9.3",
+		"core-js": "^3.49.0",
+		"hamburgers": "^1.2.1",
+		"jquery": "^4.0.0",
+		"lodash": "^4.18.1",
+		"prettier": "npm:wp-prettier@^3.0.3",
+		"sass": "~1.83.4"
+	},
+	"scripts": {
+		"start": "wp-scripts start",
+		"build": "wp-scripts build",
+		"check-engines": "wp-scripts check-engines",
+		"check-licenses": "wp-scripts check-licenses",
+		"format:js": "wp-scripts format-js",
+		"lint:css": "wp-scripts lint-style",
+		"lint:js": "wp-scripts lint-js",
+		"lint:md:docs": "wp-scripts lint-md-docs",
+		"lint:md:js": "wp-scripts lint-md-js",
+		"lint:pkg-json": "wp-scripts lint-pkg-json",
+		"packages-update": "wp-scripts packages-update",
+		"full-upgrade": "npm update && npm run packages-update && npm upgrade; pushd ./.php-cs-fixer && ./refresh.sh && popd; composer update && composer upgrade && ./rescope.sh"
+	}
 }

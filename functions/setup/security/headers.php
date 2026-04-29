@@ -42,6 +42,7 @@ namespace CumulusTheme\Setup\Security;
 	\header( 'X-UA-Compatible: IE=edge,chrome=1' );
 } );
 
+/*
 // Last-modified header should reflect content
 \add_action( 'send_headers', function () {
 	if ( ! \is_admin() && \is_singular() ) {
@@ -52,6 +53,7 @@ namespace CumulusTheme\Setup\Security;
 		}
 	}
 } );
+*/
 
 /**
  * Get a key-value list of current HTTP headers. Keys are LOWER CASE.

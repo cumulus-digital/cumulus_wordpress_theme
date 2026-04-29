@@ -36,7 +36,7 @@ humbug_phpscoper_expose_class('TGM_Bulk_Installer_Skin', 'CumulusTheme\Vendors\T
 humbug_phpscoper_expose_class('TGMPA_Bulk_Installer', 'CumulusTheme\Vendors\TGMPA_Bulk_Installer');
 humbug_phpscoper_expose_class('TGMPA_Bulk_Installer_Skin', 'CumulusTheme\Vendors\TGMPA_Bulk_Installer_Skin');
 humbug_phpscoper_expose_class('TGMPA_Utils', 'CumulusTheme\Vendors\TGMPA_Utils');
-humbug_phpscoper_expose_class('ComposerAutoloaderInitd6cbdcc39ef2865cb5a14e8befbc738b', 'CumulusTheme\Vendors\ComposerAutoloaderInitd6cbdcc39ef2865cb5a14e8befbc738b');
+humbug_phpscoper_expose_class('ComposerAutoloaderInit8b213a6df91d64c432b1475b4c55288e', 'CumulusTheme\Vendors\ComposerAutoloaderInit8b213a6df91d64c432b1475b4c55288e');
 
 // Function aliases. For more information see:
 // https://github.com/humbug/php-scoper/blob/master/docs/further-reading.md#function-aliases
