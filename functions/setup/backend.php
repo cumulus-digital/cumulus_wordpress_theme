@@ -77,6 +77,14 @@ function backendSetupScripts() {
 	);
 }
 \add_action( 'enqueue_block_editor_assets', ns( 'backendSetupScripts' ) );
+\add_action( 'enqueue_block_assets', ns( 'backendSetupScripts' ) );
+
+// Force wp-block-library to load
+\add_action( 'enqueue_block_editor_assets', function() {
+	if (is_admin()) {
+		\wp_enqueue_style( 'wp-block-library' );
+	}
+}, 999 );
 
 // Brand the admin bar
 \add_action( 'init', function () {

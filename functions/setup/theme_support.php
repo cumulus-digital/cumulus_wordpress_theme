@@ -14,8 +14,10 @@ function init_theme_support() {
 		'flex-width' => true,
 	) );
 	\add_theme_support( 'menus' );
+	
 	\add_theme_support( 'editor-styles' );
-	// \add_editor_style('build/backend.css');
+	//\add_editor_style( 'assets/prod/editor.css' );
+	
 	\add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption', 'style', 'script' ) );
 
 	\add_theme_support( 'align-wide' );
@@ -130,4 +132,8 @@ $content_width = 1200;
  */
 
 // Separate stylesheets for blocks
-\add_filter( 'should_load_separate_core_block_assets', '__return_false' );
+add_filter(
+	'should_load_separate_core_block_assets',
+	'__return_false',
+	999
+);
