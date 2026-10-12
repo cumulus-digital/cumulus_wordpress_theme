@@ -30,7 +30,6 @@ class ComposerStaticInit8b213a6df91d64c432b1475b4c55288e
     );
 
     public static $classMap = array (
-        'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
         'CumulusTheme\\Vendors\\WPTRT\\Customize\\Control\\ColorAlpha' => __DIR__ . '/..' . '/wptrt/control-color-alpha/src/ColorAlpha.php',
         'CumulusTheme\\Vendors\\vena\\AcfJson\\Loader' => __DIR__ . '/..' . '/vena/acf-json/src/Loader.php',
     );
